@@ -1,0 +1,40 @@
+{{> welcomemenu id="signup"}}
+
+<form class="ui inverted violet raised center aligned middle aligned segment form" action="/register" method="POST">
+
+    <img class="ui centered medium image"
+         src="https://cdn.glitch.com/8174d58b-629e-4cf4-aba5-ac1b48330142%2Fregister.gif?1498569145927">
+
+    <div class="two fields">
+        <div class="field">
+            <label>First Name</label>
+            <input placeholder="First Name" type="text" name="firstName" required>
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input placeholder="Last Name" type="text" name="lastName" required>
+        </div>
+    </div>
+
+    <div class="two fields">
+        <div class="field">
+            <label>Email</label>
+            <input placeholder="Email" type="text" name="email" required>
+        </div>
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+    </div>
+
+
+    <button class="ui red icon button">
+        <div class="ui animated blue fade button" tabindex="0">
+            <div class="visible content">
+                <i class="big sound icon"></i></div>
+            <div class="hidden content">Just click!!
+            </div>
+        </div>
+    </button>
+
+</form>
