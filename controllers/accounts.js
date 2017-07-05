@@ -20,15 +20,15 @@ const accounts = {
   },
 
   logout(request, response) { //-------------------------------------> logout method called when ‘/ accounts’ request received
-    response.cookie('gym', ''); //------------------------------> creates a cookie called playlist
+    response.cookie('gym', ''); //-----------------------------------> creates a cookie called gym
     response.redirect('/'); //---------------------------------------> redirect to (/)
   },
 
-  signup(request, response) { //-------------------------------------> signup method called when ‘/ accounts’ request received
+  signup(request, response) { //-------------------------------------> sign up method called when ‘/ accounts’ request received
     const viewData = { //--------------------------------------------> place model in viewData object
       title: 'Login to the Service', //------------------------------> name of title
     };
-    response.render('signup', viewData); //--------------------------> name of view to render (signup) and sends viewData to view
+    response.render('signup', viewData); //--------------------------> name of view to render (sign up) and sends viewData to view
   },
 
   //---> Creates a new user object based on the form data + adds to user-store <---//
@@ -44,11 +44,12 @@ const accounts = {
   authenticate(request, response) {
     const user = userstore.getUserByEmail(request.body.email); //----> checks if user exists by searching valid email
     if (user && user.password === request.body.password) { //--------> checks if the user and password match from db
-      response.cookie('gym', user.email); //--------------------> if so then a cookie called ‘playlist’ containing users email is created
+      response.cookie('gym', user.email); //-------------------------> if so then a cookie called ‘gym’ containing users email is created
       logger.info(`logging in ${user.email}`); //--------------------> logs info to console of user logging in
       response.redirect('/dashboard'); //----------------------------> switches to dashboard otherwise
     } else {
       response.redirect('/login'); //--------------------------------> ask user to try to log in again
+
     }
   },
 

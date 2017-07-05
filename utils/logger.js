@@ -3,7 +3,7 @@ const winston = require('winston'); //---------------------------------> require
 const logger = new (winston.Logger)({
 
   transports: [new (winston.transports.Console)({ json: true })], //---> changed to true to better arrange the data structure
-});                                                               //---> this will change how the playlists are displayed in the logs:
+});                                                               //---> this will change how the lists are displayed in the logs:
 
 logger.level = 'debug';
 

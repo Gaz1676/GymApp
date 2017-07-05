@@ -1,40 +1,74 @@
 {{> welcomemenu id="signup"}}
 
-<form class="ui inverted violet raised center aligned middle aligned segment form" action="/register" method="POST">
+<section class="ui raised segment">
+    <div class="ui two column grid basic middle aligned segment">
+        <div class="column">
+            <form class="ui raised segment form" action="/register" method="POST">
+                <h2 class="ui center aligned header">Register</h2>
 
-    <img class="ui centered medium image"
-         src="https://cdn.glitch.com/8174d58b-629e-4cf4-aba5-ac1b48330142%2Fregister.gif?1498569145927">
+                <div class="two fields">
+                    <div class="field">
+                        <label>Name</label>
+                        <input placeholder="Name" type="text" name="name">
+                    </div>
+                    <div class="field">
+                        <label>Gender</label>
+                        <select class="ui dropdown" name="gender">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
 
-    <div class="two fields">
-        <div class="field">
-            <label>First Name</label>
-            <input placeholder="First Name" type="text" name="firstName" required>
+                <div class="field">
+                    <label>Select</label>
+                    <section class="ui center aligned segment">
+                        <div class="ui form">
+                            <div class="inline fields">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="member">
+                                    <label>Member&emsp;</label>
+                                </div>
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="trainer">
+                                    <label>Trainer</label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="field">
+                    <label>Email</label>
+                    <input placeholder="Email" type="text" name="email">
+                </div>
+
+                <div class="field">
+                    <label>Password</label>
+                    <input placeholder="Password" type="password" name="password">
+                </div>
+
+                <div class="field">
+                    <label>Address</label>
+                    <input placeholder="Address" type="text" name="address">
+                </div>
+
+                <div class="field">
+                    <label>Height</label>
+                    <input placeholder="Height" type="text" name="height">
+                </div>
+
+                <div class="field">
+                    <label>StartingWeight</label>
+                    <input placeholder="Starting Weight" type="text" name="startingWeight">
+                </div>
+                <button class="ui blue submit button">Submit</button>
+            </form>
         </div>
-        <div class="field">
-            <label>Last Name</label>
-            <input placeholder="Last Name" type="text" name="lastName" required>
+        <div class="column">
         </div>
     </div>
 
-    <div class="two fields">
-        <div class="field">
-            <label>Email</label>
-            <input placeholder="Email" type="text" name="email" required>
-        </div>
-        <div class="field">
-            <label>Password</label>
-            <input type="password" name="password" required>
-        </div>
-    </div>
+</section>
 
-
-    <button class="ui red icon button">
-        <div class="ui animated blue fade button" tabindex="0">
-            <div class="visible content">
-                <i class="big sound icon"></i></div>
-            <div class="hidden content">Just click!!
-            </div>
-        </div>
-    </button>
-
-</form>

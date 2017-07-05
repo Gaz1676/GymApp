@@ -1,25 +1,26 @@
 {
   "users": [
     {
-      "firstName": "Homer",
-      "lastName": "Simpson",
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+      "name": "q",
+      "gender": "male",
+      "member": "on",
+      "email": "q",
+      "password": "q",
+      "address": "q",
+      "height": "q",
+      "startingWeight": "q",
+      "id": "c2f8b2e8-7dd0-451f-b1c0-a4bcf416f268"
     },
     {
-      "firstName": "Marge",
-      "lastName": "Simpson",
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-    },
-    {
-      "firstName": "Lisa",
-      "lastName": "Simpson",
-      "email": "lisa@simpson.com",
-      "password": "secret",
-      "id": "66d8589f-00ff-4386-86a6-91081f89d7ef"
+      "name": "a",
+      "gender": "female",
+      "trainer": "on",
+      "email": "a",
+      "password": "a",
+      "address": "a",
+      "height": "a",
+      "startingWeight": "a",
+      "id": "e64fa0b0-eef7-4503-a696-72a4bb491d6a"
     }
   ]
 }
