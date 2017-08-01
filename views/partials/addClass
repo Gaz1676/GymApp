@@ -1,0 +1,59 @@
+<form class="ui segment form" name="addClass" action="/trainerDashboard/addclass" method="POST">
+  <div class="three fields">
+    <div class="field">
+      <label>Class Name</label>
+      <input placeholder="Class Name" type="text" name="name">
+    </div>
+    
+    <div class="field">
+    <label>Description</label>
+    <textarea placeholder="Description" name="description" rows="2"></textarea>
+  </div>
+  
+  <div class="field">
+      <label>Duration</label>
+      <input placeholder="Duration (mins)" type="text" name="duration">
+    </div>
+  </div>
+  
+  <div class="field">
+      <label>Capacity</label>
+      <input placeholder="Capacity" type="text" name="capacity">
+    </div>
+  </div>
+  
+    <div class="field">
+      <label>Difficulty</label>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="difficulty">
+        <i class="dropdown icon"></i>
+        <div class="default text">Difficulty</div>
+        <div class="menu">
+          <div class="item" data-value="Beginner">Beginner</div>
+          <div class="item" data-value="Intermediate">Intermediate</div>
+          <div class="item" data-value="Advanced">Advanced</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="field">
+      <label>Time</label>
+      <input placeholder="Time" type="text" name="time">
+    </div>
+  </div>
+  
+  <div class="field">
+      <label>Date</label>
+      <input placeholder="Date" type="text" name="date">
+    </div>
+  </div>
+  
+  <div class="field">
+      <label>Suite</label>
+      <input placeholder="Suite" type="text" name="suite">
+    </div>
+  </div>
+    
+  <button class="ui blue submit button"> Add Class </button>
+</form>
+

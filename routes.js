@@ -5,22 +5,44 @@ const router = express.Router();
 
 // Objects //
 
+const index = require('./controllers/index.js');
 const dashboard = require('./controllers/dashboard.js');
-const about = require('./controllers/about.js'); //-------------------------> imports these objects
+const trainerDashboard = require('./controllers/trainerDashboard.js'); //----> imports these objects
+const about = require('./controllers/about.js'); 
 const accounts = require('./controllers/accounts.js');
 
 // Links //
 
 router.get('/', accounts.index);
 router.get('/about', about.index);
-router.get('/dashboard', dashboard.index); //-------------------------------> matches the objects with each of these links
+router.get('/index', index.index); //----------------------------------------> matches the objects with each of these links
+router.get('/dashboard', dashboard.index); 
+router.get('/trainerDashboard', trainerDashboard.index);
 
 // Accounts //
 
-router.get('/login', accounts.login); //------------------------------------> route to where the users can login
-router.get('/signup', accounts.signup); //----------------------------------> route to where the new user can sign up
-router.get('/logout', accounts.logout); //----------------------------------> route to where the user can logout
-router.post('/register', accounts.register); //-----------------------------> creates a new user database object
-router.post('/authenticate', accounts.authenticate); //---------------------> check database for given user -> create session object if user found
+router.get('/login', accounts.login); 
+router.get('/signup', accounts.signup); 
+router.get('/logout', accounts.logout); 
+router.post('/register', accounts.register); 
+router.post('/authenticate', accounts.authenticate);
 
-module.exports = router; //-------------------------------------------------> this is the object that is then exported
+// Dashboard //
+
+router.post('/dashboard/addassessment', dashboard.addAssessment);
+router.get('/dashboard/removeassessment/:assessmentId', dashboard.removeAssessment);
+router.post('/settings', dashboard.updateProfile); //TODO
+router.get ('/settings', dashboard.settings);
+
+// Trainer Dashboard //
+
+router.get('/trainerDashboard/removemember/:id', trainerDashboard.removeMember);
+router.get('/trainerDashboard/viewassessments/:id', trainerDashboard.viewAssessments);
+router.get('/trainerDashboard/:id/removeassessment/:assessmentId', trainerDashboard.removeAssessment);
+router.post('/', trainerDashboard.updateComment); //TODO
+
+router.post('/trainerDashboard/addclass', trainerDashboard.addClass); //TODO
+router.get('/trainerDashboard/viewclass', trainerDashboard.viewClass); //TODO
+router.get('/trainerdashboard/allclasses', trainerDashboard.allClasses); //TODO
+
+module.exports = router; 
