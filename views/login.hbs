@@ -1,26 +1,26 @@
-{{> welcomemenu id='login' }}
-
-<form class="ui raised center aligned middle aligned segment form" action="/authenticate" method="POST">
-
-    <div class="two fields">
-        <div class="field">
-            <label>Email</label> <input placeholder="Email" name="email" required>
-        </div>
-
-        <div class="field">
-            <label>Password</label> <input type="password" name="password" required>
-        </div>
+{{> welcomeMenu id='login' }}
+ 
+<section class = "ui inverted yellow segment"> 
+<section class = "ui segment">
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
     </div>
+    
+    <div class="column">
+    <form class="ui raised segment form" action="/authenticate" method="POST">
 
-    <button class="ui icon button">
-        <div class="ui animated teal fade button" tabindex="0">
-            <div class="visible content">
-                <i class="big lock icon"></i>
+        <h1 class="ui red center aligned header">Log-in</h1>
+
+            <div class="field">
+                <label>Email</label> <input placeholder="Email" name="email" required>
             </div>
-            <div class="hidden content">Unlock
+            <div class="field">
+                <label>Password</label> <input type="password"  name="password" required>
             </div>
-        </div>
-    </button>
 
-</form>
+        <button class="ui blue submit button">Login</button>
 
+    </form>
+</div>
+</section>
+</section>

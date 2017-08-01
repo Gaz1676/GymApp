@@ -1,0 +1,25 @@
+<nav class="ui menu">
+    <header class="ui red header item"> Gym App </header>
+
+    <div class="right menu">
+        <div class="ui simple dropdown item">
+            &emsp;Classes&emsp;<i class="brown list layout icon"></i>
+            <div class="menu">
+                <a id="addclass" class="item" href="/showClass"> Create Class&emsp;<i class="blue write icon"></i></a>
+                <a id="allClasses" class="item" href="/allClasses"> All Classes&emsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="red calendar icon"></i></a>
+            </div>
+        </div>
+        <div class="ui simple dropdown item">
+            &emsp;Menu&emsp;<i class="orange sidebar icon"></i>
+            <div class="menu">
+                <a id="trainerDashboard" class="item" href="/trainerDashboard"> Dashboard&emsp;&nbsp;&nbsp;&nbsp;<i class="green home icon"></i></a>
+                <a id="logout" class="item" href="/logout"> Logout&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<i class="red sign out icon"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $("#{{id}}").addClass("active item");
+</script>
+

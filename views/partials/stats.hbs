@@ -1,0 +1,39 @@
+<section class="ui inverted brown raised segment">
+
+<form class="ui segment form">
+    <div class="ui four statistics">
+        <div class="statistic">
+            <div class="value">
+                <i class=" blue user icon"></i>
+            </div>
+            <div class="label">
+                {{member.firstName}} {{member.lastName}}
+            </div>
+        </div>
+        <div class="statistic">
+            <div class="value">
+                <i class="{{idealBodyWeight}} dashboard icon"></i>
+            </div>
+            <div class="label">
+                Ideal Weight Indicator
+            </div>
+        </div>
+        <div class="statistic">
+            <div class="value">
+                <i class="yellow heartbeat icon">{{bmi}}</i>
+            </div>
+            <div class="label">
+                BMI
+            </div>
+        </div>
+        <div class="statistic">
+            <div class="value">
+                <i class="green doctor icon"></i>
+            </div>
+            <div class="label">
+                {{bmiCategory}}
+            </div>
+        </div>
+    </div>
+</form>
+</section>

@@ -1,17 +1,20 @@
 'use strict';
 
-//---> require identifies and imports object defined in other modules <--- //
+const logger = require('../utils/logger'); //-------------------> import logger
 
-const logger = require('../utils/logger'); //-------------------> import the logger so we can use it
+//---> about object definition <---//
 
 const about = {
-  index(request, response) { //---------------------------------> calls render method on response with 2 param
-    logger.info('about rendering'); //--------------------------> logs a message to the console
+  index(request, response) { //---------------------------------> index method called when ‘/ accounts’ request received
+    logger.info('rendering about'); //--------------------------> logs a message to the console
     const viewData = { //---------------------------------------> creates object called viewData
-      title: 'About JS Gym App', //-----------------------------> containing single property: title
+      title: 'About JS Gym App', //-----------------------------> name of title
     };
-    response.render('about', viewData); //----------------------> name of view to render(about)
-  },                                    //----------------------> anything in viewData will be rendered with (about)
+    response.render('about', viewData); //----------------------> name of view to render (about) and sends viewData to view
+  },                                   
 };
 
 module.exports = about; //--------------------------------------> this is the object that is then exported
+
+//-----> request -> link or button pressed on page
+//-----> response -> complete page rendered into browser
