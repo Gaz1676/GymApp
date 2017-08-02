@@ -64,7 +64,7 @@ const accounts = {
     const memberEmail = request.cookies.member; //---------------------------> requests cookies of member and stores them in memberEmail
     return memberStore.getMemberByEmail(memberEmail); //---------------------> returns a valid member by email search if session exists
   },
-  
+
   getCurrentTrainer(request) { //--------------------------------------------> getCurrentTrainer method, called when ‘/ accounts’ request received
     const trainerEmail = request.cookies.trainer; //-------------------------> requests cookies of trainer and stores them in trainerEmail
     return trainerStore.getTrainerByEmail(trainerEmail); //------------------> returns a valid trainer by email search if session exists

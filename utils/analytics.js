@@ -1,7 +1,7 @@
 const accounts = require('../controllers/accounts');
 
 const analytics = {
-  
+
   calculateBMI(member)
   {
     let memberWeight = 0;
@@ -10,6 +10,7 @@ const analytics = {
     } else {
       memberWeight = member.startingWeight;
     }
+
     if (member.height <= 0) {
       return 0;
     } else {
@@ -36,7 +37,7 @@ const analytics = {
       return 'VERY SEVERELY OBESE';
     }
   },
-  
+
   convertHeightMetersToInches(height) {
     let convertedHeight = (height * 39.37);
     return (convertedHeight.toFixed(2));
@@ -52,25 +53,25 @@ const analytics = {
     let idealBodyWeight = 0;
     let inches = this.convertHeightMetersToInches(height);
     if (inches <= fiveFeet) {
-      if (gender === "M") {
+      if (gender === 'M') {
         idealBodyWeight = 50;
       } else {
         idealBodyWeight = 45.5;
       }
     } else {
-      if (gender === "M") {
+      if (gender === 'M') {
         idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
       } else {
         idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
       }
     }
+
     if (idealBodyWeight <= weight + 2.0 && idealBodyWeight >= weight - 2.0) {
-      return "green";
+      return 'green';
     } else {
-      return "red";
+      return 'red';
     }
   },
-
 
   trend(member) {
     let trend = 'green';
@@ -94,6 +95,7 @@ const analytics = {
     } else {
       trend = 'black';
     }
+
     list[0].trend = trend;
   },
 };

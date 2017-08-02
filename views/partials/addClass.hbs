@@ -1,0 +1,52 @@
+<section class="ui inverted brown segment">
+    <form class="ui yellow raised center aligned segment form" name="addClass" action="/trainerDashboard/addclass" method="POST">
+        <div class="three fields">
+            <div class="field">
+                <label>Class name</label>
+                <input placeholder="Class name"  name="name" required>
+            </div>
+            <div class="field">
+                <label>Description</label>
+                <textarea rows="2" name="description"></textarea>
+            </div>
+            <div class="field">
+                <label>Duration of the class</label>
+                <input placeholder="Duration of the class" type="number" name="duration" step="1" min="10" max="60" required>
+            </div>
+        </div>
+        <div class="four fields">
+            <div class="field">
+                <label>Capacity of the class</label>
+                <input placeholder="Capacity of the class" type="number" name="capacity" step="1" min="5" max="20" required>
+            </div>
+            <div class="field">
+                <label> Difficulty </label>
+                <select class="ui dropdown" name="difficulty" required>
+                    <option value="">Select</option>
+                    <option value="beginners"> beginners </option>
+                    <option value="intermediate"> intermediate</option>
+                    <option value="advanced"> advanced</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Time</label>
+                <input placeholder="Time" name="time" required>
+            </div>
+            <div class="field">
+                <label>Date</label>
+                <input placeholder="Date"  name="date" required>
+            </div>
+        </div>
+        <div class="three fields">
+            <div class="field">
+            </div>
+            <div class="field">
+                <label>Classes in the suite</label>
+                <input placeholder="Classes in the suite" type="number" name="suite" step="1" min="1" max="10" required>
+            </div>
+            <div class="field">
+            </div>
+        </div>
+        <button class="ui blue submit button"> Create a class </button>
+    </form>
+</section>

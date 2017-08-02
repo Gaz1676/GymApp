@@ -1,26 +1,36 @@
 {{> welcomeMenu id='login' }}
- 
-<section class = "ui inverted yellow segment"> 
-<section class = "ui segment">
-<div class="ui two column grid basic middle aligned segment">
-    <div class="column">
-    </div>
-    
-    <div class="column">
-    <form class="ui raised segment form" action="/authenticate" method="POST">
 
-        <h1 class="ui red center aligned header">Log-in</h1>
+<section class = "ui inverted yellow segment">
+    <section class = "ui segment">
+        <div class="ui three column grid basic middle aligned segment">
 
-            <div class="field">
-                <label>Email</label> <input placeholder="Email" name="email" required>
-            </div>
-            <div class="field">
-                <label>Password</label> <input type="password"  name="password" required>
+            <div class="column">
+                <h3>Coach Flanders<i><h5>(ned@flanders.com)</h5></i></h3>
+
+                <img class="ui small centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1501622679/ned_gfhoxf.png">
             </div>
 
-        <button class="ui blue submit button">Login</button>
+            <div class="column">
+                <form class="ui raised segment form" action="/authenticate" method="POST">
 
-    </form>
-</div>
-</section>
+                    <h1 class="ui red center aligned header">Log-in</h1>
+
+                    <div class="field">
+                        <label>Email</label> <input placeholder="Email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label> <input type="password" name="password" required>
+                    </div>
+
+                    <button class="ui blue submit button">Login</button>
+
+                </form>
+            </div>
+
+            <div class="column">
+                <img class="ui small centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1500222855/info_vit8ea.png">
+                <h3>Coach Simpson<i><h5>(marge@simpson.com)</h5></i></h3>
+            </div>
+
+    </section>
 </section>

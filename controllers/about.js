@@ -11,7 +11,7 @@ const about = {
       title: 'About JS Gym App', //-----------------------------> name of title
     };
     response.render('about', viewData); //----------------------> name of view to render (about) and sends viewData to view
-  },                                   
+  },
 };
 
 module.exports = about; //--------------------------------------> this is the object that is then exported

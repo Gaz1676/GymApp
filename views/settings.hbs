@@ -1,91 +1,92 @@
 {{> memberMenu id="settings"}}
 
 <section class="ui inverted yellow segment">
-<section class="ui segment">
-<div class="ui two column grid basic segment">
-    <div class="column left aligned">
-       
-       <section class="ui inverted brown segment">
-        <table class="ui fixed left aligned table">
-        <h2 class="ui center aligned header"> Member Details </h2>
-            <tr>
-                <td>First Name:</td>
-                <td>{{member.firstName}}</td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td>{{member.lastName}}</td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td>{{member.email}}</td>
-            </tr>
-            <tr>
-                <td>Address:</td>
-                <td> {{member.address}}</td>
-            </tr>
-            <tr>
-                <td>Gender:</td>
-                <td> {{member.gender}}</td>
-            </tr>
-            <tr>
-                <td>Height:</td>
-                <td>{{member.height}} Meters </td>
-            </tr>
-            <tr>
-                <td>Starting Weight:</td>
-                <td>{{member.startingWeight}} KGs </td>
-            </tr>
-        </table>
-        <section>
-    </div>
-    
-    <div class="column">
-        <form class="ui inverted brown raised segment form" action="/settings" method="POST">
-            <h2 class="ui center aligned header"> Update Profile</h2>
-            <div class="two fields">
-                <div class="field">
-                    <label> First Name </label>
-                    <input placeholder="first name" type="text" name="firstName" required>
-                </div>
-                <div class="field">
-                    <label> Last Name </label>
-                    <input placeholder="last name" type="text" name="lastName" required>
-                </div>
+    <section class="ui inverted brown segment">
+        <div class="ui two column grid basic segment">
+            <div class="column">
+                <form class="ui yellow raised segment form" action="/settings" method="POST">
+                    <h2 class="ui red center aligned header"> Update Profile</h2>
+                    <section class="ui inverted grey segment">
+                    <div class="two fields">
+                        <div class="field">
+                            <label> First Name </label>
+                            <input placeholder="first name" type="text" name="firstName" required>
+                        </div>
+                        <div class="field">
+                            <label> Last Name </label>
+                            <input placeholder="last name" type="text" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <input placeholder="email" type="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label>Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="field">
+                        <label>Address</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    <div class="field">
+                        <label> Gender </label>
+                        <select class="ui dropdown" name="gender">
+                            <option value=""> Select </option>
+                            <option value="male"> Male </option>
+                            <option value="female"> Female </option>
+                        </select>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label> Height </label>
+                            <input placeholder="height (metres)" type="number" step=".01" min="1" max="3" name="height" required>
+                        </div>
+                        <div class="field">
+                            <label> Starting Weight </label>
+                            <input placeholder="starting weight (kgs)" type="number" step=".01" min="35" max="250" name="startingWeight" required>
+                        </div>
+                    </div>
+                    <button class="ui blue submit button"> Update </button>
+                    </section>
+                </form>
             </div>
-            <div class="field">
-                <label>Email</label>
-                <input placeholder="email" type="email" required>
+            <div class="column left aligned">
+
+                <section class="ui yellow segment">
+                    <table class="ui inverted grey fixed left aligned table">
+                        <h2 class="ui red center aligned header"> Member Details </h2>
+                        <tr>
+                            <td>First Name:</td>
+                            <td>{{member.firstName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td>{{member.lastName}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td>{{member.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td> {{member.address}}</td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td> {{member.gender}}</td>
+                        </tr>
+                        <tr>
+                            <td>Height:</td>
+                            <td>{{member.height}} meters </td>
+                        </tr>
+                        <tr>
+                            <td>Starting Weight:</td>
+                            <td>{{member.startingWeight}} kgs </td>
+                        </tr>
+                    </table>
+                    </section>
             </div>
-            <div class="field">
-                <label>Password</label>
-                <input type="password" name="password" required>
-            </div>
-            <div class="field">
-                <label>Address</label>
-                <input type="text" name="address" required>
-            </div>
-                <div class="field">
-                <label> Gender </label>
-                <select class="ui dropdown" name="gender">
-                    <option value=""> Unspecified</option>
-                    <option value="male"> Male</option>
-                    <option value="female"> Female</option>
-                </select>
-            </div>
-            <div class="two fields">
-                <div class="field">
-                    <label> Height </label>
-                    <input placeholder="height(in Metres)" type="number" step=".01" min="1" max="3" name="height" required>
-                </div>
-                <div class="field">
-                    <label> Starting Weight </label>
-                    <input placeholder="starting weight(in KGs)" type="number" step=".01" min="35" max="250" name="startingWeight" required>
-                </div>
-            </div>
-            <button class="ui blue submit button"> Update </button>
-        </form>
-    </div>
-</div>
-</section>
+        </div>
+    </section>
 </section>

@@ -1,38 +1,35 @@
 <section class="ui inverted brown segment">
-<div class="ui basic center aligned segment">
-    <form class="ui raised segment form" name="addAssessment" action="/dashboard/addassessment"
-          method="POST">
+    <form class="ui yellow raised center aligned segment form" name="addAssessment" action="/dashboard/addassessment" method="POST">
         <div class="three fields">
             <div class="field">
                 <label> Weight </label>
-                <input placeholder="00.00kg" type="text" name="weight" required>
+                <input placeholder="00.00kg" type="number" name="weight" step=".01" min="35" max="250" required>
             </div>
             <div class="field">
                 <label> Chest </label>
-                <input placeholder="00.00cm" type="text" name="chest" required>
+                <input placeholder="00.00cm" type="number" name="chest" step=".01" min="35" required>
             </div>
             <div class="field">
                 <label> Thigh </label>
-                <input placeholder="00.00cm" type="text" name="thigh" required>
+                <input placeholder="00.00cm" type="number" name="thigh" step=".01" min="35" required>
             </div>
         </div>
         <div class="three fields">
             <div class="field">
                 <label> Upper Arm </label>
-                <input placeholder="00.00cm" type="text" name="upperArm" required>
+                <input placeholder="00.00cm" type="number" name="upperArm" step=".01" min="15" required>
             </div>
             <div class="field">
                 <label> Waist </label>
-                <input placeholder="00.00cm" type="text" name="waist" required>
+                <input placeholder="00.00cm" type="number" name="waist" step=".01" min="65" required>
             </div>
             <div class="field">
                 <label> Hips </label>
-                <input placeholder="00.00cm" type="text" name="hips" required>
+                <input placeholder="00.00cm" type="number" name="hips" step=".01" min="65" required>
             </div>
         </div>
 
         <button class="ui blue submit button"> Add Assessment</button>
 
     </form>
-</div>
 </section>

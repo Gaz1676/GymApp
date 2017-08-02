@@ -1,13 +1,12 @@
 <section class="ui inverted brown center aligned segment">
-<h3 class="ui header"> Comments </h3>
-<form class="ui section form" name="updateComment" action="/" method="POST">
-    <div>
-        <input placeholder="Update Comment..." type="text" name="comment">
-    </div>
-    <div>
-        <br>
-        <button class="ui blue submit button"> Update </button>
-    </div>
-</form>
+    <h3 class="ui header"> Comments </h3>
+    <form class="ui section form "  name="updateComment" action="/updatecomment/{{memberId}}/updatecomment/{{assessmentId}}" method="POST">
+        <div>
+            <input placeholder="Update Comment..." type="text" name="comment">
+        </div>
+        <div>
+            <br>
+            <button class="ui blue submit button"> Update </button>
+        </div>
+    </form>
 </section>
-

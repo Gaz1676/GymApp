@@ -26,6 +26,7 @@ const dashboard = {
     for (let i = 0; i < list.length; i++) { //--------------------------------------------------> if 'i' is less than list.length then increment by one
       list[i].updateComment = false; //---------------------------------------------------------> update comment equals to false
     }
+
     response.render('dashboard', viewData); //--------------------------------------------------> name of view to render 'dashboard' and sends viewData to view
   },
 
@@ -50,13 +51,13 @@ const dashboard = {
     analytics.trend(loggedInMember); //---------------------------------------------------------> gets trend from analytics of loggedInMember
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
-  
+
   removeAssessment(request, response) { //------------------------------------------------------> removeAssessment method, called when ‘/ dashboard’ request received
-  logger.info('rendering removing assessment'); //----------------------------------------------> logs message to console
-  const assessmentId = request.params.assessmentId; //------------------------------------------> gets assessmentId
-  const loggedInMember = accounts.getCurrentMember(request); //---------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
-  memberStore.removeAssessment(loggedInMember.id, assessmentId); //-----------------------------> removes assessment from member-store
-  response.redirect('/dashboard'); //-----------------------------------------------------------> redirects to (/dashboard)
+    logger.info('rendering removing assessment'); //--------------------------------------------> logs message to console
+    const assessmentId = request.params.assessmentId; //----------------------------------------> gets assessmentId
+    const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
+    memberStore.removeAssessment(loggedInMember.id, assessmentId); //---------------------------> removes assessment from member-store
+    response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 
   settings(request, response) { //--------------------------------------------------------------> settings method, called when ‘/ dashboard’ request received
@@ -71,14 +72,14 @@ const dashboard = {
   updateProfile(request, response) { //---------------------------------------------------------> updateProfile method, called when ‘/ dashboard’ request received
     logger.info('rendering updating profile'); //-----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> gets currentMember from accounts and stores it in loggedInMember
-      loggedInMember.firstName = request.body.firstName; //-------------------------------------> request fn = fn of loggedInMember
-      loggedInMember.lastName = request.body.lastName; //---------------------------------------> request ln = ln of loggedInMember
-      loggedInMember.email = request.body.email; //---------------------------------------------> request email = email of loggedInMember
-      loggedInMember.password = request.body.password; //---------------------------------------> request password = password of loggedInMember
-      loggedInMember.address = request.body.address; //-----------------------------------------> request address = address of loggedInMember
-      loggedInMember.gender = request.body.gender; //-------------------------------------------> request gender = gender of loggedInMember
-      loggedInMember.height = request.body.height; //-------------------------------------------> request height = height of loggedInMember
-      loggedInMember.startingWeight = request.body.startingWeight; //---------------------------> request startingWeight = startingWeight of loggedInMember
+    loggedInMember.firstName = request.body.firstName; //---------------------------------------> request fn = fn of loggedInMember
+    loggedInMember.lastName = request.body.lastName; //-----------------------------------------> request ln = ln of loggedInMember
+    loggedInMember.email = request.body.email; //-----------------------------------------------> request email = email of loggedInMember
+    loggedInMember.password = request.body.password; //-----------------------------------------> request password = password of loggedInMember
+    loggedInMember.address = request.body.address; //-------------------------------------------> request address = address of loggedInMember
+    loggedInMember.gender = request.body.gender; //---------------------------------------------> request gender = gender of loggedInMember
+    loggedInMember.height = request.body.height; //---------------------------------------------> request height = height of loggedInMember
+    loggedInMember.startingWeight = request.body.startingWeight; //-----------------------------> request startingWeight = startingWeight of loggedInMember
 
     memberStore.save(); //----------------------------------------------------------------------> saves new results to store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)

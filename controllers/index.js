@@ -11,7 +11,7 @@ const index = {
       title: 'Welcome to me gym app', //------------------------> name of title
     };
     response.render('index', viewData); //----------------------> name of view to render (index) and sends viewData to view
-  },                                    
+  },
 };
 
 module.exports = index; //--------------------------------------> this is the object that is then exported

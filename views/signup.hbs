@@ -1,67 +1,69 @@
 {{> welcomeMenu id="signup"}}
 
 <section class = "ui inverted yellow segment">
-<section class = "ui segment">
-<div class="ui two column grid basic middle aligned segment">
-    <div class="column">
-        <!--<img class="ui image" src="../../public/images/Sign_Up.png">-->
-    </div>
-    
-    <div class="column">
-        <form class="ui raised segment form" name="signup" action="/register" method="POST">
-            <h1 class="ui red center aligned header"> Register </h1>
+    <section class = "ui segment">
+        <div class="ui two column grid basic middle aligned segment">
 
-            <div class="two fields">
-                <div class="required field">
-                    <label> First Name </label>
-                    <input placeholder="first Name" type="text" name="firstName" required>
-                </div>
-
-                <div class="required field">
-                    <label> Last Name </label>
-                    <input placeholder="last Name" type="text" name="lastName" required>
-                </div>
+            <div class="column">
+                <h3><i>"Before I wouldn't dare DREEEEAM of fitting into this pool float"</i><i><h5>(homer@simpson.com)</h5></i></h3>
+                <img class="ui centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png">
             </div>
 
-            <div class="required field">
-                <label> Email </label>
-                <input placeholder="email" type="email"  name="email" required>
-            </div>
+            <div class="column">
+                <form class="ui raised segment form" name="signup" action="/register" method="POST">
+                    <h1 class="ui red center aligned header"> Register </h1>
 
-            <div class="required field">
-                <label> Password </label>
-                <input placeholder="password" type="password" name="password" required>
-            </div>
-            
-            <div class="required field">
-                <label> Address </label>
-                <input placeholder="address" type="text" name="address" required>
-            </div>
-          
-            <div class="field">
-                <label> Gender </label>
-                <select class="ui dropdown" name="gender">
-                    <option value=""> Unspecified </option>
-                    <option value="male"> Male</option>
-                    <option value="female"> Female</option>
-                </select>
-            </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label> First Name </label>
+                            <input placeholder="first name" type="text" name="firstName" required>
+                        </div>
 
-            <div class="two fields">
-                <div class="required field">
-                    <label> Height </label>
-                    <input placeholder="height (in metres)..." type="number" step=".01" min="1" max="3" name="height" required>
-                </div>
-                <div class="required field">
-                    <label> Starting Weight </label>
-                    <input placeholder="starting weight (in kgs)..." type="number" step=".01" min="35" max="250" name="startingWeight" required>
-                </div>
-            </div>
+                        <div class="field">
+                            <label> Last Name </label>
+                            <input placeholder="last name" type="text" name="lastName" required>
+                        </div>
+                    </div>
 
-            <button class="ui blue submit button"> Submit </button>
-            
-        </form>
-    </div>
-</div>
-</section>
+                    <div class="field">
+                        <label> Email </label>
+                        <input placeholder="email" type="email"  name="email" required>
+                    </div>
+
+                    <div class="field">
+                        <label> Password </label>
+                        <input placeholder="password" type="password" name="password" required>
+                    </div>
+
+                    <div class="field">
+                        <label> Address </label>
+                        <input placeholder="address" type="text" name="address" required>
+                    </div>
+
+                    <div class="field">
+                        <label> Gender </label>
+                        <select class="ui dropdown" name="gender">
+                            <option value=""> Select </option>
+                            <option value="male"> Male </option>
+                            <option value="female"> Female </option>
+                        </select>
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label> Height </label>
+                            <input placeholder="height (metres)..." type="number" step=".01" min="1" max="3" name="height" required>
+                        </div>
+                        <div class="field">
+                            <label> Starting Weight </label>
+                            <input placeholder="starting weight (kgs)..." type="number" step=".01" min="35" max="250" name="startingWeight" required>
+                        </div>
+                    </div>
+
+                    <button class="ui blue submit button"> Submit </button>
+
+                </form>
+            </div>
+        </div>
+    </section>
 </section>       

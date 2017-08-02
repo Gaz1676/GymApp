@@ -8,6 +8,15 @@
       "gender": "female",
       "id": "b81efe79-a0b6-4226-884e-1428526df263",
       "members": []
+    },
+    {
+      "firstName": "Ned",
+      "lastName": "Flanders",
+      "email": "ned@flanders.com",
+      "password": "secret",
+      "gender": "male",
+      "id": "b81efe79-a0b6-4226-884e-1428526df264",
+      "members": []
     }
   ]
 }

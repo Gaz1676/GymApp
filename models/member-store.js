@@ -22,7 +22,7 @@ const memberStore = {
   getMemberById(id) {
     return this.store.findOneBy(this.collection, { id: id }); //-------------> gets a single member by id 
   },
-  
+
   removeMember(id) {
     const member = this.getMemberById(id); //--------------------------------> gets member by id and stores it in member
     this.store.remove(this.collection, member); //---------------------------> the member from the collection is removed from the store
@@ -38,13 +38,13 @@ const memberStore = {
     member.assessments.unshift(assessment); //-------------------------------> loads assessment to the front of the pile
     this.store.save(); //----------------------------------------------------> saves new results to store
   },
-  
-  removeAssessment(id, assessmentId) { 
+
+  removeAssessment(id, assessmentId) {
     const member = this.getMemberById(id); //--------------------------------> get member by id and store it in member
     _.remove(member.assessments, { assessmentId: assessmentId }); //---------> remove assessment by id from members assessments
     this.store.save(); //----------------------------------------------------> saves new results to store
   },
-  
+
   getAssessmentById(memberId, assessmentId) {
     const member = this.getMemberById(memberId); //--------------------------> get member by id
     for (let i = 0; i < member.assessments.length; i++) { //-----------------> for 'i' is less than assessment.length in member, increment by one
