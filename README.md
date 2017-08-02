@@ -110,21 +110,21 @@ _First time JavaScript and Node project created in WebStorm IDE_
 - _Trainers can set goals for the Members_
 
 ### Trainers Fitness Programmes
-- _Trainers can perform CRUD on Fitness Programmes_
+- _Trainers can perform CRUD on fitness programmes_
 
-- _Trainers can set up a Fitness Programme for a Member_
+- _Trainers can set up a fitness programme for a Member_
 
-- _Trainers build Fitness Programmes by choosing from the following session types:_
+- _Trainers build fitness programmes by choosing from the following session types:_
 
      - _A scheduled class_
 
      - _A list of standard predefined session programmes_
      
-     - _A bespoke session programmes developed by the	trainer comprising a mix of:_	
+     - _A bespoke session programmes developed by the trainer comprising a mix of:_	
      
-            - Resistance Weights
+            - Resistance weights
                     
-            - Cardiovascular Exercise Equipment such as:	
+            - Cardiovascular exercise equipment such as:	
             
                      * Treadmill
                     
