@@ -6,6 +6,11 @@ _First time JavaScript and Node project created in WebStorm IDE_
                 =====================================
       login: homer@simpson.com   |     login: bart@simpson.com
       password: secret           |     password: secret
+      ---------------------------------------------------------
+      login: seymour@skinner.com |     login: edna@krabappel
+      password: secret           |     password: secret
+      
+      
       
                    TRAINERS ACCOUNT LOGIN DETAILS  
               ==========================================
