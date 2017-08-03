@@ -34,7 +34,7 @@ router.post('/authenticate', accounts.authenticate);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentId', dashboard.removeAssessment);
 router.get('/settings', dashboard.settings);
-router.post('/settings', dashboard.updateProfile); //TODO
+router.post('/settings', dashboard.updateProfile);
 router.get('/createclass', trainerDashboard.createClass);
 
 // Trainer Dashboard //
@@ -42,7 +42,7 @@ router.get('/createclass', trainerDashboard.createClass);
 router.get('/trainerDashboard/removemember/:id', trainerDashboard.removeMember);
 router.get('/trainerDashboard/viewassessments/:id', trainerDashboard.viewAssessments);
 router.get('/trainerDashboard/:id/removeassessment/:assessmentId', trainerDashboard.removeAssessment);
-router.post('/updatecomment/:memberId/updatecomment/:assessmentId', trainerDashboard.updateComment);
+router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.updateComment);
 
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass); //TODO
 router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses); //TODO
