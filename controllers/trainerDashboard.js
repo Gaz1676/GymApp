@@ -61,33 +61,33 @@ const trainerDashboard = {
   },
 
   updateComment(request, response) { //-------------------------------------------------------> updateComment method, called when ‘/ dashboard’ request received
-    logger.info('rendering updating comment'); //--------------------------------------------->
-    const memberId = request.params.id; //---------------------------------------------------->
-    const assessmentId = request.params.assessmentId; //-------------------------------------->
-    const comment = request.body.comment; //-------------------------------------------------->
-    const assessment = memberStore.getAssessmentById(memberId, assessmentId); //-------------->
-    assessment.comment = comment; //---------------------------------------------------------->
-    memberStore.save(); //-------------------------------------------------------------------->
-    response.redirect('/trainerDashboard'); //------------------------------------------------>
+    logger.info('rendering updating comment'); //---------------------------------------------> logs message to console
+    const memberId = request.params.id; //----------------------------------------------------> gets member id
+    const assessmentId = request.params.assessmentId; //--------------------------------------> gets assessment id
+    const comment = request.body.comment; //--------------------------------------------------> gets comment data
+    const assessment = memberStore.getAssessmentById(memberId, assessmentId); //--------------> gets assessment by id with member id and assessment id from store and stores it in assessment
+    assessment.comment = comment; //----------------------------------------------------------> comment equals new comment from assessment
+    memberStore.store.save(); //--------------------------------------------------------------> saves new results to store
+    response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
 
   addClass(request, response) { //------------------------------------------------------------> addClass.hbs method, called when ‘/ dashboard’ request received
-    logger.info('creating a class'); //------------------------------------------------------->
-    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------->
-    const trainerId = loggedInTrainer.id; //-------------------------------------------------->
-    const newClass = { //--------------------------------------------------------------------->
-      classId: uuid(), //--------------------------------------------------------------------->
-      name: request.body.name, //------------------------------------------------------------->
-      description: request.body.description, //----------------------------------------------->
-      duration: request.body.duration, //----------------------------------------------------->
-      capacity: request.body.capacity, //----------------------------------------------------->
-      difficulty: request.body.difficulty, //------------------------------------------------->
-      time: request.body.time, //------------------------------------------------------------->
-      date: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''), //---------------->
-      suite: request.body.suite, //----------------------------------------------------------->
+    logger.info('creating a class'); //-------------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //---------------------------> gets current logged in trainer from accounts and stores it in loggedInTrainer
+    const trainerId = loggedInTrainer.id; //--------------------------------------------------> gets id of loggedInTrainer and stores it in trainer id
+    const newClass = { //---------------------------------------------------------------------> place model in newClass object
+      classId: uuid(), //---------------------------------------------------------------------> unique class id
+      name: request.body.name, //-------------------------------------------------------------> requests name
+      description: request.body.description, //-----------------------------------------------> requests description
+      duration: request.body.duration, //-----------------------------------------------------> requests duration
+      capacity: request.body.capacity, //-----------------------------------------------------> requests capacity
+      difficulty: request.body.difficulty, //-------------------------------------------------> requests difficulty
+      time: request.body.time, //-------------------------------------------------------------> requests time
+      date: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''), //----------------> new date
+      suite: request.body.suite, //-----------------------------------------------------------> requests suite
     };
-    trainerStore.addClass(trainerId, newClass); //-------------------------------------------->
-    response.redirect('/trainerDashboard'); //------------------------------------------------>
+    trainerStore.addClass(trainerId, newClass); //--------------------------------------------> adds class to trainerStore
+    response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
 
   createClass(request, response) { //---------------------------------------------------------> classes method, called when ‘/ dashboard’ request received
@@ -100,10 +100,10 @@ const trainerDashboard = {
   },
 
   allClasses(request, response) { //----------------------------------------------------------> allClasses.hbs method, called when ‘/ dashboard’ request received
-    logger.info('rendering all classes'); //-------------------------------------------------->
-    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------->
-    const list = loggedInTrainer.createClass(); //-------------------------------------------------->
-    response.render('/allclasses'); //-------------------------------------------------------->
+    logger.info('rendering all classes'); //--------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //---------------------------> gets current trainer from accounts and store it in loggedInTrainer
+    const list = loggedInTrainer.createClass(); //--------------------------------------------> TODO
+    response.render('/allclasses'); //--------------------------------------------------------> TODO
   },
 };
 
