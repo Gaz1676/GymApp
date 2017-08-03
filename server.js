@@ -22,5 +22,5 @@ const routes = require('./routes');
 app.use('/', routes);
 
 const listener = app.listen(process.env.PORT || 4000, function () {
-  logger.info(`glitch-template-1 started on port ${listener.address().port}`);
+  logger.info(`Summer Gym Web Application started om port ${listener.address().port}`);
 });
