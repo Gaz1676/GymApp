@@ -1,8 +1,7 @@
 # Summer 2017 - Gym Web Application
 
 _First time JavaScript and Node project created in WebStorm IDE_
-
-
+***
                     MEMBERS ACCOUNT LOGIN DETAILS  
                 =====================================
       login: homer@simpson.com   |     login: bart@simpson.com
@@ -14,6 +13,11 @@ _First time JavaScript and Node project created in WebStorm IDE_
       password: secret           |     password: secret
 
 
+<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">
+  Click - Glitch -Show Live!!
+</a>
+
+***
 
 ## Gym Members
 
@@ -65,10 +69,12 @@ _First time JavaScript and Node project created in WebStorm IDE_
 ### Members Fitness Programmes
   - _A Fitness Programme comprises 5 exercises sessions_
   
-  - _Members can view	their	Fitness	Programme	and	individual sessions_
- *** 
- ***
+  - _Members can view their Fitness Programme and individual sessions_
  
+ 
+ ![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg) 
+
+
 ## Gym Trainers
 ### Assessments
 - _The Trainers can review assessments and comment on any specific assessment_
@@ -131,6 +137,10 @@ _First time JavaScript and Node project created in WebStorm IDE_
                     ** Rower
                     
                    *** Bike etc....	
+
+ ![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1500222855/info_vit8ea.png)
+
+		   
 
      
 
