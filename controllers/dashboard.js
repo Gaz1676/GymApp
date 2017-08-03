@@ -81,8 +81,8 @@ const dashboard = {
     loggedInMember.height = request.body.height; //---------------------------------------------> request height = height of loggedInMember
     loggedInMember.startingWeight = request.body.startingWeight; //-----------------------------> request startingWeight = startingWeight of loggedInMember
 
-    memberStore.save(); //----------------------------------------------------------------------> saves new results to store
-    response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
+    memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
+    response.redirect('/settings'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 };
 
