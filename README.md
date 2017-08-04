@@ -74,9 +74,14 @@ _First time JavaScript and Node project created in WebStorm IDE_
   
   - _Members can view their Fitness Programme and individual sessions_
  
+ ***
  
+ ## __Homer "Toner" Simpson__
+ 
+ _(homer@simpson.com)_
  ![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg) 
 
+***
 
 ## Gym Trainers
 ### Assessments
@@ -140,7 +145,11 @@ _First time JavaScript and Node project created in WebStorm IDE_
                     ** Rower
                     
                    *** Bike etc....	
+***
 
+## __Coach Simpson__
+
+_(marge@simpson.com)_                 
  ![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1500222855/info_vit8ea.png)
 
 		   
