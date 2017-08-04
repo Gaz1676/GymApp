@@ -1,0 +1,38 @@
+<section class="ui inverted brown segment">
+<table class="ui yellow center aligned raised celled table segment">
+    <thead>
+    <tr>
+        <th>Class Name</th>
+        <th>Description</th>
+        <th>Duration</th>
+        <th>Capacity</th>
+        <th>Difficulty</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Classes in Suite</th>
+    </tr>
+    </thead>
+
+<tbody>
+    {{#each class.classes}}
+
+    <div class="ui list">
+        <tr>
+            <td> {{name}} </td>
+            <td> {{description}} </td>
+            <td> {{duration}} </td>
+            <td> {{capacity}} </td>
+            <td> {{difficulty}} </td>
+            <td> {{time}} </td>
+            <td> {{date}} </td>
+            <td> {{suite}} </td>
+            <td>
+                <a href="/trainerDashboard/{{../id}}/removeclass/{{assessmentId}}">
+                    <i class=" large red trash icon"></i>
+                </a>
+            </td>
+    </div>
+    </tbody>
+    </table>
+    {{/each}}
+</section>
