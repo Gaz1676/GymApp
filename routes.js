@@ -4,19 +4,19 @@ const express = require('express'); //--------------------------------------> ac
 const router = express.Router();
 
 // Objects //
-//const classes = require('./controllers/classes.js');
 
 const index = require('./controllers/index.js');
 const dashboard = require('./controllers/dashboard.js');
 const trainerDashboard = require('./controllers/trainerDashboard.js'); //----> imports these objects
 const about = require('./controllers/about.js');
 const accounts = require('./controllers/accounts.js');
+const classes = require('./controllers/classes.js');
 
 // Links //
-//router.get('/classes', classes.index);
 
 router.get('/', accounts.index);
 router.get('/about', about.index);
+router.get('/classes', classes.index);
 router.get('/index', index.index); //----------------------------------------> matches the objects with each of these links
 router.get('/dashboard', dashboard.index);
 router.get('/trainerDashboard', trainerDashboard.index);
@@ -35,7 +35,6 @@ router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentId', dashboard.removeAssessment);
 router.get('/settings', dashboard.settings);
 router.post('/settings', dashboard.updateProfile);
-router.get('/createclass', trainerDashboard.createClass);
 
 // Trainer Dashboard //
 
@@ -44,7 +43,7 @@ router.get('/trainerDashboard/viewassessments/:id', trainerDashboard.viewAssessm
 router.get('/trainerDashboard/:id/removeassessment/:assessmentId', trainerDashboard.removeAssessment);
 router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.updateComment);
 
-router.post('/trainerDashboard/addclass', trainerDashboard.addClass); //TODO
-router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses); //TODO
+router.post('/trainerDashboard/addClass', trainerDashboard.addClass); //TODO -- need to create a page to view new classes
+router.get('./trainerDashboard/allClasses', trainerDashboard.allClasses); //TODO
 
 module.exports = router;
