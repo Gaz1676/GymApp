@@ -1,0 +1,59 @@
+{
+  "classes": [
+    {
+      "classId": "e04b9828-7164-407f-bf60-bb78b00e52de",
+      "name": "Cindy",
+      "description": "ihbcyw",
+      "duration": "10",
+      "capacity": "5",
+      "difficulty": "intermediate",
+      "time": "13:30",
+      "date": "2017-08-04 15:34:23",
+      "suite": "4"
+    },
+    {
+      "classId": "30e9f89a-58f4-4393-80b9-c4297dc65306",
+      "name": "hey",
+      "description": "hhhh",
+      "duration": "10",
+      "capacity": "5",
+      "difficulty": "beginners",
+      "time": "13:30",
+      "date": "12/04/2018",
+      "suite": "1"
+    },
+    {
+      "classId": "136da145-c057-4ef4-947c-1394d86e7d64",
+      "name": "hh",
+      "description": "jj",
+      "duration": "10",
+      "capacity": "5",
+      "difficulty": "beginners",
+      "time": "14:30",
+      "date": "03/08/2017",
+      "suite": "5"
+    },
+    {
+      "classId": "c47e3d8e-32bd-4a2c-8874-44cfd3fcb7bf",
+      "name": "ii",
+      "description": "ii",
+      "duration": "10",
+      "capacity": "9",
+      "difficulty": "advanced",
+      "time": "13:30",
+      "date": "11/06/2018",
+      "suite": "8"
+    },
+    {
+      "classId": "19635075-bf75-4952-9962-64263f8a22bf",
+      "name": "hh",
+      "description": "hh",
+      "duration": "10",
+      "capacity": "5",
+      "difficulty": "beginners",
+      "time": "13:30",
+      "date": "12/04/2018",
+      "suite": "1"
+    }
+  ]
+}
