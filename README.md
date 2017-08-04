@@ -76,10 +76,11 @@ _First time JavaScript and Node project created in WebStorm IDE_
  
  ***
  
- ## __Homer "Toner" Simpson__
- 
- _(homer@simpson.com)_
- ![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg) 
+## __Homer "Toner" Simpson__ 
+_(homer@simpson.com)_
+
+
+![alternate text](http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg) 
 
 ***
 
