@@ -1,17 +1,6 @@
 {
   "classes": [
     {
-      "classId": "e04b9828-7164-407f-bf60-bb78b00e52de",
-      "name": "Cindy",
-      "description": "ihbcyw",
-      "duration": "10",
-      "capacity": "5",
-      "difficulty": "intermediate",
-      "time": "13:30",
-      "date": "2017-08-04 15:34:23",
-      "suite": "4"
-    },
-    {
       "classId": "30e9f89a-58f4-4393-80b9-c4297dc65306",
       "name": "hey",
       "description": "hhhh",
