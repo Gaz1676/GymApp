@@ -6,6 +6,11 @@ _First time JavaScript and Node project created in WebStorm IDE_
                 =====================================
       login: homer@simpson.com   |     login: bart@simpson.com
       password: secret           |     password: secret
+      ---------------------------------------------------------
+      login: seymour@skinner.com |     login: edna@krabappel
+      password: secret           |     password: secret
+      
+      
       
                    TRAINERS ACCOUNT LOGIN DETAILS  
               ==========================================
@@ -13,9 +18,7 @@ _First time JavaScript and Node project created in WebStorm IDE_
       password: secret           |     password: secret
 
 
-<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">
-  Click - Glitch -Show Live!!
-</a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
 
 ***
 
