@@ -31,12 +31,6 @@ const trainerStore = {
     trainer.members.push(members); //---------------------------------------------> loads members to the end of pile
     this.store.save(); //---------------------------------------------------------> saves new results to store
   },
-
-  addClass(id, classes) {
-    const trainer = this.getTrainerById(id); //-----------------------------------> get trainer by id and store it in trainer
-    trainer.createClass(classes); //----------------------------------------------> loads classes to the front of the pile
-    this.store.save(); //---------------------------------------------------------> saves new results to store
-  },
 };
 
 module.exports = trainerStore; //-------------------------------------------------> this is the object that is then exported

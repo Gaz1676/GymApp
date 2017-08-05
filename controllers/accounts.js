@@ -69,6 +69,7 @@ const accounts = {
     const trainerEmail = request.cookies.trainer; //-------------------------> requests cookies of trainer and stores them in trainerEmail
     return trainerStore.getTrainerByEmail(trainerEmail); //------------------> returns a valid trainer by email search if session exists
   },
+
 };
 
 module.exports = accounts; //------------------------------------------------> this is the object that is then exported

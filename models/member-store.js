@@ -20,7 +20,7 @@ const memberStore = {
   },
 
   getMemberById(id) {
-    return this.store.findOneBy(this.collection, { id: id }); //-------------> gets a single member by id 
+    return this.store.findOneBy(this.collection, { id: id }); //-------------> gets a single member by id
   },
 
   removeMember(id) {
@@ -30,7 +30,7 @@ const memberStore = {
   },
 
   getMemberByEmail(email) {
-    return this.store.findOneBy(this.collection, { email: email }); //-------> gets a single member by email 
+    return this.store.findOneBy(this.collection, { email: email }); //-------> gets a single member by email
   },
 
   addAssessment(id, assessment) {

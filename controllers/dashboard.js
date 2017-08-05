@@ -45,7 +45,7 @@ const dashboard = {
       hips: request.body.hips, //---------------------------------------------------------------> hips
       trend: '', //-----------------------------------------------------------------------------> trend
       comment: '', //---------------------------------------------------------------------------> comment
-      updateComment: false, //------------------------------------------------------------------> saved as false if no comment Update
+      updateComment: false, //------------------------------------------------------------------> saved as false if trainer has not commented on assessment
     };
     memberStore.addAssessment(memberId, newAssessment); //--------------------------------------> adds assessment to member-store
     analytics.trend(loggedInMember); //---------------------------------------------------------> gets trend from analytics of loggedInMember
@@ -54,7 +54,7 @@ const dashboard = {
 
   removeAssessment(request, response) { //------------------------------------------------------> removeAssessment method, called when ‘/ dashboard’ request received
     logger.info('rendering removing assessment'); //--------------------------------------------> logs message to console
-    const assessmentId = request.params.assessmentId; //----------------------------------------> gets assessmentId
+    const assessmentId = request.params.assessmentId; //----------------------------------------> gets assessmentId and stores in assessmentId
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
     memberStore.removeAssessment(loggedInMember.id, assessmentId); //---------------------------> removes assessment from member-store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
@@ -82,7 +82,7 @@ const dashboard = {
     loggedInMember.startingWeight = request.body.startingWeight; //-----------------------------> request startingWeight = startingWeight of loggedInMember
 
     memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
-    response.redirect('/settings'); //---------------------------------------------------------> redirects to (/dashboard)
+    response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 };
 

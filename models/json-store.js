@@ -46,4 +46,3 @@ class JsonStore {
 }
 
 module.exports = JsonStore;
-
