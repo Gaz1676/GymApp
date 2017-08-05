@@ -10,28 +10,6 @@
       "time": "12:00",
       "date": "10/09/2017",
       "suite": "6"
-    },
-    {
-      "classId": "5ba4cd0f-10c5-44d3-9eb0-938dc9dfa2bb",
-      "name": "hh",
-      "description": "h",
-      "duration": "10mins",
-      "capacity": "5",
-      "difficulty": "intermediate",
-      "time": "10:00",
-      "date": "11/10/2017",
-      "suite": "1"
-    },
-    {
-      "classId": "bb2627c5-39bb-498b-aaec-f6a09e405dae",
-      "name": "ii",
-      "description": "ii",
-      "duration": "10mins",
-      "capacity": "5",
-      "difficulty": "advanced",
-      "time": "11:00",
-      "date": "12/08/2017",
-      "suite": "4"
     }
   ]
 }
