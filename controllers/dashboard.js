@@ -78,8 +78,8 @@ const dashboard = {
     loggedInMember.password = request.body.password; //-----------------------------------------> request password = password of loggedInMember
     loggedInMember.address = request.body.address; //-------------------------------------------> request address = address of loggedInMember
     loggedInMember.gender = request.body.gender; //---------------------------------------------> request gender = gender of loggedInMember
-    loggedInMember.height = request.body.height; //---------------------------------------------> request height = height of loggedInMember
-    loggedInMember.startingWeight = request.body.startingWeight; //-----------------------------> request startingWeight = startingWeight of loggedInMember
+    loggedInMember.height = Number(request.body.height); //---------------------------------------------> request height = height of loggedInMember
+    loggedInMember.startingWeight = Number(request.body.startingWeight); //-----------------------------> request startingWeight = startingWeight of loggedInMember
 
     memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)

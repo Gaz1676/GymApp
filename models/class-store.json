@@ -1,15 +1,30 @@
 {
   "classes": [
     {
-      "classId": "8797b473-e292-4ecd-b8d2-89fb176f73b2",
-      "name": "Cindy",
-      "description": "5 pull ups,  10 sit ups,  15 squats",
+      "trainerEmail": "marge@simpson.com",
+      "trainerId": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classId": "b236a5a9-cbc9-4792-83ba-72a601423267",
+      "name": "Nicole",
+      "description": "Max pull ups , 400m run, repeat process",
       "duration": "20",
-      "capacity": "20",
-      "difficulty": "intermediate",
-      "time": "12:00",
-      "date": "10/09/2017",
-      "suite": "6"
+      "capacity": "10",
+      "difficulty": "advanced",
+      "time": "11:00",
+      "date": "11/11/2017",
+      "suite": "3"
+    },
+    {
+      "trainerEmail": "marge@simpson.com",
+      "trainerId": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classId": "3e0a1039-3483-4e7f-8717-a8b5bbb32c2a",
+      "name": "t",
+      "description": "t",
+      "duration": 10,
+      "capacity": 5,
+      "difficulty": "beginners",
+      "time": 3,
+      "date": 1,
+      "suite": 2
     }
   ]
 }

@@ -7,35 +7,35 @@
       "password": "secret",
       "address": "742 Evergreen Terrace",
       "gender": "male",
-      "height": "1.7",
-      "startingWeight": "62",
+      "height": 1.7,
+      "startingWeight": 68,
       "id": "6e100050-2f37-493d-a76d-74e1b6384a31",
       "assessments": [
         {
-          "assessmentId": "c40eb834-5ad1-495e-8e20-74e285fc31a1",
-          "date": "2017-08-04 11:18:47",
-          "weight": "50",
-          "chest": "35",
-          "thigh": "35",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
-          "trend": "",
-          "comment": "Excellent work",
-          "updateComment": true
+          "assessmentId": "e1212f76-6089-4afa-8e4a-2449aef95be0",
+          "date": "2017-08-05 20:18:22",
+          "weight": 61,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "You're really dingdongdoodelydoing so good",
+          "updateComment": false
         },
         {
-          "assessmentId": "cf3a9a24-919b-4892-9ac4-0822700859f0",
-          "date": "2017-08-01 17:25:52",
-          "weight": "99",
-          "chest": "99",
-          "thigh": "99",
-          "upperArm": "99",
-          "waist": "99",
-          "hips": "99",
+          "assessmentId": "4c2b3440-f1f9-4e0e-b645-5629dbd5646c",
+          "date": "2017-08-05 20:18:09",
+          "weight": 68,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
           "trend": "red",
-          "comment": "Ah hey now???",
-          "updateComment": true
+          "comment": "Doind great Homer!!",
+          "updateComment": false
         }
       ]
     },
@@ -51,30 +51,30 @@
       "id": "f368ec4a-4370-4155-a6c9-dfc77c63f7be",
       "assessments": [
         {
-          "assessmentId": "ffdf772a-e421-4000-8f02-d42b38915a9d",
-          "date": "2017-08-03 22:41:01",
-          "weight": "43",
-          "chest": "35",
-          "thigh": "35",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
+          "assessmentId": "f1698fc0-70df-4a4c-8fe3-8022d989fae6",
+          "date": "2017-08-05 20:18:59",
+          "weight": 42,
+          "chest": 35.01,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
           "trend": "red",
-          "comment": "Keep it going",
-          "updateComment": true
+          "comment": "",
+          "updateComment": false
         },
         {
-          "assessmentId": "e3de7f72-a6c8-435c-acbd-dfc564963c97",
-          "date": "2017-08-03 22:40:46",
-          "weight": "48",
-          "chest": "35",
-          "thigh": "35",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
+          "assessmentId": "2ea4c784-9efd-4e08-b2ec-6a187b2038e3",
+          "date": "2017-08-05 20:18:49",
+          "weight": 43,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
           "trend": "green",
-          "comment": "Excellent young Bart",
-          "updateComment": true
+          "comment": "",
+          "updateComment": false
         }
       ]
     },
@@ -90,30 +90,43 @@
       "id": "d46c8024-4c16-49c4-a3c9-f72614d14020",
       "assessments": [
         {
-          "assessmentId": "1aadbe3a-498c-4c4e-b7de-86206db4f0fa",
-          "date": "2017-08-03 22:42:09",
-          "weight": "78",
+          "assessmentId": "f942fef1-50d4-4c9a-8bca-401f4dab781f",
+          "date": "2017-08-05 21:41:16",
+          "weight": "63",
           "chest": "35",
           "thigh": "35",
           "upperArm": "15",
           "waist": "65",
           "hips": "65",
           "trend": "",
-          "comment": "Good improvement",
-          "updateComment": true
+          "comment": "",
+          "updateComment": false
         },
         {
-          "assessmentId": "00813c1b-4365-4469-96c0-332d324efaf3",
-          "date": "2017-08-03 22:41:58",
-          "weight": "88",
+          "assessmentId": "41b62436-6212-4bc3-ae2a-2b2d4d5201dc",
+          "date": "2017-08-05 21:40:55",
+          "weight": "61",
           "chest": "35",
           "thigh": "35",
           "upperArm": "15",
           "waist": "65",
           "hips": "65",
           "trend": "green",
-          "comment": "Bit on the pudgy side there SIZEmour!!!",
-          "updateComment": true
+          "comment": "",
+          "updateComment": false
+        },
+        {
+          "assessmentId": "47b36e03-468c-47b0-a1f8-ede2fb9099f5",
+          "date": "2017-08-05 20:19:40",
+          "weight": 76,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "",
+          "updateComment": false
         }
       ]
     },
@@ -129,17 +142,17 @@
       "id": "0d376909-1f97-4895-bef0-bc60d3e9165f",
       "assessments": [
         {
-          "assessmentId": "c12d5ca3-6485-4f80-8247-8e7e1322bcbc",
-          "date": "2017-08-01 20:53:55",
-          "weight": "67",
-          "chest": "37",
-          "thigh": "48",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
-          "trend": "",
-          "comment": "Can lose a bit more Edna",
-          "updateComment": true
+          "assessmentId": "d5238b45-4c82-4dee-959e-49bb12392f5f",
+          "date": "2017-08-05 20:20:20",
+          "weight": 59,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "",
+          "updateComment": false
         }
       ]
     }

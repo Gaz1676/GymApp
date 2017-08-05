@@ -23,7 +23,7 @@ const accounts = {
   },
 
   logout(request, response) { //---------------------------------------------> logout method called when ‘/ accounts’ request received
-    response.cookie('member', ''); //----------------------------------------> creates a cookie called gym
+    response.cookie('member', ''); //----------------------------------------> creates a cookie called member
     response.redirect('/'); //-----------------------------------------------> redirect to (/)
   },
 

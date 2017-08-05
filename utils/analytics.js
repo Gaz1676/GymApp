@@ -2,8 +2,7 @@ const accounts = require('../controllers/accounts');
 
 const analytics = {
 
-  calculateBMI(member)
-  {
+  calculateBMI(member) {
     let memberWeight = 0;
     if (member.assessments.length > 0) {
       memberWeight = member.assessments[0].weight;
@@ -48,25 +47,25 @@ const analytics = {
     return (convertedWeight.toFixed(2));
   },
 
-  idealBodyWeight(gender, height, weight) {
+  idealBodyWeight(member) {
     const fiveFeet = 60.0;
     let idealBodyWeight = 0;
-    let inches = this.convertHeightMetersToInches(height);
+    let inches = this.convertHeightMetersToInches(member.height);
     if (inches <= fiveFeet) {
-      if (gender === 'M') {
+      if (member.gender === 'male') {
         idealBodyWeight = 50;
       } else {
         idealBodyWeight = 45.5;
       }
     } else {
-      if (gender === 'M') {
+      if (member.gender === 'male') {
         idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
       } else {
         idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
       }
     }
 
-    if (idealBodyWeight <= weight + 2.0 && idealBodyWeight >= weight - 2.0) {
+    if (idealBodyWeight <= member.weight + 2.0 && idealBodyWeight >= member.weight - 2.0) {
       return 'green';
     } else {
       return 'red';
