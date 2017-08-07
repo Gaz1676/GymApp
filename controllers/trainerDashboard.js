@@ -63,6 +63,8 @@ const trainerDashboard = {
     response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
 
+  // --------- TODO ---------- //
+
   removeClass(request, response) { //---------------------------------------------------------> removeClass method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering removing class'); //-----------------------------------------------> log message to console
     const classId = request.params.id; //-----------------------------------------------------> gets class id
@@ -96,8 +98,8 @@ const trainerDashboard = {
       duration: Number(request.body.duration), //---------------------------------------------> requests duration
       capacity: Number(request.body.capacity), //---------------------------------------------> requests capacity
       difficulty: request.body.difficulty, //-------------------------------------------------> requests difficulty
-      time: Number(request.body.time), //-----------------------------------------------------> requests time
-      date: Number(request.body.date), //-----------------------------------------------------> new date
+      time: request.body.time, //-----------------------------------------------------> requests time
+      date: request.body.date, //-----------------------------------------------------> new date
       suite: Number(request.body.suite), //---------------------------------------------------> requests suite
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
@@ -121,8 +123,6 @@ const trainerDashboard = {
     classStore.store.save(); //---------------------------------------------------------------> saves new results to store
     response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
-
-  // --------- TODO ---------- //
 
   allClasses(request, response) { //----------------------------------------------------------> allClasses method, called when ‘/ trainerDashboard’ request received
     const trainer = accounts.getCurrentTrainer(request); //-----------------------------------> gets current trainer from accounts and stores it in trainer

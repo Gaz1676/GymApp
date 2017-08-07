@@ -3,28 +3,28 @@
     {
       "trainerEmail": "marge@simpson.com",
       "trainerId": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classId": "b236a5a9-cbc9-4792-83ba-72a601423267",
-      "name": "Nicole",
-      "description": "Max pull ups , 400m run, repeat process",
-      "duration": "20",
-      "capacity": "10",
-      "difficulty": "advanced",
-      "time": "11:00",
-      "date": "11/11/2017",
-      "suite": "3"
+      "classId": "3bcd1f07-9259-41f5-ba98-51ed60c45311",
+      "name": "Henry",
+      "description": "50 Double unders  ---  10 Overhead Squats (40 kgs)",
+      "duration": 7,
+      "capacity": 15,
+      "difficulty": "Advanced",
+      "time": "12:00",
+      "date": "07/08/2017",
+      "suite": 5
     },
     {
       "trainerEmail": "marge@simpson.com",
       "trainerId": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classId": "3e0a1039-3483-4e7f-8717-a8b5bbb32c2a",
-      "name": "t",
-      "description": "t",
-      "duration": 10,
-      "capacity": 5,
-      "difficulty": "beginners",
-      "time": 3,
-      "date": 1,
-      "suite": 2
+      "classId": "b5d95e22-987c-4555-8d94-d88303ee9877",
+      "name": "Nicole",
+      "description": "Max Pull Ups  ---  400m Run  ---  Repeat",
+      "duration": 20,
+      "capacity": 20,
+      "difficulty": "Intermediate",
+      "time": "11:00",
+      "date": "07/08/2017",
+      "suite": 5
     }
   ]
 }

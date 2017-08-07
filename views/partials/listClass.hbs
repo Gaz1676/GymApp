@@ -1,38 +1,39 @@
-<section class="ui inverted brown segment">
-<table class="ui yellow center aligned raised celled table segment">
-    <thead>
-    <tr>
-        <th>Class Name</th>
-        <th>Description</th>
-        <th>Duration</th>
-        <th>Capacity</th>
-        <th>Difficulty</th>
-        <th>Time</th>
-        <th>Date</th>
-        <th>Classes in Suite</th>
-    </tr>
-    </thead>
+<section class="ui inverted brown center aligned segment">
 
-<tbody>
-    {{#each class.classes}}
-
-    <div class="ui list">
+    <table class="ui yellow center aligned raised celled table segment">
+        <thead>
         <tr>
-            <td> {{name}} </td>
-            <td> {{description}} </td>
-            <td> {{duration}} </td>
-            <td> {{capacity}} </td>
-            <td> {{difficulty}} </td>
-            <td> {{time}} </td>
-            <td> {{date}} </td>
-            <td> {{suite}} </td>
-            <td>
-                <a href="/trainerDashboard/{{../id}}/removeclass/{{assessmentId}}">
-                    <i class=" large red trash icon"></i>
-                </a>
-            </td>
-    </div>
-    </tbody>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th>Capacity</th>
+            <th>Difficulty</th>
+            <th>Start Date</th>
+            <th>Start Time</th>
+            <th>Classes in Suite</th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each classList}}
+            <div class="ui list">
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{duration}}</td>
+                    <td>{{capacity}}</td>
+                    <td>{{difficulty}}</td>
+                    <td>{{date}}</td>
+                    <td>{{time}}</td>
+                    <td>{{suite}}</td>
+                    <td>
+                        <a href="/trainerDashboard/removeclass/{{classId}}">
+                            <i class=" large red trash icon"></i>
+                        </a>
+                    </td>
+            </div>
+        {{/each}}
+        </tbody>
     </table>
-    {{/each}}
 </section>

@@ -23,19 +23,10 @@ const classStore = {
   },
 
   removeClass(id) {
-    const scheduledClass = this.getClassById(id); //-------------------------> gets class by id and stores it in scheduledClass
-    this.store.remove(this.collection, scheduledClass); //-------------------> the scheduledClass from the collection is removed from the store
+    const classes = this.getClassById(id); //--------------------------------> gets class by id and stores it in classes
+    this.store.remove(this.collection, classes); //--------------------------> the classes from the collection is removed from the store
     this.store.save(); //----------------------------------------------------> saves new results to store
-  },
-
-  getClassById(memberId, id) {
-    const member = this.getMemberById(id); //--------------------------------> get member by id
-    for (let i = 0; i < member.classes.length; i++) { //---------------------> for 'i' is less than classes.length in member, increment by one
-      if (member.classes[i].id === id) { //----------------------------------> if class id is equal to one found then
-        return member.classes[i]; //-----------------------------------------> return that class from the classes in member
-      }
-    }
   },
 };
 
-module.exports = classStore; //---------------------------------------------> this is the object that is then exported
+module.exports = classStore; //----------------------------------------------> this is the object that is then exported

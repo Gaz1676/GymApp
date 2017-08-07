@@ -60,8 +60,8 @@
           "waist": 65,
           "hips": 65,
           "trend": "red",
-          "comment": "",
-          "updateComment": false
+          "comment": "Excellent dude!!!",
+          "updateComment": true
         },
         {
           "assessmentId": "2ea4c784-9efd-4e08-b2ec-6a187b2038e3",
@@ -73,8 +73,8 @@
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": "",
-          "updateComment": false
+          "comment": "Awesome",
+          "updateComment": true
         }
       ]
     },
@@ -99,21 +99,8 @@
           "waist": "65",
           "hips": "65",
           "trend": "",
-          "comment": "",
-          "updateComment": false
-        },
-        {
-          "assessmentId": "41b62436-6212-4bc3-ae2a-2b2d4d5201dc",
-          "date": "2017-08-05 21:40:55",
-          "weight": "61",
-          "chest": "35",
-          "thigh": "35",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
-          "trend": "green",
-          "comment": "",
-          "updateComment": false
+          "comment": "Good loss",
+          "updateComment": true
         },
         {
           "assessmentId": "47b36e03-468c-47b0-a1f8-ede2fb9099f5",
@@ -125,8 +112,8 @@
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": "",
-          "updateComment": false
+          "comment": "Little bit of a belly there Seymour",
+          "updateComment": true
         }
       ]
     },
@@ -151,8 +138,8 @@
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": "",
-          "updateComment": false
+          "comment": "Keep going Edna",
+          "updateComment": true
         }
       ]
     }

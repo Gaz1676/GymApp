@@ -3,16 +3,16 @@
         <table class="ui fixed yellow center aligned table">
             <thead>
             <tr>
-                <th> Date </th>
-                <th> Weight </th>
-                <th> Chest </th>
-                <th> Thigh </th>
-                <th> Upper Arm </th>
-                <th> Waist </th>
-                <th> Hips </th>
-                <th> Trend </th>
-                <th> Comment</th>
-                <th> Delete </th>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Chest</th>
+                <th>Thigh</th>
+                <th>Upper Arm</th>
+                <th>Waist</th>
+                <th>Hips</th>
+                <th>Trend</th>
+                <th>Comment</th>
+                <th>Delete</th>
             </tr>
             </thead>
 
@@ -51,13 +51,14 @@
         {{#if updateComment}}
             <section class="ui center aligned section">
                 <h4> Comment </h4>
-                <form class="ui section form" action="/assessment/{{../id}}/updatecomment/{{assessmentId}}" method="POST">
+                <form class="ui section form" action="/assessment/{{../id}}/updatecomment/{{assessmentId}}"
+                      method="POST">
                     <div>
                         <input placeholder="Insert comment..." name="comment" required>
                     </div>
                     <div>
                         <br>
-                        <button class="ui blue submit button"> Update </button>
+                        <button class="ui blue submit button"> Update</button>
                     </div>
                 </form>
             </section>

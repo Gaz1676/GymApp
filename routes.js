@@ -43,8 +43,9 @@ router.get('/trainerDashboard/viewassessments/:id', trainerDashboard.viewAssessm
 router.get('/trainerDashboard/:id/removeassessment/:assessmentId', trainerDashboard.removeAssessment);
 router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.updateComment);
 
-router.post('/trainerDashboard/addclass', trainerDashboard.addClass); //TODO -- need to create a page to view new classes
-router.get('./trainerDashboard/allClasses', trainerDashboard.allClasses); //TODO
-router.post('/trainerDashboard/:id/updateClass', trainerDashboard.updateClass); //TODO
+router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
+router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses);
+router.post('/trainerDashboard/:id/updateclass', trainerDashboard.updateClass); //TODO
+router.get('/trainerDashboard/removeclass/:classId', trainerDashboard.removeClass); //TODO
 
 module.exports = router;
