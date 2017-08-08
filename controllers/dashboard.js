@@ -3,6 +3,7 @@
 const logger = require('../utils/logger.js'); //------------------------------------------------> imports logger
 const accounts = require('./accounts.js'); //---------------------------------------------------> imports accounts
 const memberStore = require('../models/member-store.js'); //------------------------------------> imports member-store
+const classStore = require('../models/class-store.js'); //--------------------------------------> imports class-store
 const uuid = require('uuid'); //----------------------------------------------------------------> imports uuid
 const analytics = require('../utils/analytics.js'); //------------------------------------------> imports analytics
 
@@ -83,6 +84,17 @@ const dashboard = {
 
     memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
+  },
+
+  allMemberClasses(request, response) {
+    const member = accounts.getCurrentMember(request); //--------------------------------------> gets currentMember from accounts and stores it in member
+    const classList = classStore.getAllClasses(); //-------------------------------------------> gets all classes from classStore and stores it in classList
+    const viewData = { //----------------------------------------------------------------------> place model in viewData object
+      member: member, //-----------------------------------------------------------------------> member
+      classList: classList, //-----------------------------------------------------------------> classList
+    };
+    logger.info('rendering all classes'); //---------------------------------------------------> logs message to console
+    response.render('allMemberClasses', viewData); //-------------------------------------------> name of view to render 'allClasses' and sends viewData to view
   },
 };
 
