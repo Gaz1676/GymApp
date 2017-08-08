@@ -33,6 +33,7 @@ router.post('/authenticate', accounts.authenticate);
 
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentId', dashboard.removeAssessment);
+router.get('/dashboard/allmemberclasses', dashboard.allMemberClasses);
 router.get('/settings', dashboard.settings);
 router.post('/settings', dashboard.updateProfile);
 
@@ -45,7 +46,7 @@ router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.upda
 
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses);
-router.post('/trainerDashboard/:id/updateclass', trainerDashboard.updateClass); //TODO
+router.post('/trainerDashboard/updateclass/:classId', trainerDashboard.updateClass); //TODO
 router.get('/trainerDashboard/removeclass/:classId', trainerDashboard.removeClass); //TODO
 
 module.exports = router;
