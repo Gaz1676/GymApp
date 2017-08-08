@@ -26,7 +26,7 @@ const trainerStore = {
     return this.store.findOneBy(this.collection, { email: email }); //------------> gets a single trainer by email 
   },
 
-  addAllMembers(id, members) {
+  addMemberList(id, members) {
     const trainer = this.getTrainerById(id); //-----------------------------------> gets trainer by id and stores it in trainer
     trainer.members.push(members); //---------------------------------------------> loads members to the end of pile
     this.store.save(); //---------------------------------------------------------> saves new results to store
