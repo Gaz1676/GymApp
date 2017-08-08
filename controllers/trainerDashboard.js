@@ -4,8 +4,7 @@
 const logger = require('../utils/logger'); //-------------------------------------------------> imports logger
 const memberStore = require('../models/member-store.js'); //----------------------------------> imports member-store
 const accounts = require('./accounts.js'); //-------------------------------------------------> imports accounts
-const trainerStore = require('../models/trainer-store.js'); //--------------------------------> imports trainer-store
-const classStore = require('../models/class-store.js');
+const classStore = require('../models/class-store.js'); //------------------------------------> imports class-store
 const analytics = require('../utils/analytics.js'); //----------------------------------------> imports analytics
 const uuid = require('uuid'); //--------------------------------------------------------------> imports uuid
 
@@ -67,10 +66,10 @@ const trainerDashboard = {
 
   removeClass(request, response) { //---------------------------------------------------------> removeClass method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering removing class'); //-----------------------------------------------> log message to console
-    const classId = request.params.id; //-----------------------------------------------------> gets class id
-    logger.debug(`Deleting ${classStore.className} ${classId}`); //---------------------------> logs message to console
-    classStore.removeClass(classId); //-------------------------------------------------------> remove class by id
-    response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
+    const classId = request.params.classId; //------------------------------------------------> gets class id
+    logger.debug(`Deleting ${classStore.classId}`); //---------------------------------------------------> logs message to console
+    classStore.removeClass(classId); //-------------------------------------------------------> remove class from class-store
+    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
   },
 
   updateComment(request, response) { //-------------------------------------------------------> updateComment method, called when ‘/ trainerDashboard’ request received
@@ -87,10 +86,8 @@ const trainerDashboard = {
   addClass(request, response) { //------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('creating a class'); //-------------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //---------------------------> gets current logged in trainer from accounts and stores it in loggedInTrainer
-    const trainerEmail = loggedInTrainer.email; //--------------------------------------------> gets email of loggedInTrainer and stores it in trainer email
     const trainerId = loggedInTrainer.id; //--------------------------------------------------> gets id of loggedInTrainer and stores it in trainer id
     const newClass = { //---------------------------------------------------------------------> place model in newClass object
-      trainerEmail: trainerEmail, //----------------------------------------------------------> trainer email
       trainerId: trainerId, //----------------------------------------------------------------> trainer id
       classId: uuid(), //---------------------------------------------------------------------> unique class id
       name: request.body.name, //-------------------------------------------------------------> requests name
@@ -98,12 +95,12 @@ const trainerDashboard = {
       duration: Number(request.body.duration), //---------------------------------------------> requests duration
       capacity: Number(request.body.capacity), //---------------------------------------------> requests capacity
       difficulty: request.body.difficulty, //-------------------------------------------------> requests difficulty
-      time: request.body.time, //-----------------------------------------------------> requests time
-      date: request.body.date, //-----------------------------------------------------> new date
+      time: request.body.time, //-------------------------------------------------------------> requests time
+      date: request.body.date, //-------------------------------------------------------------> new date
       suite: Number(request.body.suite), //---------------------------------------------------> requests suite
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
-    response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
+    response.redirect('/trainerDashboard/allClasses'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
 
   // --------- TODO ---------- //
@@ -116,10 +113,10 @@ const trainerDashboard = {
     classes.duration = Number(request.body.duration); //--------------------------------------> class duration
     classes.capacity = Number(request.body.capacity); //--------------------------------------> class capacity
     classes.difficulty = request.body.difficulty; //------------------------------------------> class difficulty
-    classes.time = Number(request.body.time); //----------------------------------------------> class time
-    classes.date = Number(request.body.date); //----------------------------------------------> class date
+    classes.time = request.body.time; //------------------------------------------------------> class time
+    classes.date = request.body.date; //------------------------------------------------------> class date
     classes.suite = Number(request.body.suite); //--------------------------------------------> class suite
-    logger.debug('updating class ' + request.params.id); //-----------------------------------> logs message to console
+
     classStore.store.save(); //---------------------------------------------------------------> saves new results to store
     response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
