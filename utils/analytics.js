@@ -51,6 +51,15 @@ const analytics = {
     const fiveFeet = 60.0;
     let idealBodyWeight = 0;
     let inches = this.convertHeightMetersToInches(member.height);
+    let weight;
+    const list = member.assessments;
+
+    if (member.assessments.length > 0) {
+      weight = list[0].weight;
+    } else {
+      weight = member.startingWeight;
+    }
+
     if (inches <= fiveFeet) {
       if (member.gender === 'male') {
         idealBodyWeight = 50;
@@ -59,16 +68,23 @@ const analytics = {
       }
     } else {
       if (member.gender === 'male') {
-        idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
+        idealBodyWeight = 50 + (2.3 * (inches - fiveFeet));
       } else {
-        idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
+        idealBodyWeight = 45.5 + (2.3 * (inches - fiveFeet));
       }
     }
 
-    if (idealBodyWeight <= member.weight + 2.0 && idealBodyWeight >= member.weight - 2.0) {
-      return 'green';
+    if (list.length > 0) {
+      const latestAssessment = list[0];
+      if ((latestAssessment.weight <= (idealBodyWeight + 2)) && (latestAssessment.weight >= (idealBodyWeight - 2))) {
+        return 'green';
+      } else { return 'red';
+      }
     } else {
-      return 'red';
+      if ((member.startingWeight <= (idealBodyWeight + 2)) && (member.startingWeight >= (idealBodyWeight - 2))) {
+        return 'green';
+      } else { return 'red';
+      }
     }
   },
 
