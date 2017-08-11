@@ -8,10 +8,11 @@
             <th>Duration</th>
             <th>Capacity</th>
             <th>Difficulty</th>
-            <th>Start Date</th>
-            <th>Start Time</th>
-            <th>Classes in Suite</th>
-            <th></th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>No. Classes</th>
+            <th>Edit</th>
+            <th>Remove</th>
         </tr>
         </thead>
 
@@ -21,14 +22,20 @@
                 <tr>
                     <td>{{name}}</td>
                     <td>{{description}}</td>
-                    <td>{{duration}}</td>
+                    <td>{{duration}} mins</td>
                     <td>{{capacity}}</td>
                     <td>{{difficulty}}</td>
                     <td>{{date}}</td>
                     <td>{{time}}</td>
                     <td>{{suite}}</td>
                     <td>
-                        <a href="/trainerDashboard/removeclass/{{classId}}">
+                        <a href="/trainerdashboard/{{id}}/editclass/{{classId}}" class="ui icon button">
+                            <i class="purple icon edit"></i>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="/trainerDashboard/{{trainerId}}/removeclass/{{classId}}">
                             <i class=" large red trash icon"></i>
                         </a>
                     </td>
