@@ -46,7 +46,9 @@ router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.upda
 
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses);
-router.post('/trainerDashboard/updateclass/:classId', trainerDashboard.updateClass); //TODO
-router.get('/trainerDashboard/removeclass/:classId', trainerDashboard.removeClass); //TODO
+router.get('/trainerDashboard/:trainerId/removeclass/:classId', trainerDashboard.removeClass);
+
+router.post('/trainerDashboard/editclass', trainerDashboard.editClass); //TODO
+router.get('/trainerDashboard/:id/editclass/:id', trainerDashboard.viewEditClass); //TODO
 
 module.exports = router;
