@@ -79,21 +79,21 @@ const dashboard = {
     loggedInMember.password = request.body.password; //-----------------------------------------> request password = password of loggedInMember
     loggedInMember.address = request.body.address; //-------------------------------------------> request address = address of loggedInMember
     loggedInMember.gender = request.body.gender; //---------------------------------------------> request gender = gender of loggedInMember
-    loggedInMember.height = Number(request.body.height); //---------------------------------------------> request height = height of loggedInMember
-    loggedInMember.startingWeight = Number(request.body.startingWeight); //-----------------------------> request startingWeight = startingWeight of loggedInMember
+    loggedInMember.height = Number(request.body.height); //-------------------------------------> request height = height of loggedInMember
+    loggedInMember.startingWeight = Number(request.body.startingWeight); //---------------------> request startingWeight = startingWeight of loggedInMember
 
     memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 
   allMemberClasses(request, response) {
-    const member = accounts.getCurrentMember(request); //--------------------------------------> gets currentMember from accounts and stores it in member
-    const classList = classStore.getAllClasses(); //-------------------------------------------> gets all classes from classStore and stores it in classList
-    const viewData = { //----------------------------------------------------------------------> place model in viewData object
-      member: member, //-----------------------------------------------------------------------> member
-      classList: classList, //-----------------------------------------------------------------> classList
+    const member = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in member
+    const classList = classStore.getAllClasses(); //--------------------------------------------> gets all classes from classStore and stores it in classList
+    const viewData = { //-----------------------------------------------------------------------> place model in viewData object
+      member: member, //------------------------------------------------------------------------> member
+      classList: classList, //------------------------------------------------------------------> classList
     };
-    logger.info('rendering all classes'); //---------------------------------------------------> logs message to console
+    logger.info('rendering all classes'); //----------------------------------------------------> logs message to console
     response.render('allMemberClasses', viewData); //-------------------------------------------> name of view to render 'allClasses' and sends viewData to view
   },
 };

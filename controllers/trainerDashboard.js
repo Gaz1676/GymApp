@@ -1,10 +1,10 @@
-
 'use strict';
 
 const logger = require('../utils/logger'); //-------------------------------------------------> imports logger
 const memberStore = require('../models/member-store.js'); //----------------------------------> imports member-store
 const accounts = require('./accounts.js'); //-------------------------------------------------> imports accounts
 const classStore = require('../models/class-store.js'); //------------------------------------> imports class-store
+const trainerStore = require('../models/trainer-store.js'); //--------------------------------> imports class-store
 const analytics = require('../utils/analytics.js'); //----------------------------------------> imports analytics
 const uuid = require('uuid'); //--------------------------------------------------------------> imports uuid
 
@@ -56,18 +56,16 @@ const trainerDashboard = {
 
   removeMember(request, response) { //--------------------------------------------------------> removeMember method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering removing member'); //----------------------------------------------> log message to console
+    const loggedInMember =  accounts.getCurrentMember(request);
     const memberId = request.params.id; //----------------------------------------------------> gets member id
-    logger.debug(`Deleting ${memberStore.firstName} ${memberId}`); //-------------------------> logs message to console
+    logger.debug(`Deleting ${memberId.firstName} ${memberId}`); //----------------------------> logs message to console
     memberStore.removeMember(memberId); //----------------------------------------------------> remove member by id
     response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
 
-  // --------- TODO ---------- //
-
   removeClass(request, response) { //---------------------------------------------------------> removeClass method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering removing class'); //-----------------------------------------------> log message to console
-    const classId = request.params.classId; //------------------------------------------------> gets class id
-    logger.debug(`Deleting ${classStore.classId}`); //---------------------------------------------------> logs message to console
+    const classId = request.params.classId; // -----------------------------------------------> gets class id
     classStore.removeClass(classId); //-------------------------------------------------------> remove class from class-store
     response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
   },
@@ -100,12 +98,12 @@ const trainerDashboard = {
       suite: Number(request.body.suite), //---------------------------------------------------> requests suite
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
-    response.redirect('/trainerDashboard/allClasses'); //------------------------------------------------> redirects to (/trainerDashboard)
+    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
   },
 
   // --------- TODO ---------- //
 
-  updateClass(request, response) { //---------------------------------------------------------> updateClass method, called when ‘/ classes’ request received
+  editClass(request, response) { //-----------------------------------------------------------> updateClass method, called when ‘/ classes’ request received
     logger.info('rendering updating of classes'); //------------------------------------------> logs message to console
     const classes = classStore.getClassById(request.params.id); //----------------------------> gets classesById from classStore and stores it in classes
     classes.name = request.body.name; //------------------------------------------------------> class name
@@ -118,7 +116,19 @@ const trainerDashboard = {
     classes.suite = Number(request.body.suite); //--------------------------------------------> class suite
 
     classStore.store.save(); //---------------------------------------------------------------> saves new results to store
-    response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
+    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
+  },
+
+  // --------- TODO ---------- //
+
+  viewEditClass(request, response) {
+    const trainerId = trainerStore.getTrainerById(id);
+    const classId = classStore.getClassById(id);
+    const viewData = {
+      trainerId: trainerId,
+      classes: classId,
+    };
+    response.render('viewClass', viewData);
   },
 
   allClasses(request, response) { //----------------------------------------------------------> allClasses method, called when ‘/ trainerDashboard’ request received
