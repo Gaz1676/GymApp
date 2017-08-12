@@ -1,16 +1,16 @@
 {
   "classes": [
     {
-      "trainerId": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classId": "042c129d-3c69-473c-abad-5bc335fa5f2e",
-      "name": "w",
-      "description": "w",
-      "duration": 5,
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classid": "183c735e-ade7-4e42-8402-7c9099ea5768",
+      "name": "h",
+      "description": "y",
+      "duration": 1,
       "capacity": 5,
       "difficulty": "intermediate",
-      "time": "3",
+      "time": "1",
       "date": "3",
-      "suite": 7
+      "suite": null
     }
   ]
 }

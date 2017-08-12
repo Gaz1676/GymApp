@@ -18,16 +18,16 @@ const trainerStore = {
     this.store.save(); //---------------------------------------------------------> saves new results to store
   },
 
-  getTrainerById(id) {
-    return this.store.findOneBy(this.collection, { id: id }); //------------------> gets a single trainer by id 
+  getTrainerById(trainerid) {
+    return this.store.findOneBy(this.collection, { trainerid: trainerid }); //-----> gets a single trainer by id
   },
 
   getTrainerByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email }); //------------> gets a single trainer by email 
   },
 
-  addMemberList(id, members) {
-    const trainer = this.getTrainerById(id); //-----------------------------------> gets trainer by id and stores it in trainer
+  addMemberList(trainerid, members) {
+    const trainer = this.getTrainerById(trainerid); //----------------------------> gets trainer by id and stores it in trainer
     trainer.members.push(members); //---------------------------------------------> loads members to the end of pile
     this.store.save(); //---------------------------------------------------------> saves new results to store
   },

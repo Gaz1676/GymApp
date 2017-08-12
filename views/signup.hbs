@@ -16,12 +16,12 @@
                     <div class="two fields">
                         <div class="field">
                             <label> First Name </label>
-                            <input placeholder="first name" type="text" name="firstName" required>
+                            <input placeholder="first name" name="firstName" required>
                         </div>
 
                         <div class="field">
                             <label> Last Name </label>
-                            <input placeholder="last name" type="text" name="lastName" required>
+                            <input placeholder="last name" name="lastName" required>
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@
 
                     <div class="field">
                         <label> Address </label>
-                        <input placeholder="address" type="text" name="address" required>
+                        <input placeholder="address" name="address" required>
                     </div>
 
                     <div class="field">
@@ -59,8 +59,10 @@
                             <input placeholder="starting weight (kgs)..." type="number" step=".01" min="35" max="250" name="startingWeight" required>
                         </div>
                     </div>
-
-                    <button class="ui blue submit button"> Submit </button>
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="arrow circle up icon"></i>Sign Up</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
 
                 </form>
             </div>

@@ -34,9 +34,9 @@ const dashboard = {
   addAssessment(request, response) { //---------------------------------------------------------> addAssessment method, called when ‘/ dashboard’ request received
     logger.info('rendering adding assessment'); //----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> gets currentMember from accounts and stores it in loggedInMember
-    const memberId = loggedInMember.id; //------------------------------------------------------> gets id of loggedInMember and stores it in memberId
+    const memberid = loggedInMember.memberid; //------------------------------------------------------> gets id of loggedInMember and stores it in memberId
     const newAssessment = { //------------------------------------------------------------------> place model in newAssessment object
-      assessmentId: uuid(), //------------------------------------------------------------------> unique id for assessment
+      assessmentid: uuid(), //------------------------------------------------------------------> unique id for assessment
       date: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''), //------------------> new date
       weight: request.body.weight, //-----------------------------------------------------------> weight
       chest: request.body.chest, //-------------------------------------------------------------> chest
@@ -48,16 +48,16 @@ const dashboard = {
       comment: '', //---------------------------------------------------------------------------> comment
       updateComment: false, //------------------------------------------------------------------> saved as false if trainer has not commented on assessment
     };
-    memberStore.addAssessment(memberId, newAssessment); //--------------------------------------> adds assessment to member-store
+    memberStore.addAssessment(memberid, newAssessment); //--------------------------------------> adds assessment to member-store
     analytics.trend(loggedInMember); //---------------------------------------------------------> gets trend from analytics of loggedInMember
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 
   removeAssessment(request, response) { //------------------------------------------------------> removeAssessment method, called when ‘/ dashboard’ request received
     logger.info('rendering removing assessment'); //--------------------------------------------> logs message to console
-    const assessmentId = request.params.assessmentId; //----------------------------------------> gets assessmentId and stores in assessmentId
+    const assessmentid = request.params.assessmentid; //----------------------------------------> gets assessmentId and stores in assessmentId
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
-    memberStore.removeAssessment(loggedInMember.id, assessmentId); //---------------------------> removes assessment from member-store
+    memberStore.removeAssessment(loggedInMember.memberid, assessmentid); //---------------------> removes assessment from member-store
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 

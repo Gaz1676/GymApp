@@ -32,23 +32,23 @@ router.post('/authenticate', accounts.authenticate);
 // Dashboard //
 
 router.post('/dashboard/addassessment', dashboard.addAssessment);
-router.get('/dashboard/removeassessment/:assessmentId', dashboard.removeAssessment);
+router.get('/dashboard/removeassessment/:assessmentid', dashboard.removeAssessment);
 router.get('/dashboard/allmemberclasses', dashboard.allMemberClasses);
 router.get('/settings', dashboard.settings);
 router.post('/settings', dashboard.updateProfile);
 
 // Trainer Dashboard //
 
-router.get('/trainerDashboard/removemember/:id', trainerDashboard.removeMember);
-router.get('/trainerDashboard/viewassessments/:id', trainerDashboard.viewAssessments);
-router.get('/trainerDashboard/:id/removeassessment/:assessmentId', trainerDashboard.removeAssessment);
-router.post('/assessment/:id/updatecomment/:assessmentId', trainerDashboard.updateComment);
+router.get('/trainerDashboard/removemember/:memberid', trainerDashboard.removeMember);
+router.get('/trainerDashboard/viewassessments/:memberid', trainerDashboard.viewAssessments);
+router.get('/trainerDashboard/:memberid/removeassessment/:assessmentid', trainerDashboard.removeAssessment);
+router.post('/assessment/:memberid/updatecomment/:assessmentid', trainerDashboard.updateComment);
 
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses);
-router.get('/trainerDashboard/:trainerId/removeclass/:classId', trainerDashboard.removeClass);
+router.get('/trainerDashboard/:trainerid/removeclass/:classid', trainerDashboard.removeClass);
 
 router.post('/trainerDashboard/editclass', trainerDashboard.editClass); //TODO
-router.get('/trainerDashboard/:id/editclass/:id', trainerDashboard.viewEditClass); //TODO
+router.get('/trainerDashboard/:trainerid/editclass/:classid', trainerDashboard.viewEditClass); //TODO
 
 module.exports = router;

@@ -1,5 +1,4 @@
 <section class="ui inverted brown center aligned segment">
-
     <table class="ui yellow center aligned raised celled table segment">
         <thead>
         <tr>
@@ -10,7 +9,6 @@
             <th>Difficulty</th>
             <th>Date</th>
             <th>Time</th>
-            <th>No. Classes</th>
             <th>Edit</th>
             <th>Remove</th>
         </tr>
@@ -22,25 +20,26 @@
                 <tr>
                     <td>{{name}}</td>
                     <td>{{description}}</td>
-                    <td>{{duration}} mins</td>
+                    <td>{{duration}}</td>
                     <td>{{capacity}}</td>
                     <td>{{difficulty}}</td>
                     <td>{{date}}</td>
                     <td>{{time}}</td>
-                    <td>{{suite}}</td>
                     <td>
-                        <a href="/trainerdashboard/{{id}}/editclass/{{classId}}" class="ui icon button">
+                        <a href="/trainerdashboard/{{trainerid}}/editclass/{{classid}}" class="ui icon button">
                             <i class="purple icon edit"></i>
                         </a>
                     </td>
 
                     <td>
-                        <a href="/trainerDashboard/{{trainerId}}/removeclass/{{classId}}">
+                        <a href="/trainerDashboard/{{trainerid}}/removeclass/{{classid}}" data-tooltip="Are You Sure???">
                             <i class=" large red trash icon"></i>
                         </a>
                     </td>
+                </tr>
             </div>
         {{/each}}
         </tbody>
     </table>
 </section>
+

@@ -8,36 +8,86 @@
       "address": "742 Evergreen Terrace",
       "gender": "male",
       "height": 1.7,
-      "startingWeight": 68,
-      "id": "6e100050-2f37-493d-a76d-74e1b6384a31",
+      "startingWeight": 88,
+      "memberid": "e23abd8f-1f5f-4d40-82e9-094dd2b618e1",
       "assessments": [
         {
-          "assessmentId": "e1212f76-6089-4afa-8e4a-2449aef95be0",
-          "date": "2017-08-05 20:18:22",
-          "weight": 61,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
+          "assessmentid": "d262cb7e-e91d-48fb-83a1-5351db9d15f9",
+          "date": "2017-08-12 20:51:25",
+          "weight": "56",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
           "trend": "green",
-          "comment": "You're really dingdongdoodelydoing so good",
-          "updateComment": false
+          "comment": "Brilliant work!",
+          "updateComment": true
         },
         {
-          "assessmentId": "4c2b3440-f1f9-4e0e-b645-5629dbd5646c",
-          "date": "2017-08-05 20:18:09",
-          "weight": 68,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
+          "assessmentid": "8eb63ce3-edf0-4069-8d68-a996c79a1a18",
+          "date": "2017-08-11 17:20:33",
+          "weight": "88",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
           "trend": "red",
-          "comment": "Doind great Homer!!",
-          "updateComment": false
+          "comment": "Need more effort homer",
+          "updateComment": true
         }
       ]
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "address": "742 Evergreen Terrace",
+      "gender": "male",
+      "height": "1.4",
+      "startingWeight": "45",
+      "memberid": "3f43fbb2-1c0f-4c9b-bddd-df4ce0559d16",
+      "assessments": [
+        {
+          "assessmentid": "4836e763-ad72-4641-add4-e3198110e615",
+          "date": "2017-08-11 17:20:55",
+          "weight": "42",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "green",
+          "comment": "",
+          "updateComment": true
+        }
+      ]
+    },
+    {
+      "firstName": "Seymour",
+      "lastName": "Skinner",
+      "email": "seymour@skinner.com",
+      "password": "secret",
+      "address": "Springfield Elementry School",
+      "gender": "male",
+      "height": "1.6",
+      "startingWeight": "69",
+      "memberid": "53a2d968-6096-4f54-a825-82deadfc7d4c",
+      "assessments": []
+    },
+    {
+      "firstName": "Edna",
+      "lastName": "Krabappel",
+      "email": "edna@krabappel.com",
+      "password": "secret",
+      "address": "Springfield Elementry School",
+      "gender": "female",
+      "height": "1.6",
+      "startingWeight": "66",
+      "memberid": "70761f88-5e16-4e86-aafb-0583eb4351bb",
+      "assessments": []
     }
   ]
 }

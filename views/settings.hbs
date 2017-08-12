@@ -10,16 +10,16 @@
                         <div class="two fields">
                             <div class="field">
                                 <label> First Name </label>
-                                <input placeholder="{{member.firstName}}" name="firstName" required>
+                                <input placeholder="first name" name="firstName" required>
                             </div>
                             <div class="field">
                                 <label> Last Name </label>
-                                <input placeholder="{{member.lastName}}"  name="lastName" required>
+                                <input placeholder="last name"  name="lastName" required>
                             </div>
                         </div>
                         <div class="field">
                             <label>Email</label>
-                            <input placeholder="{{member.email}}" type="email" name="email" required>
+                            <input placeholder="email" type="email" name="email" required>
                         </div>
                         <div class="field">
                             <label>Password</label>
@@ -27,7 +27,7 @@
                         </div>
                         <div class="field">
                             <label>Address</label>
-                            <input  placeholder="{{member.address}}" name="address" required>
+                            <input  placeholder="address" name="address" required>
                         </div>
                         <div class="field">
                             <label> Gender </label>
@@ -40,14 +40,17 @@
                         <div class="two fields">
                             <div class="field">
                                 <label> Height </label>
-                                <input placeholder="{{member.height}} meters" type="number" step=".01" min="1" max="3" name="height" required>
+                                <input placeholder="height (in meters)" type="number" step=".01" min="1" max="3" name="height" required>
                             </div>
                             <div class="field">
                                 <label> Starting Weight </label>
-                                <input placeholder="{{member.startingWeight}} kgs" type="number" step=".01" min="35" max="250" name="startingWeight" required>
+                                <input placeholder="starting weight (in kgs)" type="number" step=".01" min="35" max="250" name="startingWeight" required>
                             </div>
                         </div>
-                        <button class="ui blue submit button"> Update </button>
+                        <button class="ui animated fade blue submit button">
+                            <div class="visible content"><i class="upload icon"></i>Update</div>
+                            <div class="hidden content">Click to Save</div>
+                        </button>
                     </section>
                 </form>
             </div>
@@ -57,31 +60,27 @@
                     <table class="ui inverted grey fixed left aligned table">
                         <h2 class="ui red center aligned header"> Member Details </h2>
                         <tr>
-                            <td>First Name:</td>
-                            <td>{{member.firstName}}</td>
+                            <td><i class="large inverted blue user icon"></i>Member:</td>
+                            <td>{{member.firstName}} {{member.lastName}}</td>
                         </tr>
                         <tr>
-                            <td>Last Name:</td>
-                            <td>{{member.lastName}}</td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
+                            <td><i class="large inverted red mail icon"></i>Email:</td>
                             <td>{{member.email}}</td>
                         </tr>
                         <tr>
-                            <td>Address:</td>
+                            <td><i class="large inverted green home icon"></i>Address:</td>
                             <td>{{member.address}}</td>
                         </tr>
                         <tr>
-                            <td>Gender:</td>
+                            <td><i class="large inverted purple genderless icon"></i>Gender:</td>
                             <td>{{member.gender}}</td>
                         </tr>
                         <tr>
-                            <td>Height:</td>
+                            <td><i class="large resize vertical icon"></i>Height:</td>
                             <td>{{member.height}} meters </td>
                         </tr>
                         <tr>
-                            <td>Starting Weight:</td>
+                            <td><i class="large inverted yellow law icon"></i>Starting weight:</td>
                             <td>{{member.startingWeight}} kgs </td>
                         </tr>
                     </table>

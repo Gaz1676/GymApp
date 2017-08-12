@@ -1,52 +1,63 @@
 <section class="ui inverted brown segment">
-    <form class="ui yellow raised center aligned segment form" name="addClass" action="/trainerDashboard/addclass" method="POST">
+    <form class="ui yellow raised center aligned segment form" name="addClass" action="/trainerDashboard/addclass"
+          method="POST">
         <div class="three fields">
             <div class="field">
                 <label>Class name</label>
-                <input placeholder="Class name"  name="name" required>
+                <input placeholder="Class name" name="name" required>
             </div>
             <div class="field">
                 <label>Description</label>
                 <textarea rows="2" name="description"></textarea>
             </div>
             <div class="field">
-                <label>Duration of the class</label>
-                <input placeholder="Duration of the class" type="number" name="duration" step="1" min="5" max="60" required>
+                <label>Duration</label>
+                <select class="ui dropdown" name="duration" required>
+                    <option value=""> No. of Weeks</option>
+                    <option value="1"> 1 Week</option>
+                    <option value="2"> 2 Weeks</option>
+                    <option value="3"> 3 Weeks</option>
+                    <option value="4"> 4 Weeks</option>
+                    <option value="5"> 5 Weeks</option>
+                    <option value="6"> 6 Weeks</option>
+                    <option value="7"> 7 Weeks</option>
+                    <option value="8"> 8 Weeks</option>
+                </select>
             </div>
         </div>
         <div class="four fields">
             <div class="field">
-                <label>Capacity of the class</label>
-                <input placeholder="Capacity of the class" type="number" name="capacity" step="1" min="5" max="20" required>
+                <label>Capacity</label>
+                <input placeholder="Capacity" type="number" name="capacity" step="1" min="5" max="20"
+                       required>
             </div>
             <div class="field">
                 <label> Difficulty </label>
                 <select class="ui dropdown" name="difficulty" required>
-                    <option value="">Select</option>
-                    <option value="beginners"> Beginners </option>
+                    <option value="">Select Level</option>
+                    <option value="beginners"> Beginners</option>
                     <option value="intermediate"> Intermediate</option>
                     <option value="advanced"> Advanced</option>
                 </select>
             </div>
             <div class="field">
                 <label>Time</label>
-                <input placeholder="Time" name="time" required>
+                <div class="ui input left icon">
+                    <i class="time icon"></i>
+                    <input placeholder="Time" name="time" required>
+                </div>
             </div>
             <div class="field">
                 <label>Date</label>
-                <input placeholder="Date"  name="date" required>
+                <div class="ui input left icon">
+                    <i class="calendar icon"></i>
+                    <input placeholder="Date" name="date" required>
+                </div>
             </div>
         </div>
-        <div class="three fields">
-            <div class="field">
-            </div>
-            <div class="field">
-                <label>Classes in the suite</label>
-                <input placeholder="Classes in the suite" type="number" name="suite" step="1" min="1" max="10" required>
-            </div>
-            <div class="field">
-            </div>
-        </div>
-        <button class="ui blue submit button"> Create a class </button>
+        <button class="ui animated fade blue submit button">
+            <div class="visible content"><i class="add circle icon"></i>Create Class</div>
+            <div class="hidden content">Click to Save</div>
+        </button>
     </form>
 </section>

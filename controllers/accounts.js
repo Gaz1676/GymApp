@@ -36,7 +36,7 @@ const accounts = {
 
   register(request, response) { //-------------------------------------------> register method, called when ‘/ accounts’ request received
     const member = request.body; //------------------------------------------> requests body data and stores it in member
-    member.id = uuid(); //---------------------------------------------------> creates a unique member id
+    member.memberid = uuid(); //---------------------------------------------> creates a unique member id
     member.assessments = []; //----------------------------------------------> creates assessment array
     memberStore.addMember(member); //----------------------------------------> adds the member to the store
     logger.info(`registering ${member.email}`); //---------------------------> logs info to console of member registering

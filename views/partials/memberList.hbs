@@ -9,11 +9,8 @@
                         <i class="big green user icon"></i>
                     </td>
                     <td class="sixteen wide">
-
-                        <a href="/trainerDashboard/viewassessments/{{id}}"> {{firstName}} {{lastName}} </a>
-
-                        &emsp;<a href="/trainerDashboard/removemember/{{id}}"><i class="large red trash icon"></i></a>
-
+                        <a href="/trainerDashboard/viewassessments/{{memberid}}"> {{firstName}} {{lastName}} </a>
+                        &emsp;<a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="Are You Sure???"><i class="large red trash icon"></i></a>
                         <br>
                         {{assessments.length}} assessments
                     </td>
@@ -24,4 +21,3 @@
         </tbody>
     </table>
 </section>
-

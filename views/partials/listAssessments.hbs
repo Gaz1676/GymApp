@@ -1,3 +1,4 @@
+
 <section class="ui inverted brown center aligned segment">
     {{#each member.assessments}}
         <table class="ui fixed yellow center aligned table">
@@ -26,19 +27,19 @@
                     <td>{{upperArm}}</td>
                     <td>{{waist}}</td>
                     <td>{{hips}}</td>
-                    <td><i class="large {{trend}} arrow circle left icon"></i></td>
+                    <td><i class="large {{trend}} bullseye icon"></i></td>
                     <td>{{comment}}</td>
 
                     {{#unless updateComment}}
                         <td>
-                            <a href="/dashboard/removeassessment/{{assessmentId}}">
+                            <a href="/dashboard/removeassessment/{{assessmentid}}">
                                 <i class=" large red trash icon"></i>
                             </a>
                         </td>
                     {{/unless}}
                     {{#if updateComment}}
                         <td>
-                            <a href="/trainerDashboard/{{../id}}/removeassessment/{{assessmentId}}">
+                            <a href="/trainerDashboard/{{../id}}/removeassessment/{{assessmentid}}">
                                 <i class=" large red trash icon"></i>
                             </a>
                         </td>
@@ -51,14 +52,18 @@
         {{#if updateComment}}
             <section class="ui center aligned section">
                 <h4> Comment </h4>
-                <form class="ui section form" action="/assessment/{{../id}}/updatecomment/{{assessmentId}}"
+                <form class="ui section form" action="/assessment/{{../memberid}}/updatecomment/{{assessmentid}}"
                       method="POST">
                     <div>
                         <input placeholder="Insert comment..." name="comment" required>
                     </div>
                     <div>
                         <br>
-                        <button class="ui blue submit button"> Update</button>
+
+                        <button class="ui animated fade blue submit button">
+                            <div class="visible content"><i class="write icon"></i>Update Comment</div>
+                            <div class="hidden content">Click to Save</div>
+                        </button>
                     </div>
                 </form>
             </section>
