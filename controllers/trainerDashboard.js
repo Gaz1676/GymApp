@@ -71,7 +71,7 @@ const trainerDashboard = {
 
   updateComment(request, response) { //-------------------------------------------------------> updateComment method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering updating comment'); //---------------------------------------------> logs message to console
-    const memberid = request.params.memberid; //----------------------------------------------------> gets member id
+    const memberid = request.params.memberid; //----------------------------------------------> gets member id
     const assessmentid = request.params.assessmentid; //--------------------------------------> gets assessment id
     const comment = request.body.comment; //--------------------------------------------------> gets comment data
     const assessment = memberStore.getAssessmentById(memberid, assessmentid); //--------------> gets assessment by id with member id and assessment id from store and stores it in assessment
@@ -83,9 +83,7 @@ const trainerDashboard = {
   addClass(request, response) { //------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('creating a class'); //-------------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //---------------------------> gets current logged in trainer from accounts and stores it in loggedInTrainer
-    const trainerid = loggedInTrainer.trainerid; //--------------------------------------------------> gets id of loggedInTrainer and stores it in trainer id
     const newClass = { //---------------------------------------------------------------------> place model in newClass object
-      trainerid: trainerid, //----------------------------------------------------------------> trainer id
       classid: uuid(), //---------------------------------------------------------------------> unique class id
       name: request.body.name, //-------------------------------------------------------------> requests name
       description: request.body.description, //-----------------------------------------------> requests description
@@ -94,9 +92,9 @@ const trainerDashboard = {
       difficulty: request.body.difficulty, //-------------------------------------------------> requests difficulty
       time: request.body.time, //-------------------------------------------------------------> requests time
       date: request.body.date, //-------------------------------------------------------------> new date
-      suite: Number(request.body.suite), //---------------------------------------------------> requests suite
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
+    logger.info(`New class added by ${loggedInTrainer.firstName}`);
     response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
   },
 
@@ -104,7 +102,8 @@ const trainerDashboard = {
 
   editClass(request, response) { //-----------------------------------------------------------> updateClass method, called when ‘/ classes’ request received
     logger.info('rendering updating of classes'); //------------------------------------------> logs message to console
-    const classes = classStore.getClassById(request.params.id); //----------------------------> gets classesById from classStore and stores it in classes
+    const classid = request.params.classid; //------------------------------------------------> gets classid (params)
+    const classes = classStore.getClassById(classid); //--------------------------------------> gets classesById from classStore and stores it in classes
     classes.name = request.body.name; //------------------------------------------------------> class name
     classes.description = request.body.description; //----------------------------------------> class description
     classes.duration = Number(request.body.duration); //--------------------------------------> class duration
@@ -112,8 +111,6 @@ const trainerDashboard = {
     classes.difficulty = request.body.difficulty; //------------------------------------------> class difficulty
     classes.time = request.body.time; //------------------------------------------------------> class time
     classes.date = request.body.date; //------------------------------------------------------> class date
-    classes.suite = Number(request.body.suite); //--------------------------------------------> class suite
-
     classStore.store.save(); //---------------------------------------------------------------> saves new results to store
     response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
   },
@@ -121,10 +118,8 @@ const trainerDashboard = {
   // --------- TODO ---------- //
 
   viewEditClass(request, response) {
-    const trainerid = trainerStore.getTrainerById(request);
     const classes = classStore.getClassById(request);
     const viewData = {
-      trainerid: trainerid,
       classes: classes,
     };
     response.render('viewEditClass', viewData);
