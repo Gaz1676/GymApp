@@ -1,0 +1,46 @@
+<section class="ui inverted brown center aligned segment">
+    <table class="ui yellow center aligned raised celled table segment">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th>Capacity</th>
+            <th>Difficulty</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Trainer</th>
+            <th>No. Members</th>
+            <th>Enrol</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each classList}}
+            <div class="ui list">
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{duration}}</td>
+                    <td>{{capacity}}</td>
+                    <td>{{difficulty}}</td>
+                    <td>{{date}}</td>
+                    <td>{{time}}</td>
+                    <td>{{trainer.name}}</td>
+                    <td>{{member.size}}</td>
+                    <td>
+                        <a href="/dashboard/enrollmember/{{memberid}}/intoclass/{{classid}}" class="ui icon button">
+                            <i class="green icon plus"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/dashboard/unenroll/{{memberid}}/fromclass/{{classid}}" class="ui icon button">
+                            <i class="red icon minus"></i>
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        {{/each}}
+        </tbody>
+    </table>
+</section>
