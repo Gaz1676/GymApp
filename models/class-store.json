@@ -1,16 +1,24 @@
 {
   "classes": [
     {
-      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "183c735e-ade7-4e42-8402-7c9099ea5768",
-      "name": "h",
-      "description": "y",
+      "classid": "77e63bfc-d9f8-4f92-99ca-760d7e8b9018",
+      "name": "hh",
+      "description": "hh",
       "duration": 1,
       "capacity": 5,
-      "difficulty": "intermediate",
-      "time": "1",
-      "date": "3",
-      "suite": null
+      "difficulty": "beginners",
+      "time": "00:00",
+      "date": "2017-08-15"
+    },
+    {
+      "classid": "7c4f2ffe-8f8e-4d01-8f11-36185be20108",
+      "name": "h",
+      "description": "k",
+      "duration": 5,
+      "capacity": 5,
+      "difficulty": "advanced",
+      "time": "11:00",
+      "date": "2017-08-15"
     }
   ]
 }

@@ -22,7 +22,7 @@
           "hips": "65",
           "trend": "green",
           "comment": "Brilliant work!",
-          "updateComment": true
+          "updateComment": false
         },
         {
           "assessmentid": "8eb63ce3-edf0-4069-8d68-a996c79a1a18",
@@ -35,7 +35,7 @@
           "hips": "65",
           "trend": "red",
           "comment": "Need more effort homer",
-          "updateComment": true
+          "updateComment": false
         }
       ]
     },
