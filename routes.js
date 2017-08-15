@@ -48,7 +48,7 @@ router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/allclasses', trainerDashboard.allClasses);
 router.get('/trainerDashboard/:trainerid/removeclass/:classid', trainerDashboard.removeClass);
 
-router.post('/trainerDashboard/editclass', trainerDashboard.editClass); //TODO
-router.get('/trainerDashboard/:trainerid/editclass/:classid', trainerDashboard.viewEditClass); //TODO
+router.post('/trainerDashboard/editclass/', trainerDashboard.editClass); //TODO
+router.get('/trainerDashboard/editclass/:classid', trainerDashboard.viewEditClass); //TODO
 
 module.exports = router;
