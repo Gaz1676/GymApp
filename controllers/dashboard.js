@@ -22,7 +22,7 @@ const dashboard = {
       bmiCategory: analytics.BMICategory(bmi), //-----------------------------------------------> bmiCategory of bmi results
       idealBodyWeight: idealBodyWeight, //------------------------------------------------------> IBW
     };
-    logger.info(`rendering assessments for ${loggedInMember.firstName}`); //--------------------> logs message to console
+    logger.debug(`rendering assessments for ${loggedInMember.firstName}`); //-------------------> logs message to console
     const list = loggedInMember.assessments; //-------------------------------------------------> assessments of the loggedInMember stored in list
     for (let i = 0; i < list.length; i++) { //--------------------------------------------------> if 'i' is less than list.length then increment by one
       list[i].updateComment = false; //---------------------------------------------------------> update comment equals to false
@@ -34,7 +34,7 @@ const dashboard = {
   addAssessment(request, response) { //---------------------------------------------------------> addAssessment method, called when ‘/ dashboard’ request received
     logger.info('rendering adding assessment'); //----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> gets currentMember from accounts and stores it in loggedInMember
-    const memberid = loggedInMember.memberid; //------------------------------------------------------> gets id of loggedInMember and stores it in memberId
+    const memberid = loggedInMember.memberid; //------------------------------------------------> gets id of loggedInMember and stores it in memberId
     const newAssessment = { //------------------------------------------------------------------> place model in newAssessment object
       assessmentid: uuid(), //------------------------------------------------------------------> unique id for assessment
       date: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''), //------------------> new date
@@ -86,15 +86,15 @@ const dashboard = {
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 
-  allMemberClasses(request, response) {
+  memberClasses(request, response) {
     const member = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in member
     const classList = classStore.getAllClasses(); //--------------------------------------------> gets all classes from classStore and stores it in classList
     const viewData = { //-----------------------------------------------------------------------> place model in viewData object
       member: member, //------------------------------------------------------------------------> member
-      classList: classList, //------------------------------------------------------------------> classList
+      classList: classList, //------------------------------------------------------------------> class List
     };
     logger.info('rendering all classes'); //----------------------------------------------------> logs message to console
-    response.render('allMemberClasses', viewData); //-------------------------------------------> name of view to render 'allClasses' and sends viewData to view
+    response.render('memberClasses', viewData); //----------------------------------------------> name of view to render 'memberClasses' and sends viewData to view
   },
 };
 
