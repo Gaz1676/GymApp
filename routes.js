@@ -28,7 +28,6 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 // Member Dashboard //
-router.get('/trainerDashboard/createclasses', trainerDashboard.createClasses);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentid', dashboard.removeAssessment);
 router.get('/dashboard/memberclasses', dashboard.memberClasses);
@@ -40,6 +39,7 @@ router.get('/trainerDashboard/viewassessments/:memberid', trainerDashboard.viewA
 router.get('/trainerDashboard/:memberid/removeassessment/:assessmentid', trainerDashboard.removeAssessment);
 router.post('/trainerDashboard/:memberid/updatecomment/:assessmentid', trainerDashboard.updateComment);
 
+router.get('/trainerDashboard/createclasses', trainerDashboard.createClasses);
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/viewtrainerclasses', trainerDashboard.viewTrainerClasses);
 router.get('/trainerDashboard/removeclass/:classid', trainerDashboard.removeClass);
