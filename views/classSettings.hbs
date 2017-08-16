@@ -1,0 +1,110 @@
+{{> trainerMenu id="classEdits"}}
+
+<div class="ui two column grid basic segment">
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <h2 class="ui red center aligned header"> Class Details </h2>
+                    <tr>
+                        <td><i class="tasks icon"></i> Name:</td>
+                        <td>{{classes.name}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="write icon"></i> Description:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="checked calendar icon"></i> Duration:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="users icon"></i> Capacity:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="heartbeat icon"></i> Difficulty:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="time icon"></i> Time:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><i class="calendar icon"></i> Date:</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
+    <div class="column left aligned">
+        <section class="ui inverted brown segment">
+            <form class="ui yellow raised segment form" action="/classSettings" method="POST">
+                <h2 class="ui red center aligned header"> Update Class</h2>
+                <section class="ui segment">
+                    <div class="field">
+                        <label>Name</label>
+                        <input placeholder="Class name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <textarea rows="2" name="description"></textarea>
+                    </div>
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Duration</label>
+                            <select class="ui dropdown" name="duration" required>
+                                <option value=""> No. of Weeks</option>
+                                <option value="1"> 1 Week</option>
+                                <option value="2"> 2 Weeks</option>
+                                <option value="3"> 3 Weeks</option>
+                                <option value="4"> 4 Weeks</option>
+                                <option value="5"> 5 Weeks</option>
+                                <option value="6"> 6 Weeks</option>
+                                <option value="7"> 7 Weeks</option>
+                                <option value="8"> 8 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Capacity</label>
+                            <input placeholder="Capacity of the class" type="number" name="capacity" step="1"
+                                   min="5"
+                                   max="20" required>
+                        </div>
+                        <div class="field">
+                            <label> Difficulty </label>
+                            <select class="ui dropdown" name="difficulty" required>
+                                <option value="">Select Level</option>
+                                <option value="beginners"> Beginners</option>
+                                <option value="intermediate"> Intermediate</option>
+                                <option value="advanced"> Advanced</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Time</label>
+                            <div class="ui input left icon">
+                                <i class="time icon"></i>
+                                <input placeholder="Time" type="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="Date" type="date" name="date" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="upload icon"></i>Update</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </section>
+            </form>
+        </section>
+    </div>
+</div>
+
