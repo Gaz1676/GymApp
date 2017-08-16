@@ -4,7 +4,6 @@ const logger = require('../utils/logger'); //-----------------------------------
 const memberStore = require('../models/member-store.js'); //----------------------------------> imports member-store
 const accounts = require('./accounts.js'); //-------------------------------------------------> imports accounts
 const classStore = require('../models/class-store.js'); //------------------------------------> imports class-store
-const trainerStore = require('../models/trainer-store.js'); //--------------------------------> imports class-store
 const analytics = require('../utils/analytics.js'); //----------------------------------------> imports analytics
 const uuid = require('uuid'); //--------------------------------------------------------------> imports uuid
 
@@ -26,23 +25,35 @@ const trainerDashboard = {
   viewAssessments(request, response) { //-----------------------------------------------------> viewAssessments method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering viewing assessments'); //------------------------------------------> log message to console
     const memberid = request.params.memberid; //----------------------------------------------> gets id from member list
-    const viewMember = memberStore.getMemberById(memberid); //--------------------------------> gets member by id from store and stores it in viewMember
-    const bmi = analytics.calculateBMI(viewMember); //----------------------------------------> gets calculateBMI of member from analytics and stores it in bmi
-    const idealBodyWeight = analytics.idealBodyWeight(viewMember); //-------------------------> gets IBW of member from analytics and stores it in IBW
+    const member = memberStore.getMemberById(memberid); //------------------------------------> gets member by id from store and stores it in viewMember
+    const bmi = analytics.calculateBMI(member); //--------------------------------------------> gets calculateBMI of member from analytics and stores it in bmi
+    const idealBodyWeight = analytics.idealBodyWeight(member); //-----------------------------> gets IBW of member from analytics and stores it in IBW
     const viewData = { //---------------------------------------------------------------------> place model in viewData object
       memberid: memberid, //------------------------------------------------------------------> member id
-      member: viewMember, //------------------------------------------------------------------> the member
+      member: member, //----------------------------------------------------------------------> the member
       bmi: bmi, //----------------------------------------------------------------------------> the bmi
       bmiCategory: analytics.BMICategory(bmi), //---------------------------------------------> bmiCategory of bmi from analytics
       idealBodyWeight: idealBodyWeight, //----------------------------------------------------> IBW
     };
-    logger.debug(`View ${viewMember.firstName} assessments`); //------------------------------> logs message to console
-    const list = viewMember.assessments; //---------------------------------------------------> the assessments of the viewed member stored in list
+    logger.debug(`View ${member.firstName} assessments`); //----------------------------------> logs message to console
+    const list = member.assessments; //-------------------------------------------------------> the assessments of the viewed member stored in list
     for (let i = 0; i < list.length; i++) { //------------------------------------------------> if 'i' is less than list.length then increment by one
       list[i].updateComment = true; //--------------------------------------------------------> update comment equals to true
     }
 
     response.render('viewAssessments', viewData); //------------------------------------------> name of view to render 'viewAssessments' and sends viewData to view
+  },
+
+  viewTrainerClasses(request, response) { //--------------------------------------------------> allClasses method, called when ‘/ trainerDashboard’ request received
+    const trainer = accounts.getCurrentTrainer(request); //-----------------------------------> gets current trainer from accounts and stores it in trainer
+    const classList = classStore.getAllClasses(); //------------------------------------------> gets all classes from classStore and stores it in classList
+    const viewData = { //---------------------------------------------------------------------> place model in viewData object
+      title: 'Trainer Classes', //------------------------------------------------------------> name of title
+      trainer: trainer, //--------------------------------------------------------------------> trainer
+      classList: classList, //----------------------------------------------------------------> classList
+    };
+    logger.debug(`rendering all classes by ${trainer.firstName}`); //-------------------------> logs message to console
+    response.render('viewTrainerClasses', viewData); //---------------------------------------> name of view to render 'allClasses' and sends viewData to view
   },
 
   removeAssessment(request, response) { //----------------------------------------------------> removeAssessment method, called when ‘/ trainerDashboard’ request received
@@ -65,8 +76,9 @@ const trainerDashboard = {
   removeClass(request, response) { //---------------------------------------------------------> removeClass method, called when ‘/ trainerDashboard’ request received
     logger.info('rendering removing class'); //-----------------------------------------------> log message to console
     const classid = request.params.classid; // -----------------------------------------------> gets class id
+    logger.debug(`Deleting ${classid}`); //---------------------------------------------------> logs message to console
     classStore.removeClass(classid); //-------------------------------------------------------> remove class from class-store
-    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
+    response.redirect('/trainerDashboard/viewTrainerClasses'); //-----------------------------> redirects to (/trainerDashboard/allClasses)
   },
 
   updateComment(request, response) { //-------------------------------------------------------> updateComment method, called when ‘/ trainerDashboard’ request received
@@ -76,6 +88,7 @@ const trainerDashboard = {
     const comment = request.body.comment; //--------------------------------------------------> gets comment data
     const assessment = memberStore.getAssessmentById(memberid, assessmentid); //--------------> gets assessment by id with member id and assessment id from store and stores it in assessment
     assessment.comment = comment; //----------------------------------------------------------> comment equals new comment from assessment
+
     memberStore.store.save(); //--------------------------------------------------------------> saves new results to store
     response.redirect('/trainerDashboard'); //------------------------------------------------> redirects to (/trainerDashboard)
   },
@@ -94,47 +107,48 @@ const trainerDashboard = {
       date: request.body.date, //-------------------------------------------------------------> new date
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
-    logger.info(`New class added by ${loggedInTrainer.firstName}`);
-    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
+    response.redirect('/trainerDashboard/viewTrainerClasses'); //-----------------------------> redirects to (/trainerDashboard/allClasses)
   },
 
   // --------- TODO ---------- //
 
-  editClass(request, response) { //-----------------------------------------------------------> updateClass method, called when ‘/ classes’ request received
-    logger.info('rendering updating of classes'); //------------------------------------------> logs message to console
+  classSettings(request, response) { //-------------------------------------------------------> classSettings method, called when ‘/ trainerDashboard’ request received
+    logger.info('rendering edits'); //--------------------------------------------------------> logs message to console
     const classid = request.params.classid; //------------------------------------------------> gets classid (params)
-    const classes = classStore.getClassById(classid); //--------------------------------------> gets classesById from classStore and stores it in classes
-    classes.name = request.body.name; //------------------------------------------------------> class name
-    classes.description = request.body.description; //----------------------------------------> class description
-    classes.duration = Number(request.body.duration); //--------------------------------------> class duration
-    classes.capacity = Number(request.body.capacity); //--------------------------------------> class capacity
-    classes.difficulty = request.body.difficulty; //------------------------------------------> class difficulty
-    classes.time = request.body.time; //------------------------------------------------------> class time
-    classes.date = request.body.date; //------------------------------------------------------> class date
-    classStore.store.save(); //---------------------------------------------------------------> saves new results to store
-    response.redirect('/trainerDashboard/allClasses'); //-------------------------------------> redirects to (/trainerDashboard/allClasses)
+    const updatedClass = classStore.getClassById(classid); //---------------------------------> gets class by id from classStore and stores it in updatedClass
+    const viewData = { //---------------------------------------------------------------------> place model in viewData object
+      updatedClass: updatedClass, //----------------------------------------------------------> updated class
+    };
+    response.render('classSettings', viewData); //--------------------------------------------> name of view to render 'classSettings' and sends viewData to view
   },
 
-  // --------- TODO ---------- //
+  updateClass(request, response) { //---------------------------------------------------------> updateClass method, called when ‘/ trainerDashboard’ request received
+    logger.info('rendering updating class'); //-----------------------------------------------> logs message to console
+    const updatedClass = classStore.getClassById(request); //---------------------------------> gets class by id from classStore and stores it in updatedClass
+    updatedClass.name = request.body.name; //-------------------------------------------------> request class name
+    updatedClass.description = request.body.description; //-----------------------------------> request description
+    updatedClass.duration = request.body.duration; //-----------------------------------------> request duration
+    updatedClass.capacity = request.body.capacity; //-----------------------------------------> request capacity
+    updatedClass.difficulty = request.body.difficulty; //-------------------------------------> request difficulty
+    updatedClass.time = request.body.time; //-------------------------------------------------> request time
+    updatedClass.date = request.body.date; //-------------------------------------------------> request date
 
-  viewEditClass(request, response) {
-    const classes = classStore.getClassById(request);
+    classStore.store.save(); //---------------------------------------------------------------> saves new results to store
+    response.redirect('/trainerDashboard/viewTrainerClasses'); //-----------------------------> redirects to (//trainerDashboard/trainerClasses)
+  },
+
+  createClasses(request, response) {
+    const loggedInTrainer = accounts.getCurrentTrainer(request);
+    const classes = classStore.getAllClasses();
     const viewData = {
+      title: 'Classes',
+      member: loggedInTrainer,
       classes: classes,
     };
-    response.render('viewEditClass', viewData);
+    logger.info(`classes menu rendering for ${loggedInTrainer.firstName}`);
+    response.render('createClasses', viewData);
   },
 
-  allClasses(request, response) { //----------------------------------------------------------> allClasses method, called when ‘/ trainerDashboard’ request received
-    const trainer = accounts.getCurrentTrainer(request); //-----------------------------------> gets current trainer from accounts and stores it in trainer
-    const classList = classStore.getAllClasses(); //------------------------------------------> gets all classes from classStore and stores it in classList
-    const viewData = { //---------------------------------------------------------------------> place model in viewData object
-      trainer: trainer, //--------------------------------------------------------------------> trainer
-      classList: classList, //----------------------------------------------------------------> classList
-    };
-    logger.info('rendering all classes'); //--------------------------------------------------> logs message to console
-    response.render('allClasses', viewData); //-----------------------------------------------> name of view to render 'allClasses' and sends viewData to view
-  },
 };
 
 module.exports = trainerDashboard; //---------------------------------------------------------> this is the object that is then exported:
