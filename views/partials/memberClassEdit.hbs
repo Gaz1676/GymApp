@@ -9,10 +9,10 @@
             <th>Difficulty</th>
             <th>Date</th>
             <th>Time</th>
-            <th>Trainer</th>
             <th>No. Members</th>
-            <th>Enrol</th>
-            <th>Remove</th>
+            <th>Enroll</th>
+            <th>Enroll To All</th>
+            <th>Unenroll </th>
         </tr>
         </thead>
         <tbody>
@@ -26,16 +26,20 @@
                     <td>{{difficulty}}</td>
                     <td>{{date}}</td>
                     <td>{{time}}</td>
-                    <td>{{trainer.name}}</td>
                     <td>{{member.size}}</td>
                     <td>
                         <a href="/dashboard/enrollmember/{{memberid}}/intoclass/{{classid}}" class="ui icon button">
-                            <i class="green icon plus"></i>
+                            <i class="green add user icon"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="ui icon button">
+                            <i class="green users icon"></i>
                         </a>
                     </td>
                     <td>
                         <a href="/dashboard/unenroll/{{memberid}}/fromclass/{{classid}}" class="ui icon button">
-                            <i class="red icon minus"></i>
+                            <i class="red remove user icon"></i>
                         </a>
                     </td>
                 </tr>
