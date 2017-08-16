@@ -1,27 +1,27 @@
 {
   "members": [
     {
-      "firstName": "Homer",
+      "firstName": "Homer J",
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "742 Evergreen Terrace",
       "gender": "male",
       "height": 1.7,
-      "startingWeight": 88,
+      "startingWeight": 66,
       "memberid": "e23abd8f-1f5f-4d40-82e9-094dd2b618e1",
       "assessments": [
         {
-          "assessmentid": "d262cb7e-e91d-48fb-83a1-5351db9d15f9",
-          "date": "2017-08-12 20:51:25",
-          "weight": "56",
+          "assessmentid": "2bb518a0-dec7-44bf-a39d-4376f9ce23cc",
+          "date": "2017-08-16 14:42:44",
+          "weight": "66",
           "chest": "35",
           "thigh": "35",
           "upperArm": "15",
           "waist": "65",
           "hips": "65",
           "trend": "green",
-          "comment": "Brilliant work!",
+          "comment": "Thats what I like to see Homer",
           "updateComment": false
         },
         {
@@ -60,7 +60,7 @@
           "waist": "65",
           "hips": "65",
           "trend": "green",
-          "comment": "",
+          "comment": "Excellent boy!",
           "updateComment": true
         }
       ]
@@ -75,7 +75,34 @@
       "height": "1.6",
       "startingWeight": "69",
       "memberid": "53a2d968-6096-4f54-a825-82deadfc7d4c",
-      "assessments": []
+      "assessments": [
+        {
+          "assessmentid": "b2b8a0a1-89ea-43d8-b505-893842313e35",
+          "date": "2017-08-16 15:56:52",
+          "weight": "63",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "green",
+          "comment": "Excellent Seymour",
+          "updateComment": true
+        },
+        {
+          "assessmentid": "2bb9b7e6-c6d4-422d-8614-9d02adfb95ef",
+          "date": "2017-08-16 15:56:42",
+          "weight": "65",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "green",
+          "comment": "Dedication pays off",
+          "updateComment": true
+        }
+      ]
     },
     {
       "firstName": "Edna",
@@ -87,7 +114,34 @@
       "height": "1.6",
       "startingWeight": "66",
       "memberid": "70761f88-5e16-4e86-aafb-0583eb4351bb",
-      "assessments": []
+      "assessments": [
+        {
+          "assessmentid": "d537fc3d-8f3d-4297-b90b-41709adbb66a",
+          "date": "2017-08-16 15:57:34",
+          "weight": "46",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "red",
+          "comment": "Need to beef you up a bit",
+          "updateComment": true
+        },
+        {
+          "assessmentid": "04130479-05c2-4220-9a8d-45aa77313503",
+          "date": "2017-08-16 15:57:20",
+          "weight": "55",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "green",
+          "comment": "Well done Edna",
+          "updateComment": true
+        }
+      ]
     }
   ]
 }

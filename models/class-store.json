@@ -1,24 +1,24 @@
 {
   "classes": [
     {
-      "classid": "77e63bfc-d9f8-4f92-99ca-760d7e8b9018",
+      "classid": "aa8c166d-ad60-40bd-835b-dd243c91bddf",
+      "name": "jj",
+      "description": "jj",
+      "duration": 1,
+      "capacity": 5,
+      "difficulty": "beginners",
+      "time": "12:59",
+      "date": "2017-12-31"
+    },
+    {
+      "classid": "752e2a8f-e9d5-469d-85f0-b2979e67fb60",
       "name": "hh",
       "description": "hh",
       "duration": 1,
       "capacity": 5,
       "difficulty": "beginners",
-      "time": "00:00",
-      "date": "2017-08-15"
-    },
-    {
-      "classid": "7c4f2ffe-8f8e-4d01-8f11-36185be20108",
-      "name": "h",
-      "description": "k",
-      "duration": 5,
-      "capacity": 5,
-      "difficulty": "advanced",
-      "time": "11:00",
-      "date": "2017-08-15"
+      "time": "12:59",
+      "date": "2017-12-31"
     }
   ]
 }
