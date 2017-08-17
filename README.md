@@ -1,29 +1,31 @@
-# Summer 2017 - Gym Web Application
+Summer 2017 - Gym Web Application
+  ==========================     
 
-_First time JavaScript and Node project created in WebStorm IDE_
+_&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebStorm IDE_
 ***
-                    MEMBERS ACCOUNT LOGIN DETAILS  
-                =====================================
-      login: homer@simpson.com   |     login: bart@simpson.com
-      password: secret           |     password: secret
-      ---------------------------------------------------------
-      login: seymour@skinner.com |     login: edna@krabappel
-      password: secret           |     password: secret
+                      MEMBERS ACCOUNT LOGIN DETAILS  
+                  =====================================
+          login: homer@simpson.com   |     login: bart@simpson.com
+          password: secret           |     password: secret
+          ---------------------------------------------------------
+          login: seymour@skinner.com |     login: edna@krabappel
+          password: secret           |     password: secret
       
       
       
-                   TRAINERS ACCOUNT LOGIN DETAILS  
-              ==========================================
-      login: ned@flanders.com    |     login: marge@simpson.com
-      password: secret           |     password: secret
+                       TRAINERS ACCOUNT LOGIN DETAILS  
+                  ==========================================
+          login: ned@flanders.com    |     login: marge@simpson.com
+          password: secret           |     password: secret
 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
 
 ***
 
-## Gym Members
-
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Gym Members
+  ==========================     
+***
 ### Assessments
 - _Periodically tracks assessments on individual Members_
 
@@ -35,18 +37,18 @@ _First time JavaScript and Node project created in WebStorm IDE_
 
 - _Members can delete individual assessments as well as update their profiles_
 
-- _Members may book an assessment	with a Trainer of their	choice(assuming	the	Trainer is free	at that time)_
+- _Members may book an assessment with a Trainer of their choice(assuming the Trainer is free at that time)_
 
 ### Scheduled Classes
 - _Enable Members to view and search the scheduled classes created by the Trainers_
 
 - _Members can enrol in the scheduled classes on a specific dates_
 
-- _Members can enrol in	all	classes	in the suite designed by the Trainers_
+- _Members can enrol in	all classes in the suite designed by the Trainers_
 
-- _Members enrolment in	classes	is subject to	available	spaces_
+- _Members enrolment in	classes	is subject to available	spaces_
 
-- _Members can also un-enrol from	these classes	too_
+- _Members can also un-enrol from these classes too_
 
 ### Members Goals/Targets
 - _Members can set goals for themselves_	
@@ -84,7 +86,9 @@ _(homer@simpson.com)_
 
 ***
 
-## Gym Trainers
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Gym Trainers
+  ==========================     
+***
 ### Assessments
 - _The Trainers can review assessments and comment on any specific assessment_
 
