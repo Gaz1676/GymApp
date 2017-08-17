@@ -21,6 +21,7 @@ router.get('/trainerDashboard', trainerDashboard.index);
 
 // Accounts //
 
+router.get('/tAndC', accounts.tAndC);
 router.get('/login', accounts.login);
 router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
@@ -28,6 +29,7 @@ router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
 // Member Dashboard //
+
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentid', dashboard.removeAssessment);
 router.get('/dashboard/memberclasses', dashboard.memberClasses);
