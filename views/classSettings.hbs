@@ -6,9 +6,11 @@
             <section class="ui yellow segment">
                 <table class="ui fixed left aligned table">
                     <h2 class="ui red center aligned header"> Class Details </h2>
+                    <img class="ui small centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1502920405/update_zojeca.gif">
+
                     <tr>
                         <td><i class="tasks icon"></i> Name:</td>
-                        <td>{{classes.name}}</td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><i class="write icon"></i> Description:</td>
@@ -45,7 +47,7 @@
                 <section class="ui segment">
                     <div class="field">
                         <label>Name</label>
-                        <input placeholder="Class name" name="name" required>
+                        <input placeholder="Class name" name="name" value="name" required>
                     </div>
                     <div class="field">
                         <label>Description</label>
@@ -64,21 +66,26 @@
                                 <option value="6"> 6 Weeks</option>
                                 <option value="7"> 7 Weeks</option>
                                 <option value="8"> 8 Weeks</option>
+                                <option value="9"> 9 Weeks</option>
+                                <option value="10"> 10 Weeks</option>
+                                <option value="11"> 11 Weeks</option>
+                                <option value="12"> 12 Weeks</option>
                             </select>
                         </div>
                         <div class="field">
                             <label>Capacity</label>
                             <input placeholder="Capacity of the class" type="number" name="capacity" step="1"
                                    min="5"
-                                   max="20" required>
+                                   max="30" required>
                         </div>
                         <div class="field">
                             <label> Difficulty </label>
                             <select class="ui dropdown" name="difficulty" required>
                                 <option value="">Select Level</option>
-                                <option value="beginners"> Beginners</option>
-                                <option value="intermediate"> Intermediate</option>
-                                <option value="advanced"> Advanced</option>
+                                <option value="All Levels">All Levels</option>
+                                <option value="Beginners Level"> Beginners Level</option>
+                                <option value="Intermediate Level"> Intermediate Level</option>
+                                <option value="Advanced Level"> Advanced Level</option>
                             </select>
                         </div>
                     </div>
@@ -96,6 +103,13 @@
                                 <i class="calendar icon"></i>
                                 <input placeholder="Date" type="date" name="date" required>
                             </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Image Url</label>
+                        <div class="ui input left icon">
+                            <i class="image icon"></i>
+                            <input placeholder="Image Url" name="image">
                         </div>
                     </div>
                     <button class="ui animated fade blue submit button">

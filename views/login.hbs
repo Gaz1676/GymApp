@@ -1,7 +1,7 @@
 {{> welcomeMenu id='login' }}
 
-<section class = "ui inverted yellow segment">
-    <section class = "ui segment">
+<section class = "ui inverted brown segment">
+    <section class = "ui yellow segment">
         <div class="ui three column grid basic middle aligned segment">
 
             <div class="column">
@@ -19,12 +19,18 @@
                         <label>Email</label> <input placeholder="Email" name="email" required>
                     </div>
                     <div class="field">
-                        <label>Password</label> <input type="password" name="password" required>
+                        <label>Password</label> <label>
+                        <input type="password" name="password" required>
+                    </label>
+                        <input type="checkbox"> Remember me
+
                     </div>
+
                     <button class="ui animated fade blue submit button">
                         <div class="visible content"><i class="lock icon"></i>Log-in</div>
                         <div class="hidden content"><i class="unlock icon"></i>Click</div>
                     </button>
+
                 </form>
             </div>
 
