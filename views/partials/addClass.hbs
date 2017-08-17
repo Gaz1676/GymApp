@@ -1,63 +1,90 @@
-<section class="ui inverted brown segment">
-    <form class="ui yellow raised center aligned segment form" name="addClass" action="/trainerDashboard/addclass"
-          method="POST">
-        <div class="three fields">
-            <div class="field">
-                <label>Class name</label>
-                <input placeholder="Class name" name="name" required>
-            </div>
-            <div class="field">
-                <label>Description</label>
-                <textarea rows="2" name="description"></textarea>
-            </div>
-            <div class="field">
-                <label>Duration</label>
-                <select class="ui dropdown" name="duration" required>
-                    <option value=""> No. of Weeks</option>
-                    <option value="1"> 1 Week</option>
-                    <option value="2"> 2 Weeks</option>
-                    <option value="3"> 3 Weeks</option>
-                    <option value="4"> 4 Weeks</option>
-                    <option value="5"> 5 Weeks</option>
-                    <option value="6"> 6 Weeks</option>
-                    <option value="7"> 7 Weeks</option>
-                    <option value="8"> 8 Weeks</option>
-                </select>
-            </div>
-        </div>
-        <div class="four fields">
-            <div class="field">
-                <label>Capacity</label>
-                <input placeholder="Capacity" type="number" name="capacity" step="1" min="5" max="20"
-                       required>
-            </div>
-            <div class="field">
-                <label> Difficulty </label>
-                <select class="ui dropdown" name="difficulty" required>
-                    <option value="">Select Level</option>
-                    <option value="beginners"> Beginners</option>
-                    <option value="intermediate"> Intermediate</option>
-                    <option value="advanced"> Advanced</option>
-                </select>
-            </div>
-            <div class="field">
-                <label>Time</label>
-                <div class="ui input left icon">
-                    <i class="time icon"></i>
-                    <input placeholder="Time" type="time" name="time" required>
-                </div>
-            </div>
-            <div class="field">
-                <label>Date</label>
-                <div class="ui input left icon">
-                    <i class="calendar icon"></i>
-                    <input placeholder="Date" type="date" name="date" required>
-                </div>
-            </div>
-        </div>
-        <button class="ui animated fade blue submit button">
-            <div class="visible content"><i class="add circle icon"></i>Create Class</div>
-            <div class="hidden content">Click to Save</div>
-        </button>
-    </form>
-</section>
+<div class="ui two column grid basic segment">
+    <div class="column left aligned">
+        <section class="ui inverted brown segment">
+            <form class="ui yellow raised segment form" action="/trainerDashboard/addclass" method="POST">
+                <h2 class="ui red center aligned header"> Create A New Workout Class</h2>
+                <section class="ui segment">
+                    <div class="field">
+                        <label>Name</label>
+                        <input placeholder="Class name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <textarea rows="2" name="description"></textarea>
+                    </div>
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Duration</label>
+                            <select class="ui dropdown" name="duration" required>
+                                <option value=""> No. of Weeks</option>
+                                <option value="1"> 1 Week</option>
+                                <option value="2"> 2 Weeks</option>
+                                <option value="3"> 3 Weeks</option>
+                                <option value="4"> 4 Weeks</option>
+                                <option value="5"> 5 Weeks</option>
+                                <option value="6"> 6 Weeks</option>
+                                <option value="7"> 7 Weeks</option>
+                                <option value="8"> 8 Weeks</option>
+                                <option value="9"> 9 Weeks</option>
+                                <option value="10"> 10 Weeks</option>
+                                <option value="11"> 11 Weeks</option>
+                                <option value="12"> 12 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Capacity</label>
+                            <input placeholder="Capacity of the class" type="number" name="capacity" step="1"
+                                   min="5"
+                                   max="30" required>
+                        </div>
+                        <div class="field">
+                            <label> Difficulty </label>
+                            <select class="ui dropdown" name="difficulty" required>
+                                <option value="">Select Level</option>
+                                <option value="All Levels">All Levels</option>
+                                <option value="Beginners Level"> Beginners Level</option>
+                                <option value="Intermediate Level"> Intermediate Level</option>
+                                <option value="Advanced Level"> Advanced Level</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Time</label>
+                            <div class="ui input left icon">
+                                <i class="time icon"></i>
+                                <input placeholder="Time" type="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="Date" type="date" name="date" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Image Url</label>
+                        <div class="ui input left icon">
+                            <i class="image icon"></i>
+                            <input placeholder="Image Url" name="image">
+                        </div>
+                    </div>
+
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="add circle icon"></i>Create Class</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </section>
+            </form>
+        </section>
+    </div>
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <section class="ui yellow raised segment">
+                <img class="ui centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1502984938/yogahomer_lwmkhu.jpg">
+            </section>
+        </section>
+    </div>
+</div>
