@@ -1,4 +1,4 @@
-&emsp;&emsp;&emsp;Summer 2017 - Gym Web Application
+Summer 2017 - Gym Web Application
   ==========================     
 
 _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebStorm IDE_
@@ -23,7 +23,7 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
 
 ***
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Gym Members
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Gym Members
   ==========================     
 ***
 ### Assessments
@@ -37,18 +37,18 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
 
 - _Members can delete individual assessments as well as update their profiles_
 
-- _Members may book an assessment	with a Trainer of their	choice(assuming	the	Trainer is free	at that time)_
+- _Members may book an assessment with a Trainer of their choice(assuming the Trainer is free at that time)_
 
 ### Scheduled Classes
 - _Enable Members to view and search the scheduled classes created by the Trainers_
 
 - _Members can enrol in the scheduled classes on a specific dates_
 
-- _Members can enrol in	all	classes	in the suite designed by the Trainers_
+- _Members can enrol in	all classes in the suite designed by the Trainers_
 
-- _Members enrolment in	classes	is subject to	available	spaces_
+- _Members enrolment in	classes	is subject to available	spaces_
 
-- _Members can also un-enrol from	these classes	too_
+- _Members can also un-enrol from these classes too_
 
 ### Members Goals/Targets
 - _Members can set goals for themselves_	
@@ -86,9 +86,10 @@ _(homer@simpson.com)_
 
 ***
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Gym Trainers
+&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Gym Trainers
   ==========================     
-***### Assessments
+***
+### Assessments
 - _The Trainers can review assessments and comment on any specific assessment_
 
 - _Trainers can delete any Members or assessments at anytime_
