@@ -95,16 +95,16 @@ const trainerDashboard = {
 
   addClass(request, response) { //------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('creating a class'); //-------------------------------------------------------> logs message to console
-    const loggedInTrainer = accounts.getCurrentTrainer(request); //---------------------------> gets current logged in trainer from accounts and stores it in loggedInTrainer
     const newClass = { //---------------------------------------------------------------------> place model in newClass object
       classid: uuid(), //---------------------------------------------------------------------> unique class id
       name: request.body.name, //-------------------------------------------------------------> requests name
       description: request.body.description, //-----------------------------------------------> requests description
-      duration: Number(request.body.duration), //---------------------------------------------> requests duration
+      duration: request.body.duration, //-----------------------------------------------------> requests duration
       capacity: Number(request.body.capacity), //---------------------------------------------> requests capacity
       difficulty: request.body.difficulty, //-------------------------------------------------> requests difficulty
       time: request.body.time, //-------------------------------------------------------------> requests time
-      date: request.body.date, //-------------------------------------------------------------> new date
+      date: request.body.date, //-------------------------------------------------------------> requests date
+      image: request.body.image, //-----------------------------------------------------------> requests image
     };
     classStore.addClass(newClass); //---------------------------------------------------------> adds new class to class Store
     response.redirect('/trainerDashboard/viewTrainerClasses'); //-----------------------------> redirects to (/trainerDashboard/allClasses)
