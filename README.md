@@ -1,29 +1,31 @@
-# Summer 2017 - Gym Web Application
+&emsp;&emsp;&emsp;Summer 2017 - Gym Web Application
+  ==========================     
 
-_First time JavaScript and Node project created in WebStorm IDE_
+_&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebStorm IDE_
 ***
-                    MEMBERS ACCOUNT LOGIN DETAILS  
-                =====================================
-      login: homer@simpson.com   |     login: bart@simpson.com
-      password: secret           |     password: secret
-      ---------------------------------------------------------
-      login: seymour@skinner.com |     login: edna@krabappel
-      password: secret           |     password: secret
+                      MEMBERS ACCOUNT LOGIN DETAILS  
+                  =====================================
+          login: homer@simpson.com   |     login: bart@simpson.com
+          password: secret           |     password: secret
+          ---------------------------------------------------------
+          login: seymour@skinner.com |     login: edna@krabappel
+          password: secret           |     password: secret
       
       
       
-                   TRAINERS ACCOUNT LOGIN DETAILS  
-              ==========================================
-      login: ned@flanders.com    |     login: marge@simpson.com
-      password: secret           |     password: secret
+                       TRAINERS ACCOUNT LOGIN DETAILS  
+                  ==========================================
+          login: ned@flanders.com    |     login: marge@simpson.com
+          password: secret           |     password: secret
 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
 
 ***
 
-## Gym Members
-
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Gym Members
+  ==========================     
+***
 ### Assessments
 - _Periodically tracks assessments on individual Members_
 
@@ -84,8 +86,9 @@ _(homer@simpson.com)_
 
 ***
 
-## Gym Trainers
-### Assessments
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Gym Trainers
+  ==========================     
+***### Assessments
 - _The Trainers can review assessments and comment on any specific assessment_
 
 - _Trainers can delete any Members or assessments at anytime_
