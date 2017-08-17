@@ -34,6 +34,13 @@ const accounts = {
     response.render('signup', viewData); //----------------------------------> name of view to render (sign up) and sends viewData to view
   },
 
+  tAndC(request, response) { //----------------------------------------------> t&c method called when ‘/ accounts’ request received
+    const viewData = { //----------------------------------------------------> place model in viewData object
+      title: 't&c\'s to the gym', //-----------------------------------------> name of title
+    };
+    response.render('tAndC', viewData); //-----------------------------------> name of view to render (tAndC) and sends viewData to view
+  },
+
   register(request, response) { //-------------------------------------------> register method, called when ‘/ accounts’ request received
     const member = request.body; //------------------------------------------> requests body data and stores it in member
     member.memberid = uuid(); //---------------------------------------------> creates a unique member id
