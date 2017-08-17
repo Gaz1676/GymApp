@@ -1,24 +1,37 @@
 {
   "classes": [
     {
-      "classid": "aa8c166d-ad60-40bd-835b-dd243c91bddf",
-      "name": "jj",
-      "description": "jj",
-      "duration": 1,
-      "capacity": 5,
-      "difficulty": "beginners",
-      "time": "12:59",
-      "date": "2017-12-31"
+      "classid": "09757512-3efd-4a8e-831f-6db656b151df",
+      "name": "Strength & Conditioning",
+      "description": "This 30 minute strength and conditioning class is a high intensity, interval training workout. This class is designed to improve strength and build lean muscle.",
+      "duration": "8",
+      "capacity": 20,
+      "difficulty": "Intermediate Level",
+      "time": "10:00",
+      "date": "2017-08-17",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg"
     },
     {
-      "classid": "752e2a8f-e9d5-469d-85f0-b2979e67fb60",
-      "name": "hh",
-      "description": "hh",
-      "duration": 1,
-      "capacity": 5,
-      "difficulty": "beginners",
-      "time": "12:59",
-      "date": "2017-12-31"
+      "classid": "c2930a5f-366f-4a3e-8a2a-9c569969d184",
+      "name": "Circuit Training",
+      "description": "Like variety in your workout? Then our circuit training class is for you. A mixture of aerobic, strength and endurance exercises – you never get the same class twice! Based on timed intervals you are pushed to your limits. A great class to mix up your gym routine.",
+      "duration": "6",
+      "capacity": 20,
+      "difficulty": "Intermediate Level",
+      "time": "11:00",
+      "date": "2017-08-17",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502999367/The_Strong_Arms_of_the_Ma_k4zyu7.jpg"
+    },
+    {
+      "classid": "73df2402-9be2-4ea3-8493-97c941377645",
+      "name": "Spin",
+      "description": "Looking to increase your cardio fitness, you need look no further than our Spinning Class. Spin is a 45mins cardio class cycling on stationary indoor bikes. Aimed to get the pulses races and legs burning. From slow hill climbs to quick sprints, you will be cycling them all!",
+      "duration": "4",
+      "capacity": 15,
+      "difficulty": "All Levels",
+      "time": "15:00",
+      "date": "2017-08-24",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502994737/38d0dd158c5273bde79b6b17d25a14b5--cycling-motivation-fitness-motivation_g7zvr3.jpg"
     }
   ]
 }
