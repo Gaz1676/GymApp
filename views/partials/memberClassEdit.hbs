@@ -1,50 +1,57 @@
-<section class="ui inverted brown center aligned segment">
-    <table class="ui yellow center aligned raised celled table segment">
-        <thead>
-        <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Duration</th>
-            <th>Capacity</th>
-            <th>Difficulty</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>No. Members</th>
-            <th>Enroll</th>
-            <th>Enroll To All</th>
-            <th>Unenroll </th>
-        </tr>
-        </thead>
-        <tbody>
-        {{#each classList}}
-            <div class="ui list">
-                <tr>
-                    <td>{{name}}</td>
-                    <td>{{description}}</td>
-                    <td>{{duration}}</td>
-                    <td>{{capacity}}</td>
-                    <td>{{difficulty}}</td>
-                    <td>{{date}}</td>
-                    <td>{{time}}</td>
-                    <td>{{member.size}}</td>
-                    <td>
-                        <a href="/dashboard/enrollmember/{{memberid}}/intoclass/{{classid}}" class="ui icon button">
-                            <i class="green add user icon"></i>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#" class="ui icon button">
-                            <i class="green users icon"></i>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="/dashboard/unenroll/{{memberid}}/fromclass/{{classid}}" class="ui icon button">
-                            <i class="red remove user icon"></i>
-                        </a>
-                    </td>
-                </tr>
+<div class="ui yellow three stackable cards">
+    {{#each classList}}
+        <div class="card">
+            <div class="content">
+                <div class="center aligned content">
+                    <img class="ui middle aligned small image" {{#if image}} src="{{image}}" {{else}} src="http://s3.amazonaws.com/wpd-assets/ymcanewyork/uploads/sub-class-thumbs/family-yoga-pilates-icon.png" {{/if}}>
+                </div>
+                <div class="ui blue header">{{name}}</div>
+                <section class="ui segment">
+                    <div>{{description}}</div>
+                </section>
+
+                <div class="column left aligned">
+                    <section class="ui yellow segment">
+                        <table class="ui fixed left aligned table">
+                                <td>Duration:</td>
+                                <td>{{duration}} week(s)</td>
+                            </tr>
+                            <tr>
+                                <td>Capacity:</td>
+                                <td>{{capacity}}</td>
+                            </tr>
+                            <tr>
+                                <td>Difficulty:</td>
+                                <td>{{difficulty}}</td>
+                            </tr>
+                            <tr>
+                                <td>Date:</td>
+                                <td>{{date}}</td>
+                            </tr>
+                            <tr>
+                                <td>Time:</td>
+                                <td>{{time}}</td>
+                            </tr>
+                        </table>
+                    </section>
+                </div>
             </div>
-        {{/each}}
-        </tbody>
-    </table>
-</section>
+
+            <div class="extra content">
+                <span>
+                    Enrol <a href="/dashboard/enrollmember/{{memberid}}/intoclass/{{classid}}" class="ui icon button">
+                            <i class="green add user icon"></i>
+                        </a>&emsp;&emsp;&emsp;
+                     <a href="/dashboard/unenroll/{{memberid}}/fromclass/{{classid}}" class="ui icon button">
+                            <i class="red remove user icon"></i>
+                        </a>Un-Enrol
+                </span>
+            </div>
+            <div class="extra content">
+                <span>
+                </span>
+            </div>
+        </div>
+
+    {{/each}}
+</div>
