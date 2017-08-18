@@ -9,6 +9,7 @@
       "gender": "male",
       "height": 1.7,
       "startingWeight": 66,
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1501779026/Homer-Simpson-02-Donut-icon_i1qv3w.png",
       "memberid": "e23abd8f-1f5f-4d40-82e9-094dd2b618e1",
       "assessments": [
         {
@@ -48,6 +49,7 @@
       "gender": "male",
       "height": "1.4",
       "startingWeight": "45",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1499114469/pejow7glvwfoyphjt0vo.jpg",
       "memberid": "3f43fbb2-1c0f-4c9b-bddd-df4ce0559d16",
       "assessments": [
         {
@@ -74,6 +76,7 @@
       "gender": "male",
       "height": "1.6",
       "startingWeight": "69",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
       "memberid": "53a2d968-6096-4f54-a825-82deadfc7d4c",
       "assessments": [
         {
@@ -87,7 +90,7 @@
           "hips": "65",
           "trend": "green",
           "comment": "Excellent Seymour",
-          "updateComment": true
+          "updateComment": false
         },
         {
           "assessmentid": "2bb9b7e6-c6d4-422d-8614-9d02adfb95ef",
@@ -100,7 +103,7 @@
           "hips": "65",
           "trend": "green",
           "comment": "Dedication pays off",
-          "updateComment": true
+          "updateComment": false
         }
       ]
     },
@@ -113,6 +116,7 @@
       "gender": "female",
       "height": "1.6",
       "startingWeight": "66",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091790/ZLWCe9Bd_jspbf9.png",
       "memberid": "70761f88-5e16-4e86-aafb-0583eb4351bb",
       "assessments": [
         {
@@ -140,6 +144,46 @@
           "trend": "green",
           "comment": "Well done Edna",
           "updateComment": true
+        }
+      ]
+    },
+    {
+      "firstName": "Lisa",
+      "lastName": "Simpson",
+      "email": "lisa@simpson.com",
+      "password": "secret",
+      "address": "742 Evergreen Terrace",
+      "gender": "female",
+      "height": "1.4",
+      "startingWeight": "43",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503083391/Lisa-Simpson_o8psap.ico",
+      "memberid": "0c49b7dc-755a-419b-9be0-ee13ebf49f86",
+      "assessments": [
+        {
+          "assessmentid": "f80f9d49-7d9d-4119-88a9-e989c39bf1e2",
+          "date": "2017-08-18 19:56:49",
+          "weight": "243",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "",
+          "comment": "",
+          "updateComment": false
+        },
+        {
+          "assessmentid": "797a83c3-81f1-4620-8eb0-be7f5df34fc8",
+          "date": "2017-08-18 19:35:10",
+          "weight": "35",
+          "chest": "35",
+          "thigh": "35",
+          "upperArm": "15",
+          "waist": "65",
+          "hips": "65",
+          "trend": "red",
+          "comment": "",
+          "updateComment": false
         }
       ]
     }
