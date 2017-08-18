@@ -22,6 +22,15 @@ const classStore = {
     return this.store.findOneBy(this.collection, { classid: classid }); //---> gets a single class by id
   },
 
+  getWorkoutById(classid, workoutid) {
+    const thisClass = this.getClassById(classid); //-------------------------> gets classById from this location, stores it in thisClass
+    for (let i = 0; i < thisClass.workouts.length; i++) { //-----------------> for loop
+      if (thisClass.workouts[i].workoutid === workoutid) { //----------------> if workoutid is equal to the one found
+        return thisClass.workouts[i]; //-------------------------------------> then return that workout from the workouts in thisClass
+      }
+    }
+  },
+
   removeClass(classid) {
     const classes = this.getClassById(classid); //---------------------------> gets class by id and stores it in classes
     this.store.remove(this.collection, classes); //--------------------------> the classes from the collection is removed from the store
