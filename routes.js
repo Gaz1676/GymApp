@@ -45,13 +45,13 @@ router.get('/trainerDashboard/createclasses', trainerDashboard.createClasses);
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/viewtrainerclasses', trainerDashboard.viewTrainerClasses);
 router.get('/trainerDashboard/removeclass/:classid', trainerDashboard.removeClass);
+router.get('/trainerDashboard/updateclass/:classid', trainerDashboard.updateClass);
+router.post('/trainerDashboard/editclass/:classid', trainerDashboard.editClass);
 
 // Settings //
 
 router.get('/settings', dashboard.settings);
 router.post('/settings', dashboard.updateProfile);
-router.get('/classSettings', trainerDashboard.classSettings); //TODO
-router.post('/classSettings', trainerDashboard.updateClass); //TODO
 
 //router.get('/dashboard/enrollmember/:memberid/intoclass/:classid', dashboard.enrollMember);
 //router.get('/dashboard/unenroll/:memberid/fromclass/:classid', dashboard.unenrollMember);
