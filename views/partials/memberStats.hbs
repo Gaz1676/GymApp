@@ -1,36 +1,40 @@
-    <form class="ui yellow raised segment form">
-        <div class="ui four statistics">
-            <div class="statistic">
-                <div class="value">
-                    <i class=" blue user icon"></i>
-                </div>
-                <div class="label">
-                    {{member.firstName}} {{member.lastName}}
-                </div>
-            </div>
-            <div class="statistic">
-                <div class="value">
-                    <i class="{{idealBodyWeight}} dashboard icon"></i>
-                </div>
-                <div class="label">
-                    Ideal Weight Indicator
-                </div>
-            </div>
-            <div class="statistic">
-                <div class="value">
-                    <i class="yellow heartbeat icon">{{bmi}}</i>
-                </div>
-                <div class="label">
-                    BMI
-                </div>
-            </div>
-            <div class="statistic">
-                <div class="value">
-                    <i class="green doctor icon"></i>
-                </div>
-                <div class="label">
-                    {{bmiCategory}}
-                </div>
+<div class="ui center aligned four column grid">
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image">
+                <img src="{{member.image}}">
             </div>
         </div>
-    </form>
+    </div>
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image">
+                <i class="ui center aligned massive green doctor icon"></i>
+            </div>
+            <div class="content">
+                <a class="ui center aligned header">{{bmiCategory}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image">
+                <i class="ui center aligned massive yellow heartbeat icon"></i>
+            </div>
+            <div class="content">
+                <a class="ui center aligned header">{{bmi}} BMI</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image">
+                <i class="massive {{idealBodyWeight}} dashboard icon"></i>
+            </div>
+            <div class="content">
+                <a class="ui center aligned header">IDEAL BODY WEIGHT</a>
+            </div>
+        </div>
+    </div>
+</div>
