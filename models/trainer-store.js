@@ -25,12 +25,6 @@ const trainerStore = {
   getTrainerByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email }); //------------> gets a single trainer by email 
   },
-
-  addMemberList(trainerid, members) {
-    const trainer = this.getTrainerById(trainerid); //----------------------------> gets trainer by id and stores it in trainer
-    trainer.members.push(members); //---------------------------------------------> loads members to the end of pile
-    this.store.save(); //---------------------------------------------------------> saves new results to store
-  },
 };
 
 module.exports = trainerStore; //-------------------------------------------------> this is the object that is then exported

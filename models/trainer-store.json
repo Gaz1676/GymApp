@@ -6,6 +6,7 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "gender": "female",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091949/simpsons_PNG91_a365i8.png",
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
       "members": []
     },
@@ -15,6 +16,7 @@
       "email": "ned@flanders.com",
       "password": "secret",
       "gender": "male",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091980/Ned_Flanders_2_o1oced.png",
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
       "members": []
     }

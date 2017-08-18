@@ -1,7 +1,7 @@
-<div class="ui yellow three stackable cards">
+<div class="ui yellow three cards">
     {{#each classList}}
         <div class="card">
-            <div class="content">
+            <div class="image">
                 <div class="center aligned content">
                     <img class="ui small image" {{#if image}} src="{{image}}" {{else}} src="http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png" {{/if}}>
                 </div>
@@ -13,24 +13,28 @@
                     <section class="ui yellow segment">
                         <table class="ui fixed left aligned table">
                             <tr>
-                                <td>Duration:</td>
-                                <td>{{duration}} week(s)</td>
+                                <td><i class="checked calendar icon"></i> Duration:</td>
+                                <td>{{duration}}</td>
                             </tr>
                             <tr>
-                                <td>Capacity:</td>
+                                <td><i class="users icon"></i> Capacity:</td>
                                 <td>{{capacity}}</td>
                             </tr>
                             <tr>
-                                <td>Difficulty:</td>
+                                <td><i class="heartbeat icon"></i> Difficulty:</td>
                                 <td>{{difficulty}}</td>
                             </tr>
                             <tr>
-                                <td>Date:</td>
-                                <td>{{date}}</td>
+                                <td><i class="tasks icon"></i> Workouts:</td>
+                                <td>{{classesWorkouts}}</td>
                             </tr>
                             <tr>
-                                <td>Time:</td>
+                                <td><i class="time icon"></i> Time:</td>
                                 <td>{{time}}</td>
+                            </tr>
+                            <tr>
+                                <td><i class="calendar icon"></i> Date:</td>
+                                <td>{{date}}</td>
                             </tr>
                         </table>
                     </section>
@@ -38,7 +42,7 @@
             </div>
             <div class="extra content">
                 <span>
-                    Edit <a href="/classSettings" data-tooltip="Edit Class"><i class="large blue write icon"></i></a>
+                    Edit <a href="/trainerDashboard/updateclass/{{classid}}" data-tooltip="Edit Class"><i class="large blue write icon"></i></a>
                     &emsp;&emsp;&emsp;
                      <a href="/trainerDashboard/removeclass/{{classid}}" data-tooltip="Are You Sure???">
                          <i class=" large red trash icon"></i></a> Remove

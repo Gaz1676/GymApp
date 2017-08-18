@@ -10,7 +10,7 @@ const index = {
     const viewData = { //---------------------------------------> creates object called viewData
       title: 'Welcome to me gym app', //------------------------> name of title
     };
-    response.render('index', viewData); //----------------------> name of view to render (index) and sends viewData to view
+    response.render('index', viewData); //----------------------> rendera 'index' and viewData to view
   },
 };
 

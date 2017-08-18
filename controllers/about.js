@@ -10,7 +10,7 @@ const about = {
     const viewData = { //---------------------------------------> creates object called viewData
       title: 'About JS Gym App', //-----------------------------> name of title
     };
-    response.render('about', viewData); //----------------------> name of view to render (about) and sends viewData to view
+    response.render('about', viewData); //----------------------> renders 'about' and viewData to view
   },
 };
 

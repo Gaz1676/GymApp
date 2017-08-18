@@ -12,57 +12,57 @@ const accounts = {
     const viewData = { //----------------------------------------------------> place model in viewData object
       title: 'Login or Signup', //-------------------------------------------> name of title
     };
-    response.render('index', viewData); //-----------------------------------> name of view to render (index) and sends viewData to view
+    response.render('index', viewData); //-----------------------------------> renders 'index' and viewData to view
   },
 
   login(request, response) { //----------------------------------------------> login method called when ‘/ accounts’ request received
     const viewData = { //----------------------------------------------------> place model in viewData object
       title: 'Login to the gym', //------------------------------------------> name of title
     };
-    response.render('login', viewData); //-----------------------------------> name of view to render (login) and sends viewData to view
+    response.render('login', viewData); //-----------------------------------> renders 'login' and viewData to view
   },
 
   logout(request, response) { //---------------------------------------------> logout method called when ‘/ accounts’ request received
     response.cookie('member', ''); //----------------------------------------> creates a cookie called member
-    response.redirect('/'); //-----------------------------------------------> redirect to (/)
+    response.redirect('/'); //-----------------------------------------------> redirect to '/'
   },
 
   signup(request, response) { //---------------------------------------------> sign up method called when ‘/ accounts’ request received
     const viewData = { //----------------------------------------------------> place model in viewData object
       title: 'Sign up to the gym', //----------------------------------------> name of title
     };
-    response.render('signup', viewData); //----------------------------------> name of view to render (sign up) and sends viewData to view
+    response.render('signup', viewData); //----------------------------------> renders 'sign up' and viewData to view
   },
 
   tAndC(request, response) { //----------------------------------------------> t&c method called when ‘/ accounts’ request received
     const viewData = { //----------------------------------------------------> place model in viewData object
       title: 't&c\'s to the gym', //-----------------------------------------> name of title
     };
-    response.render('tAndC', viewData); //-----------------------------------> name of view to render (tAndC) and sends viewData to view
+    response.render('tAndC', viewData); //-----------------------------------> renders 'tAndC' and viewData to view
   },
 
   register(request, response) { //-------------------------------------------> register method, called when ‘/ accounts’ request received
     const member = request.body; //------------------------------------------> requests body data and stores it in member
-    member.memberid = uuid(); //---------------------------------------------> creates a unique member id
-    member.assessments = []; //----------------------------------------------> creates assessment array
-    memberStore.addMember(member); //----------------------------------------> adds the member to the store
-    logger.info(`registering ${member.email}`); //---------------------------> logs info to console of member registering
+    member.memberid = uuid(); //---------------------------------------------> creates a unique memberid for member
+    member.assessments = []; //----------------------------------------------> creates an empty assessment array list for member
+    memberStore.addMember(member); //----------------------------------------> adds the member to memberStore
+    logger.info(`registering ${member.email}`); //---------------------------> logs message to console
     response.redirect('/login'); //------------------------------------------> redirect to (/login)
   },
 
   authenticate(request, response) { //---------------------------------------> authenticate method, called when ‘/ accounts’ request received
-    const member = memberStore.getMemberByEmail(request.body.email); //------> checks if member exists by searching valid email
-    const trainer = trainerStore.getTrainerByEmail(request.body.email);//----> checks if trainer exists by searching valid email
+    const member = memberStore.getMemberByEmail(request.body.email); //------> getMemberByEmail from data in memberStore and stores it in member
+    const trainer = trainerStore.getTrainerByEmail(request.body.email);//----> getTrainerByEmail from data in trainerStore and stores it in trainer
     if (member && member.password === request.body.password) { //------------> checks if the member and password match from db
       response.cookie('member', member.email); //----------------------------> if so then a cookie called ‘member’ containing members email is created
-      logger.info(`logging in ${member.email}`); //--------------------------> logs info to console of member logging in
-      response.redirect('/dashboard'); //------------------------------------> redirected to dashboard 
+      logger.info(`logging in ${member.email}`); //--------------------------> logs message to console
+      response.redirect('/dashboard'); //------------------------------------> redirected to dashboard
     } else if (trainer && trainer.password === request.body.password) { //---> checks if the trainer and password match from db
       response.cookie('trainer', trainer.email); //--------------------------> if so then a cookie called ‘trainer’ containing trainers email is created
-      logger.info(`logging in ${trainer.email}`); //-------------------------> logs info to console of trainer logging in
-      response.redirect('/trainerDashboard'); //-----------------------------> redirected to trainerdashboard 
+      logger.info(`logging in ${trainer.email}`); //-------------------------> logs message to console
+      response.redirect('/trainerDashboard'); //-----------------------------> redirected to (/trainerdashboard)
     } else {
-      logger.info(`authentication failed`); //-------------------------------> else if no matches found console displays err
+      logger.info(`authentication failed`); //-------------------------------> logs message to console
       response.redirect('/login'); //----------------------------------------> redirect to (/login)
     }
   },

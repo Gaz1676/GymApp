@@ -47,7 +47,7 @@ const memberStore = {
   getAssessmentById(memberid, assessmentid) {
     const member = this.getMemberById(memberid); //-----------------------------> get member by id
     for (let i = 0; i < member.assessments.length; i++) { //--------------------> for 'i' is less than assessment.length in member, increment by one
-      if (member.assessments[i].assessmentid === assessmentid) { //-------------> if assessmentId is equal to one found then
+      if (member.assessments[i].assessmentid === assessmentid) { //-------------> if assessmentid is equal to one found then
         return member.assessments[i]; //----------------------------------------> return that assessment from the assessments in member
       }
     }

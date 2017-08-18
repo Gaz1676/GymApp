@@ -1,37 +1,280 @@
 {
   "classes": [
     {
-      "classid": "09757512-3efd-4a8e-831f-6db656b151df",
-      "name": "Strength & Conditioning",
-      "description": "This 30 minute strength and conditioning class is a high intensity, interval training workout. This class is designed to improve strength and build lean muscle.",
-      "duration": "8",
-      "capacity": 20,
-      "difficulty": "Intermediate Level",
-      "time": "10:00",
-      "date": "2017-08-17",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg"
-    },
-    {
-      "classid": "c2930a5f-366f-4a3e-8a2a-9c569969d184",
-      "name": "Circuit Training",
-      "description": "Like variety in your workout? Then our circuit training class is for you. A mixture of aerobic, strength and endurance exercises – you never get the same class twice! Based on timed intervals you are pushed to your limits. A great class to mix up your gym routine.",
-      "duration": "6",
-      "capacity": 20,
-      "difficulty": "Intermediate Level",
-      "time": "11:00",
-      "date": "2017-08-17",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502999367/The_Strong_Arms_of_the_Ma_k4zyu7.jpg"
-    },
-    {
-      "classid": "73df2402-9be2-4ea3-8493-97c941377645",
-      "name": "Spin",
-      "description": "Looking to increase your cardio fitness, you need look no further than our Spinning Class. Spin is a 45mins cardio class cycling on stationary indoor bikes. Aimed to get the pulses races and legs burning. From slow hill climbs to quick sprints, you will be cycling them all!",
-      "duration": "4",
+      "classid": "e689a656-6345-4283-a9e5-b256b567a5a3",
+      "name": "Yin Yoga",
+      "description": "Yin yoga is a very intimate practice which takes on a meditative approach. It is a simple yet challenging practice but simple does not always mean easy. It allows the practitioner time to connect with their breath and observe the inner landscape of their bodies on a physical, emotional and spiritual level.",
+      "duration": "4 weeks",
       "capacity": 15,
       "difficulty": "All Levels",
-      "time": "15:00",
-      "date": "2017-08-24",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502994737/38d0dd158c5273bde79b6b17d25a14b5--cycling-motivation-fitness-motivation_g7zvr3.jpg"
+      "classesWorkouts": 4,
+      "time": "09:00",
+      "date": "2017-08-18",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503070307/Jesse_Grass_set5k0.png",
+      "workouts": [
+        {
+          "workoutid": "801d62d7-39f0-46f7-810c-c0126de5b9ae",
+          "workoutDate": "2017-08-18 00:00:00",
+          "time": "09:00",
+          "duration": "4 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "4939e2a7-c263-4a17-a8e8-152d1a836508",
+          "workoutDate": "2017-08-25 00:00:00",
+          "time": "09:00",
+          "duration": "4 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "ef6b2415-bc31-47d9-9804-24e1734c4869",
+          "workoutDate": "2017-09-01 00:00:00",
+          "time": "09:00",
+          "duration": "4 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "4f63b316-3c8b-4642-b116-595c4356a161",
+          "workoutDate": "2017-09-08 00:00:00",
+          "time": "09:00",
+          "duration": "4 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        }
+      ]
+    },
+    {
+      "classid": "9be5aa4d-e272-4648-bdd8-8e9c6b7fe7f6",
+      "name": "Aqua Aerobics",
+      "description": "Aqua Aerobics is a fun and challenging class is designed to give you a full body workout, using the water as your resistance. Suitable for people who can’t swim but are confident in the water, injury rehabilitation and aerobic enthusiasts. This is by far one of our most popular classes.",
+      "duration": "6 weeks",
+      "capacity": 15,
+      "difficulty": "Beginners Level",
+      "classesWorkouts": 6,
+      "time": "18:15",
+      "date": "2017-08-18",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png",
+      "workouts": [
+        {
+          "workoutid": "aff47cdc-494b-4bef-8dc9-9f208fa130c5",
+          "workoutDate": "2017-08-18 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "da2feaa3-d070-44c3-9a69-e676ddf1c62f",
+          "workoutDate": "2017-08-25 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "b6c1c6b8-7fac-46e9-ad69-366e38b06e14",
+          "workoutDate": "2017-09-01 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "3b47d53a-3db4-4917-8b0e-8dee3a5b6090",
+          "workoutDate": "2017-09-08 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "f5e3a0a7-1c16-452f-adb0-7fe69601ac51",
+          "workoutDate": "2017-09-15 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        },
+        {
+          "workoutid": "298504ff-2270-4347-9602-c8e23a2fef16",
+          "workoutDate": "2017-09-22 00:00:00",
+          "time": "18:15",
+          "duration": "6 weeks",
+          "currentCapacity": 0,
+          "capacity": "15",
+          "members": []
+        }
+      ]
+    },
+    {
+      "classid": "6e009964-843c-4fda-a262-5906e0fe3f95",
+      "name": "Body Sculpt",
+      "description": "For those who want to focus more on sculpting your body, this is your class. Body Sculpt, a low impact upper and lower body workout with weights, aimed to improve muscle tone and endurance.",
+      "duration": "8 weeks",
+      "capacity": 25,
+      "difficulty": "Intermediate Level",
+      "classesWorkouts": 16,
+      "time": "19:00",
+      "date": "2017-08-25",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502994434/Bare_Chested_Willie_Unlock_i9u2jp.png",
+      "workouts": [
+        {
+          "workoutid": "07ddd591-32d7-4026-82b1-145c4a78923e",
+          "workoutDate": "2017-08-25 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "9a455468-036a-4486-8b69-156640d90b3f",
+          "workoutDate": "2017-09-01 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "3c673f2c-84e0-482c-a670-90bbf59cbdc9",
+          "workoutDate": "2017-09-08 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "156ddbfd-91ae-4fb6-8756-7a34e0ea5c51",
+          "workoutDate": "2017-09-15 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "461008ce-391f-4aad-8c00-b768191e7300",
+          "workoutDate": "2017-09-22 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "f4207870-ec81-4e8f-9e07-9e5d4e9f799e",
+          "workoutDate": "2017-09-29 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "77be29ee-5245-4848-9873-c47b72e642f7",
+          "workoutDate": "2017-10-06 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "c15c5859-afab-44a8-a0b3-defe1252928a",
+          "workoutDate": "2017-10-13 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "c08fda1d-6a37-414f-9bff-5beb452c8435",
+          "workoutDate": "2017-10-20 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "c65c470d-a67f-4699-853e-414ddc6c126c",
+          "workoutDate": "2017-10-27 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "8c747a23-b111-4046-ae66-415399373280",
+          "workoutDate": "2017-11-03 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "ad857e55-07f3-40c0-bd23-c76dceaa146c",
+          "workoutDate": "2017-11-10 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "1a5a4188-df2f-4381-a9c6-bc6eca361f3a",
+          "workoutDate": "2017-11-17 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "75185623-0799-41f2-97ea-6da88c4314f2",
+          "workoutDate": "2017-11-24 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "af47f40b-b69e-45ef-8f6e-71cfa4ca6ef3",
+          "workoutDate": "2017-12-01 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        },
+        {
+          "workoutid": "9a05d952-8fd7-419f-b4fe-8514a38b20b6",
+          "workoutDate": "2017-12-08 00:00:00",
+          "time": "19:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": "25",
+          "members": []
+        }
+      ]
     }
   ]
 }
