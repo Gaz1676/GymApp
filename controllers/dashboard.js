@@ -67,34 +67,35 @@ const dashboard = {
     const viewData = { //-----------------------------------------------------------------------> place model in viewData object
       member: loggedInMember, //----------------------------------------------------------------> loggedInMember
     };
-    response.render('settings', viewData); //---------------------------------------------------> name of view to render 'settings' and sends viewData to view
+    response.render('settings', viewData); //---------------------------------------------------> renders 'settings' and viewData to view
   },
 
   updateProfile(request, response) { //---------------------------------------------------------> updateProfile method, called when ‘/ dashboard’ request received
     logger.info('rendering updating profile'); //-----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //-------------------------------> gets currentMember from accounts and stores it in loggedInMember
-    loggedInMember.firstName = request.body.firstName; //---------------------------------------> request fn = fn of loggedInMember
-    loggedInMember.lastName = request.body.lastName; //-----------------------------------------> request ln = ln of loggedInMember
+    loggedInMember.firstName = request.body.firstName; //---------------------------------------> request firstName = firstName of loggedInMember
+    loggedInMember.lastName = request.body.lastName; //-----------------------------------------> request lastName = lastName of loggedInMember
     loggedInMember.email = request.body.email; //-----------------------------------------------> request email = email of loggedInMember
     loggedInMember.password = request.body.password; //-----------------------------------------> request password = password of loggedInMember
     loggedInMember.address = request.body.address; //-------------------------------------------> request address = address of loggedInMember
     loggedInMember.gender = request.body.gender; //---------------------------------------------> request gender = gender of loggedInMember
     loggedInMember.height = Number(request.body.height); //-------------------------------------> request height = height of loggedInMember
     loggedInMember.startingWeight = Number(request.body.startingWeight); //---------------------> request startingWeight = startingWeight of loggedInMember
+    loggedInMember.image = request.body.image; //-----------------------------------------------> request image = image of loggedInMember
 
-    memberStore.store.save(); //----------------------------------------------------------------> saves new results to store
+    memberStore.store.save(); //----------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //---------------------------------------------------------> redirects to (/dashboard)
   },
 
-  memberClasses(request, response) {
+  memberClasses(request, response) { //---------------------------------------------------------> memberClasses method, called when ‘/ dashboard’ request received
     const member = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in member
     const classList = classStore.getAllClasses(); //--------------------------------------------> gets all classes from classStore and stores it in classList
     const viewData = { //-----------------------------------------------------------------------> place model in viewData object
       member: member, //------------------------------------------------------------------------> member
-      classList: classList, //------------------------------------------------------------------> class List
+      classList: classList, //------------------------------------------------------------------> classList
     };
     logger.info('rendering all classes'); //----------------------------------------------------> logs message to console
-    response.render('memberClasses', viewData); //----------------------------------------------> name of view to render 'memberClasses' and sends viewData to view
+    response.render('memberClasses', viewData); //----------------------------------------------> renders 'memberClasses' and viewData to view
   },
 };
 
