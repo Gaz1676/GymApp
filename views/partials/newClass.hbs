@@ -1,0 +1,133 @@
+<div class="ui two column grid basic segment">
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <h2 class="ui red center aligned header"> Class Details </h2>
+                    <img class="ui small centered image" src="{{updatedClass.image}}">
+
+                    <tr>
+                        <td><i class="university icon"></i> Name:</td>
+                        <td>{{updatedClass.name}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="write icon"></i> Description:</td>
+                        <td>{{updatedClass.description}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="checked calendar icon"></i> Duration:</td>
+                        <td>{{updatedClass.duration}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="users icon"></i> Capacity:</td>
+                        <td>{{updatedClass.capacity}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="heartbeat icon"></i> Difficulty:</td>
+                        <td>{{updatedClass.difficulty}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="tasks icon"></i> Workouts:</td>
+                        <td>{{updatedClass.classesWorkouts}}</td>
+                        </tr>
+                        <tr>
+                        <td><i class="time icon"></i> Time:</td>
+                        <td>{{updatedClass.time}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="calendar icon"></i> Date:</td>
+                        <td>{{updatedClass.date}}</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
+    <div class="column left aligned">
+        <section class="ui inverted brown segment">
+            <form class="ui yellow raised segment form" name="editClass" action="/trainerDashboard/editClass/{{updatedClass.classid}}" method="POST">
+                <h2 class="ui red center aligned header"> Update Class</h2>
+                <section class="ui segment">
+                    <div class="field">
+                        <label>Class Name</label>
+                        <input placeholder="class name" name="className" required>
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <textarea rows="2" name="description"></textarea>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Duration</label>
+                            <select class="ui dropdown" name="duration" required>
+                                <option value=""> No. of Weeks</option>
+                                <option value="1 week"> 1 Week</option>
+                                <option value="2 weeks"> 2 Weeks</option>
+                                <option value="3 weeks"> 3 Weeks</option>
+                                <option value="4 weeks"> 4 Weeks</option>
+                                <option value="5 weeks"> 5 Weeks</option>
+                                <option value="6 weeks"> 6 Weeks</option>
+                                <option value="7 weeks"> 7 Weeks</option>
+                                <option value="8 weeks"> 8 Weeks</option>
+                                <option value="9 weeks"> 9 Weeks</option>
+                                <option value="10 weeks"> 10 Weeks</option>
+                                <option value="11 weeks"> 11 Weeks</option>
+                                <option value="12 weeks"> 12 Weeks</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Capacity</label>
+                            <input placeholder="capacity" type="number" name="capacity" step="1"
+                                   min="5"
+                                   max="30" required>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label> Difficulty </label>
+                            <select class="ui dropdown" name="difficulty" required>
+                                <option value="">Select Level</option>
+                                <option value="All Levels">All Levels</option>
+                                <option value="Beginners Level"> Beginners Level</option>
+                                <option value="Intermediate Level"> Intermediate Level</option>
+                                <option value="Advanced Level"> Advanced Level</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Number of Workouts</label>
+                            <input placeholder="number of workouts" type="number" step="1" min="1" max="24" name="workoutNumber" required>
+                        </div>
+                    </div>
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Time</label>
+                            <div class="ui input left icon">
+                                <i class="time icon"></i>
+                                <input placeholder="time" type="time" name="time" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="date" type="date" name="date" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label>Image Url</label>
+                        <div class="ui input left icon">
+                            <i class="image icon"></i>
+                            <input placeholder="image url" name="image">
+                        </div>
+                    </div>
+
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="upload icon"></i>Update</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </section>
+            </form>
+        </section>
+    </div>
+</div>
+
