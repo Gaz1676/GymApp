@@ -1,23 +1,26 @@
 <section class="ui inverted brown segment">
-    <table class="ui yellow table">
-        <tbody>
-        <div class="ui list">
+    <h2 class="ui center aligned header">Welcome Back Coach {{trainer.lastName}}</h2>
+    <img class="ui centered small image" src="{{trainer.image}}">
+    <h3 class="ui center aligned header">Here Are The List of the Gym Members!!</h3>
 
+    <section class="ui center aligned segment">
+        <div class="ui raised four cards">
             {{#each memberList}}
-                <tr>
-                    <td class="one wide">
-                        <i class="big green user icon"></i>
-                    </td>
-                    <td class="sixteen wide">
-                        <a href="/trainerDashboard/viewassessments/{{memberid}}"> {{firstName}} {{lastName}} </a>
-                        &emsp;<a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="Are You Sure???"><i class="large red trash icon"></i></a>
-                        <br>
-                        {{assessments.length}} assessments
-                    </td>
-                </tr>
+
+                <div class="ui link card">
+                    <a class="image" src="{{image}}" href="/trainerDashboard/viewassessments/{{memberid}}">
+                        <img {{#if image}} src="{{image}}"
+                        {{else}}
+
+                                           src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}></a>
+
+                    <h3 class="ui header">{{firstName}} {{lastName}}<br>{{assessments.length}} Assessment(s)</h3>
+
+                    <a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="Are You Sure???"><i class="large red trash icon"></i></a>
+                    <br>
+                </div>
+
             {{/each}}
         </div>
-
-        </tbody>
-    </table>
+    </section>
 </section>
