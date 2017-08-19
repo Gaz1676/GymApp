@@ -33,6 +33,7 @@ router.post('/authenticate', accounts.authenticate);
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentid', dashboard.removeAssessment);
 router.get('/dashboard/memberclasses', dashboard.memberClasses);
+router.get('/showworkouts', dashboard.showWorkouts); // TODO
 
 // Trainer Dashboard //
 
