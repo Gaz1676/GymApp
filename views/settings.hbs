@@ -94,7 +94,9 @@
                         <td>{{member.startingWeight}} kgs</td>
                     </tr>
 
-                    <img class="ui small centered image" src="{{member.image}}">
+                    <img class="ui small centered image" {{#if member.image}} src="{{member.image}}" {{else}}
+
+                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
 
                 </table>
             </section>
