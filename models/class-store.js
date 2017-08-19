@@ -3,7 +3,7 @@
 const _ = require('lodash'); //----------------------------------------------> imports lodash (library for js)
 const JsonStore = require('./json-store'); //--------------------------------> imports json-store
 
-//---> manage database of members <---//
+//---> manage database of classes <---//
 
 const classStore = {
   store: new JsonStore('./models/class-store.json', { classes: [] }),

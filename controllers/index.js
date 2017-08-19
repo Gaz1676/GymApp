@@ -6,11 +6,11 @@ const logger = require('../utils/logger'); //-------------------> import logger
 
 const index = {
   index(request, response) { //---------------------------------> index method, called when ‘/ index’ request received
-    logger.info('rendering index'); //--------------------------> logs a message to the console
+    logger.info('index rendering'); //--------------------------> logs a message to the console
     const viewData = { //---------------------------------------> creates object called viewData
       title: 'Welcome to me gym app', //------------------------> name of title
     };
-    response.render('index', viewData); //----------------------> rendera 'index' and viewData to view
+    response.render('index', viewData); //----------------------> renders 'index' and viewData to view
   },
 };
 

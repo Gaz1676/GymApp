@@ -1,7 +1,7 @@
 {
   "members": [
     {
-      "firstName": "Homer J",
+      "firstName": "Homer",
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
@@ -37,33 +37,6 @@
           "trend": "red",
           "comment": "Need more effort homer",
           "updateComment": false
-        }
-      ]
-    },
-    {
-      "firstName": "Bart",
-      "lastName": "Simpson",
-      "email": "bart@simpson.com",
-      "password": "secret",
-      "address": "742 Evergreen Terrace",
-      "gender": "male",
-      "height": "1.4",
-      "startingWeight": "45",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1499114469/pejow7glvwfoyphjt0vo.jpg",
-      "memberid": "3f43fbb2-1c0f-4c9b-bddd-df4ce0559d16",
-      "assessments": [
-        {
-          "assessmentid": "4836e763-ad72-4641-add4-e3198110e615",
-          "date": "2017-08-11 17:20:55",
-          "weight": "42",
-          "chest": "35",
-          "thigh": "35",
-          "upperArm": "15",
-          "waist": "65",
-          "hips": "65",
-          "trend": "green",
-          "comment": "Excellent boy!",
-          "updateComment": true
         }
       ]
     },
@@ -186,6 +159,19 @@
           "updateComment": false
         }
       ]
+    },
+    {
+      "firstName": "kk",
+      "lastName": "kk",
+      "email": "kk@simpson.com",
+      "password": "s",
+      "address": "742 Evergreen Terrace",
+      "gender": "male",
+      "height": "1",
+      "startingWeight": "35",
+      "image": "",
+      "memberid": "5aafdae7-feb2-4cbc-aaf4-11ae11b7cf9f",
+      "assessments": []
     }
   ]
 }

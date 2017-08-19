@@ -6,7 +6,7 @@ const logger = require('../utils/logger'); //-------------------> import logger
 
 const about = {
   index(request, response) { //---------------------------------> index method called when ‘/ accounts’ request received
-    logger.info('rendering about'); //--------------------------> logs a message to the console
+    logger.info('about rendering'); //--------------------------> logs a message to the console
     const viewData = { //---------------------------------------> creates object called viewData
       title: 'About JS Gym App', //-----------------------------> name of title
     };
