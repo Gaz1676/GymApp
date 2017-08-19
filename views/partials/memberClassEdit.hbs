@@ -3,7 +3,8 @@
         <div class="card">
             <div class="content">
                 <div class="center aligned content">
-                    <img class="ui middle aligned small image" {{#if image}} src="{{image}}" {{else}} src="http://s3.amazonaws.com/wpd-assets/ymcanewyork/uploads/sub-class-thumbs/family-yoga-pilates-icon.png" {{/if}}>
+                    <img class="ui middle aligned small image" {{#if image}}
+                         src="{{image}}" {{else}} src="http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png" {{/if}}>
                 </div>
                 <div class="ui blue header">{{name}}</div>
                 <section class="ui segment">
@@ -13,6 +14,7 @@
                 <div class="column left aligned">
                     <section class="ui yellow segment">
                         <table class="ui fixed left aligned table">
+                            <tr>
                             <td>Duration:</td>
                             <td>{{duration}}</td>
                             </tr>
@@ -43,12 +45,7 @@
 
             <div class="extra content">
                 <span>
-                    Enrol <a href="/dashboard/enrollmember/{{memberid}}/intoclass/{{classid}}" class="ui icon button">
-                            <i class="green add user icon"></i>
-                        </a>&emsp;&emsp;&emsp;
-                     <a href="/dashboard/unenroll/{{memberid}}/fromclass/{{classid}}" class="ui icon button">
-                            <i class="red remove user icon"></i>
-                        </a>Un-Enrol
+                    Show Classes <a href="/showworkouts" class="ui icon button"><i class="green add icon"></i></a>&emsp;&emsp;&emsp;
                 </span>
             </div>
             <div class="extra content">
