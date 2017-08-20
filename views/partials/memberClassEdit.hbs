@@ -1,58 +1,28 @@
-<div class="ui yellow three stackable cards">
+<div class="ui five cards">
     {{#each classList}}
         <div class="card">
-            <div class="content">
-                <div class="center aligned content">
-                    <img class="ui middle aligned small image" {{#if image}}
-                         src="{{image}}" {{else}} src="http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png" {{/if}}>
+            <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                    <div class="content">
+                        <div class="center">
+                                <h5 class="ui inverted header">{{description}}</h5>
+                            <a href="/showworkouts" class="ui icon button">Check Availability</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="ui blue header">{{name}}</div>
-                <section class="ui segment">
-                    <div>{{description}}</div>
-                </section>
-
-                <div class="column left aligned">
-                    <section class="ui yellow segment">
-                        <table class="ui fixed left aligned table">
-                            <tr>
-                            <td>Duration:</td>
-                            <td>{{duration}}</td>
-                            </tr>
-                            <tr>
-                                <td>Capacity:</td>
-                                <td>{{capacity}}</td>
-                            </tr>
-                            <tr>
-                                <td>Difficulty:</td>
-                                <td>{{difficulty}}</td>
-                            </tr>
-                            <tr>
-                                <td>Workouts:</td>
-                                <td>{{classesWorkouts}}</td>
-                            </tr>
-                            <tr>
-                                <td>Date:</td>
-                                <td>{{date}}</td>
-                            </tr>
-                            <tr>
-                                <td>Time:</td>
-                                <td>{{time}}</td>
-                            </tr>
-                        </table>
-                    </section>
+                <div class="ui blue header">
+                    {{name}}
                 </div>
-            </div>
+                <img {{#if image}} src="{{image}}" {{else}}  src="http://res.cloudinary.com/cloud101/image/upload/v1503230448/imageedit_3_2129305932_eekvt6.png" {{/if}}>
 
-            <div class="extra content">
-                <span>
-                    Show Classes <a href="/showworkouts" class="ui icon button"><i class="green add icon"></i></a>&emsp;&emsp;&emsp;
-                </span>
-            </div>
-            <div class="extra content">
-                <span>
-                </span>
             </div>
         </div>
-
     {{/each}}
 </div>
+
+
+<script>
+    $('.five.cards .image').dimmer({
+        on: 'hover'
+    });
+</script>
