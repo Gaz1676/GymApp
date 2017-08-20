@@ -5,7 +5,7 @@ const memberStore = require('../models/member-store.js'); //--------------------
 const accounts = require('./accounts.js'); //---------------------------------------------------> imports accounts
 const classStore = require('../models/class-store.js'); //--------------------------------------> imports class-store
 const analytics = require('../utils/analytics.js'); //------------------------------------------> imports analytics
-const uuid = require('uuid'); //----------------------------------------------------------------> imports uuid
+const uuid = require('uuid');
 
 //---> trainerdashboard object definition <---//
 
@@ -18,6 +18,7 @@ const trainerDashboard = {
       title: 'Trainer Dashboard', //------------------------------------------------------------> name of the title
       trainer: loggedInTrainer, //--------------------------------------------------------------> logged in trainer
       memberList: memberList, //----------------------------------------------------------------> memberList
+
     };
     response.render('trainerDashboard', viewData); //-------------------------------------------> renders 'trainerDashboard' and viewData to view
   },
@@ -35,11 +36,6 @@ const trainerDashboard = {
       bmiCategory: analytics.BMICategory(bmi), //-----------------------------------------------> bmiCategory of bmi from analytics
       idealBodyWeight: idealBodyWeight, //------------------------------------------------------> IBW
     };
-    const list = member.assessments; //---------------------------------------------------------> the assessments of the member stored in list
-    for (let i = 0; i < list.length; i++) { //--------------------------------------------------> if 'i' is less than list.length then increment by one
-      list[i].updateComment = true; //----------------------------------------------------------> update comment equals to true
-    }
-
     logger.debug(`view ${member.firstName} assessments`); //------------------------------------> logs message to console
     response.render('viewAssessments', viewData); //--------------------------------------------> renders 'viewAssessments' and viewData to view
   },
@@ -122,7 +118,7 @@ const trainerDashboard = {
         time: request.body.time, //-------------------------------------------------------------> requests time
         duration: request.body.duration, //-----------------------------------------------------> requests duration
         currentCapacity: 0, //------------------------------------------------------------------> currentCapacity set to 0
-        capacity: request.body.capacity, //-----------------------------------------------------> request capacity
+        capacity: Number(request.body.capacity), //---------------------------------------------> request capacity
         members: [], //-------------------------------------------------------------------------> empty members array list
       };
       newClass.workouts.push(workout); //-------------------------------------------------------> pushes workout to the end of workouts pile
@@ -142,6 +138,7 @@ const trainerDashboard = {
     newClass.duration = request.body.duration; //-----------------------------------------------> request duration
     newClass.capacity = request.body.capacity; //-----------------------------------------------> request capacity
     newClass.difficulty = request.body.difficulty; //-------------------------------------------> request difficulty
+    newClass.classesWorkouts = Number(request.body.classesWorkouts); //-------------------------> request classesWorkouts
     newClass.image = request.body.image; //-----------------------------------------------------> request image
     newClass.time = request.body.time; //-------------------------------------------------------> request time
     newClass.date = request.body.date; //-------------------------------------------------------> request date
@@ -172,7 +169,6 @@ const trainerDashboard = {
     logger.info(`classes menu rendering for ${loggedInTrainer.firstName}`); //------------------> logs message to console
     response.render('createClasses', viewData); //----------------------------------------------> renders 'createClasses' and viewData to view
   },
-
 };
 
 module.exports = trainerDashboard; //-----------------------------------------------------------> this is the object that is then exported:

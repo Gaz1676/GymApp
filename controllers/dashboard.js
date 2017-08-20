@@ -22,11 +22,6 @@ const dashboard = {
       bmiCategory: analytics.BMICategory(bmi), //--------------------------------------------------> bmiCategory of bmi results
       idealBodyWeight: idealBodyWeight, //---------------------------------------------------------> IBW
     };
-    const list = loggedInMember.assessments; //----------------------------------------------------> assessments of the loggedInMember stored in list
-    for (let i = 0; i < list.length; i++) { //-----------------------------------------------------> if 'i' is less than list.length then increment by one
-      list[i].updateComment = false; //------------------------------------------------------------> update comment equals to false
-    }
-
     logger.debug(`rendering assessments for ${loggedInMember.firstName}`); //----------------------> logs message to console
     response.render('dashboard', viewData); //-----------------------------------------------------> name of view to render 'dashboard' and sends viewData to view
   },
@@ -38,15 +33,14 @@ const dashboard = {
     const newAssessment = { //---------------------------------------------------------------------> place model in newAssessment object
       assessmentid: uuid(), //---------------------------------------------------------------------> unique id for assessment
       date: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''), //---------------------> new date
-      weight: request.body.weight, //--------------------------------------------------------------> weight
-      chest: request.body.chest, //----------------------------------------------------------------> chest
-      thigh: request.body.thigh, //----------------------------------------------------------------> thigh
-      upperArm: request.body.upperArm, //----------------------------------------------------------> upperArm
-      waist: request.body.waist, //----------------------------------------------------------------> waist
-      hips: request.body.hips, //------------------------------------------------------------------> hips
+      weight: Number(request.body.weight), //------------------------------------------------------> weight
+      chest: Number(request.body.chest), //--------------------------------------------------------> chest
+      thigh: Number(request.body.thigh), //--------------------------------------------------------> thigh
+      upperArm: Number(request.body.upperArm), //--------------------------------------------------> upperArm
+      waist: Number(request.body.waist), //--------------------------------------------------------> waist
+      hips: Number(request.body.hips), //----------------------------------------------------------> hips
       trend: '', //--------------------------------------------------------------------------------> trend
       comment: '', //------------------------------------------------------------------------------> comment
-      updateComment: false, //---------------------------------------------------------------------> saved as false if trainer has not commented on assessment
     };
     logger.debug(`adding new assessment for ${loggedInMember.firstName}`); //----------------------> logs message to console
     memberStore.addAssessment(memberid, newAssessment); //-----------------------------------------> adds assessment to member-store
@@ -107,9 +101,7 @@ const dashboard = {
   showWorkouts(request, response) { //-------------------------------------------------------------> showWorkouts method, called when ‘/ dashboard’ request received
     logger.info('available workouts rendering'); //------------------------------------------------> logs message to console
     const member = accounts.getCurrentMember(request); //------------------------------------------> gets currentMember from accounts and stores it in member
-    const classid = request.params.classid; //-----------------------------------------------------> gets classid (params) stores it in classid
-    const workoutid = request.params.workoutid; //-------------------------------------------------> gets classid (params) stores it in workoutid
-    const workout = classStore.getWorkoutById(classid, workoutid); //------------------------------> gets workoutid (params) stores it in workoutid
+    const workout = classStore.getWorkoutById(request); //-----------------------------------------> gets workoutid
     const viewData = { //--------------------------------------------------------------------------> place model in viewData object
       member: member, //---------------------------------------------------------------------------> member
       workout: workout, //-------------------------------------------------------------------------> workout

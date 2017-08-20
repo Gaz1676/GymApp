@@ -1,23 +1,22 @@
-
 <section class="ui inverted brown center aligned segment">
-    {{#each member.assessments}}
-        <table class="ui fixed yellow center aligned table">
-            <thead>
-            <tr>
-                <th>Date</th>
-                <th>Weight</th>
-                <th>Chest</th>
-                <th>Thigh</th>
-                <th>Upper Arm</th>
-                <th>Waist</th>
-                <th>Hips</th>
-                <th>Trend</th>
-                <th>Comment</th>
-                <th>Delete</th>
-            </tr>
-            </thead>
+    <table class="ui fixed yellow center aligned table">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Weight</th>
+            <th>Chest</th>
+            <th>Thigh</th>
+            <th>Upper Arm</th>
+            <th>Waist</th>
+            <th>Hips</th>
+            <th>Trend</th>
+            <th>Comment</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
 
-            <tbody>
+        <tbody>
+        {{#each member.assessments}}
             <div class="ui list">
                 <tr>
                     <td>{{date}}</td>
@@ -29,44 +28,14 @@
                     <td>{{hips}}</td>
                     <td><i class="large {{trend}} bullseye icon"></i></td>
                     <td>{{comment}}</td>
-
-                    {{#unless updateComment}}
-                        <td>
-                            <a href="/dashboard/removeassessment/{{assessmentid}}">
-                                <i class=" large red trash icon"></i>
-                            </a>
-                        </td>
-                    {{/unless}}
-                    {{#if updateComment}}
-                        <td>
-                            <a href="/trainerDashboard/{{../memberid}}/removeassessment/{{assessmentid}}">
-                                <i class=" large red trash icon"></i>
-                            </a>
-                        </td>
-                    {{/if}}
+                    <td>
+                        <a href="/dashboard/removeassessment/{{assessmentid}}">
+                            <i class=" large red trash icon"></i>
+                        </a>
+                    </td>
                 </tr>
             </div>
-            </tbody>
-        </table>
-
-        {{#if updateComment}}
-            <section class="ui center aligned section">
-                <h4> Comment </h4>
-                <form class="ui section form" action="/trainerDashboard/{{../memberid}}/updatecomment/{{assessmentid}}"
-                      method="POST">
-                    <div>
-                        <input placeholder="Insert comment..." name="comment" required>
-                    </div>
-                    <div>
-                        <br>
-
-                        <button class="ui animated fade blue submit button">
-                            <div class="visible content"><i class="write icon"></i>Update Comment</div>
-                            <div class="hidden content">Click to Save</div>
-                        </button>
-                    </div>
-                </form>
-            </section>
-        {{/if}}
-    {{/each}}
+        {{/each}}
+        </tbody>
+    </table>
 </section>

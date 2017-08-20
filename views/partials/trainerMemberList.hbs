@@ -1,20 +1,20 @@
 <section class="ui inverted brown segment">
     <h2 class="ui center aligned header">Welcome Back Coach {{trainer.lastName}}</h2>
     <img class="ui centered small image" src="{{trainer.image}}">
-    <h3 class="ui center aligned header">Here Are The List of the Gym Members!!</h3>
+    <h3 class="ui center aligned header">Here is the list of the Gym Members!!</h3>
 
     <section class="ui center aligned segment">
-        <div class="ui raised four cards">
+        <div class="ui raised five cards">
             {{#each memberList}}
 
                 <div class="ui link card">
-                    <a class="image" src="{{image}}" href="/trainerDashboard/viewassessments/{{memberid}}">
+                    <a class="ui tiny centered image" data-tooltip="{{firstName}} {{lastName}}" src="{{image}}" href="/trainerDashboard/viewassessments/{{memberid}}">
                         <img {{#if image}} src="{{image}}"
                         {{else}}
 
-                                           src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}></a>
+                                           src="http://res.cloudinary.com/cloud101/image/upload/v1503230448/imageedit_3_2129305932_eekvt6.png" {{/if}}></a>
 
-                    <h3 class="ui header">{{firstName}} {{lastName}}<br>{{assessments.length}} Assessment(s)</h3>
+                    <h3 class="ui header">{{assessments.length}} Assessment(s)</h3>
 
                     <a href="/trainerDashboard/removemember/{{memberid}}" data-tooltip="Are You Sure???"><i class="large red trash icon"></i></a>
                     <br>

@@ -19,7 +19,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -28,7 +28,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -37,7 +37,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -46,7 +46,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -55,7 +55,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -64,7 +64,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -73,7 +73,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -82,7 +82,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -91,7 +91,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -100,7 +100,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -109,7 +109,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         },
         {
@@ -118,7 +118,7 @@
           "time": "09:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "15",
+          "capacity": 15,
           "members": []
         }
       ]
@@ -142,7 +142,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -151,7 +151,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -160,7 +160,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -169,7 +169,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -178,7 +178,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -187,7 +187,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -196,7 +196,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -205,7 +205,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -214,7 +214,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -223,7 +223,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -232,7 +232,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -241,7 +241,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -250,7 +250,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -259,7 +259,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -268,7 +268,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -277,7 +277,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -286,7 +286,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -295,7 +295,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -304,7 +304,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -313,7 +313,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -322,7 +322,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -331,7 +331,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -340,7 +340,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         },
         {
@@ -349,7 +349,7 @@
           "time": "14:00",
           "duration": "12 weeks",
           "currentCapacity": 0,
-          "capacity": "25",
+          "capacity": 25,
           "members": []
         }
       ]
@@ -373,7 +373,7 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         },
         {
@@ -382,7 +382,7 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         },
         {
@@ -391,7 +391,7 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         },
         {
@@ -400,7 +400,7 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         },
         {
@@ -409,7 +409,7 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         },
         {
@@ -418,10 +418,226 @@
           "time": "10:00",
           "duration": "6 weeks",
           "currentCapacity": 0,
-          "capacity": "10",
+          "capacity": 10,
           "members": []
         }
       ]
+    },
+    {
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+      "classid": "aa5067d3-d861-4569-ae78-20cb3599f1e6",
+      "name": "H.I.I.T.",
+      "description": "HIIT is the concept where you perform  short bursts of high-intensity (or max-intensity) exercises followed by a brief low-intensity activity, repeatedly. This intense workout last for 30 minutes and is aimed for anyone who is wanting to dramatically increase their fitness.",
+      "duration": "8 weeks",
+      "capacity": "20",
+      "difficulty": "Intermediate Level",
+      "classesWorkouts": 8,
+      "time": "09:00",
+      "date": "2017-08-20",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503259861/hiit_r7k73b.png",
+      "workouts": [
+        {
+          "workoutid": "3d163edb-c8cb-40c1-91d9-5b519b767fc3",
+          "workoutDate": "Sun Aug 20 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "b3b8ce95-ffb6-49c7-a3d7-0bfa89f6e227",
+          "workoutDate": "Sun Aug 27 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "c2345b45-f8d7-4576-85c3-70fb22010f53",
+          "workoutDate": "Sun Sep 03 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "fd4dc6a7-6e73-48fc-a2a3-626f08311c76",
+          "workoutDate": "Sun Sep 10 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "e97d04b5-d857-4084-8ce5-d161ba5c583e",
+          "workoutDate": "Sun Sep 17 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "57d98fbd-62b1-4655-8a99-ea2c6f07c5e3",
+          "workoutDate": "Sun Sep 24 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "33d87cb5-ebcd-4aad-8596-c6412bf0ef46",
+          "workoutDate": "Sun Oct 01 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        },
+        {
+          "workoutid": "a028816b-0013-44e2-850f-f9c150981bf6",
+          "workoutDate": "Sun Oct 08 2017",
+          "time": "10:00",
+          "duration": "8 weeks",
+          "currentCapacity": 0,
+          "capacity": 25,
+          "members": []
+        }
+      ]
+    },
+    {
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+      "classid": "cd1e22fa-430c-4643-9849-9730b7828838",
+      "name": "DodgeBall",
+      "description": "What began as an elementary school game played during PE classes has now become a competitive adult sport with a huge following and  it’s also a great way to stay healthy and fit! Designed to improve your Agility, Balance,Strength Training and Hand-Eye Coordination, DodgeBall has it all...",
+      "duration": "10 weeks",
+      "capacity": "30",
+      "difficulty": "Beginners Level",
+      "classesWorkouts": 10,
+      "time": "10:00",
+      "date": "2017-08-20",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503260357/dodgeball_pwqza2.png",
+      "workouts": [
+        {
+          "workoutid": "448bedfc-28e9-4c7e-969b-de9fb0717103",
+          "workoutDate": "Sun Aug 20 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "d6d2e8d9-d9ec-4c97-9a42-f721c7c8362d",
+          "workoutDate": "Sun Aug 27 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "8bb026bb-4e51-4b2c-a1d4-2e4c7d069fec",
+          "workoutDate": "Sun Sep 03 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "6d1de550-2308-4e5a-9277-50460d1c95c6",
+          "workoutDate": "Sun Sep 10 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "f0ce54f5-edf7-41ef-bb46-dec787a8be74",
+          "workoutDate": "Sun Sep 17 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "5947d59f-24b1-4a36-a473-3c6da0400a70",
+          "workoutDate": "Sun Sep 24 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "df2e3e5e-d898-4c42-90c9-b92233a63133",
+          "workoutDate": "Sun Oct 01 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "00c29ce7-f381-4730-a95e-95be4595867c",
+          "workoutDate": "Sun Oct 08 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "0912c5e0-3d85-4b62-be10-7fa88afd420c",
+          "workoutDate": "Sun Oct 15 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        },
+        {
+          "workoutid": "865362b6-c2de-4605-ab7a-d737c394954d",
+          "workoutDate": "Sun Oct 22 2017",
+          "time": "19:00",
+          "duration": "10 weeks",
+          "currentCapacity": 0,
+          "capacity": 30,
+          "members": []
+        }
+      ]
+    },
+    {
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classid": "a5433cf0-4e7e-4cb6-bbf5-c040d5d51d88",
+      "description": "test1",
+      "duration": "1 week",
+      "capacity": "5",
+      "difficulty": "All Levels",
+      "classesWorkouts": null,
+      "time": "12:59",
+      "date": "2017-12-31",
+      "image": "https://image.flaticon.com/icons/png/512/84/84145.png",
+      "workouts": [
+        {
+          "workoutid": "25127e97-8905-4c37-9ed4-1c57d593fec0",
+          "workoutDate": "Sun Dec 31 2017",
+          "time": "12:59",
+          "duration": "1 week",
+          "currentCapacity": 0,
+          "capacity": 5,
+          "members": []
+        }
+      ],
+      "name": "test1"
     }
   ]
 }
