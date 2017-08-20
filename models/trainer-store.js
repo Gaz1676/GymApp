@@ -19,7 +19,7 @@ const trainerStore = {
   },
 
   getTrainerById(trainerid) {
-    return this.store.findOneBy(this.collection, { trainerid: trainerid }); //-----> gets a single trainer by id
+    return this.store.findOneBy(this.collection, { trainerid: trainerid }); //----> gets a single trainer by id
   },
 
   getTrainerByEmail(email) {
