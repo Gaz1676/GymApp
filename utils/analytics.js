@@ -46,8 +46,7 @@ const analytics = {
     return (convertedWeight.toFixed(2));
   },
 
-  idealBodyWeight(member)
-  {
+  idealBodyWeight(member) {
     const fiveFeet = 60.0;
     let idealBodyWeight = 0;
     let inches = this.convertHeightMetersToInches(member.height);
@@ -56,36 +55,29 @@ const analytics = {
 
     if (member.assessments.length >= 1) {
       weight = assessmentList[0].weight;
-    } else
-    {
+    } else {
       weight = member.startingWeight;
     }
 
-    if (inches <= fiveFeet)
-    {
-      if (member.gender === 'male')
-      {
+    if (inches <= fiveFeet) {
+      if (member.gender === 'male') {
         idealBodyWeight = 50;
-      } else
-      {
+      } else {
         idealBodyWeight = 45.5;
       }
-    } else
-    {
-      if (member.gender === 'male')
-      {
+    } else {
+      if (member.gender === 'male') {
         idealBodyWeight = 50 + ((inches - fiveFeet) * 2.3);
-      } else
-      {
+      } else {
         idealBodyWeight = 45.5 + ((inches - fiveFeet) * 2.3);
       }
     }
 
-    if ((idealBodyWeight <= (weight + 2.0)) && (idealBodyWeight >= (weight - 2.0)))
-    {
+    if ((idealBodyWeight <= (weight + 2.0)) && (idealBodyWeight >= (weight - 2.0))) {
       return 'green';
-    } else
-    {
+    } else if ((idealBodyWeight <= (weight + 5.0)) && (idealBodyWeight >= (weight - 5.0))) {
+      return 'orange';
+    } else {
       return 'red';
     }
   },
@@ -93,18 +85,18 @@ const analytics = {
   trend(member) {
     let trend = 'green';
     const idealBMI = 22;
-    const list = member.assessments;
-    if (list.length === 1) {
-      const previousBMI = (member.startingWeight / (member.height * member.height));
-      if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(previousBMI - idealBMI)) {
+    const assessmentList = member.assessments;
+    if (assessmentList.length === 1) {
+      const lastBMI = (member.startingWeight / (member.height * member.height));
+      if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(lastBMI - idealBMI)) {
         trend = 'green';
       } else {
         trend = 'red';
       }
-    } else if (list.length > 1) {
-      const secondLatestAssessment = list[1];
-      const previousBMI = (secondLatestAssessment.weight / (member.height * member.height));
-      if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(previousBMI - idealBMI)) {
+    } else if (assessmentList.length > 1) {
+      const nextAssessment = assessmentList[1];
+      const lastBMI = (nextAssessment.weight / (member.height * member.height));
+      if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(lastBMI - idealBMI)) {
         trend = 'green';
       } else {
         trend = 'red';
@@ -113,7 +105,7 @@ const analytics = {
       trend = 'black';
     }
 
-    list[0].trend = trend;
+    assessmentList[0].trend = trend;
   },
 };
 
