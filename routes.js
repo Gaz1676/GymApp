@@ -28,31 +28,53 @@ router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
 
-// Member Dashboard //
+// Member Settings //
+
+router.get('/settings', dashboard.settings);
+router.post('/settings', dashboard.updateProfile);
+
+// Member Assessments //
 
 router.post('/dashboard/addassessment', dashboard.addAssessment);
 router.get('/dashboard/removeassessment/:assessmentid', dashboard.removeAssessment);
-router.get('/dashboard/memberclasses', dashboard.memberClasses);
-router.get('/showworkouts', dashboard.showWorkouts); // TODO
 
-// Trainer Dashboard //
+// Member Classes //
 
-router.get('/trainerDashboard/removemember/:memberid', trainerDashboard.removeMember);
+router.get('/dashboard/viewmemberclasses', dashboard.viewMemberClasses);
+router.post('/dashboard/searchforclass/:classid', dashboard.searchForClass); // TODO
+router.get('/dashboard/viewclass/:classid', dashboard.viewClass); // TODO
+
+// Member Bookings //
+
+router.get('/dashboard/memberbookings', dashboard.memberBookings);
+router.post('/dashboard/memberaddbooking', dashboard.memberAddBooking);
+router.get('/dashboard/removebooking/:bookingid', dashboard.removeBooking);
+router.post('/dashboard/editbooking/:bookingid', dashboard.editBooking); // TODO
+router.get('/dashboard/updatebooking/:bookingid', dashboard.updateBooking); // TODO
+
+// Trainer Members, Assessments & Update Comment //
+
 router.get('/trainerDashboard/viewassessments/:memberid', trainerDashboard.viewAssessments);
 router.get('/trainerDashboard/:memberid/removeassessment/:assessmentid', trainerDashboard.removeAssessment);
 router.post('/trainerDashboard/:memberid/updatecomment/:assessmentid', trainerDashboard.updateComment);
+router.get('/trainerDashboard/removemember/:memberid', trainerDashboard.removeMember);
+
+// Trainer Classes //
 
 router.get('/trainerDashboard/createclasses', trainerDashboard.createClasses);
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/viewtrainerclasses', trainerDashboard.viewTrainerClasses);
 router.get('/trainerDashboard/removeclass/:classid', trainerDashboard.removeClass);
-router.get('/trainerDashboard/updateclass/:classid', trainerDashboard.updateClass);
 router.post('/trainerDashboard/editclass/:classid', trainerDashboard.editClass);
+router.get('/trainerDashboard/updateclass/:classid', trainerDashboard.updateClass);
 
-// Settings //
+// Trainer Bookings //
 
-router.get('/settings', dashboard.settings);
-router.post('/settings', dashboard.updateProfile);
+router.get('/trainerDashboard/trainerbookings', trainerDashboard.trainerBookings);
+router.post('/trainerDashboard/traineraddbooking', trainerDashboard.trainerAddBooking);
+router.get('/trainerDashboard/removebooking/:bookingid', trainerDashboard.removeBooking);
+router.post('/trainerDashboard/editbooking/:bookingid', trainerDashboard.editBooking); // TODO
+router.get('/trainerDashboard/updatebooking/:bookingid', trainerDashboard.updateBooking); // TODO
 
 //router.get('/dashboard/enrollmember/:memberid/intoclass/:classid', dashboard.enrollMember);
 //router.get('/dashboard/unenroll/:memberid/fromclass/:classid', dashboard.unenrollMember);
