@@ -1,0 +1,52 @@
+<div class="ui two column grid basic segment">
+    <div class="column left aligned">
+        <section class="ui inverted brown segment">
+            <section class="ui yellow segment">
+                <h2 class="ui red center aligned header"> Book Before It's Too Late {{member.firstName}}!!</h2>
+                <img class="ui centered image"
+                     src="http://res.cloudinary.com/cloud101/image/upload/v1503414070/addBooking_otc3at.png">
+            </section>
+        </section>
+    </div>
+
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <form class="ui raised segment form" name="memberAddBooking" action="/dashboard/memberAddbooking" method="POST">
+                <h2 class="ui red center aligned header"> Add Booking Details</h2>
+                <section class="ui raised segment">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Booking Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="date" type="date" name="date" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Booking Time</label>
+                            <div class="ui yellow input left icon">
+                                <i class="time icon"></i>
+                                <input placeholder="time" type="time" name="time" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label> Trainer </label>
+                        <select class="ui dropdown" name="trainerid" required>
+                            <option value="">Select Trainer</option>
+                            {{#each trainerList}}
+                                <option value="{{trainerid}}">Coach {{lastName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="add to calendar icon"></i>&emsp;Add Booking</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </section>
+            </form>
+        </section>
+
+    </div>
+</div>

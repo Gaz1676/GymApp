@@ -1,0 +1,39 @@
+<div class="ui large blue ribbon label">
+    <i class="add to calendar icon"></i> All of your Booking Details!!
+</div>
+
+<section class="ui inverted brown center aligned segment">
+    <table class="ui fixed yellow center aligned celled table">
+        <thead>
+        <tr>
+            <th>Booking Date</th>
+            <th>Booking Time</th>
+            <th>Trainer</th>
+            <th>Update</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each member.bookings}}
+            <div class="ui list">
+                <tr>
+                    <td>{{date}}</td>
+                    <td>{{time}}</td>
+                    <td>Coach {{trainerlastname}}</td>
+                    <td>
+                        <a href="dashboard/updatebooking/{{bookingid}}">
+                            <i class="large teal upload icon"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/dashboard/removebooking/{{bookingid}}">
+                            <i class="large red trash icon"></i>
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        {{/each}}
+        </tbody>
+    </table>
+</section>
