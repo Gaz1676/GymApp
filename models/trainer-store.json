@@ -10,14 +10,6 @@
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
       "bookings": [
         {
-          "bookingid": "790e58bd-5688-430a-8cda-029053ba7ab3",
-          "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
-          "date": "2017-08-29",
-          "time": "00:00",
-          "memberfirstname": "Edna",
-          "memberlastname": "Krabappel"
-        },
-        {
           "bookingid": "a3a68312-4566-4227-88d5-7fb0f33ad309",
           "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
           "date": "2017-09-02",
@@ -38,6 +30,14 @@
           "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
           "date": "2017-08-23",
           "time": "10:00",
+          "memberfirstname": "Edna",
+          "memberlastname": "Krabappel"
+        },
+        {
+          "bookingid": "75a9be2a-a52d-4722-a88e-cc07125d8ca6",
+          "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
+          "date": "2017-08-23",
+          "time": "09:00",
           "memberfirstname": "Edna",
           "memberlastname": "Krabappel"
         }
@@ -67,6 +67,14 @@
           "time": "09:00",
           "memberfirstname": "Bart",
           "memberlastname": "Simpson"
+        },
+        {
+          "bookingid": "d6a23154-d208-430a-aca2-b04f5f919809",
+          "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
+          "date": "2017-08-23",
+          "time": "09:00",
+          "memberfirstname": "Edna",
+          "memberlastname": "Krabappel"
         }
       ]
     }

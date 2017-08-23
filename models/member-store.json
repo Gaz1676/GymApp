@@ -81,6 +81,18 @@
       "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
       "assessments": [
         {
+          "assessmentid": "1465e70d-4c73-41fe-bb59-5eeb490d79c9",
+          "date": "2017-08-23 18:41:37",
+          "weight": 44,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "",
+          "comment": ""
+        },
+        {
           "assessmentid": "475a5847-5f1e-4604-92b1-6bf3250fd4ad",
           "date": "2017-08-22 15:37:16",
           "weight": 45,
