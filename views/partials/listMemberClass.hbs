@@ -1,3 +1,24 @@
+<form class="ui fluid search basic segment form" action="/dashboard/searchforclass/{{classid}}" method="POST">
+    <div class="ui right icon input field">
+        <i class="search icon"></i>
+        <input class="prompt" placeholder="Class Name" name="search">
+    </div>
+    <div class="results"></div>
+</form>
+
+<script>
+    let list = [
+        {{#each classList}}
+            {title: '{{name}}'},
+        {{/each}}
+    ];
+    $('.ui.search')
+            .search({
+                source: list
+            })
+    ;
+</script>
+
 <div class="ui five cards">
     {{#each classList}}
         <div class="card">
@@ -5,8 +26,8 @@
                 <div class="ui dimmer">
                     <div class="content">
                         <div class="center">
-                                <h5 class="ui inverted header">{{description}}</h5>
-                            <a href="/showworkouts" class="ui icon button">Check Availability</a>
+                            <h5 class="ui inverted header">{{description}}</h5>
+                            <a href="/dashboard/viewclass/{{classid}}" class="ui icon button">Check Availability</a>
                         </div>
                     </div>
                 </div>
