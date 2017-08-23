@@ -8,7 +8,40 @@
       "gender": "female",
       "image": "http://res.cloudinary.com/cloud101/image/upload/v1503154474/cutmypic_qwyvs0.png",
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "members": []
+      "bookings": [
+        {
+          "bookingid": "790e58bd-5688-430a-8cda-029053ba7ab3",
+          "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
+          "date": "2017-08-29",
+          "time": "00:00",
+          "memberfirstname": "Edna",
+          "memberlastname": "Krabappel"
+        },
+        {
+          "bookingid": "a3a68312-4566-4227-88d5-7fb0f33ad309",
+          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+          "date": "2017-09-02",
+          "time": "10:00",
+          "memberfirstname": "Homer",
+          "memberlastname": "Simpson"
+        },
+        {
+          "bookingid": "cf69d8f8-ce77-4bfd-acbf-8dec91f3e785",
+          "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
+          "date": "2017-08-22",
+          "time": "12:00",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson"
+        },
+        {
+          "bookingid": "0cc3e0cf-ed4a-46a5-966a-e7d6b4468764",
+          "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
+          "date": "2017-08-23",
+          "time": "10:00",
+          "memberfirstname": "Edna",
+          "memberlastname": "Krabappel"
+        }
+      ]
     },
     {
       "firstName": "Ned",
@@ -18,7 +51,24 @@
       "gender": "male",
       "image": "http://res.cloudinary.com/cloud101/image/upload/v1503158894/cutmypic_1_fuwkix.png",
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-      "members": []
+      "bookings": [
+        {
+          "bookingid": "e0597a95-88d9-4d9b-b307-33e4fdaacb54",
+          "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
+          "date": "2017-08-22",
+          "time": "20:00",
+          "memberfirstname": "Seymour",
+          "memberlastname": "Skinner"
+        },
+        {
+          "bookingid": "f83f35df-96b3-43f0-9076-cb21863326b2",
+          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
+          "date": "2017-08-29",
+          "time": "09:00",
+          "memberfirstname": "Bart",
+          "memberlastname": "Simpson"
+        }
+      ]
     }
   ]
 }

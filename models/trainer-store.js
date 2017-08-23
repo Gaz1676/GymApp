@@ -23,7 +23,28 @@ const trainerStore = {
   },
 
   getTrainerByEmail(email) {
-    return this.store.findOneBy(this.collection, { email: email }); //------------> gets a single trainer by email 
+    return this.store.findOneBy(this.collection, { email: email }); //------------> gets a single trainer by email
+  },
+
+  addBooking(trainerid, booking) {
+    const trainer = this.getTrainerById(trainerid); //-----------------------------> get member by id and store it in member
+    trainer.bookings.push(booking); //-------------------------------------------> loads booking to the end of the pile
+    this.store.save(); //-------------------------------------------------------> saves new results to store
+  },
+
+  getBookingById(trainerid, bookingid) {
+    const trainer = this.getTrainerById(trainerid); //-----------------------------> get member by id and stores it in member
+    for (let i = 0; i < trainer.bookings.length; i++) { //-----------------------> for loop
+      if (trainer.bookings[i].bookingid === bookingid) { //----------------------> if bookingid is equal to one found then
+        return trainer.bookings[i]; //-------------------------------------------> return that boking from the bookings in member
+      }
+    }
+  },
+
+  removeBooking(trainerid, bookingid) {
+    const trainer = this.getTrainerById(trainerid); //-----------------------------> getsMemberId and stores it in member
+    _.remove(trainer.bookings, { bookingid: bookingid }); //---------------------> removes bookingid from the bookings in member
+    this.store.save(); //-------------------------------------------------------> saves new results to store
   },
 };
 
