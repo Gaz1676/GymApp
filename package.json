@@ -1,6 +1,6 @@
 {
-  "name": "gomix-list",
-  "version": "0.0.1",
+  "name": "Lefties Gym App",
+  "version": "1.0.1",
   "description": "Summer School Gym Web Application",
   "main": "server.js",
   "scripts": {

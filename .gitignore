@@ -51,5 +51,6 @@ jspm_packages
 
 #.env.json files will hold confidential information
 /.data/.env.json
+tempimage
 
 
