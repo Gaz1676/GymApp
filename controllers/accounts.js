@@ -3,6 +3,7 @@
 const memberStore = require('../models/member-store'); //--------------------> imports memberStore
 const trainerStore = require('../models/trainer-store.js'); //---------------> imports trainerStore
 const logger = require('../utils/logger'); //--------------------------------> imports logger
+const classStore = require('../models/class-store.js'); //---------------> imports trainerStore
 const uuid = require('uuid'); //---------------------------------------------> imports uuid
 
 //---> accounts object definition <---//
@@ -10,7 +11,7 @@ const uuid = require('uuid'); //---------------------------------------------> i
 const accounts = {
   index(request, response) { //----------------------------------------------> index method called when ‘/ accounts’ request received
     const viewData = { //----------------------------------------------------> place model in viewData object
-      title: 'Login or Signup', //-------------------------------------------> name of title
+      title: 'Home', //------------------------------------------------------> name of title
     };
     response.render('index', viewData); //-----------------------------------> renders 'index' and viewData to view
   },
@@ -45,6 +46,8 @@ const accounts = {
     const member = request.body; //------------------------------------------> requests body data and stores it in member
     member.memberid = uuid(); //---------------------------------------------> creates a unique memberid for member
     member.assessments = []; //----------------------------------------------> creates an empty assessment array list for member
+    member.classes = [];
+    member.bookings = []; //-------------------------------------------------> creates an empty bookings array list for member
     memberStore.addMember(member); //----------------------------------------> adds the member to memberStore
     logger.debug(`registering ${member.email}`); //--------------------------> logs message to console
     response.redirect('/login'); //------------------------------------------> redirect to (/login)
@@ -77,6 +80,10 @@ const accounts = {
     return trainerStore.getTrainerByEmail(trainerEmail); //------------------> returns a valid trainer by email search if session exists
   },
 
+  getCurrentClass(request) { //--------------------------------------------> getCurrentTrainer method, called when ‘/ accounts’ request received
+    const classid = request.cookies.class; //-------------------------> requests cookies of trainer and stores them in trainerEmail
+    return classStore.getClassById(classid); //------------------> returns a valid trainer by email search if session exists
+  },
 };
 
 module.exports = accounts; //------------------------------------------------> this is the object that is then exported
