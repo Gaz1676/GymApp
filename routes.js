@@ -61,7 +61,7 @@ router.get('/trainerDashboard/removemember/:memberid', trainerDashboard.removeMe
 
 // Trainer Classes //
 
-router.get('/trainerDashboard/createclasses', trainerDashboard.createClasses);
+router.get('/trainerDashboard/trainerclasses', trainerDashboard.trainerClasses);
 router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/viewtrainerclasses', trainerDashboard.viewTrainerClasses);
 router.get('/trainerDashboard/removeclass/:classid', trainerDashboard.removeClass);

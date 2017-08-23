@@ -84,6 +84,18 @@ const trainerDashboard = {
     response.redirect('/trainerDashboard'); //-----------------------------------------------------> redirects to (/trainerDashboard)
   },
 
+  trainerClasses(request, response) { //-----------------------------------------------------------> trainerClasses method, called when ‘/ trainerDashboard’ request received
+    logger.info('create class rendering '); //-----------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const classes = classStore.getAllClasses(); //-------------------------------------------------> gets allClasses from classStore and stores it in classes
+    const viewData = { //--------------------------------------------------------------------------> place model in viewData object
+      trainer: loggedInTrainer, //-----------------------------------------------------------------> loggedInTrainer
+      classes: classes, //-------------------------------------------------------------------------> classes
+    };
+    logger.debug(`create classes menu rendered for Coach ${loggedInTrainer.lastName}`); //---------> logs message to console
+    response.render('trainerClasses', viewData); //------------------------------------------------> renders 'trainerClasses' and viewData to view
+  },
+
   addClass(request, response) { //-----------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('add a new class rendering'); //---------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
@@ -151,18 +163,6 @@ const trainerDashboard = {
     };
     logger.debug(`details/update class menu rendered for Coach ${loggedInTrainer.lastName}`); //---> logs message to console
     response.render('updateClass', viewData); //---------------------------------------------------> renders 'updateClass' and viewData to view
-  },
-
-  createClasses(request, response) { //------------------------------------------------------------> createClass method, called when ‘/ trainerDashboard’ request received
-    logger.info('create class rendering '); //-----------------------------------------------------> logs message to console
-    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
-    const classes = classStore.getAllClasses(); //-------------------------------------------------> gets allClasses from classStore and stores it in classes
-    const viewData = { //--------------------------------------------------------------------------> place model in viewData object
-      trainer: loggedInTrainer, //-----------------------------------------------------------------> loggedInTrainer
-      classes: classes, //-------------------------------------------------------------------------> classes
-    };
-    logger.debug(`create classes menu rendered for Coach ${loggedInTrainer.lastName}`); //---------> logs message to console
-    response.render('createClasses', viewData); //-------------------------------------------------> renders 'createClasses' and viewData to view
   },
 
   removeClass(request, response) { //--------------------------------------------------------------> removeClass method, called when ‘/ trainerDashboard’ request received

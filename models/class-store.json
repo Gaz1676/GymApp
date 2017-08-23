@@ -614,6 +614,30 @@
           "members": []
         }
       ]
+    },
+    {
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classid": "83c2f541-8fc9-4ecc-836e-e4fba50b5414",
+      "name": "test",
+      "description": "test",
+      "duration": "1 week",
+      "capacity": 5,
+      "difficulty": "All Levels",
+      "classesWorkouts": 1,
+      "time": "12:59",
+      "date": "2017-12-31",
+      "image": "https://image.flaticon.com/icons/png/512/84/84145.png",
+      "workouts": [
+        {
+          "workoutid": "be18738c-8c8e-4419-929e-b93c540bbd35",
+          "workoutDate": "Sun Dec 31 2017",
+          "time": "12:59",
+          "duration": "1 week",
+          "currentCapacity": 0,
+          "capacity": 5,
+          "members": []
+        }
+      ]
     }
   ]
 }
