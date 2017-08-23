@@ -7,110 +7,64 @@
       "password": "secret",
       "address": "742 Evergreen Terrace",
       "gender": "male",
-      "height": 1.7,
-      "startingWeight": 66,
+      "height": "1.6",
+      "startingWeight": "56",
       "image": "http://res.cloudinary.com/cloud101/image/upload/v1501779026/Homer-Simpson-02-Donut-icon_i1qv3w.png",
-      "memberid": "e23abd8f-1f5f-4d40-82e9-094dd2b618e1",
+      "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
       "assessments": [
         {
-          "assessmentid": "2bb518a0-dec7-44bf-a39d-4376f9ce23cc",
-          "date": "2017-08-16 14:42:44",
-          "weight": 66,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": "Good going Homer"
-        },
-        {
-          "assessmentid": "8eb63ce3-edf0-4069-8d68-a996c79a1a18",
-          "date": "2017-08-11 17:20:33",
-          "weight": 88,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "red",
-          "comment": "Need more effort homer"
-        }
-      ]
-    },
-    {
-      "firstName": "Seymour",
-      "lastName": "Skinner",
-      "email": "seymour@skinner.com",
-      "password": "secret",
-      "address": "Springfield Elementry School",
-      "gender": "male",
-      "height": 1.6,
-      "startingWeight": 69,
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
-      "memberid": "53a2d968-6096-4f54-a825-82deadfc7d4c",
-      "assessments": [
-        {
-          "assessmentid": "a0a87a82-2518-4a1a-ac6f-89df770c1a0b",
-          "date": "2017-08-20 12:37:05",
-          "weight": 57,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": ""
-        },
-        {
-          "assessmentid": "66bbb302-3696-4f43-b944-26bead255a1a",
-          "date": "2017-08-20 12:28:45",
-          "weight": 58,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": "Brilliant"
-        }
-      ]
-    },
-    {
-      "firstName": "Edna",
-      "lastName": "Krabappel",
-      "email": "edna@krabappel.com",
-      "password": "secret",
-      "address": "Springfield Elementry School",
-      "gender": "female",
-      "height": 1.6,
-      "startingWeight": 66,
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091790/ZLWCe9Bd_jspbf9.png",
-      "memberid": "70761f88-5e16-4e86-aafb-0583eb4351bb",
-      "assessments": [
-        {
-          "assessmentid": "d537fc3d-8f3d-4297-b90b-41709adbb66a",
-          "date": "2017-08-16 15:57:34",
-          "weight": 46,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "red",
-          "comment": "Need to beef you up a bit"
-        },
-        {
-          "assessmentid": "04130479-05c2-4220-9a8d-45aa77313503",
-          "date": "2017-08-16 15:57:20",
+          "assessmentid": "1ed598ff-f776-4122-ba28-22246f76fe4c",
+          "date": "2017-08-23 13:29:41",
           "weight": 55,
           "chest": 35,
           "thigh": 35,
+          "upperArm": 15.01,
+          "waist": 65,
+          "hips": 65,
+          "trend": "",
+          "comment": "Go Homer, well done"
+        },
+        {
+          "assessmentid": "64b20fe6-fad4-403c-bbbf-3bdcb37fdc05",
+          "date": "2017-08-22 13:22:08",
+          "weight": 45,
+          "chest": 35,
+          "thigh": 35,
           "upperArm": 15,
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": "Well done Edna"
+          "comment": "Time to eat some protein Homer"
+        }
+      ],
+      "bookings": [
+        {
+          "bookingid": "9cd7db9f-8306-4658-8281-d0e371a66868",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "date": "2017-08-22",
+          "time": "12:00",
+          "trainerlastname": "Flanders"
+        },
+        {
+          "bookingid": "d29bca5a-e8fd-4bc0-94df-48e2a9d0f987",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-22",
+          "time": "11:00",
+          "trainerlastname": "Simpson"
+        },
+        {
+          "bookingid": "8d537e47-76c4-40a2-8294-01d65b69212f",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-23",
+          "time": "12:00",
+          "trainerlastname": "Simpson"
+        },
+        {
+          "bookingid": "89da9bf2-2766-49b2-baae-c348edeb87cb",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "date": "2017-08-30",
+          "time": "09:00",
+          "trainerlastname": "Flanders"
         }
       ]
     },
@@ -121,37 +75,181 @@
       "password": "secret",
       "address": "742 Evergreen Terrace",
       "gender": "female",
-      "height": 1.4,
-      "startingWeight": 43,
+      "height": "1.4",
+      "startingWeight": "43",
       "image": "http://res.cloudinary.com/cloud101/image/upload/v1503083391/Lisa-Simpson_o8psap.ico",
-      "memberid": "0c49b7dc-755a-419b-9be0-ee13ebf49f86",
+      "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
       "assessments": [
         {
-          "assessmentid": "797a83c3-81f1-4620-8eb0-be7f5df34fc8",
-          "date": "2017-08-18 19:35:10",
-          "weight": 35,
+          "assessmentid": "475a5847-5f1e-4604-92b1-6bf3250fd4ad",
+          "date": "2017-08-22 15:37:16",
+          "weight": 45,
           "chest": 35,
           "thigh": 35,
           "upperArm": 15,
           "waist": 65,
           "hips": 65,
           "trend": "red",
-          "comment": "Need some more meat on them bones missy"
+          "comment": "Excellent work Lisa"
+        },
+        {
+          "assessmentid": "ad689000-2333-4c3f-b904-0a62c0787a63",
+          "date": "2017-08-22 15:36:53",
+          "weight": 43,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Perfect Lisa"
+        }
+      ],
+      "bookings": [
+        {
+          "bookingid": "83a0d437-88c0-44b5-8a18-142bd5424a73",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-22",
+          "time": "12:00",
+          "trainerlastname": "Simpson"
         }
       ]
     },
     {
-      "firstName": "kk",
-      "lastName": "kk",
-      "email": "kk@simpson.com",
-      "password": "s",
+      "firstName": "Edna",
+      "lastName": "Krabappel",
+      "email": "edna@krabappel.com",
+      "password": "secret",
+      "address": "Springfield Elementry School",
+      "gender": "female",
+      "height": "1.6",
+      "startingWeight": "59",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091790/ZLWCe9Bd_jspbf9.png",
+      "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
+      "assessments": [
+        {
+          "assessmentid": "264df52e-5826-4589-8349-ea25c68f194f",
+          "date": "2017-08-22 15:40:41",
+          "weight": 54,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Excellent work Edna"
+        },
+        {
+          "assessmentid": "f4dc8be4-0e38-42c2-be5b-924c4f4ec345",
+          "date": "2017-08-22 15:40:04",
+          "weight": 50,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "red",
+          "comment": "Thats what I like to see Edna"
+        }
+      ],
+      "bookings": [
+        {
+          "bookingid": "b3a291b1-1e72-4d8c-90f2-d43301d28715",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "date": "2017-08-22",
+          "time": "18:00",
+          "trainerlastname": "Flanders"
+        }
+      ]
+    },
+    {
+      "firstName": "Seymour",
+      "lastName": "Skinner",
+      "email": "seymour@skinner.com",
+      "password": "secret",
+      "address": "Springfield Elementry School",
+      "gender": "male",
+      "height": "1.7",
+      "startingWeight": "57",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
+      "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
+      "assessments": [
+        {
+          "assessmentid": "5159a917-2be7-41d6-beb8-0e7c0b1f3a45",
+          "date": "2017-08-22 15:43:39",
+          "weight": 64,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Brilliant work!"
+        },
+        {
+          "assessmentid": "29853a6f-5c82-41ff-894b-657e2813e053",
+          "date": "2017-08-22 15:42:45",
+          "weight": 57,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "red",
+          "comment": "Thats what I like to see Seymour"
+        }
+      ],
+      "bookings": [
+        {
+          "bookingid": "8e4bbcbd-8bd1-423e-a285-85a2073b3416",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-22",
+          "time": "19:00",
+          "trainerlastname": "Simpson"
+        },
+        {
+          "bookingid": "0ec01e97-47ed-4d22-82f6-5f59e54c495f",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-29",
+          "time": "12:00",
+          "trainerlastname": "Simpson"
+        }
+      ]
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
       "address": "742 Evergreen Terrace",
       "gender": "male",
-      "height": 1,
-      "startingWeight": 35,
-      "image": "",
-      "memberid": "5aafdae7-feb2-4cbc-aaf4-11ae11b7cf9f",
-      "assessments": []
+      "height": "1.4",
+      "startingWeight": "43",
+      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503417078/bartProfile_tlgfjw.png",
+      "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
+      "assessments": [
+        {
+          "assessmentid": "77408864-6e1e-4d3a-af80-7139019395cf",
+          "date": "2017-08-22 15:52:39",
+          "weight": 47,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "red",
+          "comment": "Thats what I like to see"
+        }
+      ],
+      "bookings": [
+        {
+          "bookingid": "47daf977-b22b-4538-9d08-dae2f7f5deb5",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "2017-08-29",
+          "time": "13:00",
+          "trainerlastname": "Simpson"
+        }
+      ]
     }
   ]
 }
