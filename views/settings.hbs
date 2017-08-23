@@ -3,6 +3,44 @@
 <div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
+                    <tr>
+                        <td><i class="user icon"></i> Member:</td>
+                        <td>{{member.firstName}} {{member.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="mail icon"></i> Email:</td>
+                        <td>{{member.email}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="home icon"></i> Address:</td>
+                        <td>{{member.address}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="genderless icon"></i> Gender:</td>
+                        <td>{{member.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="resize vertical icon"></i> Height:</td>
+                        <td>{{member.height}} meters</td>
+                    </tr>
+                    <tr>
+                        <td><i class="law icon"></i> Starting weight:</td>
+                        <td>{{member.startingWeight}} kgs</td>
+                    </tr>
+
+                    <img class="ui small centered image" {{#if member.image}} src="{{member.image}}" {{else}}
+
+                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
+
+                </table>
+            </section>
+        </section>
+    </div>
+    <div class="column">
+        <section class="ui inverted brown segment">
             <form class="ui yellow raised segment form" action="/settings" method="POST">
                 <h2 class="ui red center aligned header"> Update Profile</h2>
                 <section class="ui segment">
@@ -18,7 +56,7 @@
                     </div>
                     <div class="field">
                         <label>Email</label>
-                        <input placeholder="email" type="email" name="email" required>
+                        <input placeholder="{{member.email}}" type="email" name="email" required>
                     </div>
                     <div class="field">
                         <label>Password</label>
@@ -61,45 +99,6 @@
                     </button>
                 </section>
             </form>
-        </section>
-    </div>
-
-    <div class="column left aligned">
-        <section class="ui inverted brown segment">
-            <section class="ui yellow segment">
-                <table class="ui fixed left aligned table">
-                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
-                    <tr>
-                        <td><i class="user icon"></i> Member:</td>
-                        <td>{{member.firstName}} {{member.lastName}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="mail icon"></i> Email:</td>
-                        <td>{{member.email}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="home icon"></i> Address:</td>
-                        <td>{{member.address}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="genderless icon"></i> Gender:</td>
-                        <td>{{member.gender}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="resize vertical icon"></i> Height:</td>
-                        <td>{{member.height}} meters</td>
-                    </tr>
-                    <tr>
-                        <td><i class="law icon"></i> Starting weight:</td>
-                        <td>{{member.startingWeight}} kgs</td>
-                    </tr>
-
-                    <img class="ui small centered image" {{#if member.image}} src="{{member.image}}" {{else}}
-
-                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
-
-                </table>
-            </section>
         </section>
     </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="ui center aligned four column grid">
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image">
+            <div class="ui small centered image" data-tooltip="{{member.firstName}} {{member.lastName}}">
 
                 <img class="ui image" {{#if member.image}} src="{{member.image}}"
 
@@ -13,33 +13,34 @@
     </div>
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image">
+            <div class="ui small centered image" data-tooltip="Your BMI Category determined by your BMI Reading">
                 <i class="ui center aligned massive teal doctor icon"></i>
             </div>
             <div class="content">
-                <a class="ui center aligned header">{{bmiCategory}}</a>
+                <label class="ui center aligned header">{{bmiCategory}}</label>
             </div>
         </div>
     </div>
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image">
+            <div class="ui small centered image" data-tooltip="Your BMI reading from calculation of height to weight ratio">
                 <i class="ui center aligned massive yellow heartbeat icon"></i>
             </div>
             <div class="content">
-                <a class="ui center aligned header">{{bmi}} BMI</a>
+                <label class="ui center aligned header">{{bmi}} BMI</label>
             </div>
         </div>
     </div>
 
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image">
+            <div class="ui small centered image" data-tooltip="Green for perfect, Orange for borderline, Red for out of limits">
                 <i class="massive {{idealBodyWeight}} dashboard icon"></i>
             </div>
             <div class="content">
-                <a class="ui center aligned header">IDEAL BODY WEIGHT</a>
+                <label class="ui center aligned header">IDEAL BODY WEIGHT</label>
             </div>
         </div>
     </div>
 </div>
+<br>

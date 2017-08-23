@@ -1,20 +1,15 @@
 <nav class="ui menu">
-    <header class="ui blue header item"> {{member.firstName}} {{member.lastName}}'s Gym App </header>
+    <header class="ui blue header item"> Lefties Gym App</header>
     <div class="right menu">
-        <div class="ui simple dropdown item">
-            Scheduled Classes&emsp;<i class="brown tasks icon"></i>
-            <div class="menu">
-                <a id="searchClassByName" class="item" href="#"> Search for a class&emsp;<i class="yellow search icon"></i></a>
-                <a id="memberClasses" class="item" href="/dashboard/memberclasses"> Available classes&emsp;&nbsp;<i class="red calendar icon"></i></a>
-            </div>
-        </div>
+        <a id="memberBookings" class="item" href="/dashboard/memberbookings">&emsp;Book Assessment &emsp;&nbsp;<i class="blue add to calendar icon"></i></a>
+        <a id="viewMemberClasses" class="item" href="/dashboard/viewmemberclasses">&emsp;Workout Classes&emsp;&nbsp;<i class="red calendar icon"></i></a>
         <div class="right menu">
             <div class="ui simple dropdown item">
                 &emsp;Menu&emsp;<i class="orange sidebar icon"></i>
                 <div class="menu">
-                    <a id="settings" class="item" href="/settings">Update Profile&nbsp;<i class="blue user icon"></i></a>
-                    <a id="dashboard" class="item" href="/dashboard"> Dashboard&emsp;&nbsp;&nbsp;&nbsp;<i class="green home icon"></i></a>
-                    <a id="logout" class="item" href="/logout"> Logout&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<i class="red sign out icon"></i></a>
+                    <a id="settings" class="item" href="/settings">&emsp;Update Profile&nbsp;<i class="blue user icon"></i></a>
+                    <a id="dashboard" class="item" href="/dashboard">&emsp;Dashboard&emsp;&nbsp;&nbsp;&nbsp;<i class="green home icon"></i></a>
+                    <a id="logout" class="item" href="/logout">&emsp;Logout&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;<i class="red sign out icon"></i></a>
                 </div>
             </div>
         </div>
