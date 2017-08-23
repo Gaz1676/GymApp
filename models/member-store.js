@@ -38,19 +38,40 @@ const memberStore = {
     this.store.save(); //-------------------------------------------------------> saves new results to store
   },
 
+  getAssessmentById(memberid, assessmentid) {
+    const member = this.getMemberById(memberid); //-----------------------------> get member by id and stores it in member
+    for (let i = 0; i < member.assessments.length; i++) { //--------------------> for loop
+      if (member.assessments[i].assessmentid === assessmentid) { //-------------> if assessmentid is equal to one found then
+        return member.assessments[i]; //----------------------------------------> return that assessment from the assessments in member
+      }
+    }
+  },
+
   removeAssessment(memberid, assessmentid) {
     const member = this.getMemberById(memberid); //-----------------------------> get member by id and store it in member
     _.remove(member.assessments, { assessmentid: assessmentid }); //------------> remove assessment by id from members assessments
     this.store.save(); //-------------------------------------------------------> saves new results to store
   },
 
-  getAssessmentById(memberid, assessmentid) {
-    const member = this.getMemberById(memberid); //-----------------------------> get member by id
-    for (let i = 0; i < member.assessments.length; i++) { //--------------------> for 'i' is less than assessment.length in member, increment by one
-      if (member.assessments[i].assessmentid === assessmentid) { //-------------> if assessmentid is equal to one found then
-        return member.assessments[i]; //----------------------------------------> return that assessment from the assessments in member
+  addBooking(memberid, booking) {
+    const member = this.getMemberById(memberid); //-----------------------------> get member by id and store it in member
+    member.bookings.push(booking); //-------------------------------------------> loads booking to the end of the pile
+    this.store.save(); //-------------------------------------------------------> saves new results to store
+  },
+
+  getBookingById(memberid, bookingid) {
+    const member = this.getMemberById(memberid); //-----------------------------> get member by id and stores it in member
+    for (let i = 0; i < member.bookings.length; i++) { //-----------------------> for loop
+      if (member.bookings[i].bookingid === bookingid) { //----------------------> if bookingid is equal to one found then
+        return member.bookings[i]; //-------------------------------------------> return that booking from the bookings in member
       }
     }
+  },
+
+  removeBooking(memberid, bookingid) {
+    const member = this.getMemberById(memberid); //-----------------------------> getsMemberId and stores it in member
+    _.remove(member.bookings, { bookingid: bookingid }); //---------------------> removes bookingid from the bookings in member
+    this.store.save(); //-------------------------------------------------------> saves new results to store
   },
 };
 
