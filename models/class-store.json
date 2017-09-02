@@ -2,613 +2,226 @@
   "classes": [
     {
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "500ad06e-56c1-4603-8478-5e04b410ce9e",
-      "name": "Yin Yoga",
-      "description": "Yin yoga is a very intimate practice which takes on a meditative approach. It is a simple yet challenging practice but simple does not always mean easy. It allows the practitioner time to connect with their breath and observe the inner landscape of their bodies on a physical, emotional and spiritual level.",
-      "duration": "6 weeks",
+      "classid": "4ffb64ea-e494-4cd2-85c7-b8582d07b962",
+      "name": "Yoga - Stretch and Restore",
       "capacity": 15,
-      "difficulty": "All Levels",
-      "classesWorkouts": 12,
-      "time": "09:00",
-      "date": "2017-08-19",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503070307/Jesse_Grass_set5k0.png",
+      "noOfWorkouts": 6,
+      "duration": 25,
+      "date": "Sat Sep 02 2017",
+      "time": "10:30",
       "workouts": [
         {
-          "workoutid": "a69895fe-66c5-409d-b9ef-26b641f7194a",
-          "workoutDate": "Sat Aug 19 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "156f5a73-2bbe-4407-8091-0aadef5819a3",
-          "workoutDate": "Sat Aug 26 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "67592ce4-b2bb-4663-b569-fc3aab13af1c",
+          "workoutid": "18c64b11-0053-48cf-944d-54db9ef2197a",
           "workoutDate": "Sat Sep 02 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "10:00",
+          "duration": "45",
+          "currentCapacity": 3,
           "capacity": 15,
-          "members": []
+          "members": [
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "82d42543-1dd8-4c36-804f-c8ee1308b935",
+          "workoutid": "f16dcd11-5f72-47a9-a9c1-c883d3720877",
           "workoutDate": "Sat Sep 09 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "10:00",
+          "duration": "45",
+          "currentCapacity": 3,
           "capacity": 15,
-          "members": []
+          "members": [
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "b01899b8-046d-4ab9-a86c-a3d288f7b217",
+          "workoutid": "ea7741d8-9491-4749-8abc-824d7700569a",
           "workoutDate": "Sat Sep 16 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "10:00",
+          "duration": "45",
+          "currentCapacity": 3,
           "capacity": 15,
-          "members": []
+          "members": [
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "7bbe144f-3957-4307-99db-42f296f9afe4",
+          "workoutid": "782a72b4-ef5f-4148-b31b-71d8e02511c5",
           "workoutDate": "Sat Sep 23 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "10:00",
+          "duration": "45",
+          "currentCapacity": 3,
           "capacity": 15,
-          "members": []
+          "members": [
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "02926a71-fd05-4c3c-be07-26e1e619ca90",
+          "workoutid": "4ba96f85-2a2d-46bb-8525-ca13aab92841",
           "workoutDate": "Sat Sep 30 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "10:00",
+          "duration": "45",
+          "currentCapacity": 3,
           "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "277d2893-6b02-4273-b2e1-e3d4677fb0a5",
-          "workoutDate": "Sat Oct 07 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "4a41e7b7-26ff-4329-bf5e-c1ac14934d66",
-          "workoutDate": "Sat Oct 14 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "bd34404c-ffa3-4c4d-bff7-98eaa7e0c4d0",
-          "workoutDate": "Sat Oct 21 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "70a678fa-daa7-41d0-953b-9580a9e89438",
-          "workoutDate": "Sat Oct 28 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
-        },
-        {
-          "workoutid": "ae697649-a7ed-4311-9d47-f39b87c83a1b",
-          "workoutDate": "Sat Nov 04 2017",
-          "time": "09:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 15,
-          "members": []
+          "members": [
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         }
-      ]
+      ],
+      "difficulty": "Beginners Level"
     },
     {
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "97747dc7-d840-45b9-af9f-206baee199d9",
+      "classid": "80bbbdca-6215-4b88-b792-b6197bc01f4a",
       "name": "Body Sculpt",
-      "description": "For those who want to focus more on sculpting your body, this is your class. Body Sculpt, a low impact upper and lower body workout with weights, aimed to improve muscle tone and endurance.",
-      "duration": "12 weeks",
-      "capacity": 25,
-      "difficulty": "Intermediate Level",
-      "classesWorkouts": 24,
-      "time": "14:00",
-      "date": "2017-09-08",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1502994434/Bare_Chested_Willie_Unlock_i9u2jp.png",
+      "capacity": 15,
+      "noOfWorkouts": 10,
+      "duration": 15,
+      "date": "Sat Sep 02 2017",
+      "time": "05:30",
       "workouts": [
         {
-          "workoutid": "2f378de6-31ed-4f77-a70b-3e4ace1e1fd9",
-          "workoutDate": "Fri Sep 08 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "f1430d9d-b1e8-42f0-b212-8b59d261e029",
-          "workoutDate": "Fri Sep 15 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "f4d43c2b-99c1-465f-a4b4-7de5a34eaa94",
-          "workoutDate": "Fri Sep 22 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "13582bad-e71d-4c3b-ae4e-746d1f54b47e",
-          "workoutDate": "Fri Sep 29 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "b34ecfa9-7262-4630-baac-1ce77e868206",
-          "workoutDate": "Fri Oct 06 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "6c9e142e-7742-4001-a1f8-fd7dda3f0b8c",
-          "workoutDate": "Fri Oct 13 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "473a50b4-dbeb-4d55-b5e4-60b0842fd9c7",
-          "workoutDate": "Fri Oct 20 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "f2fc4e6a-7511-4f8e-8e5c-16363d93a20a",
-          "workoutDate": "Fri Oct 27 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "719bc125-2e0a-4b45-9bc1-17316677f8bd",
-          "workoutDate": "Fri Nov 03 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "91ed8b6d-af13-455e-9234-2801115aa699",
-          "workoutDate": "Fri Nov 10 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "eaf214f8-2c50-4348-9891-d430d9e67951",
-          "workoutDate": "Fri Nov 17 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "ce3968b0-2922-47a7-aca2-20f02af5cc04",
-          "workoutDate": "Fri Nov 24 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "f8befc09-fc2e-4a65-8d76-8e70639e6bb2",
-          "workoutDate": "Fri Dec 01 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "d0c5addf-d31f-4913-b224-ac7fde3c5a33",
-          "workoutDate": "Fri Dec 08 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "c09b8683-cf50-4c20-a2a6-2d46f447dd00",
-          "workoutDate": "Fri Dec 15 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "e44a3ace-5bd4-4e3b-80b3-906fdaefad5c",
-          "workoutDate": "Fri Dec 22 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "ff481c67-803e-4cd0-9861-aa1f94bb8e8b",
-          "workoutDate": "Fri Dec 29 2017",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "23815909-912f-4b47-80d9-6f2b0490d9d0",
-          "workoutDate": "Fri Jan 05 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "30d9e78d-27a1-412d-9361-0d954fbbd5c9",
-          "workoutDate": "Fri Jan 12 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "2536b690-e85b-453a-a519-e60904c83bb2",
-          "workoutDate": "Fri Jan 19 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "8b1e67da-e8a5-42b9-9c7c-cd0bdebce371",
-          "workoutDate": "Fri Jan 26 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "72a271fb-76df-4cd6-bfc5-1345420023b3",
-          "workoutDate": "Fri Feb 02 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "594ea329-cb4d-4914-9537-7dca7850af2c",
-          "workoutDate": "Fri Feb 09 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "f86fcd36-4f0d-48ae-ac89-a33d6d83045a",
-          "workoutDate": "Fri Feb 16 2018",
-          "time": "14:00",
-          "duration": "12 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        }
-      ]
-    },
-    {
-      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "82585b30-a188-4658-ab40-e84ecde56baf",
-      "name": "Aqua Aerobics",
-      "description": "Aqua Aerobics is a fun and challenging class is designed to give you a full body workout, using the water as your resistance. Suitable for people who can’t swim but are confident in the water, injury rehabilitation and aerobic enthusiasts. This is by far one of our most popular classes.",
-      "duration": "6 weeks",
-      "capacity": 10,
-      "difficulty": "Beginners Level",
-      "classesWorkouts": 6,
-      "time": "10:00",
-      "date": "2017-08-26",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1499163813/pc6tz5xokwwd46mfa1t1.png",
-      "workouts": [
-        {
-          "workoutid": "db09b81b-84c1-4e52-b59b-844e6c66f248",
-          "workoutDate": "Sat Aug 26 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
-          "capacity": 10,
-          "members": []
-        },
-        {
-          "workoutid": "4a4e9442-d77b-4e54-beb0-751be0927212",
+          "workoutid": "3ff8c18f-9123-4469-af48-2c1236b4de56",
           "workoutDate": "Sat Sep 02 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
           "capacity": 10,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "2c0eac97-319b-45e9-bb73-fdec6b11e148",
+          "workoutid": "2ef8866b-e8af-4f17-a586-718b037fc98f",
           "workoutDate": "Sat Sep 09 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
           "capacity": 10,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "f8aa125e-5437-448f-85a9-9a0d6f4bcdf4",
+          "workoutid": "75ac08a1-2525-4d75-a74a-b9a74dfe2705",
           "workoutDate": "Sat Sep 16 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
           "capacity": 10,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "e37a870f-8cd9-4973-a294-045a03b3c25b",
+          "workoutid": "a47dcef3-97a0-49b0-805b-a6fdacfa1cf9",
           "workoutDate": "Sat Sep 23 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
           "capacity": 10,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         },
         {
-          "workoutid": "5956f52c-aff5-4b60-9f33-b93a159e8b36",
+          "workoutid": "0031e6d5-48d3-46f3-b8c0-820e13071e08",
           "workoutDate": "Sat Sep 30 2017",
-          "time": "10:00",
-          "duration": "6 weeks",
-          "currentCapacity": 0,
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
           "capacity": 10,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
+        },
+        {
+          "workoutid": "3bb90540-3627-4fc9-867e-06cbb20df6da",
+          "workoutDate": "Sat Oct 07 2017",
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
+        },
+        {
+          "workoutid": "412d21c4-40b5-40dd-ac31-12e958ed8773",
+          "workoutDate": "Sat Oct 14 2017",
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
+        },
+        {
+          "workoutid": "5e765009-8bf1-450d-8e09-4787cf8ca5d9",
+          "workoutDate": "Sat Oct 21 2017",
+          "time": "11:00",
+          "duration": "25",
+          "currentCapacity": 2,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "91be1c56-ec01-4292-96c6-1f00c990d062"
+          ]
         }
-      ]
+      ],
+      "difficulty": "Beginners Level"
     },
     {
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-      "classid": "aa5067d3-d861-4569-ae78-20cb3599f1e6",
-      "name": "H.I.I.T.",
-      "description": "HIIT is the concept where you perform  short bursts of high-intensity (or max-intensity) exercises followed by a brief low-intensity activity, repeatedly. This intense workout last for 30 minutes and is aimed for anyone who is wanting to dramatically increase their fitness.",
-      "duration": "8 weeks",
-      "capacity": "20",
-      "difficulty": "Intermediate Level",
-      "classesWorkouts": 8,
-      "time": "09:00",
-      "date": "2017-08-20",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503259861/hiit_r7k73b.png",
-      "workouts": [
-        {
-          "workoutid": "3d163edb-c8cb-40c1-91d9-5b519b767fc3",
-          "workoutDate": "Sun Aug 20 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "b3b8ce95-ffb6-49c7-a3d7-0bfa89f6e227",
-          "workoutDate": "Sun Aug 27 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "c2345b45-f8d7-4576-85c3-70fb22010f53",
-          "workoutDate": "Sun Sep 03 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "fd4dc6a7-6e73-48fc-a2a3-626f08311c76",
-          "workoutDate": "Sun Sep 10 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "e97d04b5-d857-4084-8ce5-d161ba5c583e",
-          "workoutDate": "Sun Sep 17 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "57d98fbd-62b1-4655-8a99-ea2c6f07c5e3",
-          "workoutDate": "Sun Sep 24 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "33d87cb5-ebcd-4aad-8596-c6412bf0ef46",
-          "workoutDate": "Sun Oct 01 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        },
-        {
-          "workoutid": "a028816b-0013-44e2-850f-f9c150981bf6",
-          "workoutDate": "Sun Oct 08 2017",
-          "time": "10:00",
-          "duration": "8 weeks",
-          "currentCapacity": 0,
-          "capacity": 25,
-          "members": []
-        }
-      ]
-    },
-    {
-      "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-      "classid": "cd1e22fa-430c-4643-9849-9730b7828838",
-      "name": "DodgeBall",
-      "description": "What began as an elementary school game played during PE classes has now become a competitive adult sport with a huge following and  it’s also a great way to stay healthy and fit! Designed to improve your Agility, Balance,Strength Training and Hand-Eye Coordination, DodgeBall has it all...",
-      "duration": "10 weeks",
-      "capacity": "30",
+      "classid": "35175959-f5b7-445e-91c1-342ab2c2084e",
+      "name": "Test Class",
+      "capacity": 5,
       "difficulty": "Beginners Level",
-      "classesWorkouts": 10,
-      "time": "10:00",
-      "date": "2017-08-20",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503260357/dodgeball_pwqza2.png",
+      "noOfWorkouts": 1,
+      "duration": 10,
+      "date": "Fri Sep 01 2017",
+      "time": "02:00",
       "workouts": [
         {
-          "workoutid": "448bedfc-28e9-4c7e-969b-de9fb0717103",
-          "workoutDate": "Sun Aug 20 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
+          "workoutid": "c6ada604-2bf2-48d5-b9e7-1aa1fbd1d9cc",
+          "workoutDate": "Fri Sep 01 2017",
           "currentCapacity": 0,
           "capacity": 30,
           "members": []
         },
         {
-          "workoutid": "d6d2e8d9-d9ec-4c97-9a42-f721c7c8362d",
-          "workoutDate": "Sun Aug 27 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
+          "workoutid": "495910d0-0d97-41c1-9f04-6d6e29a02cc7",
+          "workoutDate": "Fri Sep 08 2017",
           "currentCapacity": 0,
           "capacity": 30,
           "members": []
         },
         {
-          "workoutid": "8bb026bb-4e51-4b2c-a1d4-2e4c7d069fec",
-          "workoutDate": "Sun Sep 03 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
+          "workoutid": "1dd3cf6b-dfec-423f-b6eb-8ce5ee87695c",
+          "workoutDate": "Fri Sep 15 2017",
           "currentCapacity": 0,
           "capacity": 30,
           "members": []
         },
         {
-          "workoutid": "6d1de550-2308-4e5a-9277-50460d1c95c6",
-          "workoutDate": "Sun Sep 10 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "f0ce54f5-edf7-41ef-bb46-dec787a8be74",
-          "workoutDate": "Sun Sep 17 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "5947d59f-24b1-4a36-a473-3c6da0400a70",
-          "workoutDate": "Sun Sep 24 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "df2e3e5e-d898-4c42-90c9-b92233a63133",
-          "workoutDate": "Sun Oct 01 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "00c29ce7-f381-4730-a95e-95be4595867c",
-          "workoutDate": "Sun Oct 08 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "0912c5e0-3d85-4b62-be10-7fa88afd420c",
-          "workoutDate": "Sun Oct 15 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
-          "currentCapacity": 0,
-          "capacity": 30,
-          "members": []
-        },
-        {
-          "workoutid": "865362b6-c2de-4605-ab7a-d737c394954d",
-          "workoutDate": "Sun Oct 22 2017",
-          "time": "19:00",
-          "duration": "10 weeks",
+          "workoutid": "d7f27e2d-abf9-473e-a64c-c6e91ff83f54",
+          "workoutDate": "Fri Sep 22 2017",
           "currentCapacity": 0,
           "capacity": 30,
           "members": []
@@ -617,24 +230,48 @@
     },
     {
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "83c2f541-8fc9-4ecc-836e-e4fba50b5414",
-      "name": "test",
-      "description": "test",
-      "duration": "1 week",
+      "classid": "cad26bdd-7562-4461-a31a-1e154661ca82",
+      "name": "test2",
       "capacity": 5,
-      "difficulty": "All Levels",
-      "classesWorkouts": 1,
-      "time": "12:59",
-      "date": "2017-12-31",
-      "image": "https://image.flaticon.com/icons/png/512/84/84145.png",
+      "difficulty": "Intermediate Level",
+      "noOfWorkouts": 6,
+      "duration": 20,
+      "date": "Sun Jan 01 2017",
+      "time": "01:00",
       "workouts": [
         {
-          "workoutid": "be18738c-8c8e-4419-929e-b93c540bbd35",
-          "workoutDate": "Sun Dec 31 2017",
-          "time": "12:59",
-          "duration": "1 week",
+          "workoutid": "6a96cdcb-9f3a-438e-bd13-616ad2f02bde",
+          "workoutDate": "Sun Jan 01 2017",
           "currentCapacity": 0,
-          "capacity": 5,
+          "capacity": "10",
+          "members": []
+        },
+        {
+          "workoutid": "1ed40261-7448-4d49-a7fa-1bfa9c840a05",
+          "workoutDate": "Sun Jan 08 2017",
+          "currentCapacity": 0,
+          "capacity": "10",
+          "members": []
+        },
+        {
+          "workoutid": "a2ce8396-67b7-44e7-9eb7-29680c33a60f",
+          "workoutDate": "Sun Jan 15 2017",
+          "currentCapacity": 0,
+          "capacity": "10",
+          "members": []
+        },
+        {
+          "workoutid": "9f698653-0ce4-480f-8842-b3ea3776b110",
+          "workoutDate": "Sun Jan 22 2017",
+          "currentCapacity": 0,
+          "capacity": "10",
+          "members": []
+        },
+        {
+          "workoutid": "33be069c-f100-4d53-afe5-1be998642973",
+          "workoutDate": "Sun Jan 29 2017",
+          "currentCapacity": 0,
+          "capacity": "10",
           "members": []
         }
       ]

@@ -6,65 +6,67 @@
       "email": "homer@simpson.com",
       "password": "secret",
       "address": "742 Evergreen Terrace",
-      "gender": "male",
-      "height": "1.6",
-      "startingWeight": "56",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1501779026/Homer-Simpson-02-Donut-icon_i1qv3w.png",
+      "gender": "Male",
+      "height": 1.7,
+      "startingWeight": 62,
       "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504177494/z0seztxpulrk8l2izmob.png",
       "assessments": [
         {
-          "assessmentid": "1ed598ff-f776-4122-ba28-22246f76fe4c",
-          "date": "2017-08-23 13:29:41",
-          "weight": 55,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15.01,
-          "waist": 65,
-          "hips": 65,
-          "trend": "",
-          "comment": "Go Homer, well done"
-        },
-        {
-          "assessmentid": "64b20fe6-fad4-403c-bbbf-3bdcb37fdc05",
-          "date": "2017-08-22 13:22:08",
-          "weight": 45,
+          "assessmentid": "1f6ec0e3-fd68-4b35-b48c-dec21fe6be7f",
+          "date": "Tue Aug 29 2017",
+          "weight": 65,
           "chest": 35,
           "thigh": 35,
           "upperArm": 15,
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": "Time to eat some protein Homer"
+          "comment": "Excellent work Homer"
+        },
+        {
+          "assessmentid": "ad23455e-8210-493c-b173-c5cb336422d7",
+          "date": "Tue Aug 29 2017",
+          "weight": 62,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Good going Homer"
         }
       ],
       "bookings": [
         {
-          "bookingid": "9cd7db9f-8306-4658-8281-d0e371a66868",
+          "bookingid": "ed6b5d7e-eefb-4cd3-adba-0802921f99bd",
           "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-          "date": "2017-08-22",
+          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+          "date": "Sat Sep 09 2017",
           "time": "12:00",
-          "trainerlastname": "Flanders"
+          "coachlastname": "Flanders",
+          "memberfirstname": "Homer",
+          "memberlastname": "Simpson"
         },
         {
-          "bookingid": "d29bca5a-e8fd-4bc0-94df-48e2a9d0f987",
+          "bookingid": "19ef0c3a-ec43-49b3-9803-4fe69b3c2bc0",
           "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-22",
-          "time": "11:00",
-          "trainerlastname": "Simpson"
-        },
+          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+          "date": "Sat Sep 02 2017",
+          "time": "11:30",
+          "coachlastname": "Simpson",
+          "memberfirstname": "Homer",
+          "memberlastname": "Simpson"
+        }
+      ],
+      "goals": [
         {
-          "bookingid": "8d537e47-76c4-40a2-8294-01d65b69212f",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-23",
-          "time": "12:00",
-          "trainerlastname": "Simpson"
-        },
-        {
-          "bookingid": "89da9bf2-2766-49b2-baae-c348edeb87cb",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-          "date": "2017-08-30",
-          "time": "09:00",
-          "trainerlastname": "Flanders"
+          "goalid": "b8768aa8-5354-484c-a1ce-276b5697333f",
+          "date": "Fri Sep 29 2017",
+          "area": "Weight",
+          "goal": "65",
+          "description": "Lose weight",
+          "status": "open"
         }
       ]
     },
@@ -77,102 +79,24 @@
       "gender": "female",
       "height": "1.4",
       "startingWeight": "43",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503083391/Lisa-Simpson_o8psap.ico",
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504205898/ucez1rhfzrylf9wihgzq.ico",
       "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
       "assessments": [
         {
-          "assessmentid": "1465e70d-4c73-41fe-bb59-5eeb490d79c9",
-          "date": "2017-08-23 18:41:37",
-          "weight": 44,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "",
-          "comment": ""
-        },
-        {
-          "assessmentid": "475a5847-5f1e-4604-92b1-6bf3250fd4ad",
-          "date": "2017-08-22 15:37:16",
-          "weight": 45,
+          "assessmentid": "d8f17b81-5cdd-4fd1-8602-13d0d9e4c9fa",
+          "date": "Wed Aug 30 2017",
+          "weight": 46,
           "chest": 35,
           "thigh": 35,
           "upperArm": 15,
           "waist": 65,
           "hips": 65,
           "trend": "red",
-          "comment": "Excellent work Lisa"
-        },
-        {
-          "assessmentid": "ad689000-2333-4c3f-b904-0a62c0787a63",
-          "date": "2017-08-22 15:36:53",
-          "weight": 43,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": "Perfect Lisa"
+          "comment": "Great going Lisa"
         }
       ],
-      "bookings": [
-        {
-          "bookingid": "83a0d437-88c0-44b5-8a18-142bd5424a73",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-22",
-          "time": "12:00",
-          "trainerlastname": "Simpson"
-        }
-      ]
-    },
-    {
-      "firstName": "Edna",
-      "lastName": "Krabappel",
-      "email": "edna@krabappel.com",
-      "password": "secret",
-      "address": "Springfield Elementry School",
-      "gender": "female",
-      "height": "1.6",
-      "startingWeight": "59",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091790/ZLWCe9Bd_jspbf9.png",
-      "memberid": "745fe23e-6078-4089-bc69-07efba131dc5",
-      "assessments": [
-        {
-          "assessmentid": "264df52e-5826-4589-8349-ea25c68f194f",
-          "date": "2017-08-22 15:40:41",
-          "weight": 54,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": "Excellent work Edna"
-        },
-        {
-          "assessmentid": "f4dc8be4-0e38-42c2-be5b-924c4f4ec345",
-          "date": "2017-08-22 15:40:04",
-          "weight": 50,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "red",
-          "comment": "Thats what I like to see Edna"
-        }
-      ],
-      "bookings": [
-        {
-          "bookingid": "b3a291b1-1e72-4d8c-90f2-d43301d28715",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-          "date": "2017-08-22",
-          "time": "18:00",
-          "trainerlastname": "Flanders"
-        }
-      ]
+      "bookings": [],
+      "goals": []
     },
     {
       "firstName": "Seymour",
@@ -183,48 +107,29 @@
       "gender": "male",
       "height": "1.7",
       "startingWeight": "57",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
       "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
-      "assessments": [
-        {
-          "assessmentid": "5159a917-2be7-41d6-beb8-0e7c0b1f3a45",
-          "date": "2017-08-22 15:43:39",
-          "weight": 64,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "green",
-          "comment": "Brilliant work!"
-        },
-        {
-          "assessmentid": "29853a6f-5c82-41ff-894b-657e2813e053",
-          "date": "2017-08-22 15:42:45",
-          "weight": 57,
-          "chest": 35,
-          "thigh": 35,
-          "upperArm": 15,
-          "waist": 65,
-          "hips": 65,
-          "trend": "red",
-          "comment": "Thats what I like to see Seymour"
-        }
-      ],
+      "assessments": [],
       "bookings": [
         {
-          "bookingid": "8e4bbcbd-8bd1-423e-a285-85a2073b3416",
+          "bookingid": "a2e613ea-8a29-454f-b605-d12ae87cadc6",
           "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-22",
-          "time": "19:00",
-          "trainerlastname": "Simpson"
-        },
+          "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
+          "date": "Fri Sep 01 2017",
+          "time": "10:00",
+          "coachlastname": "Simpson",
+          "memberfirstname": "Seymour",
+          "memberlastname": "Skinner"
+        }
+      ],
+      "goals": [
         {
-          "bookingid": "0ec01e97-47ed-4d22-82f6-5f59e54c495f",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-29",
-          "time": "12:00",
-          "trainerlastname": "Simpson"
+          "goalid": "b57d5e77-22a9-45da-9d6b-e900638dc393",
+          "date": "Fri Sep 08 2017",
+          "area": "Waist",
+          "goal": "77 cm",
+          "description": "Trim some fat",
+          "status": "open"
         }
       ]
     },
@@ -234,32 +139,83 @@
       "email": "bart@simpson.com",
       "password": "secret",
       "address": "742 Evergreen Terrace",
-      "gender": "male",
+      "gender": "Male",
       "height": "1.4",
       "startingWeight": "43",
-      "image": "http://res.cloudinary.com/cloud101/image/upload/v1503417078/bartProfile_tlgfjw.png",
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504116491/o5fdqrv6bueikbhh9wbb.png",
       "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
       "assessments": [
         {
-          "assessmentid": "77408864-6e1e-4d3a-af80-7139019395cf",
-          "date": "2017-08-22 15:52:39",
-          "weight": 47,
+          "assessmentid": "32b49c50-aecc-4001-9fdf-6a1fef28af5b",
+          "date": "Tue Aug 29 2017",
+          "weight": 45,
           "chest": 35,
           "thigh": 35,
           "upperArm": 15,
           "waist": 65,
           "hips": 65,
           "trend": "red",
-          "comment": "Thats what I like to see"
+          "comment": "Good but could be better"
         }
       ],
       "bookings": [
         {
-          "bookingid": "47daf977-b22b-4538-9d08-dae2f7f5deb5",
+          "bookingid": "bbaa3ce1-6beb-4a39-805b-014c952e449d",
           "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "date": "2017-08-29",
-          "time": "13:00",
-          "trainerlastname": "Simpson"
+          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
+          "date": "Thu Aug 31 2017",
+          "time": "12:30",
+          "coachlastname": "Simpson",
+          "memberfirstname": "Bart",
+          "memberlastname": "Simpson"
+        },
+        {
+          "bookingid": "f2d7e263-bef1-44bf-9aea-4fc6196b080c",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
+          "date": "Fri Sep 01 2017",
+          "time": "10:00",
+          "coachlastname": "Flanders",
+          "memberfirstname": "Bart",
+          "memberlastname": "Simpson"
+        }
+      ],
+      "goals": []
+    },
+    {
+      "firstName": "ComicBook",
+      "lastName": "Guy",
+      "email": "comicbook@guy.com",
+      "password": "secret",
+      "address": "The Android's Dungeon & Baseball Card Shop",
+      "gender": "male",
+      "height": 1.6,
+      "startingWeight": 99,
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504126702/wtpovapauwee10lqi80n.png",
+      "memberid": "65add577-e790-4c39-8717-abe69d61d051",
+      "assessments": [
+        {
+          "assessmentid": "ebb74ddd-8348-4504-9c15-bbec14c40e9b",
+          "date": "Thu Aug 31 2017",
+          "weight": 90,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": ""
+        }
+      ],
+      "bookings": [],
+      "goals": [
+        {
+          "goalid": "0dae6f49-5049-4cc0-b453-1b4ceed8f77a",
+          "date": "Fri Sep 29 2017",
+          "area": "Hips",
+          "goal": 77,
+          "description": "lose the spare tyre",
+          "status": "open"
         }
       ]
     }

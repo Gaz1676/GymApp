@@ -27,10 +27,10 @@ const classStore = {
   },
 
   getWorkoutById(classid, workoutid) {
-    const thisClass = this.getClassById(classid); //------------------------------> gets classById from this location, stores it in thisClass
-    for (let i = 0; i < thisClass.workouts.length; i++) { //----------------------> for loop
-      if (thisClass.workouts[i].workoutid === workoutid) { //---------------------> if workoutid is equal to the one found
-        return thisClass.workouts[i]; //------------------------------------------> then return that workout from the workouts in thisClass
+    const currentClass = this.getClassById(classid); //------------------------------> gets classById from this location, stores it in thisClass
+    for (let i = 0; i < currentClass.workouts.length; i++) { //----------------------> for loop
+      if (currentClass.workouts[i].workoutid === workoutid) { //---------------------> if workoutid is equal to the one found
+        return currentClass.workouts[i]; //------------------------------------------> then return that workout from the workouts in thisClass
       }
     }
   },

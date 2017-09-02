@@ -1,3 +1,4 @@
+'use strict';
 
 const analytics = {
 
@@ -76,6 +77,8 @@ const analytics = {
     if ((idealBodyWeight <= (weight + 2.0)) && (idealBodyWeight >= (weight - 2.0))) {
       return 'green';
     } else if ((idealBodyWeight <= (weight + 5.0)) && (idealBodyWeight >= (weight - 5.0))) {
+      return 'yellow';
+    } else if ((idealBodyWeight <= (weight + 8.0)) && (idealBodyWeight >= (weight - 8.0))) {
       return 'orange';
     } else {
       return 'red';
@@ -101,8 +104,6 @@ const analytics = {
       } else {
         trend = 'red';
       }
-    } else {
-      trend = 'black';
     }
 
     assessmentList[0].trend = trend;
