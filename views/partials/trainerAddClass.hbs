@@ -9,42 +9,16 @@
     <div class="column">
         <section class="ui inverted brown segment">
             <form class="ui yellow raised segment form" action="/trainerDashboard/addclass" method="POST">
-                <h2 class="ui red center aligned header"> Create A New Workout Class</h2>
+                <h2 class="ui red center aligned header"> Create A New Gym Class</h2>
                 <section class="ui segment">
                     <div class="field">
-                        <label>Name</label>
-                        <input placeholder="name" name="name" required>
-                    </div>
-                    <div class="field">
-                        <label>Description</label>
-                        <textarea rows="2" name="description"></textarea>
-                    </div>
-                    <div class="two fields">
-                        <div class="field">
-                            <label>Duration</label>
-                            <select class="ui dropdown" name="duration" required>
-                                <option value=""> No. of Weeks</option>
-                                <option value="1 week"> 1 Week</option>
-                                <option value="2 weeks"> 2 Weeks</option>
-                                <option value="3 weeks"> 3 Weeks</option>
-                                <option value="4 weeks"> 4 Weeks</option>
-                                <option value="5 weeks"> 5 Weeks</option>
-                                <option value="6 weeks"> 6 Weeks</option>
-                                <option value="7 weeks"> 7 Weeks</option>
-                                <option value="8 weeks"> 8 Weeks</option>
-                                <option value="9 weeks"> 9 Weeks</option>
-                                <option value="10 weeks"> 10 Weeks</option>
-                                <option value="11 weeks"> 11 Weeks</option>
-                                <option value="12 weeks"> 12 Weeks</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label>Capacity</label>
-                            <input placeholder="capacity" type="number" name="capacity" step="1"
-                                   min="5"
-                                   max="30" required>
+                        <label>Class Name</label>
+                        <div class="ui input left icon">
+                            <i class="university icon"></i>
+                            <input placeholder="class name" name="name" required>
                         </div>
                     </div>
+
                     <div class="two fields">
                         <div class="field">
                             <label> Difficulty </label>
@@ -57,16 +31,39 @@
                             </select>
                         </div>
                         <div class="field">
-                            <label>Workouts</label>
-                            <input placeholder="workouts" type="number" step="1" min="1" max="24" name="classesWorkouts" required>
+                            <label>Capacity</label>
+                            <div class="ui input left icon">
+                                <i class="users icon"></i>
+                                <input placeholder="capacity" type="number" name="capacity" step="1"
+                                       min="5"
+                                       max="30" required>
+                            </div>
                         </div>
                     </div>
+
                     <div class="two fields">
                         <div class="field">
-                            <label>Time</label>
+                            <label>No. of Workouts</label>
+                            <div class="ui input left icon">
+                                <i class="ordered list icon"></i>
+                                <input placeholder="workouts" type="number" step="1" min="1" max="12" name="noOfWorkouts" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Duration</label>
+                            <div class="ui input left icon">
+                                <i class="hourglass half icon"></i>
+                                <input placeholder="time" type="number" name="duration" step="5" min="5" max="60" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two fields">
+                        <div class="field">
+                            <label>Start Time</label>
                             <div class="ui input left icon">
                                 <i class="time icon"></i>
-                                <input placeholder="time" type="time" name="time" required>
+                                <input placeholder="time" type="time" name="time" step="1800" required>
                             </div>
                         </div>
                         <div class="field">
@@ -75,13 +72,6 @@
                                 <i class="calendar icon"></i>
                                 <input placeholder="date" type="date" name="date" required>
                             </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Image Url</label>
-                        <div class="ui input left icon">
-                            <i class="image icon"></i>
-                            <input placeholder="image url" name="image">
                         </div>
                     </div>
 

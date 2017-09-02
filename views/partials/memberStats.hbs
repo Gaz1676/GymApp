@@ -1,9 +1,13 @@
+<div class="ui large blue left ribbon label">
+    <i class="line chart icon"></i>All of your Essential Statistic Details {{member.firstName}}&emsp; <i class="pointing down icon"></i>
+</div>
+<br><br>
 <div class="ui center aligned four column grid">
     <div class="column">
         <div class="ui raised card">
             <div class="ui small centered image" data-tooltip="{{member.firstName}} {{member.lastName}}">
 
-                <img class="ui image" {{#if member.image}} src="{{member.image}}"
+                <img class="ui small image" {{#if member.img}} src="{{member.img}}"
 
                 {{else}}
                      src="http://res.cloudinary.com/cloud101/image/upload/v1503230448/imageedit_3_2129305932_eekvt6.png" {{/if}}>
@@ -13,7 +17,7 @@
     </div>
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image" data-tooltip="Your BMI Category determined by your BMI Reading">
+            <div class="ui small centered image" data-tooltip="The BMI Category determined by the BMI Reading">
                 <i class="ui center aligned massive teal doctor icon"></i>
             </div>
             <div class="content">
@@ -23,7 +27,7 @@
     </div>
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image" data-tooltip="Your BMI reading from calculation of height to weight ratio">
+            <div class="ui small centered image" data-tooltip="The BMI reading from calculation of height to weight ratio">
                 <i class="ui center aligned massive yellow heartbeat icon"></i>
             </div>
             <div class="content">
@@ -34,7 +38,7 @@
 
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image" data-tooltip="Green for perfect, Orange for borderline, Red for out of limits">
+            <div class="ui small centered image" data-tooltip="Colors change to indicate the weight control limits">
                 <i class="massive {{idealBodyWeight}} dashboard icon"></i>
             </div>
             <div class="content">
@@ -43,4 +47,3 @@
         </div>
     </div>
 </div>
-<br>
