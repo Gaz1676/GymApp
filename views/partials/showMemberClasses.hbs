@@ -1,0 +1,112 @@
+<div class="ui center aligned three column grid">
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="Yoga - Precious time for yourself to relax from the stresses of daily life">
+
+                <img class="ui image" src="http://res.cloudinary.com/cloud101/image/upload/c_scale,q_100,w_126/v1503070307/Jesse_Grass_set5k0.png">
+
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="DodgeBall - If you can dodge a wrench, you can dodge a ball">
+
+                <img class="ui image" src="http://res.cloudinary.com/cloud101/image/upload/c_scale,w_126/v1503260357/dodgeball_pwqza2.png">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="Body Sculpting - Where there's more Uff in Buff than in Duff OOOHHH YEAHHHH">
+
+                <img class="ui image" src="http://res.cloudinary.com/cloud101/image/upload/v1501779636/homer-simpson-muscles_sqsv2v.jpg">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ui inverted brown segment">
+    <section class="ui inverted yellow segment">
+
+        {{#each classes}}
+            <h1 class="ui red center aligned header"><i class="ui small blue university icon"></i>{{name}}</h1>
+            <section class="ui inverted brown segment">
+
+                <table class="ui fixed celled center aligned table">
+                    <thead>
+                    <tr>
+                        <th> Start Date</th>
+                        <th> Start Time</th>
+                        <th> Workouts</th>
+                        <th> Duration</th>
+                        <th> Max Capacity</th>
+                        <th> Difficulty</th>
+                        <th> Enroll to Class</th>
+                        <th> UnEnroll</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td> {{date}} </td>
+                        <td> {{time}} </td>
+                        <td> {{noOfWorkouts}} </td>
+                        <td> {{duration}} mins</td>
+                        <td> {{capacity}} members</td>
+                        <td> {{difficulty}} </td>
+                        <td>
+                            <a href="/dashboard/enrollclass/{{classid}}">
+                                <i class="large left green sign in icon"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/dashboard/unenrollclass/{{classid}}">
+                                <i class="large red sign out icon"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="ui inverted brown segment">
+                <section class="ui inverted teal segment">
+                    <details>
+                        <summary><h3>Click to see details for all the Class Workouts of {{name}} </h3></summary>
+                        {{#each workouts}}
+                            <table class="ui yellow fixed celled center aligned table">
+                                <thead>
+                                <tr>
+                                    <th> Date of Workout</th>
+                                    <th> Enrolled&emsp;/&emsp;Max Capacity</th>
+                                    <th> Enroll to Workout</th>
+                                    <th> UnEnroll</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td> {{workoutDate}} </td>
+                                    <td> &emsp;{{currentCapacity}}&emsp;&emsp;&emsp;/&nbsp;&emsp;{{capacity}} members</td>
+                                    <td>
+                                        <a href="/dashboard/{{../classid}}/enrollworkout/{{workoutid}}">
+                                            <i class="large inverted green add user icon"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="/dashboard/{{../classid}}/unenrollworkout/{{workoutid}}">
+                                            <i class="large inverted red remove user icon"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        {{/each}}
+                    </details>
+                </section>
+            </section>
+        {{/each}}
+    </section>
+</section>
