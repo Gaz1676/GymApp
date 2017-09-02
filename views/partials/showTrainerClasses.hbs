@@ -1,13 +1,13 @@
 <div class="ui five cards">
-    {{#each classList}}
+    {{#each classes}}
         <div class="card">
             <div class="blurring dimmable image">
                 <div class="ui dimmer">
                     <div class="content">
                         <div class="center">
                             <h5 class="ui inverted header">{{description}}</h5>
-                            <a href="/trainerDashboard/updateclass/{{classid}}" data-tooltip="Edit Class">&emsp;Edit Class&emsp;<i class="large blue write icon"></i></a>
-                            <br><br>
+                            <a href="/trainerDashboard/trainerupdateclass/{{classid}}" data-tooltip="Edit Class">&emsp;Edit Class&emsp;<i class="large blue write icon"></i></a>
+                            <br><br><br><br><br><br>
                             <a href="/trainerDashboard/removeclass/{{classid}}" data-tooltip="Are You Sure??">&emsp;Remove Class&emsp;<i class="large red trash icon"></i></a>
                         </div>
                     </div>
@@ -15,7 +15,7 @@
                 <div class="ui blue header">
                     {{name}}
                 </div>
-                <img {{#if image}} src="{{image}}" {{else}}  src="http://res.cloudinary.com/cloud101/image/upload/v1503230448/imageedit_3_2129305932_eekvt6.png" {{/if}}>
+                <img class="ui large circular centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1502998058/nedworkout_lxfjqu.jpg">
 
             </div>
         </div>
