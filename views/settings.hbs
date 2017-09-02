@@ -3,9 +3,148 @@
 <div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
+            <div class="ui yellow button">Click to Update First & Last Name</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui four column divided grid">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updatefirstname" method="POST">
+                                <input placeholder="first name" name="firstName" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updatelastname" method="POST">
+                                <input placeholder="last name" name="lastName" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted brown segment">
+            <div class="ui yellow button">Click to Update Email & Password</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui four column divided grid">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updateemail" method="POST">
+                                <input placeholder="{{member.email}}" name="email" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updatepassword" method="POST">
+                                <input placeholder="********" name="password" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted brown segment">
+            <div class="ui yellow button">Click to Update Address & Gender</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui two column divided grid">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updateaddress" method="POST">
+                                <input placeholder="address" name="address" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updategender" method="POST">
+                                <select class="ui dropdown " name="gender" title="">
+                                    <option value=""> Select</option>
+                                    <option value="Male"> Male</option>
+                                    <option value="Female"> Female</option>
+                                </select>
+                                <br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted brown segment">
+            <div class="ui yellow button">Click to Update Height & Weight</div>
+            <div class="ui flowing popup transition hidden">
+                <div class="ui two column divided grid">
+                    <div class="ui center aligned grid">
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updateheight" method="POST">
+                                <input placeholder="(meters)" name="height" type="number" step=".1" min="1" max="3" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="eight wide column">
+                            <form class="ui yellow raised segment form" action="/settings/updatestartingweight" method="POST">
+                                <input placeholder="(kgs)" name="startingWeight" type="number" step=".1" min="35" max="250" required>
+                                <br><br>
+                                <button class="ui animated fade blue submit button">
+                                    <div class="visible content"><i class="upload icon"></i>Update</div>
+                                    <div class="hidden content">Click to Save</div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ui inverted brown segment">
+            <div class="ui yellow button">Click to Update Profile Picture</div>
+            <div class="ui flowing popup transition hidden">
+                <form class="ui yellow center aligned raised segment form" action="/settings/updateprofilepicture" method="post" enctype="multipart/form-data">
+                    <input type="file" name="picture" required>
+                    <br><br>
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="upload icon"></i>Update Profile Picture</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="column">
+        <section class="ui inverted brown segment">
             <section class="ui yellow segment">
                 <table class="ui fixed left aligned table">
                     <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
+                    <img class="ui small centered yellow image" {{#if member.img}} src="{{member.img}}" {{else}}
+
+                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
+
                     <tr>
                         <td><i class="user icon"></i> Member:</td>
                         <td>{{member.firstName}} {{member.lastName}}</td>
@@ -31,74 +170,17 @@
                         <td>{{member.startingWeight}} kgs</td>
                     </tr>
 
-                    <img class="ui small centered image" {{#if member.image}} src="{{member.image}}" {{else}}
-
-                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
-
                 </table>
             </section>
         </section>
     </div>
-    <div class="column">
-        <section class="ui inverted brown segment">
-            <form class="ui yellow raised segment form" action="/settings" method="POST">
-                <h2 class="ui red center aligned header"> Update Profile</h2>
-                <section class="ui segment">
-                    <div class="two fields">
-                        <div class="field">
-                            <label> First Name </label>
-                            <input placeholder="first name" name="firstName" required>
-                        </div>
-                        <div class="field">
-                            <label> Last Name </label>
-                            <input placeholder="last name" name="lastName" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Email</label>
-                        <input placeholder="{{member.email}}" type="email" name="email" required>
-                    </div>
-                    <div class="field">
-                        <label>Password</label>
-                        <input type="password" name="password" required>
-                    </div>
-                    <div class="field">
-                        <label>Address</label>
-                        <input placeholder="address" name="address" required>
-                    </div>
-                    <div class="three fields">
-                        <div class="field">
-                            <label> Gender </label>
-                            <select class="ui dropdown " name="gender" title="">
-                                <option value=""> Select</option>
-                                <option value="male"> Male</option>
-                                <option value="female"> Female</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label> Height </label>
-                            <input placeholder="(meters)" type="number" step=".01" min="1" max="3"
-                                   name="height" required>
-                        </div>
-                        <div class="field">
-                            <label> Starting Weight </label>
-                            <input placeholder="(kgs)" type="number" step=".01" min="35"
-                                   max="250" name="startingWeight" required>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label>Image Url</label>
-                        <div class="ui input left icon">
-                            <i class="image icon"></i>
-                            <input placeholder="image url" name="image">
-                        </div>
-                    </div>
-                    <button class="ui animated fade blue submit button">
-                        <div class="visible content"><i class="upload icon"></i>Update</div>
-                        <div class="hidden content">Click to Save</div>
-                    </button>
-                </section>
-            </form>
-        </section>
-    </div>
 </div>
+
+<script>
+    $('.ui.button')
+            .popup({
+                popup: $('.custom.popup'),
+                on: 'click'
+            })
+    ;
+</script>
