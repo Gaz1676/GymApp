@@ -1,0 +1,130 @@
+<div class="ui center aligned three column grid">
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="Today is my cheat day.. STOP LOOKING AT ME!!!!!">
+
+                <img class="ui image" src="http://res.cloudinary.com/cloud101/image/upload/v1504294698/Mindy_Simmons_updated_j58lci.png">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="I am going to reach my Target Goal - I just KNOW I will!!!">
+
+                <img class="ui small image" {{member.img}} src="{{member.img}}">
+                You Right Now {{member.firstName}}!!
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="ui raised card">
+            <div class="ui small centered image" data-tooltip="BOOOOM every goal achieved OOOHHH YEAHHHH">
+
+                <img class="ui image" src="http://res.cloudinary.com/cloud101/image/upload/v1504294866/unlock_sexypirate_btglri.png">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ui inverted brown center aligned segment">
+    <section class="ui large inverted yellow segment">
+        <div class="ui accordion">
+            <div class="title">
+                Click Arrow to add more Goals
+                <i class="dropdown icon"></i>
+            </div>
+            <div class="content">
+                <form class="ui raised center aligned segment form" name="memberAddAssessment" action="/dashboard/memberaddgoal" method="POST">
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Set Target Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="date" type="date" name="date" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label> Select Target Area </label>
+                            <select class="ui dropdown " name="area" title="area">
+                                <option value=""> Select</option>
+                                <option value="Weight"> Weight</option>
+                                <option value="Chest"> Chest</option>
+                                <option value="Thigh"> Thigh</option>
+                                <option value="Upper Arm"> Upper Arm</option>
+                                <option value="Waist"> Waist</option>
+                                <option value="Hips"> Hips</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Target Goal</label>
+                            <div class="ui input left icon">
+                                <i class="inverted red bullseye icon"></i>
+                                <input placeholder="set goal" name="goal" required>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>Description</label>
+                            <label>
+                                <textarea name="description" rows="2" cols="50"></textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="add circle icon"></i> Add Goal</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <table class="ui fixed yellow center aligned celled table">
+        <thead>
+        <tr>
+            <th>Target Date</th>
+            <th>Selected Target Area</th>
+            <th>Target Goal</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {{#each member.goals}}
+            <div class="ui list">
+                <tr>
+                    <td>{{date}}</td>
+                    <td>{{area}}</td>
+                    <td>{{goal}}</td>
+                    <td>{{description}}</td>
+                    <td>{{status}}</td>
+                    <td>
+                        <a href="/dashboard/removegoal/{{goalid}}">
+                            <i class=" large red trash icon"></i>
+                        </a>
+                    </td>
+                </tr>
+            </div>
+        {{/each}}
+        </tbody>
+    </table>
+</section>
+
+
+<script>
+    $('.ui .accordion')
+            .accordion({
+                selector: {
+                    trigger: '.title .icon'
+                }
+            })
+    ;
+</script>
+

@@ -1,0 +1,110 @@
+<div class="ui two column grid basic segment">
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <div class="ui large blue left ribbon label">
+                <i class="university icon"></i> "{{classToUpdate.name}} Class" Details being updated!!
+            </div>
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <tr>
+                        <td><i class="calendar icon"></i>Start Date:</td>
+                        <td>{{classToUpdate.date}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="time icon"></i> Start Time:</td>
+                        <td>{{classToUpdate.time}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="tasks icon"></i> No. of Workouts:</td>
+                        <td>{{classToUpdate.noOfWorkouts}} workouts</td>
+                    </tr>
+                    <tr>
+                        <td><i class="checked calendar icon"></i> Duration:</td>
+                        <td>{{classToUpdate.duration}} mins</td>
+                    </tr>
+                    <tr>
+                        <td><i class="heartbeat icon"></i> Difficulty:</td>
+                        <td>{{classToUpdate.difficulty}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="users icon"></i> Capacity:</td>
+                        <td>{{classToUpdate.capacity}} member(s)</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <div class="column">
+                <section class="ui inverted brown segment">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/traineredittime/{{classToUpdate.classid}}" method="POST">
+                        <div class="ui fluid action input">
+                            <input placeholder="start time.." type="time" step="1800" name="time" required>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update Start Time</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="ui inverted brown segment">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/trainereditnoofworkouts/{{classToUpdate.classid}}" method="POST">
+                        <div class="ui fluid action input">
+                            <input placeholder="no. of workouts.." type="number" step="1" min="1" max="12" name="noOfWorkouts" required>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update Workouts</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="ui inverted brown segment">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/trainereditduration/{{classToUpdate.classid}}" method="POST">
+                        <div class="ui fluid action input">
+                            <input placeholder="duration.." type="number" step="5" min="5" max="60" name="duration" required>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update Duration</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="ui inverted brown segment">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/trainereditdifficulty/{{classToUpdate.classid}}" method="POST">
+                        <div class="ui fluid action input">
+                            <select class="ui dropdown" name="difficulty" title="" required>
+                                <option value="">Select Level</option>
+                                <option value="All Levels">All Levels</option>
+                                <option value="Beginners Level"> Beginners Level</option>
+                                <option value="Intermediate Level"> Intermediate Level</option>
+                                <option value="Advanced Level"> Advanced Level</option>
+                            </select>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update Difficulty</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="ui inverted brown segment">
+                    <form class="ui yellow raised segment form" action="/trainerDashboard/trainereditcapacity/{{classToUpdate.classid}}" method="POST">
+                        <div class="ui fluid action input">
+                            <input placeholder="capacity" type="number" name="capacity" step="1"
+                                   min="5"
+                                   max="30" required>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update Capacity</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </div>
+</div>

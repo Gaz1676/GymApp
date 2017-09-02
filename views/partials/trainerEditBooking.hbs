@@ -1,0 +1,58 @@
+<div class="ui two column grid basic segment">
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <div class="ui large blue left ribbon label">
+                <i class="add to calendar icon"></i> Current Assessment Booking Details to be updated!!
+            </div>
+
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <tr>
+                        <td><i class="calendar icon"></i>Assessment Date:</td>
+                        <td>{{bookingToUpdate.date}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="time icon"></i>Assessment Time:</td>
+                        <td>{{bookingToUpdate.time}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="user icon"></i>Member:</td>
+                        <td>{{bookingToUpdate.memberfirstname}} {{bookingToUpdate.memberlastname}}</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div>
+    <div class="column">
+        <section class="ui inverted brown segment">
+            <div class="ui large red right ribbon label">
+                <i class="add to calendar icon"></i> Update {{bookingToUpdate.memberfirstname}}'s Assessment Booking Details!!
+            </div>
+            <form class="ui yellow raised segment form" name="trainerEditBooking" action="/trainerDashboard/trainereditbooking/{{bookingToUpdate.bookingid}}" method="POST">
+                <section class="ui raised segment">
+                    <div class="two fields">
+                        <div class="field">
+                            <label>New Assessment Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="date" type="date" name="date" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>New Assessment Time</label>
+                            <div class="ui yellow input left icon">
+                                <i class="time icon"></i>
+                                <input placeholder="time" type="time" name="time" step="1800" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="ui animated fade blue submit button">
+                        <div class="visible content"><i class="upload icon"></i>Update Booking</div>
+                        <div class="hidden content">Click to Save</div>
+                    </button>
+                </section>
+            </form>
+        </section>
+    </div>
+</div>
