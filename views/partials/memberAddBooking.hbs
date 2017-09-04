@@ -14,10 +14,10 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label>Assessment Booking Time</label>
+                                <label>Assessment Booking Time (06:00 to 18:00)</label>
                                 <div class="ui yellow input left icon">
                                     <i class="time icon"></i>
-                                    <input placeholder="time" type="time" name="time" step="1800" required>
+                                    <input placeholder="time" type="time" name="time" step="1800" min="06:00" max="18:00" required>
                                 </div>
                             </div>
 
@@ -52,13 +52,13 @@
                         <th>Assessment Date</th>
                         <th>Assessment Time</th>
                         <th>Trainer</th>
-                        <th>Update Booking</th>
+                        <th>Edit Booking</th>
                         <th>Remove Booking</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    {{#each member.bookings}}
+                    {{#each bookings}}
                         <div class="ui list">
                             <tr>
                                 <td>{{date}}</td>
@@ -70,7 +70,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="/dashboard/removebooking/{{bookingid}}">
+                                    <a href="/dashboard/{{trainerid}}/removebooking/{{bookingid}}">
                                         <i class="large red trash icon"></i>
                                     </a>
                                 </td>
@@ -83,3 +83,10 @@
         </div>
     </section>
 </section>
+
+
+<script>
+    // sets calendar from todays date
+    const todaysDate = new Date().toISOString().split('T')[0];
+    document.getElementsByName("date")[0].setAttribute('min', todaysDate);
+</script>

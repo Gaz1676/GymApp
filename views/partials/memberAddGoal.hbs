@@ -11,10 +11,10 @@
 
     <div class="column">
         <div class="ui raised card">
-            <div class="ui small centered image" data-tooltip="I am going to reach my Target Goal - I just KNOW I will!!!">
+            <div class="ui small centered image" data-tooltip="They say photos add on 20lbs   **coughs** !!!">
 
                 <img class="ui small image" {{member.img}} src="{{member.img}}">
-                You Right Now {{member.firstName}}!!
+                Do you REALLY like what you see hhmmm!!
             </div>
         </div>
     </div>
@@ -87,8 +87,9 @@
     <table class="ui fixed yellow center aligned celled table">
         <thead>
         <tr>
+            <th>Goal Set By</th>
             <th>Target Date</th>
-            <th>Selected Target Area</th>
+            <th>Selected Area</th>
             <th>Target Goal</th>
             <th>Description</th>
             <th>Status</th>
@@ -97,9 +98,10 @@
         </thead>
 
         <tbody>
-        {{#each member.goals}}
+        {{#each goals}}
             <div class="ui list">
                 <tr>
+                    <td>{{#if trainerid}} Coach {{coachlastname}} {{else}} Yours Truly {{/if}}</td>
                     <td>{{date}}</td>
                     <td>{{area}}</td>
                     <td>{{goal}}</td>
@@ -119,6 +121,7 @@
 
 
 <script>
+    // for dropdown feature
     $('.ui .accordion')
             .accordion({
                 selector: {
@@ -126,5 +129,8 @@
                 }
             })
     ;
-</script>
 
+    // sets calendar from todays date
+    const todaysDate = new Date().toISOString().split('T')[0];
+    document.getElementsByName("date")[0].setAttribute('min', todaysDate);
+</script>

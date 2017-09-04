@@ -2,7 +2,7 @@
     <div class="column">
         <section class="ui inverted brown segment">
             <div class="ui large blue left ribbon label">
-                <i class="add to calendar icon"></i> Current Assessment Booking Details to be updated!!
+                <i class="add to calendar icon"></i> Current Assessment Booking Details about to be updated!!
             </div>
 
             <section class="ui yellow segment">
@@ -26,7 +26,7 @@
     <div class="column">
         <section class="ui inverted brown segment">
             <div class="ui large red right ribbon label">
-                <i class="add to calendar icon"></i> Update {{bookingToUpdate.memberfirstname}}'s Assessment Booking Details!!
+                <i class="add to calendar icon"></i> Update {{bookingToUpdate.memberfirstname}} {{bookingToUpdate.memberlastname}}'s Assessment Booking Details!!
             </div>
             <form class="ui yellow raised segment form" name="trainerEditBooking" action="/trainerDashboard/trainereditbooking/{{bookingToUpdate.bookingid}}" method="POST">
                 <section class="ui raised segment">
@@ -56,3 +56,9 @@
         </section>
     </div>
 </div>
+
+<script>
+    // sets calendar from todays date
+    const todaysDate = new Date().toISOString().split('T')[0];
+    document.getElementsByName("date")[0].setAttribute('min', todaysDate);
+</script>

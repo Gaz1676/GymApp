@@ -42,7 +42,7 @@
                             <label>New Assessment Time</label>
                             <div class="ui yellow input left icon">
                                 <i class="time icon"></i>
-                                <input placeholder="time" type="time" name="time" step="1800" required>
+                                <input placeholder="time" type="time" name="time" step="1800" min="06:00" max="18:00" required>
                             </div>
                         </div>
                     </div>
@@ -56,3 +56,9 @@
         </section>
     </div>
 </div>
+
+<script>
+    // sets calendar from todays date
+    const todaysDate = new Date().toISOString().split('T')[0];
+    document.getElementsByName("date")[0].setAttribute('min', todaysDate);
+</script>
