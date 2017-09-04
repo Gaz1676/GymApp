@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const logger = require('../utils/logger'); //-------------------> import logger

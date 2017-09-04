@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 const winston = require('winston'); //---------------------------------> require identifies and imports object defined in other modules
 
 const logger = new (winston.Logger)({

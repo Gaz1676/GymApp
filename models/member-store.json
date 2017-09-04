@@ -10,7 +10,7 @@
       "height": 1.7,
       "startingWeight": 62,
       "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504177494/z0seztxpulrk8l2izmob.png",
+      "img": "http://res.cloudinary.com/cloud101/image/upload/v1504472204/fy4lekeokabhkgatkl34.png",
       "assessments": [
         {
           "assessmentid": "1f6ec0e3-fd68-4b35-b48c-dec21fe6be7f",
@@ -39,33 +39,36 @@
       ],
       "bookings": [
         {
-          "bookingid": "ed6b5d7e-eefb-4cd3-adba-0802921f99bd",
+          "bookingid": "0bc07867-f339-4f8a-b3e4-98e5f457ccc6",
+          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
           "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-          "date": "Sat Sep 09 2017",
-          "time": "12:00",
-          "coachlastname": "Flanders",
+          "date": "Thu Sep 07 2017",
+          "time": "12:30",
           "memberfirstname": "Homer",
-          "memberlastname": "Simpson"
-        },
-        {
-          "bookingid": "19ef0c3a-ec43-49b3-9803-4fe69b3c2bc0",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-          "date": "Sat Sep 02 2017",
-          "time": "11:30",
-          "coachlastname": "Simpson",
-          "memberfirstname": "Homer",
-          "memberlastname": "Simpson"
+          "memberlastname": "Simpson",
+          "coachlastname": "Flanders"
         }
       ],
       "goals": [
         {
-          "goalid": "b8768aa8-5354-484c-a1ce-276b5697333f",
-          "date": "Fri Sep 29 2017",
+          "goalid": "44791b99-be89-4848-9afd-550b3202ef48",
+          "memberid": "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "memberfirstname": "Homer",
+          "memberlastname": "Simpson",
+          "coachlastname": "Flanders",
+          "date": "Sat Sep 30 2017",
           "area": "Weight",
-          "goal": "65",
-          "description": "Lose weight",
+          "goal": "77",
+          "description": "Lose 40lbs in three weeks",
+          "status": "open"
+        },
+        {
+          "goalid": "956ca22c-0e71-47a3-b273-9f4c02839c30",
+          "date": "Sat Sep 09 2017",
+          "area": "Upper Arm",
+          "goal": "45",
+          "description": "Get toned so I can reach top shelf for more doughnuts",
           "status": "open"
         }
       ]
@@ -95,8 +98,54 @@
           "comment": "Great going Lisa"
         }
       ],
-      "bookings": [],
-      "goals": []
+      "bookings": [
+        {
+          "bookingid": "2f3c79fc-1593-4496-ab0f-0f8dfa4d197e",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
+          "date": "Fri Sep 08 2017",
+          "time": "12:00",
+          "coachlastname": "Flanders",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson"
+        }
+      ],
+      "goals": [
+        {
+          "goalid": "693c24f4-38b6-42b3-983f-46c05719d25f",
+          "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson",
+          "coachlastname": "Flanders",
+          "date": "Tue Sep 05 2017",
+          "area": "Weight",
+          "goal": "00",
+          "description": "test",
+          "status": "open"
+        },
+        {
+          "goalid": "5cf318a9-568e-4352-8b9b-ad0fa66a6d18",
+          "date": "Wed Sep 13 2017",
+          "area": "Weight",
+          "goal": "77 cm",
+          "description": "hugy",
+          "status": "open"
+        },
+        {
+          "goalid": "a2ffb4ba-3953-4583-8dd2-6dcda1188457",
+          "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson",
+          "coachlastname": "Simpson",
+          "date": "Tue Sep 12 2017",
+          "area": "Hips",
+          "goal": "123",
+          "description": "test2",
+          "status": "open"
+        }
+      ]
     },
     {
       "firstName": "Seymour",
@@ -109,19 +158,33 @@
       "startingWeight": "57",
       "img": "http://res.cloudinary.com/cloud101/image/upload/v1503091699/3DCZoTqMd48mSoQM4gdkfkkDV10_vhjuz7.png",
       "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
-      "assessments": [],
-      "bookings": [
+      "assessments": [
         {
-          "bookingid": "a2e613ea-8a29-454f-b605-d12ae87cadc6",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
-          "date": "Fri Sep 01 2017",
-          "time": "10:00",
-          "coachlastname": "Simpson",
-          "memberfirstname": "Seymour",
-          "memberlastname": "Skinner"
+          "assessmentid": "4be7fd28-4d83-47b3-8165-460170768908",
+          "date": "Sun Sep 03 2017",
+          "weight": 64,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Keep it going!!!"
+        },
+        {
+          "assessmentid": "2c2c55a4-a6d4-4dfd-8daf-8967c289dbd2",
+          "date": "Sun Sep 03 2017",
+          "weight": 62,
+          "chest": 35,
+          "thigh": 35,
+          "upperArm": 15,
+          "waist": 65,
+          "hips": 65,
+          "trend": "green",
+          "comment": "Excellent Seymour"
         }
       ],
+      "bookings": [],
       "goals": [
         {
           "goalid": "b57d5e77-22a9-45da-9d6b-e900638dc393",
@@ -129,6 +192,16 @@
           "area": "Waist",
           "goal": "77 cm",
           "description": "Trim some fat",
+          "status": "open"
+        },
+        {
+          "goalid": "b740e29a-12ea-4841-a7b8-b3fcdaeb8571",
+          "memberid": "4257cb93-724d-400a-9ec9-1779bd74c19a",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "Mon Sep 11 2017",
+          "area": "Waist",
+          "goal": "78",
+          "description": ";ljkbhjufv",
           "status": "open"
         }
       ]
@@ -158,29 +231,30 @@
           "comment": "Good but could be better"
         }
       ],
-      "bookings": [
+      "bookings": [],
+      "goals": [
         {
-          "bookingid": "bbaa3ce1-6beb-4a39-805b-014c952e449d",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
-          "date": "Thu Aug 31 2017",
-          "time": "12:30",
-          "coachlastname": "Simpson",
-          "memberfirstname": "Bart",
-          "memberlastname": "Simpson"
+          "goalid": "d9ca8654-83e7-4f9f-b9ca-9004a043a9cb",
+          "date": "Tue Sep 05 2017",
+          "area": "Chest",
+          "goal": "45",
+          "description": "Get buffed",
+          "status": "open"
         },
         {
-          "bookingid": "f2d7e263-bef1-44bf-9aea-4fc6196b080c",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "goalid": "e872e19d-60ad-4a34-a633-e0cd6993812c",
           "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
-          "date": "Fri Sep 01 2017",
-          "time": "10:00",
-          "coachlastname": "Flanders",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
           "memberfirstname": "Bart",
-          "memberlastname": "Simpson"
+          "memberlastname": "Simpson",
+          "coachlastname": "Simpson",
+          "date": "Tue Sep 12 2017",
+          "area": "Waist",
+          "goal": "44",
+          "description": "shed a few inches",
+          "status": "open"
         }
-      ],
-      "goals": []
+      ]
     },
     {
       "firstName": "ComicBook",
@@ -204,10 +278,21 @@
           "waist": 65,
           "hips": 65,
           "trend": "green",
-          "comment": ""
+          "comment": "WOAH?????"
         }
       ],
-      "bookings": [],
+      "bookings": [
+        {
+          "bookingid": "c32543f2-f3cd-4294-b920-3820e7766325",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "memberid": "65add577-e790-4c39-8717-abe69d61d051",
+          "date": "Fri Sep 08 2017",
+          "time": "09:00",
+          "coachlastname": "Simpson",
+          "memberfirstname": "ComicBook",
+          "memberlastname": "Guy"
+        }
+      ],
       "goals": [
         {
           "goalid": "0dae6f49-5049-4cc0-b453-1b4ceed8f77a",
@@ -215,6 +300,16 @@
           "area": "Hips",
           "goal": 77,
           "description": "lose the spare tyre",
+          "status": "open"
+        },
+        {
+          "goalid": "d83a54e7-094b-47a8-a811-1437be5b7938",
+          "memberid": "65add577-e790-4c39-8717-abe69d61d051",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+          "date": "Tue Sep 05 2017",
+          "area": "Waist",
+          "goal": "99",
+          "description": "gut",
           "status": "open"
         }
       ]

@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const express = require('express');
@@ -22,5 +28,5 @@ const routes = require('./routes');
 app.use('/', routes);
 
 const listener = app.listen(process.env.PORT || 4000, function () {
-  logger.info(`Summer Gym Web Application started on port ${listener.address().port}`);
+  logger.info(`Welcome to my Gym Web Application!!! check it out, its just started on port ${listener.address().port}, Enjoy!!!`);
 });

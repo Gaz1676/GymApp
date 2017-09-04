@@ -8,7 +8,7 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
           login: homer@simpson.com   |     login: bart@simpson.com
           password: secret           |     password: secret
           ---------------------------------------------------------
-          login: seymour@skinner.com |     login: edna@krabappel
+          login: seymour@skinner.com |     login: comicbook@guy.com
           password: secret           |     password: secret
       
       
@@ -27,28 +27,28 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
   ==========================     
 ***
 ### Assessments
-- _Periodically tracks assessments on individual Members_
+- _Periodically tracks assessments of the Member_
 
-- _Captures essential measurements at a given date of the Members_
+- _Captures essential measurements at a given date of the Member_
 
 - _Generates analytics on the status of the Member after a given assessment_
 
-- _Analytics are Members bmi, bmiCategory, ideal body weight and the trend of assesments_
+- _Analytics are the Members BMI, BMICategory, ideal body weight and the trend of assessments_
 
-- _Members can delete individual assessments as well as update their profiles_
+- _The Member can delete individual assessments as well as update their profiles_
 
-- _Members may book an assessment with a Trainer of their choice(assuming the Trainer is free at that time)_
+- _The Member may book an assessment with a Trainer of their choice(assuming the Trainer is free at that time)_
 
-### Scheduled Classes
-- _Enable Members to view and search the scheduled classes created by the Trainers_
+### Gym Classes
+- _Enable Members to view the Classes created by the Trainers_
 
-- _Members can enrol in the scheduled classes on a specific dates_
+- _The Member can enrol into the Classes on a specific dates_
 
-- _Members can enrol in	all classes in the suite designed by the Trainers_
+- _The Member can enrol in all Workouts in the Classes designed by the Trainers_
 
-- _Members enrolment in	classes	is subject to available	spaces_
+- _The Members enrolment into Classes/Workouts is subject to available spaces_
 
-- _Members can also un-enrol from these classes too_
+- _Members can also un-enrol from these Classes/Workouts too_
 
 ### Members Goals/Targets
 - _Members can set goals for themselves_	
@@ -71,11 +71,6 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
      
            - Awaiting processing (i.e. a current assessment needs to be done to process it)
   
-### Members Fitness Programmes
-  - _A Fitness Programme comprises 5 exercises sessions_
-  
-  - _Members can view their Fitness Programme and individual sessions_
- 
  ***
  
 ## __Homer "Toner" Simpson__ 
@@ -104,17 +99,15 @@ _(homer@simpson.com)_
             
            - Schedule a future assessment with a Member
 
-### Scheduled Classes
-- _Trainers can perform CRUD on scheduled classes_
+### Gym Classes
+- _Trainers can perform CRUD on Gym Classes_
 
-- _For each scheduled class, there will be a defined number of classes in the suite_
+- _For each Gym Class, there will be a defined number of Workouts in these Classes_
 
-- _Typical data stored for scheduled classes are:_
+- _Typical data stored for Gym Classes are:_
 
            - Class name
-          
-           - Description of class
-          
+                    
            - Duration of class
           
            - Capacity of class
@@ -126,30 +119,8 @@ _(homer@simpson.com)_
            - Date of set class
  
 ### Trainers Goals/Targets
-- _Trainers can set goals for the Members_
+- _Trainers can set goals for the Members to achieve_
 
-### Trainers Fitness Programmes
-- _Trainers can perform CRUD on fitness programmes_
-
-- _Trainers can set up a fitness programme for a Member_
-
-- _Trainers build fitness programmes by choosing from the following session types:_
-
-     - _A scheduled class_
-
-     - _A list of standard predefined session programmes_
-     
-     - _A bespoke session programmes developed by the trainer comprising a mix of:_	
-     
-            - Resistance weights
-                    
-            - Cardiovascular exercise equipment such as:	
-            
-                     * Treadmill
-                    
-                    ** Rower
-                    
-                   *** Bike etc....	
 ***
 
 ## __Coach Simpson__
