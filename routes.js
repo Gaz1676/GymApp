@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const express = require('express'); //--------------------------------------> accessing dependencies
@@ -57,8 +63,8 @@ router.get('/dashboard/:classid/unenrollworkout/:workoutid', dashboard.unenrollW
 // Member Bookings //
 
 router.get('/dashboard/memberbookings', dashboard.memberBookings);
-router.post('/dashboard/memberaddbooking', dashboard.memberAddBooking); // not adding to trainer screen
-router.get('/dashboard/removebooking/:bookingid', dashboard.removeBooking);
+router.post('/dashboard/memberaddbooking', dashboard.memberAddBooking);
+router.get('/dashboard/:trainerid/removebooking/:bookingid', dashboard.removeBooking);
 
 router.post('/dashboard/membereditbooking/:bookingid', dashboard.memberEditBooking);
 router.get('/dashboard/:memberid/memberupdatebooking/:bookingid', dashboard.memberUpdateBooking);
@@ -92,9 +98,22 @@ router.post('/trainerDashboard/trainereditcapacity/:classid', trainerDashboard.t
 // Trainer Bookings //
 
 router.get('/trainerDashboard/trainerbookings', trainerDashboard.trainerBookings);
-router.post('/trainerDashboard/traineraddbooking', trainerDashboard.trainerAddBooking); // not adding to member screen
-router.get('/trainerDashboard/removebooking/:bookingid', trainerDashboard.removeBooking);
-router.post('/trainerDashboard/trainereditbooking/:bookingid', trainerDashboard.trainerEditBooking);
+router.post('/trainerDashboard/traineraddbooking', trainerDashboard.trainerAddBooking);
+router.get('/trainerDashboard/:memberid/removebooking/:bookingid', trainerDashboard.removeBooking);
+
 router.get('/trainerDashboard/:memberid/trainerupdatebooking/:bookingid', trainerDashboard.trainerUpdateBooking);
+router.post('/trainerDashboard/trainereditbooking/:bookingid', trainerDashboard.trainerEditBooking);
+
+// Trainer Goals //
+
+router.get('/trainerDashboard/trainergoals', trainerDashboard.trainerGoals);
+router.post('/trainerDashboard/traineraddgoal', trainerDashboard.trainerAddGoal);
+router.get('/trainerDashboard/removegoal/:goalid', trainerDashboard.removeGoal);
+
+router.get('/trainerDashboard/:memberid/trainerupdategoal/:goalid', trainerDashboard.trainerUpdateGoal);
+router.post('/trainerDashboard/edittargetdate/:goalid', trainerDashboard.editTargetDate);
+router.post('/trainerDashboard/edittargetarea/:goalid', trainerDashboard.editTargetArea);
+router.post('/trainerDashboard/edittargetgoal/:goalid', trainerDashboard.editTargetGoal);
+router.post('/trainerDashboard/editdescription/:goalid', trainerDashboard.editDescription);
 
 module.exports = router;
