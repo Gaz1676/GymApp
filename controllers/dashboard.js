@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const logger = require('../utils/logger.js'); //--------------------------------------------------------> imports logger
@@ -34,18 +40,18 @@ const dashboard = {
     const newAssessment = { //--------------------------------------------------------------------------> place model in newAssessment object
       assessmentid: uuid(), //--------------------------------------------------------------------------> unique id for assessment
       date: new Date().toDateString(), //---------------------------------------------------------------> new date
-      weight: Number(request.body.weight), //-----------------------------------------------------------> weight
-      chest: Number(request.body.chest), //-------------------------------------------------------------> chest
-      thigh: Number(request.body.thigh), //-------------------------------------------------------------> thigh
-      upperArm: Number(request.body.upperArm), //-------------------------------------------------------> upperArm
-      waist: Number(request.body.waist), //-------------------------------------------------------------> waist
-      hips: Number(request.body.hips), //---------------------------------------------------------------> hips
+      weight: Number(request.body.weight), //-----------------------------------------------------------> request weight
+      chest: Number(request.body.chest), //-------------------------------------------------------------> request chest
+      thigh: Number(request.body.thigh), //-------------------------------------------------------------> request thigh
+      upperArm: Number(request.body.upperArm), //-------------------------------------------------------> request upperArm
+      waist: Number(request.body.waist), //-------------------------------------------------------------> request waist
+      hips: Number(request.body.hips), //---------------------------------------------------------------> request hips
       trend: '', //-------------------------------------------------------------------------------------> trend
       comment: '', //-----------------------------------------------------------------------------------> comment
     };
     memberStore.addAssessment(memberid, newAssessment); //----------------------------------------------> adds assessment to member-store
     analytics.trend(loggedInMember); //-----------------------------------------------------------------> gets trend from analytics of loggedInMember
-    logger.debug(`added assessment for ${loggedInMember.firstName}`); //--------------------------------> logs message to console
+    logger.debug(`added assessment for ${loggedInMember.firstName}`, newAssessment); //-----------------> logs message to console
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
 
@@ -295,9 +301,25 @@ const dashboard = {
       memberlastname: loggedInMember.lastName, //-------------------------------------------------------> gets lastName from loggedInMember and stores it in memberlastname
 
     };
-    logger.debug(`adding new booking for ${loggedInMember.firstName} to the store`); //-----------------> logs message to console
-    memberStore.addBooking(memberid, newBooking); //----------------------------------------------------> adds booking to memberStore
-    response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
+
+    const bookings = trainerStore.getAllTrainerBookings(trainerid); //----------------------------------> getAllTrainerBookings by trainerid in trainerStore store it in bookings
+    let notBooked = true; //----------------------------------------------------------------------------> set boolean true as notBooked
+    for (let i = 0; i < bookings.length; i++) { //------------------------------------------------------> for loop
+      if ((newBooking.time === bookings[i].time) && (newBooking.date === bookings[i].date)) { //--------> if time/date is equal to newBooking time/date
+        notBooked = false; //---------------------------------------------------------------------------> boolean changes to false
+        break; //---------------------------------------------------------------------------------------> breaks the loop
+      }
+    }
+
+    if (notBooked) { //---------------------------------------------------------------------------------> if true
+      logger.debug(`adding new booking for Coach ${trainer.lastName} to the store`, newBooking); //-----> logs message to console
+      memberStore.addBooking(memberid, newBooking); //--------------------------------------------------> adds booking to memberStore
+      trainerStore.addBooking(trainerid, newBooking); //------------------------------------------------> adds booking to trainerStore
+      response.redirect('/dashboard/memberBookings'); //------------------------------------------------> redirects to (/dashboard/memberBookings)
+    } else { //-----------------------------------------------------------------------------------------> else
+      logger.debug(`booking already made for Coach ${trainer.lastName}`); //----------------------------> logs message to console
+      response.redirect('/dashboard/memberBookings'); //------------------------------------------------> redirects to (/dashboard/memberBookings)
+    }
   },
 
   removeBooking(request, response) { //-----------------------------------------------------------------> removeBooking method, called when ‘/ dashboard’ request received
@@ -309,7 +331,16 @@ const dashboard = {
     response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
   },
 
-  //-------- TODO editBooking --------//
+  removeBooking(request, response) { //-----------------------------------------------------------------> removeBooking method, called when ‘/ dashboard’ request received
+    logger.info('remove booking rendering'); //---------------------------------------------------------> logs message to console
+    const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
+    const bookingid = request.params.bookingid; //------------------------------------------------------> gets bookingid (params) and stores it in bookingid
+    const trainerid = request.params.trainerid; //------------------------------------------------------> gets trainerid (params) and stores it in trainerid
+    logger.debug(`removing bookingid: ${bookingid} from ${loggedInMember.firstName}`); //---------------> logs message to console
+    memberStore.removeBooking(loggedInMember.memberid, bookingid); //-----------------------------------> removes booking from memberStore
+    trainerStore.removeBooking(trainerid, bookingid); //------------------------------------------------> removes booking from trainerStore
+    response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
+  },
 
   memberEditBooking(request, response) { //-------------------------------------------------------------> memberEditBooking method, called when ‘/ dashboard’ request received
     logger.info('edit booking rendering'); //-----------------------------------------------------------> logs message to console
@@ -318,13 +349,11 @@ const dashboard = {
     const bookingid = request.params.bookingid; //------------------------------------------------------> gets bookingid (params) and stores it in bookingid
     const booking = memberStore.getBookingById(loggedInMember.memberid, bookingid); //------------------> gets booking by id from memberStore and stores it in booking
     booking.time = request.body.time; //----------------------------------------------------------------> time
-    booking.date = date.toDateString(); //----------------------------------------------------------------> date
+    booking.date = date.toDateString(); //--------------------------------------------------------------> date
     logger.debug(`edit booking for ${loggedInMember.firstName} ${loggedInMember.lastName}`); //---------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
   },
-
-  //-------- TODO updateBooking --------//
 
   memberUpdateBooking(request, response) { //-----------------------------------------------------------> memberUpdateBooking method, called when ‘/ dashboard’ request received
     logger.info('update booking rendering '); //--------------------------------------------------------> logs message to console
@@ -341,45 +370,60 @@ const dashboard = {
     response.render('memberUpdateBooking', viewData); //------------------------------------------------> renders 'updatedBooking' and viewData to view
   },
 
-  memberGoals(request, response) { //----------------------------------------------------------------> memberBookings method, called when ‘/ dashboard’ request received
-    logger.info('members goals rendering'); //-------------------------------------------------------> logs message to console
+  memberGoals(request, response) { //-------------------------------------------------------------------> memberGoals method, called when ‘/ dashboard’ request received
+    logger.info('members goals rendering'); //----------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     const trainers = trainerStore.getAllTrainers(); //--------------------------------------------------> getsAllTrainers from trainerStore and stores it in trainerList
-    const goals = loggedInMember.goals; //--------------------------------------------------------> gets bookings from loggedInMember and stores it in bookingList
+    const goals = loggedInMember.goals; //--------------------------------------------------------------> gets goals from loggedInMember and stores it in goals
     const viewData = { //-------------------------------------------------------------------------------> place model in viewData object
       member: loggedInMember, //------------------------------------------------------------------------> loggedInMember
       trainers: trainers, //----------------------------------------------------------------------------> trainers
-      goals: goals, //----------------------------------------------------------------------------> bookings
+      goals: goals, //----------------------------------------------------------------------------------> goals
     };
-    logger.debug(`create goals menu rendered for ${loggedInMember.firstName}`); //-------------------> logs message to console
-    response.render('memberGoals', viewData); //-----------------------------------------------------> renders 'memberBookings' and viewData to view
+    logger.debug(`create goals menu rendered for ${loggedInMember.firstName}`); //----------------------> logs message to console
+    response.render('memberGoals', viewData); //--------------------------------------------------------> renders 'memberBookings' and viewData to view
   },
 
-  memberAddGoal(request, response) { //-----------------------------------------------------------> memberAddAssessment method, called when ‘/ dashboard’ request received
-    logger.info('adding goal rendering'); //------------------------------------------------------> logs message to console
+  memberAddGoal(request, response) { //-----------------------------------------------------------------> memberAddGoals method, called when ‘/ dashboard’ request received
+    logger.info('adding goal rendering'); //------------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     const memberid = loggedInMember.memberid; //--------------------------------------------------------> gets id of loggedInMember and stores it in memberId
     const date = new Date(request.body.date); //--------------------------------------------------------> request new Date store it in date
-    const newGoal = { //--------------------------------------------------------------------------> place model in newAssessment object
-      goalid: uuid(), //--------------------------------------------------------------------------> unique id for assessment
-      date: date.toDateString(), //---------------------------------------------------------------> new date
-      area: request.body.area,
-      goal: request.body.goal,
-      description: request.body.description, //-------------------------------------------------------------------------------------> trend
-      status: 'open', //-----------------------------------------------------------------------------------> comment
+    const newGoal = { //--------------------------------------------------------------------------------> place model in newGoal object
+      goalid: uuid(), //--------------------------------------------------------------------------------> unique id for goal
+      date: date.toDateString(), //---------------------------------------------------------------------> new date
+      area: request.body.area, //-----------------------------------------------------------------------> request area
+      goal: request.body.goal, //-----------------------------------------------------------------------> request goal
+      description: request.body.description, //---------------------------------------------------------> request description
+      status: 'open', //--------------------------------------------------------------------------------> status set to open
     };
-    memberStore.addGoal(memberid, newGoal); //----------------------------------------------> adds assessment to member-store
-    logger.debug(`added goal for ${loggedInMember.firstName}`); //--------------------------------> logs message to console
-    response.redirect('/dashboard/memberGoals'); //-----------------------------------------------------------------> redirects to (/dashboard)
+
+    const goals = memberStore.getAllMemberGoals(memberid); //-------------------------------------------> getAllMemberGoals from memberStore stores it in goals
+    let notSet = true; //-------------------------------------------------------------------------------> set boolean true as notSet
+    for (let i = 0; i < goals.length; i++) { //---------------------------------------------------------> for loop
+      if (newGoal.date === goals[i].date) { //----------------------------------------------------------> if date is equal to newGoals date
+        notSet = false; //------------------------------------------------------------------------------> boolean changes to false
+        break; //---------------------------------------------------------------------------------------> breaks the loop
+      }
+    }
+
+    if (notSet) { //------------------------------------------------------------------------------------> if true
+      logger.debug(`adding new goal for ${loggedInMember.firstName} to the store`, newGoal); //---------> logs message to console
+      memberStore.addGoal(memberid, newGoal); //--------------------------------------------------------> adds Goal to memberStore
+      response.redirect('/dashboard/memberGoals'); //---------------------------------------------------> redirects to (/dashboard/memberGoals)
+    } else { //-----------------------------------------------------------------------------------------> else
+      logger.debug(`goal already set by ${loggedInMember.firstName}`); //-------------------------------> logs message to console
+      response.redirect('/dashboard/memberGoals'); //---------------------------------------------------> redirects to (/dashboard/memberGoals)
+    }
   },
 
-  removeGoal(request, response) { //--------------------------------------------------------------> removeAssessment method, called when ‘/ dashboard’ request received
-    logger.info('removing goal rendering'); //----------------------------------------------------> logs message to console
-    const goalid = request.params.goalid; //------------------------------------------------> gets assessmentid (params) and stores in assessmentid
+  removeGoal(request, response) { //--------------------------------------------------------------------> removeGoal method, called when ‘/ dashboard’ request received
+    logger.info('removing goal rendering'); //----------------------------------------------------------> logs message to console
+    const goalid = request.params.goalid; //------------------------------------------------------------> gets goalid (params) and stores in goalid
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
-    logger.debug(`removing goalid: ${goalid} from ${loggedInMember.firstName}`); //---------> logs message to console
-    memberStore.removeGoal(loggedInMember.memberid, goalid); //-----------------------------> removes assessment from member-store
-    response.redirect('/dashboard/memberGoals'); //-----------------------------------------------------------------> redirects to (/dashboard)
+    logger.debug(`removing goalid: ${goalid} from ${loggedInMember.firstName}`); //---------------------> logs message to console
+    memberStore.removeGoal(loggedInMember.memberid, goalid); //-----------------------------------------> removes goal from member-store
+    response.redirect('/dashboard/memberGoals'); //-----------------------------------------------------> redirects to (/dashboard/memberGoals)
   },
 };
 
