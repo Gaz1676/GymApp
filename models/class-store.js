@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const _ = require('lodash'); //---------------------------------------------------> imports lodash (library for js)
@@ -22,21 +28,17 @@ const classStore = {
     return this.store.findOneBy(this.collection, { classid: classid }); //--------> gets a single class by id
   },
 
-  getClassByName(name) {
-    return this.store.findOneBy(this.collection, { name: name }); //--------------> gets a single class by id
-  },
-
   getWorkoutById(classid, workoutid) {
-    const currentClass = this.getClassById(classid); //------------------------------> gets classById from this location, stores it in thisClass
-    for (let i = 0; i < currentClass.workouts.length; i++) { //----------------------> for loop
-      if (currentClass.workouts[i].workoutid === workoutid) { //---------------------> if workoutid is equal to the one found
-        return currentClass.workouts[i]; //------------------------------------------> then return that workout from the workouts in thisClass
+    const currentClass = this.getClassById(classid); //---------------------------> getClassById from this location, stores it in thisClass
+    for (let i = 0; i < currentClass.workouts.length; i++) { //-------------------> for loop
+      if (currentClass.workouts[i].workoutid === workoutid) { //------------------> if workoutid is equal to the one found
+        return currentClass.workouts[i]; //---------------------------------------> then return that workout from the workouts in thisClass
       }
     }
   },
 
   removeClass(classid) {
-    const classes = this.getClassById(classid); //--------------------------------> gets class by id and stores it in classes
+    const classes = this.getClassById(classid); //--------------------------------> getClassById from this location, stores it in thisClass
     this.store.remove(this.collection, classes); //-------------------------------> the classes from the collection is removed from the store
     this.store.save(); //---------------------------------------------------------> saves new results to store
   },

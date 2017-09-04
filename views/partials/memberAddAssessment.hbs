@@ -19,23 +19,23 @@
                         </div>
                         <div class="field three wide">
                             <label> Chest </label>
-                            <input placeholder="00.00cm" type="number" name="chest" step=".01" min="35" class="ui yellow segment" required>
+                            <input placeholder="00.00cm" type="number" name="chest" step=".01" min="35" max="100" class="ui yellow segment" required>
                         </div>
                         <div class="field three wide">
                             <label> Thigh </label>
-                            <input placeholder="00.00cm" type="number" name="thigh" step=".01" min="35" class="ui yellow segment" required>
+                            <input placeholder="00.00cm" type="number" name="thigh" step=".01" min="35" max="100" class="ui yellow segment" required>
                         </div>
                         <div class="field three wide">
                             <label> Upper Arm </label>
-                            <input placeholder="00.00cm" type="number" name="upperArm" step=".01" min="15" class="ui yellow segment" required>
+                            <input placeholder="00.00cm" type="number" name="upperArm" step=".01" min="15" max="100" class="ui yellow segment" required>
                         </div>
                         <div class="field three wide">
                             <label> Waist </label>
-                            <input placeholder="00.00cm" type="number" name="waist" step=".01" min="65" class="ui yellow segment" required>
+                            <input placeholder="00.00cm" type="number" name="waist" step=".01" min="65" max="200" class="ui yellow segment" required>
                         </div>
                         <div class="field three wide">
                             <label> Hips </label>
-                            <input placeholder="00.00cm" type="number" name="hips" step=".01" min="65" class="ui yellow segment" required>
+                            <input placeholder="00.00cm" type="number" name="hips" step=".01" min="65" max="200" class="ui yellow segment" required>
                         </div>
                     </div>
                     <button class="ui animated fade blue submit button">
@@ -89,6 +89,7 @@
 
 
 <script>
+    // for dropdown feature
     $('.ui .accordion')
             .accordion({
                 selector: {

@@ -6,9 +6,9 @@
                     <div class="content">
                         <div class="center">
                             <h5 class="ui inverted header">{{description}}</h5>
-                            <a href="/trainerDashboard/trainerupdateclass/{{classid}}" data-tooltip="Edit Class">&emsp;Edit Class&emsp;<i class="large blue write icon"></i></a>
+                            <a href="/trainerDashboard/trainerupdateclass/{{classid}}" data-tooltip="Edit or View Class Details">&emsp;Edit&emsp;<i class="inverted blue write icon"></i></a>
                             <br><br><br><br><br><br>
-                            <a href="/trainerDashboard/removeclass/{{classid}}" data-tooltip="Are You Sure??">&emsp;Remove Class&emsp;<i class="large red trash icon"></i></a>
+                            <a href="/trainerDashboard/removeclass/{{classid}}" data-tooltip="Class and All  Workouts">&emsp;Remove&emsp;<i class="inverted red trash icon"></i></a>
                         </div>
                     </div>
                 </div>
@@ -22,8 +22,8 @@
     {{/each}}
 </div>
 
-
 <script>
+    // Sets card image to dim for trainer to reveal edit/view or remove class icons which are linked to appropriate pages
     $('.five.cards .image').dimmer({
         on: 'hover'
     });

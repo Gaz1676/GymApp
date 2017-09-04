@@ -6,27 +6,25 @@
             <div class="ui yellow button">Click to Update First & Last Name</div>
             <div class="ui flowing popup transition hidden">
                 <div class="ui four column divided grid">
-                    <div class="ui center aligned grid">
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updatefirstname" method="POST">
-                                <input placeholder="first name" name="firstName" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updatelastname" method="POST">
-                                <input placeholder="last name" name="lastName" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updatefirstname" method="POST">
+                            <input placeholder="first name" name="firstName" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updatelastname" method="POST">
+                            <input placeholder="last name" name="lastName" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -35,27 +33,25 @@
             <div class="ui yellow button">Click to Update Email & Password</div>
             <div class="ui flowing popup transition hidden">
                 <div class="ui four column divided grid">
-                    <div class="ui center aligned grid">
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updateemail" method="POST">
-                                <input placeholder="{{member.email}}" name="email" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updatepassword" method="POST">
-                                <input placeholder="********" name="password" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updateemail" method="POST">
+                            <input placeholder="{{member.email}}" name="email" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updatepassword" method="POST">
+                            <input placeholder="********" name="password" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -64,31 +60,29 @@
             <div class="ui yellow button">Click to Update Address & Gender</div>
             <div class="ui flowing popup transition hidden">
                 <div class="ui two column divided grid">
-                    <div class="ui center aligned grid">
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updateaddress" method="POST">
-                                <input placeholder="address" name="address" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updategender" method="POST">
-                                <select class="ui dropdown " name="gender" title="">
-                                    <option value=""> Select</option>
-                                    <option value="Male"> Male</option>
-                                    <option value="Female"> Female</option>
-                                </select>
-                                <br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updateaddress" method="POST">
+                            <input placeholder="address" name="address" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updategender" method="POST">
+                            <select class="ui dropdown " name="gender" title="">
+                                <option value=""> Select</option>
+                                <option value="Male"> Male</option>
+                                <option value="Female"> Female</option>
+                            </select>
+                            <br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -97,27 +91,25 @@
             <div class="ui yellow button">Click to Update Height & Weight</div>
             <div class="ui flowing popup transition hidden">
                 <div class="ui two column divided grid">
-                    <div class="ui center aligned grid">
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updateheight" method="POST">
-                                <input placeholder="(meters)" name="height" type="number" step=".1" min="1" max="3" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="eight wide column">
-                            <form class="ui yellow raised segment form" action="/settings/updatestartingweight" method="POST">
-                                <input placeholder="(kgs)" name="startingWeight" type="number" step=".1" min="35" max="250" required>
-                                <br><br>
-                                <button class="ui animated fade blue submit button">
-                                    <div class="visible content"><i class="upload icon"></i>Update</div>
-                                    <div class="hidden content">Click to Save</div>
-                                </button>
-                            </form>
-                        </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updateheight" method="POST">
+                            <input placeholder="(meters)" name="height" type="number" step=".1" min="1" max="3" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="eight wide column">
+                        <form class="ui yellow raised segment form" action="/settings/updatestartingweight" method="POST">
+                            <input placeholder="(kgs)" name="startingWeight" type="number" step=".1" min="35" max="250" required>
+                            <br><br>
+                            <button class="ui animated fade blue submit button">
+                                <div class="visible content"><i class="upload icon"></i>Update</div>
+                                <div class="hidden content">Click to Save</div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -136,6 +128,7 @@
             </div>
         </section>
     </div>
+
     <div class="column">
         <section class="ui inverted brown segment">
             <section class="ui yellow segment">
