@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const logger = require('../utils/logger'); //------------------------------------------------------> imports logger
@@ -98,6 +104,7 @@ const trainerDashboard = {
   addClass(request, response) { //-----------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('add a new class rendering'); //---------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const trainerid = loggedInTrainer.trainerid;
     const date = new Date(request.body.date);
     const newClass = { //--------------------------------------------------------------------------> place model in newClass object
       trainerid: loggedInTrainer.trainerid, //-----------------------------------------------------> trainerid
@@ -125,9 +132,23 @@ const trainerDashboard = {
       newClass.workouts.push(workout); //----------------------------------------------------------> pushes workout to the end of workouts pile
     }
 
-    logger.debug(`adding new class and workouts by Coach ${loggedInTrainer.lastName}`); //---------> logs message to console
-    classStore.addClass(newClass); //--------------------------------------------------------------> adds new class to classStore
-    response.redirect('/trainerDashboard/viewTrainerClasses'); //----------------------------------> redirects to (/trainerDashboard/viewTrainerClasses)
+    const classes = classStore.getAllClasses(); //-------------------------------------------------> getAllClasses from classStore stores it in classes
+    let notCreated = true; //----------------------------------------------------------------------> set boolean true as notCreated
+    for (let i = 0; i < classes.length; i++) { //--------------------------------------------------> for loop
+      if ((newClass.date === classes[i].date) && (newClass.time === classes[i].time)) { //---------> if time/date are equal to newClass
+        notCreated = false; //---------------------------------------------------------------------> boolean changes to false
+        break; //----------------------------------------------------------------------------------> breaks the loop
+      }
+    }
+
+    if (notCreated) { //---------------------------------------------------------------------------> if true
+      logger.debug(`adding new class for Coach ${loggedInTrainer.lastName} to the store`); //------> logs message to console
+      classStore.addClass(newClass); //------------------------------------------------------------> adds Class to classStore
+      response.redirect('/trainerDashboard/viewTrainerClasses'); //--------------------------------> redirects to (/trainerDashboard/viewTrainerClasses)
+    } else { //------------------------------------------------------------------------------------> else
+      logger.debug(`class already made for Coach ${loggedInTrainer.lastName}`); //-----------------> logs message to console
+      response.redirect('/trainerDashboard/trainerClasses'); //------------------------------------> redirects to (/trainerDashboard/trainerClasses)
+    }
   },
 
   trainerEditNoOfWorkouts(request, response) { //--------------------------------------------------> trainerEditNoOfWorkouts method, called when '/ trainerDashboard request received
@@ -214,8 +235,6 @@ const trainerDashboard = {
     response.render('trainerBookings', viewData); //-----------------------------------------------> renders 'trainerBookings' and viewData to view
   },
 
-  //----- TODO get bookings to show up on members page -----//
-
   trainerAddBooking(request, response) { //--------------------------------------------------------> trainerAddBooking method, called when ‘/ trainerDashboard’ request received
     logger.info('trainer add booking rendering'); //-----------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> getCurrentTrainer from accounts and stores it in loggedInTrainer
@@ -233,17 +252,35 @@ const trainerDashboard = {
       memberlastname: member.lastName, //----------------------------------------------------------> gets lastName from member and stores it in memberlastname
       coachlastname: loggedInTrainer.lastName, //--------------------------------------------------> lastName of loggedInTrainer stored in coachlastname
     };
-    logger.debug(`adding new booking for Coach ${loggedInTrainer.lastName} to the store`); //------> logs message to console
-    trainerStore.addBooking(trainerid, newBooking); //---------------------------------------------> adds booking to trainerStore
-    response.redirect('/trainerDashboard/trainerBookings'); //-------------------------------------> redirects to (/trainerDashboard/trainerBookings)
+
+    const bookings = memberStore.getAllMemberBookings(memberid); //--------------------------------> getAllMemberBookings from memberStore stores it in bookings
+    let notBooked = true; //-----------------------------------------------------------------------> sets boolean true to notBooked
+    for (let i = 0; i < bookings.length; i++) { //-------------------------------------------------> for loop
+      if ((newBooking.time === bookings[i].time) && (newBooking.date === bookings[i].date)) { //---> if time/date is equal to newBooking time/date
+        notBooked = false; //----------------------------------------------------------------------> boolean changes to false
+        break; //----------------------------------------------------------------------------------> breaks the loop
+      }
+    }
+
+    if (notBooked) { //----------------------------------------------------------------------------> if true
+      logger.debug(`adding new booking for Coach ${loggedInTrainer.lastName} to the store`); //----> logs message to console
+      memberStore.addBooking(memberid, newBooking); //---------------------------------------------> adds booking to memberStore
+      trainerStore.addBooking(trainerid, newBooking); //-------------------------------------------> adds booking to trainerStore
+      response.redirect('/trainerDashboard/trainerBookings'); //-----------------------------------> redirects to (/trainerDashboard/trainerBookings)
+    } else { //------------------------------------------------------------------------------------> else
+      logger.debug(`booking already made for ${member.firstName} ${member.lastName}`); //----------> logs message to console
+      response.redirect('/trainerDashboard/trainerBookings'); //-----------------------------------> redirects to (/trainerDashboard/trainerBookings)
+    }
   },
 
   removeBooking(request, response) { //------------------------------------------------------------> removeBooking method, called when ‘/ trainerDashboard’ request received
     logger.info('remove booking rendering'); //----------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> getCurrentTrainer from accounts and stores it in loggedInTrainer
     const bookingid = request.params.bookingid; //-------------------------------------------------> gets bookingid (params) and stores it in bookingid
+    const memberid = request.params.memberid; //---------------------------------------------------> gets memberid (params) and stores it in memberid
     logger.debug(`removing bookingid: ${bookingid} from Coach ${loggedInTrainer.lastName}`); //----> logs message to console
     trainerStore.removeBooking(loggedInTrainer.trainerid, bookingid); //---------------------------> removes booking from trainerStore
+    memberStore.removeBooking(memberid, bookingid); //---------------------------------------------> removes booking from memberStore
     response.redirect('/trainerDashboard/trainerBookings'); //-------------------------------------> redirects to (/trainerDashboard/trainerBookings)
   },
 
@@ -272,6 +309,129 @@ const trainerDashboard = {
     };
     logger.debug(`updating bookingid: ${bookingid} page rendered`); //-----------------------------> logs message to console
     response.render('trainerUpdateBooking', viewData); //------------------------------------------> renders 'trainerUpdateBooking' and viewData to view
+  },
+
+  trainerGoals(request, response) { //-------------------------------------------------------------> memberGoals method, called when ‘/ dashboard’ request received
+    logger.info('members goals rendering'); //-----------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentMember from accounts and stores it in loggedInMember
+    const members = memberStore.getAllMembers(); //------------------------------------------------> getsAllTrainers from trainerStore and stores it in trainerList
+    const goals = loggedInTrainer.goals; //--------------------------------------------------------> gets goals from loggedInMember and stores it in goals
+    const viewData = { //--------------------------------------------------------------------------> place model in viewData object
+      trainer: loggedInTrainer, //-----------------------------------------------------------------> loggedInMember
+      members: members, //-------------------------------------------------------------------------> trainers
+      goals: goals, //-----------------------------------------------------------------------------> goals
+    };
+    logger.debug(`create goals menu rendered for ${loggedInTrainer.lastName}`); //-----------------> logs message to console
+    response.render('trainerGoals', viewData); //--------------------------------------------------> renders 'memberBookings' and viewData to view
+  },
+
+  trainerAddGoal(request, response) { //-----------------------------------------------------------> trainerAddBooking method, called when ‘/ trainerDashboard’ request received
+    logger.info('trainer add goals rendering'); //-------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> getCurrentTrainer from accounts and stores it in loggedInTrainer
+    const trainerid = loggedInTrainer.trainerid; //------------------------------------------------> gets trainerid of loggedInTrainer and stores it in trainerid
+    const memberid = request.body.memberid; //-----------------------------------------------------> requests memberid data and stores it in memberid
+    const member = memberStore.getMemberById(memberid); //-----------------------------------------> getMemberById from memberStore stores it in member
+    const date = new Date(request.body.date); //---------------------------------------------------> request date as new Date and stores it in date
+    const newGoal = { //---------------------------------------------------------------------------> place model in newBooking object
+      goalid: uuid(), //---------------------------------------------------------------------------> unique id for assessment
+      memberid: memberid, //-----------------------------------------------------------------------> memberid
+      trainerid: trainerid, //---------------------------------------------------------------------> trainerid
+      memberfirstname: member.firstName, //--------------------------------------------------------> gets firstName from member and stores it in memberfirstname
+      memberlastname: member.lastName, //----------------------------------------------------------> gets lastName from member and stores it in memberlastname
+      coachlastname: loggedInTrainer.lastName, //--------------------------------------------------> lastName of loggedInTrainer stored in coachlastname
+      date: date.toDateString(), //----------------------------------------------------------------> requests date
+      area: request.body.area, //------------------------------------------------------------------> request area
+      goal: request.body.goal, //------------------------------------------------------------------> request goal
+      description: request.body.description, //----------------------------------------------------> request description
+      status: 'open', //---------------------------------------------------------------------------> status set to open
+    };
+
+    const goals = memberStore.getAllMemberGoals(memberid); //--------------------------------------> getAllMemberBookings from memberStore stores it in bookings
+    let noGoals = true; //-------------------------------------------------------------------------> sets boolean true to notBooked
+    for (let i = 0; i < goals.length; i++) { //----------------------------------------------------> for loop
+      if ((newGoal.time === goals[i].time) && (newGoal.date === goals[i].date)) { //---------------> if time/date is equal to newBooking time/date
+        noGoals = false; //------------------------------------------------------------------------> boolean changes to false
+        break; //----------------------------------------------------------------------------------> breaks the loop
+      }
+    }
+
+    if (noGoals) { //------------------------------------------------------------------------------> if true
+      logger.debug(`adding new goals for Coach ${loggedInTrainer.lastName} to the store`); //------> logs message to console
+      memberStore.addGoal(memberid, newGoal); //---------------------------------------------------> adds booking to memberStore
+      trainerStore.addGoal(trainerid, newGoal); //-------------------------------------------------> adds booking to trainerStore
+      response.redirect('/trainerDashboard/trainerGoals'); //--------------------------------------> redirects to (/trainerDashboard/trainerBookings)
+    } else { //------------------------------------------------------------------------------------> else
+      logger.debug(`goal already made for ${member.firstName} ${member.lastName}`); //-------------> logs message to console
+      response.redirect('/trainerDashboard/trainerGoals'); //--------------------------------------> redirects to (/trainerDashboard/trainerBookings)
+    }
+  },
+
+  removeGoal(request, response) { //---------------------------------------------------------------> removeGoal method, called when ‘/ dashboard’ request received
+    logger.info('removing goal rendering'); //-----------------------------------------------------> logs message to console
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) and stores in goalid
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
+    logger.debug(`removing goalid: ${goalid} from ${loggedInTrainer.lastName}`); //----------------> logs message to console
+    trainerStore.removeGoal(loggedInTrainer.trainerid, goalid); //---------------------------------> removes goal from member-store
+    response.redirect('/trainerDashboard/trainerGoals'); //----------------------------------------> redirects to (/dashboard/memberGoals)
+  },
+
+  editTargetDate(request, response) { //-----------------------------------------------------------> editTargetDate method, called when ‘/ trainerDashboard’ request received
+    logger.info('updating class rendering '); //---------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) stores it in goalid
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid); //-----------> gets goal by id from trainerStore and stores it in goalToUpdate
+    const date = new Date(request.body.date); //---------------------------------------------------> request date as new Date and stores it in date
+    goalToUpdate.date = date.toDateString(); //----------------------------------------------------> date
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`); //------------------------> logs message to console
+    trainerStore.store.save(); //------------------------------------------------------------------> saves new results to trainerStore
+    response.redirect('/trainerDashboard/trainerGoals'); //----------------------------------------> redirects to (/trainerDashboard/trainerGoals)
+  },
+
+  editTargetArea(request, response) { //-----------------------------------------------------------> editTargetArea method, called when ‘/ trainerDashboard’ request received
+    logger.info('updating class rendering '); //---------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) stores it in goalid
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid); //-----------> gets goal by id from trainerStore and stores it in goalToUpdate
+    goalToUpdate.area = request.body.area; //------------------------------------------------------> request area
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`); //------------------------> logs message to console
+    trainerStore.store.save(); //------------------------------------------------------------------> saves new results to trainerStore
+    response.redirect('/trainerDashboard/trainerGoals'); //----------------------------------------> redirects to (/trainerDashboard/trainerGoals)
+  },
+
+  editTargetGoal(request, response) { //-----------------------------------------------------------> editTargetGoal method, called when ‘/ trainerDashboard’ request received
+    logger.info('updating class rendering '); //---------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) stores it in goalid
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid); //-----------> gets goal by id from trainerStore and stores it in goalToUpdate
+    goalToUpdate.goal = request.body.goal; //------------------------------------------------------> request goal
+    logger.debug(`updating goal for Coach ${loggedInTrainer.lastName}`); //------------------------> logs message to console
+    trainerStore.store.save(); //------------------------------------------------------------------> saves new results to trainerStore
+    response.redirect('/trainerDashboard/trainerGoals'); //----------------------------------------> redirects to (/trainerDashboard/trainerGoals)
+  },
+
+  editDescription(request, response) { //----------------------------------------------------------> editDescription method, called when ‘/ trainerDashboard’ request received
+    logger.info('updating class rendering '); //---------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) stores it in goalid
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid); //-----------> gets goal by id from trainerStore and stores it in goalToUpdate
+    goalToUpdate.description = request.body.description; //----------------------------------------> request description
+    logger.debug(`updating description for Coach ${loggedInTrainer.lastName}`); //-----------------> logs message to console
+    trainerStore.store.save(); //------------------------------------------------------------------> saves new results to trainerStore
+    response.redirect('/trainerDashboard/trainerGoals'); //----------------------------------------> redirects to (/trainerDashboard/trainerGoals)
+  },
+
+  trainerUpdateGoal(request, response) { //--------------------------------------------------------> trainerUpdateGoal method, called when ‘/ trainerDashboard’ request received
+    logger.info('update booking rendering '); //---------------------------------------------------> logs message to console
+    const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
+    const goalid = request.params.goalid; //-------------------------------------------------------> gets goalid (params) stores it in goalid
+    const goalToUpdate = trainerStore.getGoalById(loggedInTrainer.trainerid, goalid); //-----------> gets goal by id from trainerStore and stores it in goalToUpdate
+    const members = memberStore.getAllMembers(); //------------------------------------------------> getAllMembers from memberStore and stores it in memberList
+    const viewData = { //--------------------------------------------------------------------------> place model in viewData object
+      goalToUpdate: goalToUpdate, //---------------------------------------------------------------> goalToUpdate
+      members: members, //-------------------------------------------------------------------------> members
+    };
+    logger.debug(`updating goalid: ${goalid} page rendered`); //-----------------------------------> logs message to console
+    response.render('trainerUpdateGoal', viewData); //---------------------------------------------> renders 'trainerUpdateBooking' and viewData to view
   },
 };
 
