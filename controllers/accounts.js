@@ -1,3 +1,9 @@
+/**
+ * Author: Gary Fleming
+ * Student No: 20019497
+ * Start Date: Aug 1st 2017
+ */
+
 'use strict';
 
 const memberStore = require('../models/member-store'); //----------------------------------------------> imports memberStore
@@ -54,9 +60,14 @@ const accounts = {
     member.bookings = []; //---------------------------------------------------------------------------> creates an empty bookings array list for member
     member.goals = []; //------------------------------------------------------------------------------> creates an empty goals array list for member
 
-    memberStore.addMember(member); //------------------------------------------------------------------> adds the member to memberStore
-    logger.debug(`registering ${member.email}`); //----------------------------------------------------> logs message to console
-    response.redirect('/login'); //--------------------------------------------------------------------> redirect to (/login)
+    if (memberStore.getMemberByEmail(member.email)) {
+      logger.debug(`email: ${member.email} already registered to database`); //------------------------> logs message to console
+      response.render('signup'); //--------------------------------------------------------------------> renders 'sign up' to view
+    } else { //----------------------------------------------------------------------------------------> else
+      memberStore.addMember(member); //----------------------------------------------------------------> adds the member to memberStore
+      logger.debug(`registering ${member.email}`); //--------------------------------------------------> logs message to console
+      response.redirect('/login'); //------------------------------------------------------------------> redirect to (/login)
+    }
   },
 
   authenticate(request, response) { //-----------------------------------------------------------------> authenticate method, called when ‘/ accounts’ request received
