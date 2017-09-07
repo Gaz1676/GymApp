@@ -27,26 +27,26 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
   ==========================     
 ***
 ### Assessments
-- _Periodically tracks assessments of the Member_
+- _Periodically tracks assessments of the Logged In Member_
 
 - _Captures essential measurements at a given date of the Member_
 
 - _Generates analytics on the status of the Member after a given assessment_
 
-- _Analytics are the Members BMI, BMICategory, ideal body weight and the trend of assessments_
+- _Analytics are the Members BMI, BMICategory, Ideal Body Weight and the Trend of assessments_
 
 - _The Member can delete individual assessments as well as update their profiles_
 
 - _The Member may book an assessment with a Trainer of their choice(assuming the Trainer is free at that time)_
 
 ### Gym Classes
-- _Enable Members to view the Classes created by the Trainers_
+- _Members can view the Classes created by the Trainers_
 
-- _The Member can enrol into the Classes on a specific dates_
+- _Members can enrol into the Classes on a specific dates_
 
-- _The Member can enrol in all Workouts in the Classes designed by the Trainers_
+- _Members can enrol in all Workouts in the Classes designed by the Trainers_
 
-- _The Members enrolment into Classes/Workouts is subject to available spaces_
+- _Members enrolment into Classes/Workouts is subject to available spaces_
 
 - _Members can also un-enrol from these Classes/Workouts too_
 
