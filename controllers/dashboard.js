@@ -8,10 +8,10 @@
 
 const logger = require('../utils/logger.js'); //--------------------------------------------------------> imports logger
 const accounts = require('./accounts.js'); //-----------------------------------------------------------> imports accounts
+const uuid = require('uuid'); //------------------------------------------------------------------------> imports uuid
 const memberStore = require('../models/member-store.js'); //--------------------------------------------> imports member-store
 const trainerStore = require('../models/trainer-store.js'); //------------------------------------------> imports trainer-store
 const classStore = require('../models/class-store.js'); //----------------------------------------------> imports class-store
-const uuid = require('uuid'); //------------------------------------------------------------------------> imports uuid
 const analytics = require('../utils/analytics.js'); //--------------------------------------------------> imports analytics
 
 //---> dashboard object definition <---//
@@ -23,7 +23,7 @@ const dashboard = {
     const bmi = analytics.calculateBMI(loggedInMember); //----------------------------------------------> gets calculateBMI from analytics for loggedInMember and stores it in bmi
     const idealBodyWeight = analytics.idealBodyWeight(loggedInMember); //-------------------------------> gets IBW from analytics for loggedInMember and stores it in IBW
     const viewData = { //-------------------------------------------------------------------------------> place model in viewData object
-      title: 'Member Dashboard', //---------------------------------------------------------------------> name of the title
+      title: 'member dashboard', //---------------------------------------------------------------------> name of the title
       member: loggedInMember, //------------------------------------------------------------------------> loggedInMember
       bmi: bmi, //--------------------------------------------------------------------------------------> bmi
       bmiCategory: analytics.BMICategory(bmi), //-------------------------------------------------------> bmiCategory of bmi results
@@ -78,7 +78,7 @@ const dashboard = {
     logger.info('updating first name rendering'); //----------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.firstName = request.body.firstName; //-----------------------------------------------> request firstName = firstName of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s first name`); //-------------------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s first name`); //---------------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -87,7 +87,7 @@ const dashboard = {
     logger.info('updating last name rendering'); //-----------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.lastName = request.body.lastName; //-------------------------------------------------> request lastName = lastName of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s last name`); //--------------------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s last name`); //----------------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -96,7 +96,7 @@ const dashboard = {
     logger.info('updating email rendering'); //---------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.email = request.body.email; //-------------------------------------------------------> request email = email of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s email address: ${loggedInMember.email}`); //---> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s email address: ${loggedInMember.email}`); //-----> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -105,7 +105,7 @@ const dashboard = {
     logger.info('updating password rendering'); //------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.password = request.body.password; //-------------------------------------------------> request password = password of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s password, ssssshhhhh`); //---------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s password, ssssshhhhh`); //-----------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -114,7 +114,7 @@ const dashboard = {
     logger.info('updating address rendering'); //-------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.address = request.body.address; //---------------------------------------------------> request address = address of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s home address`); //-----------------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s home address`); //-------------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -123,7 +123,7 @@ const dashboard = {
     logger.info('updating gender rendering'); //--------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.gender = request.body.gender; //-----------------------------------------------------> request gender = gender of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s gender??? Really???`); //----------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s gender??? Really???`); //------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -132,7 +132,7 @@ const dashboard = {
     logger.info('updating height rendering'); //--------------------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.height = Number(request.body.height); //---------------------------------------------> request height = height of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s height`); //-----------------------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s height`); //-------------------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -141,7 +141,7 @@ const dashboard = {
     logger.info('updating starting weight rendering'); //-----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
     loggedInMember.startingWeight = Number(request.body.startingWeight); //-----------------------------> request startingWeight = startingWeight of loggedInMember
-    logger.debug(`updating ${loggedInMember.firstName}'s starting weight`); //--------------------------> logs message to console
+    logger.debug(`saving ${loggedInMember.firstName}'s starting weight`); //----------------------------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard'); //-----------------------------------------------------------------> redirects to (/dashboard)
   },
@@ -149,10 +149,10 @@ const dashboard = {
   updateProfilePicture(request, response) { //----------------------------------------------------------> updateProfilePicture method, called when '/ dashboard request received
     logger.info('updating profile picture rendering'); //-----------------------------------------------> logs message to console
     const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> gets currentMember from accounts and stores it in loggedInMember
-    const picture = request.files.picture; //-----------------------------------------------------------> gets picture (files) stores it in picture
+    const picture = request.files.picture; //-----------------------------------------------------------> gets picture itself (binary) stores it in picture
 
-    memberStore.addPicture(loggedInMember, picture, function () { //------------------------------------> addPicture to the memberStore
-          logger.debug(`updating ${loggedInMember.firstName}'s picture`); //----------------------------> logs message to console
+    memberStore.addPicture(loggedInMember, picture, function () { //------------------------------------> addPicture to the memberStore for loggedInMember - callback function
+          logger.debug(`saving ${loggedInMember.firstName}'s picture`); //------------------------------> logs message to console
           memberStore.store.save(); //------------------------------------------------------------------> saves new results to memberStore
           response.redirect('/dashboard'); //-----------------------------------------------------------> redirects to (/dashboard)
         }
@@ -189,8 +189,8 @@ const dashboard = {
       if ((!enrolled) && (currentClass.currentCapacity < currentClass.capacity)) { //-------------------> if not enrolled & currentCapacity of currentClass is less than capacity of currentClass
         currentClass.currentCapacity += 1; //-----------------------------------------------------------> currentCapacity of currentClass + 1 is now currentCapacity of currentClass
         currentClass.members.push(loggedInMember.memberid); //------------------------------------------> pushes memberid of loggedInMember to members array in currentClass
-        logger.debug(`WooHoo!! enrolling to class rendered ${loggedInMember.firstName}`); //------------> logs message to console
         classStore.store.save(); //---------------------------------------------------------------------> saves new results to classStore
+        logger.debug(`WooHoo!! enrolled to class ${loggedInMember.firstName}`); //----------------------> logs message to console
       } else { //---------------------------------------------------------------------------------------> else
         logger.debug(`Doh!! you're already enrolled in this class ${loggedInMember.firstName}`); //-----> logs message to console
       }
@@ -211,8 +211,8 @@ const dashboard = {
         if (currentClass.members[j] === loggedInMember.memberid) { //-----------------------------------> if memberid of loggedInMember id equal to the member in currentClass
           currentClass.currentCapacity -= 1; //---------------------------------------------------------> currentCapacity of currentClass - 1 is now currentCapacity of currentClass
           currentClass.members.splice(loggedInMember.memberid, 1); //-----------------------------------> removes memberid of loggedInMember from members array in currentClass
-          logger.debug(`you left the class ${loggedInMember.firstName}, why???`); //--------------------> logs message to console
           classStore.store.save(); //-------------------------------------------------------------------> saves new results to classStore
+          logger.debug(`you left the class ${loggedInMember.firstName}, why???`); //--------------------> logs message to console
         } else { //-------------------------------------------------------------------------------------> else
           logger.debug(`Doh!! you're not enrolled in this class ${loggedInMember.firstName}`); //-------> logs message to console
         }
@@ -239,8 +239,8 @@ const dashboard = {
     if ((!enrolled) && (chosenWorkout.currentCapacity < chosenWorkout.capacity)) { //-------------------> if not enrolled & currentCapacity of chosenWorkout is less than capacity of chosenWorkout
       chosenWorkout.currentCapacity += 1; //------------------------------------------------------------> currentCapacity of chosenWorkout + 1 is now currentCapacity of chosenWorkout
       chosenWorkout.members.push(loggedInMember.memberid); //-------------------------------------------> pushes memberid of loggedInMember to members array in chosenWorkout
-      logger.debug(`WooHoo!! welcome to the workout ${loggedInMember.firstName}, are you ready??`); //--> logs message to console
       classStore.store.save(); //-----------------------------------------------------------------------> saves new results to classStore
+      logger.debug(`WooHoo!! welcome to the workout ${loggedInMember.firstName}, are you ready??`); //--> logs message to console
     } else { //-----------------------------------------------------------------------------------------> else
       logger.debug(`Doh!! you're not enrolled in this workout ${loggedInMember.first}`); //-------------> logs message to console
     }
@@ -259,8 +259,8 @@ const dashboard = {
       if (chosenWorkout.members[i] === loggedInMember.memberid) { //------------------------------------> if memberid of loggedInMember id equal to the member in chosenWorkout
         chosenWorkout.currentCapacity -= 1; //----------------------------------------------------------> currentCapacity of chosenWorkout - 1 is now currentCapacity of chosenWorkout
         chosenWorkout.members.splice(loggedInMember.memberid, 1); //------------------------------------> removes memberid of loggedInMember from members array in chosenWorkout
-        logger.debug(`you left the workout ${loggedInMember.firstName}, why???`); //--------------------> logs message to console
         classStore.store.save(); //---------------------------------------------------------------------> saves new results to classStore
+        logger.debug(`you left the workout ${loggedInMember.firstName}, why???`); //--------------------> logs message to console
       } else { //---------------------------------------------------------------------------------------> else
         logger.debug(`Doh!! you're not enrolled in this workout ${loggedInMember.firstName}`); //-------> logs message to console
       }
@@ -302,34 +302,25 @@ const dashboard = {
 
     };
 
-    const bookings = trainerStore.getAllTrainerBookings(trainerid); //----------------------------------> getAllTrainerBookings by trainerid in trainerStore store it in bookings
-    let notBooked = true; //----------------------------------------------------------------------------> set boolean true as notBooked
-    for (let i = 0; i < bookings.length; i++) { //------------------------------------------------------> for loop
-      if ((newBooking.time === bookings[i].time) && (newBooking.date === bookings[i].date)) { //--------> if time/date is equal to newBooking time/date
-        notBooked = false; //---------------------------------------------------------------------------> boolean changes to false
-        break; //---------------------------------------------------------------------------------------> breaks the loop
-      }
-    }
+     const bookings = trainerStore.getAllTrainerBookings(trainerid); //---------------------------------> getAllTrainerBookings by trainerid in trainerStore store it in bookings
+     let notBooked = true; //---------------------------------------------------------------------------> set boolean true as notBooked
+     for (let i = 0; i < bookings.length; i++) { //-----------------------------------------------------> for loop
+       if ((newBooking.time === bookings[i].time) && (newBooking.date === bookings[i].date)) { //-------> if time/date is equal to newBooking time/date
+         notBooked = false; //--------------------------------------------------------------------------> boolean changes to false
+         break; //--------------------------------------------------------------------------------------> breaks the loop
+       }
+     }
 
-    if (notBooked) { //---------------------------------------------------------------------------------> if true
-      logger.debug(`adding new booking for Coach ${trainer.lastName} to the store`, newBooking); //-----> logs message to console
-      memberStore.addBooking(memberid, newBooking); //--------------------------------------------------> adds booking to memberStore
-      trainerStore.addBooking(trainerid, newBooking); //------------------------------------------------> adds booking to trainerStore
-      response.redirect('/dashboard/memberBookings'); //------------------------------------------------> redirects to (/dashboard/memberBookings)
-    } else { //-----------------------------------------------------------------------------------------> else
-      logger.debug(`booking already made for Coach ${trainer.lastName}`); //----------------------------> logs message to console
-      response.redirect('/dashboard/memberBookings'); //------------------------------------------------> redirects to (/dashboard/memberBookings)
-    }
-  },
-
-  removeBooking(request, response) { //-----------------------------------------------------------------> removeBooking method, called when ‘/ dashboard’ request received
-    logger.info('remove booking rendering'); //---------------------------------------------------------> logs message to console
-    const bookingid = request.params.bookingid; //------------------------------------------------------> gets bookingid (params) and stores it in bookingid
-    const loggedInMember = accounts.getCurrentMember(request); //---------------------------------------> getsCurrentMember from accounts and stores it in loggedInMember
-    logger.debug(`removing bookingid: ${bookingid} from ${loggedInMember.firstName}`); //---------------> logs message to console
-    memberStore.removeBooking(loggedInMember.memberid, bookingid); //-----------------------------------> removes booking from memberStore
-    response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
-  },
+     if (notBooked) { //--------------------------------------------------------------------------------> if true
+       logger.debug(`adding new booking for Coach ${trainer.lastName} to the store`, newBooking); //----> logs message to console
+       memberStore.addBooking(memberid, newBooking); //-------------------------------------------------> adds booking to memberStore
+       trainerStore.addBooking(trainerid, newBooking); //-----------------------------------------------> adds booking to trainerStore
+       response.redirect('/dashboard/memberBookings'); //-----------------------------------------------> redirects to (/dashboard/memberBookings)
+     } else { //----------------------------------------------------------------------------------------> else
+       logger.debug(`booking already made for Coach ${trainer.lastName}`); //---------------------------> logs message to console
+       response.redirect('/dashboard/memberBookings'); //-----------------------------------------------> redirects to (/dashboard/memberBookings)
+     }
+   },
 
   removeBooking(request, response) { //-----------------------------------------------------------------> removeBooking method, called when ‘/ dashboard’ request received
     logger.info('remove booking rendering'); //---------------------------------------------------------> logs message to console
@@ -350,7 +341,7 @@ const dashboard = {
     const booking = memberStore.getBookingById(loggedInMember.memberid, bookingid); //------------------> gets booking by id from memberStore and stores it in booking
     booking.time = request.body.time; //----------------------------------------------------------------> time
     booking.date = date.toDateString(); //--------------------------------------------------------------> date
-    logger.debug(`edit booking for ${loggedInMember.firstName} ${loggedInMember.lastName}`); //---------> logs message to console
+    logger.debug(`saving booking for ${loggedInMember.firstName} ${loggedInMember.lastName}`); //-------> logs message to console
     memberStore.store.save(); //------------------------------------------------------------------------> saves new results to memberStore
     response.redirect('/dashboard/memberBookings'); //--------------------------------------------------> redirects to (/dashboard/memberBookings)
   },
@@ -401,7 +392,7 @@ const dashboard = {
     const goals = memberStore.getAllMemberGoals(memberid); //-------------------------------------------> getAllMemberGoals from memberStore stores it in goals
     let notSet = true; //-------------------------------------------------------------------------------> set boolean true as notSet
     for (let i = 0; i < goals.length; i++) { //---------------------------------------------------------> for loop
-      if (newGoal.date === goals[i].date) { //----------------------------------------------------------> if date is equal to newGoals date
+      if (newGoal.area === goals[i].area) { //----------------------------------------------------------> if date is equal to newGoals area
         notSet = false; //------------------------------------------------------------------------------> boolean changes to false
         break; //---------------------------------------------------------------------------------------> breaks the loop
       }
