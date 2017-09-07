@@ -3,6 +3,45 @@
 <div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
+            <section class="ui yellow segment">
+                <table class="ui fixed left aligned table">
+                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
+                    <img class="ui small centered yellow image" {{#if member.img}} src="{{member.img}}" {{else}}
+
+                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
+
+                    <tr>
+                        <td><i class="user icon"></i> Member:</td>
+                        <td>{{member.firstName}} {{member.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="mail icon"></i> Email:</td>
+                        <td>{{member.email}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="home icon"></i> Address:</td>
+                        <td>{{member.address}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="genderless icon"></i> Gender:</td>
+                        <td>{{member.gender}}</td>
+                    </tr>
+                    <tr>
+                        <td><i class="resize vertical icon"></i> Height:</td>
+                        <td>{{member.height}} meters</td>
+                    </tr>
+                    <tr>
+                        <td><i class="law icon"></i> Starting weight:</td>
+                        <td>{{member.startingWeight}} kgs</td>
+                    </tr>
+
+                </table>
+            </section>
+        </section>
+    </div>
+
+    <div class="ui center aligned column">
+        <section class="ui inverted brown segment">
             <div class="ui yellow button">Click to Update First & Last Name</div>
             <div class="ui flowing popup transition hidden">
                 <div class="ui four column divided grid">
@@ -35,7 +74,7 @@
                 <div class="ui four column divided grid">
                     <div class="eight wide column">
                         <form class="ui yellow raised segment form" action="/settings/updateemail" method="POST">
-                            <input placeholder="{{member.email}}" name="email" required>
+                            <input placeholder="email" name="email" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
                                 <div class="visible content"><i class="upload icon"></i>Update</div>
@@ -45,7 +84,7 @@
                     </div>
                     <div class="eight wide column">
                         <form class="ui yellow raised segment form" action="/settings/updatepassword" method="POST">
-                            <input placeholder="********" name="password" required>
+                            <input placeholder="password" name="password" required>
                             <br><br>
                             <button class="ui animated fade blue submit button">
                                 <div class="visible content"><i class="upload icon"></i>Update</div>
@@ -128,52 +167,19 @@
             </div>
         </section>
     </div>
-
-    <div class="column">
-        <section class="ui inverted brown segment">
-            <section class="ui yellow segment">
-                <table class="ui fixed left aligned table">
-                    <h2 class="ui red center aligned header"> {{member.firstName}}'s Profile Details </h2>
-                    <img class="ui small centered yellow image" {{#if member.img}} src="{{member.img}}" {{else}}
-
-                         src="http://res.cloudinary.com/cloud101/image/upload/v1503162221/forgotimage_lomybo.png" {{/if}}>
-
-                    <tr>
-                        <td><i class="user icon"></i> Member:</td>
-                        <td>{{member.firstName}} {{member.lastName}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="mail icon"></i> Email:</td>
-                        <td>{{member.email}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="home icon"></i> Address:</td>
-                        <td>{{member.address}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="genderless icon"></i> Gender:</td>
-                        <td>{{member.gender}}</td>
-                    </tr>
-                    <tr>
-                        <td><i class="resize vertical icon"></i> Height:</td>
-                        <td>{{member.height}} meters</td>
-                    </tr>
-                    <tr>
-                        <td><i class="law icon"></i> Starting weight:</td>
-                        <td>{{member.startingWeight}} kgs</td>
-                    </tr>
-
-                </table>
-            </section>
-        </section>
-    </div>
 </div>
 
 <script>
-    $('.ui.button')
+    // Makes the ui buttons jiggle when screen activated. Also produces a pop up to edits when clicked
+    $('.yellow.button')
             .popup({
                 popup: $('.custom.popup'),
                 on: 'click'
+            })
+            .transition({
+                animation : 'jiggle',
+                duration  : 600,
+                interval  : 20
             })
     ;
 </script>

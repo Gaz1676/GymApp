@@ -9,7 +9,7 @@
             {{#each members}}
 
                 <div class="ui link card">
-                    <a class="ui tiny centered image" data-tooltip="{{firstName}} {{lastName}}" src="{{img}}" href="/trainerDashboard/trainerviewassessments/{{memberid}}">
+                    <a class="ui tiny centered image" data-tooltip="{{firstName}} {{lastName}}:&nbsp;&nbsp;{{email}}" src="{{img}}" href="/trainerDashboard/trainerviewassessments/{{memberid}}">
                         <img {{#if img}} src="{{img}}"
                         {{else}}
 
@@ -25,3 +25,15 @@
         </div>
     </section>
 </section>
+
+<script>
+    // makes statistics pulse when page loads
+    $('.ui.card')
+            .transition({
+                animation : 'pulse',
+                reverse   : false,
+                duration  : 500,
+                interval  : 150
+            })
+    ;
+</script>

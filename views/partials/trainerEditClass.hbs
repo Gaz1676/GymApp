@@ -1,7 +1,7 @@
 <div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
-            <div class="ui large blue left ribbon label">
+            <div class="ui large red left ribbon label">
                 <i class="university icon"></i> "{{classToUpdate.name}} Class" Details about to be updated!!
             </div>
             <section class="ui yellow segment">
@@ -43,18 +43,6 @@
                             <input placeholder="start time.." type="time" step="1800" name="time" required>
                             <button class="ui animated fade blue submit button">
                                 <div class="visible content"><i class="upload icon"></i>Update Start Time</div>
-                                <div class="hidden content">Click to Save</div>
-                            </button>
-                        </div>
-                    </form>
-                </section>
-
-                <section class="ui inverted brown segment">
-                    <form class="ui yellow raised segment form" action="/trainerDashboard/trainereditnoofworkouts/{{classToUpdate.classid}}" method="POST">
-                        <div class="ui fluid action input">
-                            <input placeholder="no. of workouts.." type="number" step="1" min="1" max="12" name="noOfWorkouts" required>
-                            <button class="ui animated fade blue submit button">
-                                <div class="visible content"><i class="upload icon"></i>Update Workouts</div>
                                 <div class="hidden content">Click to Save</div>
                             </button>
                         </div>
@@ -108,3 +96,18 @@
         </section>
     </div>
 </div>
+
+<script>
+    // Makes the ui buttons jiggle when screen activated. Also produces a pop up to edits when clicked
+    $('.yellow.form')
+            .popup({
+                popup: $('.custom.popup'),
+                on: 'click'
+            })
+            .transition({
+                animation : 'jiggle',
+                duration  : 600,
+                interval  : 20
+            })
+    ;
+</script>

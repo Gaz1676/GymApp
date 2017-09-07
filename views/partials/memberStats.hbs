@@ -1,5 +1,5 @@
 <div class="ui large blue left ribbon label">
-    <i class="line chart icon"></i>All of your Essential Statistic Details {{member.firstName}}&emsp; <i class="pointing down icon"></i>
+    <i class="line chart icon"></i>All of the Essential Statistic Details &emsp; <i class="pointing down icon"></i>
 </div>
 <br><br>
 <div class="ui center aligned four column grid">
@@ -47,3 +47,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    // makes statistics pulse when page loads
+    $('.ui.card')
+            .transition({
+                animation : 'pulse',
+                reverse   : false,
+                interval  : 250
+            })
+    ;
+</script>
