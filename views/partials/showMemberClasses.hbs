@@ -81,7 +81,7 @@
                                 <thead>
                                 <tr>
                                     <th> Date of Workout</th>
-                                    <th> Enrolled&emsp;/&emsp;Max Capacity</th>
+                                    <th> Members Enrolled</th>
                                     <th> Enroll to Workout</th>
                                     <th> UnEnroll</th>
                                 </tr>
@@ -89,7 +89,7 @@
                                 <tbody>
                                 <tr>
                                     <td> {{workoutDate}} </td>
-                                    <td> &emsp;{{currentCapacity}}&emsp;&emsp;&emsp;/&nbsp;&emsp;{{capacity}} members</td>
+                                    <td> &emsp;{{currentCapacity}} members</td>
                                     <td>
                                         <a href="/dashboard/{{../classid}}/enrollworkout/{{workoutid}}">
                                             <i class="large inverted green add user icon"></i>
@@ -110,3 +110,4 @@
         {{/each}}
     </section>
 </section>
+

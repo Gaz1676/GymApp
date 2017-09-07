@@ -1,214 +1,145 @@
 {
   "classes": [
     {
-      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "4ffb64ea-e494-4cd2-85c7-b8582d07b962",
-      "name": "Yoga - Stretch and Restore",
-      "difficulty": "All Levels",
-      "capacity": 15,
-      "noOfWorkouts": 6,
-      "duration": 25,
-      "date": "Sat Sep 02 2017",
-      "time": "10:30",
-      "workouts": [
-        {
-          "workoutid": "18c64b11-0053-48cf-944d-54db9ef2197a",
-          "workoutDate": "Sat Sep 02 2017",
-          "time": "10:00",
-          "duration": "45",
-          "currentCapacity": 4,
-          "capacity": 15,
-          "members": [
-            "4257cb93-724d-400a-9ec9-1779bd74c19a",
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062",
-            "9508292c-6ff8-470c-bc3d-278777aab632"
-          ]
-        },
-        {
-          "workoutid": "f16dcd11-5f72-47a9-a9c1-c883d3720877",
-          "workoutDate": "Sat Sep 09 2017",
-          "time": "10:00",
-          "duration": "45",
-          "currentCapacity": 4,
-          "capacity": 15,
-          "members": [
-            "4257cb93-724d-400a-9ec9-1779bd74c19a",
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062",
-            "9508292c-6ff8-470c-bc3d-278777aab632"
-          ]
-        },
-        {
-          "workoutid": "ea7741d8-9491-4749-8abc-824d7700569a",
-          "workoutDate": "Sat Sep 16 2017",
-          "time": "10:00",
-          "duration": "45",
-          "currentCapacity": 4,
-          "capacity": 15,
-          "members": [
-            "4257cb93-724d-400a-9ec9-1779bd74c19a",
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062",
-            "9508292c-6ff8-470c-bc3d-278777aab632"
-          ]
-        },
-        {
-          "workoutid": "782a72b4-ef5f-4148-b31b-71d8e02511c5",
-          "workoutDate": "Sat Sep 23 2017",
-          "time": "10:00",
-          "duration": "45",
-          "currentCapacity": 4,
-          "capacity": 15,
-          "members": [
-            "4257cb93-724d-400a-9ec9-1779bd74c19a",
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062",
-            "9508292c-6ff8-470c-bc3d-278777aab632"
-          ]
-        },
-        {
-          "workoutid": "4ba96f85-2a2d-46bb-8525-ca13aab92841",
-          "workoutDate": "Sat Sep 30 2017",
-          "time": "10:00",
-          "duration": "45",
-          "currentCapacity": 4,
-          "capacity": 15,
-          "members": [
-            "4257cb93-724d-400a-9ec9-1779bd74c19a",
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062",
-            "9508292c-6ff8-470c-bc3d-278777aab632"
-          ]
-        }
-      ]
-    },
-    {
-      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-      "classid": "80bbbdca-6215-4b88-b792-b6197bc01f4a",
-      "name": "Body Sculpt",
-      "difficulty": "Advanced Level",
-      "capacity": 6,
-      "noOfWorkouts": 10,
-      "duration": 15,
-      "date": "Sat Sep 02 2017",
-      "time": "05:30",
-      "workouts": [
-        {
-          "workoutid": "3ff8c18f-9123-4469-af48-2c1236b4de56",
-          "workoutDate": "Sat Sep 02 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "2ef8866b-e8af-4f17-a586-718b037fc98f",
-          "workoutDate": "Sat Sep 09 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "75ac08a1-2525-4d75-a74a-b9a74dfe2705",
-          "workoutDate": "Sat Sep 16 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "a47dcef3-97a0-49b0-805b-a6fdacfa1cf9",
-          "workoutDate": "Sat Sep 23 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "0031e6d5-48d3-46f3-b8c0-820e13071e08",
-          "workoutDate": "Sat Sep 30 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "3bb90540-3627-4fc9-867e-06cbb20df6da",
-          "workoutDate": "Sat Oct 07 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "412d21c4-40b5-40dd-ac31-12e958ed8773",
-          "workoutDate": "Sat Oct 14 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        },
-        {
-          "workoutid": "5e765009-8bf1-450d-8e09-4787cf8ca5d9",
-          "workoutDate": "Sat Oct 21 2017",
-          "time": "11:00",
-          "duration": "25",
-          "currentCapacity": 2,
-          "capacity": 10,
-          "members": [
-            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
-            "91be1c56-ec01-4292-96c6-1f00c990d062"
-          ]
-        }
-      ]
-    },
-    {
       "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-      "classid": "261bd197-e7aa-4de1-a0fd-fb7edc16b1df",
-      "name": "test",
+      "classid": "9f68ac32-0642-42d3-8496-88f7f85879f8",
+      "name": "Yoga",
       "capacity": 5,
-      "difficulty": "Advanced Level",
-      "noOfWorkouts": 1,
-      "duration": 5,
-      "date": "Mon Sep 04 2017",
-      "time": "17:00",
+      "difficulty": "Beginners Level",
+      "noOfWorkouts": 5,
+      "duration": 20,
+      "date": "Wed Sep 06 2017",
+      "time": "11:00",
       "workouts": [
         {
-          "workoutid": "dc388ef6-7170-44fd-9bf3-4af47514ee1f",
-          "workoutDate": "Mon Sep 04 2017",
-          "currentCapacity": 0,
+          "workoutid": "0d7f80fd-2a67-458a-9c12-99a6e7d11f0f",
+          "workoutDate": "Wed Sep 06 2017",
+          "currentCapacity": 5,
           "capacity": 5,
-          "members": []
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "93893567-34dd-4731-9ae6-200ef3c290a8",
+          "workoutDate": "Wed Sep 13 2017",
+          "currentCapacity": 5,
+          "capacity": 5,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "b8fb2aca-62be-49ce-a6f6-dd9406ab8632",
+          "workoutDate": "Wed Sep 20 2017",
+          "currentCapacity": 5,
+          "capacity": 5,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "7648cb78-5726-4418-a3c1-31fa9a516132",
+          "workoutDate": "Wed Sep 27 2017",
+          "currentCapacity": 5,
+          "capacity": 5,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "fb938eff-f542-4c8e-ad92-7ec1b7581cca",
+          "workoutDate": "Wed Oct 04 2017",
+          "currentCapacity": 5,
+          "capacity": 5,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        }
+      ]
+    },
+    {
+      "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
+      "classid": "d77618b5-722f-4d3c-b6d2-bfc40b595c31",
+      "name": "Body Sculpt",
+      "capacity": 10,
+      "difficulty": "Intermediate Level",
+      "noOfWorkouts": 4,
+      "duration": 20,
+      "date": "Thu Sep 07 2017",
+      "time": "08:00",
+      "workouts": [
+        {
+          "workoutid": "02857db6-a560-46b2-bf90-47c051287716",
+          "workoutDate": "Thu Sep 07 2017",
+          "currentCapacity": 5,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "cf18c602-666d-4e47-aae1-49cc84936efc",
+          "workoutDate": "Thu Sep 14 2017",
+          "currentCapacity": 5,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "4221814e-f1bb-4278-ac49-54f42606b82f",
+          "workoutDate": "Thu Sep 21 2017",
+          "currentCapacity": 5,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
+        },
+        {
+          "workoutid": "bff8c525-724c-425f-9054-c2d0eac9c7c3",
+          "workoutDate": "Thu Sep 28 2017",
+          "currentCapacity": 5,
+          "capacity": 10,
+          "members": [
+            "27b5b681-b0dd-49af-bf7d-77b3e93837a2",
+            "344ce696-47da-4649-84ea-8a55f9099093",
+            "91be1c56-ec01-4292-96c6-1f00c990d062",
+            "4257cb93-724d-400a-9ec9-1779bd74c19a",
+            "65add577-e790-4c39-8717-abe69d61d051"
+          ]
         }
       ]
     }

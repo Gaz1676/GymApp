@@ -7,12 +7,15 @@
                     <section class="ui raised center aligned segment">
                         <div class="three fields">
                             <div class="field">
-                                <label>Assessment Booking Date</label>
-                                <div class="ui input left icon">
-                                    <i class="calendar icon"></i>
-                                    <input placeholder="date" type="date" name="date" required>
-                                </div>
+                                <label>Trainer </label>
+                                <select class="ui dropdown" name="trainerid" required>
+                                    <option value="">Select Trainer</option>
+                                    {{#each trainers}}
+                                        <option value="{{trainerid}}">Coach {{lastName}}</option>
+                                    {{/each}}
+                                </select>
                             </div>
+
                             <div class="field">
                                 <label>Assessment Booking Time (06:00 to 18:00)</label>
                                 <div class="ui yellow input left icon">
@@ -22,14 +25,13 @@
                             </div>
 
                             <div class="field">
-                                <label>Trainer </label>
-                                <select class="ui dropdown" name="trainerid" required>
-                                    <option value="">Select Trainer</option>
-                                    {{#each trainers}}
-                                        <option value="{{trainerid}}">Coach {{lastName}}</option>
-                                    {{/each}}
-                                </select>
+                                <label>Assessment Booking Date</label>
+                                <div class="ui input left icon">
+                                    <i class="calendar icon"></i>
+                                    <input placeholder="date" type="date" name="date" required>
+                                </div>
                             </div>
+
                         </div>
                         <button class="ui animated fade blue submit button">
                             <div class="visible content"><i class="add circle calendar icon"></i>&nbsp;Add Booking</div>
@@ -49,9 +51,9 @@
                 <table class="ui raised fixed center aligned celled table">
                     <thead>
                     <tr>
-                        <th>Assessment Date</th>
-                        <th>Assessment Time</th>
                         <th>Trainer</th>
+                        <th>Assessment Time</th>
+                        <th>Assessment Date</th>
                         <th>Edit Booking</th>
                         <th>Remove Booking</th>
                     </tr>
@@ -61,9 +63,9 @@
                     {{#each bookings}}
                         <div class="ui list">
                             <tr>
-                                <td>{{date}}</td>
-                                <td>{{time}}</td>
                                 <td>Coach {{coachlastname}}</td>
+                                <td>{{time}}</td>
+                                <td>{{date}}</td>
                                 <td>
                                     <a href="/dashboard/{{memberid}}/memberupdatebooking/{{bookingid}}">
                                         <i class="large teal upload icon"></i>

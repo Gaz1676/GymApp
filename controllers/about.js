@@ -6,7 +6,7 @@
 
 'use strict';
 
-const logger = require('../utils/logger'); //-------------------> import logger
+const logger = require('../utils/logger.js'); //----------------> import logger
 
 //---> about object definition <---//
 

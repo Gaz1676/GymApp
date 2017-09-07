@@ -7,12 +7,12 @@
 'use strict';
 
 const logger = require('../utils/logger'); //------------------------------------------------------> imports logger
+const accounts = require('./accounts.js'); //------------------------------------------------------> imports accounts
+const uuid = require('uuid'); //-------------------------------------------------------------------> import uuid
 const memberStore = require('../models/member-store.js'); //---------------------------------------> imports member-store
 const trainerStore = require('../models/trainer-store.js'); //-------------------------------------> imports trainer-store
-const accounts = require('./accounts.js'); //------------------------------------------------------> imports accounts
 const classStore = require('../models/class-store.js'); //-----------------------------------------> imports class-store
 const analytics = require('../utils/analytics.js'); //---------------------------------------------> imports analytics
-const uuid = require('uuid'); //-------------------------------------------------------------------> import uuid
 
 //---> trainerdashboard object definition <---//
 
@@ -104,7 +104,6 @@ const trainerDashboard = {
   addClass(request, response) { //-----------------------------------------------------------------> addClass method, called when ‘/ trainerDashboard’ request received
     logger.info('add a new class rendering'); //---------------------------------------------------> logs message to console
     const loggedInTrainer = accounts.getCurrentTrainer(request); //--------------------------------> gets currentTrainer from accounts and stores it in loggedInTrainer
-    const trainerid = loggedInTrainer.trainerid;
     const date = new Date(request.body.date);
     const newClass = { //--------------------------------------------------------------------------> place model in newClass object
       trainerid: loggedInTrainer.trainerid, //-----------------------------------------------------> trainerid
@@ -149,16 +148,6 @@ const trainerDashboard = {
       logger.debug(`class already made for Coach ${loggedInTrainer.lastName}`); //-----------------> logs message to console
       response.redirect('/trainerDashboard/trainerClasses'); //------------------------------------> redirects to (/trainerDashboard/trainerClasses)
     }
-  },
-
-  trainerEditNoOfWorkouts(request, response) { //--------------------------------------------------> trainerEditNoOfWorkouts method, called when '/ trainerDashboard request received
-    logger.info('editing no of workouts rendering '); //-------------------------------------------> logs message to console
-    const classid = request.params.classid; //-----------------------------------------------------> gets classid (params) stores it in classid
-    const newClass = classStore.getClassById(classid); //------------------------------------------> gets class by id from classStore and stores it in newClass
-    newClass.noOfWorkouts = Number(request.body.noOfWorkouts); //----------------------------------> request noOfWorkouts
-    logger.debug(`saving edited no of workouts for classid: ${classid}`); //-----------------------> logs message to console
-    classStore.store.save(); //--------------------------------------------------------------------> saves new results to classStore
-    response.redirect('/trainerDashboard/viewTrainerClasses'); //----------------------------------> redirects to ('/trainerDashboard/viewTrainerClasses)
   },
 
   trainerEditTime(request, response) { //----------------------------------------------------------> trainerEditTime method, called when '/ trainerDashboard request received
@@ -341,7 +330,7 @@ const trainerDashboard = {
       coachlastname: loggedInTrainer.lastName, //--------------------------------------------------> lastName of loggedInTrainer stored in coachlastname
       date: date.toDateString(), //----------------------------------------------------------------> requests date
       area: request.body.area, //------------------------------------------------------------------> request area
-      goal: request.body.goal, //------------------------------------------------------------------> request goal
+      goal: Number(request.body.goal), //----------------------------------------------------------> request goal
       description: request.body.description, //----------------------------------------------------> request description
       status: 'open', //---------------------------------------------------------------------------> status set to open
     };

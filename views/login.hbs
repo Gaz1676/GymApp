@@ -16,17 +16,22 @@
                     <h1 class="ui red center aligned header">Log-in</h1>
 
                     <div class="field">
-                        <label>Email</label> <input placeholder="Email" type="email" name="email" required>
+                        <label>Email</label>
+                        <div class="ui icon input">
+                            <input type="email" name="email">
+                            <i class="mail icon"></i>
+                        </div>
                     </div>
                     <div class="field">
-                        <label>Password</label> <label>
-                        <input type="password" name="password" required>
-                    </label>
-
+                        <label>Password</label>
+                        <div class="ui icon input">
+                            <input type="password" name="password">
+                            <i class="lock icon"></i>
+                        </div>
                     </div>
 
                     <button class="ui animated fade blue submit button">
-                        <div class="visible content"><i class="lock icon"></i>Log-in</div>
+                        <div class="visible content"><i class="lock icon"></i>Enter</div>
                         <div class="hidden content"><i class="unlock icon"></i>Click</div>
                     </button>
 

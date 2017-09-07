@@ -89,10 +89,10 @@ const analytics = {
     let idealBodyWeight = 0;
     let inches = this.convertHeightMetersToInches(member.height);
     let weight;
-    const assessmentList = member.assessments;
+    const listOfAssessments = member.assessments;
 
     if (member.assessments.length >= 1) {
-      weight = assessmentList[0].weight;
+      weight = listOfAssessments[0].weight;
     } else {
       weight = member.startingWeight;
     }
@@ -128,16 +128,16 @@ const analytics = {
   trend(member) {
     let trend = 'green';
     const idealBMI = 22;
-    const assessmentList = member.assessments;
-    if (assessmentList.length === 1) {
+    const listOfAssessments = member.assessments;
+    if (listOfAssessments.length === 1) {
       const lastBMI = (member.startingWeight / (member.height * member.height));
       if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(lastBMI - idealBMI)) {
         trend = 'green';
       } else {
         trend = 'red';
       }
-    } else if (assessmentList.length > 1) {
-      const nextAssessment = assessmentList[1];
+    } else if (listOfAssessments.length > 1) {
+      const nextAssessment = listOfAssessments[1];
       const lastBMI = (nextAssessment.weight / (member.height * member.height));
       if (Math.abs(this.calculateBMI(member) - idealBMI) < Math.abs(lastBMI - idealBMI)) {
         trend = 'green';
@@ -146,7 +146,7 @@ const analytics = {
       }
     }
 
-    assessmentList[0].trend = trend;
+    listOfAssessments[0].trend = trend;
   },
 };
 

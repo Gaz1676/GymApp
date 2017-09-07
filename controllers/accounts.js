@@ -6,10 +6,10 @@
 
 'use strict';
 
-const memberStore = require('../models/member-store'); //----------------------------------------------> imports memberStore
-const trainerStore = require('../models/trainer-store.js'); //-----------------------------------------> imports trainerStore
-const logger = require('../utils/logger'); //----------------------------------------------------------> imports logger
+const logger = require('../utils/logger.js'); //-------------------------------------------------------> imports logger
 const uuid = require('uuid'); //-----------------------------------------------------------------------> imports uuid
+const memberStore = require('../models/member-store.js'); //-------------------------------------------> imports memberStore
+const trainerStore = require('../models/trainer-store.js'); //-----------------------------------------> imports trainerStore
 
 //---> accounts object definition <---//
 

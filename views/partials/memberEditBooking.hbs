@@ -1,29 +1,36 @@
 <div class="ui two column grid basic segment">
     <div class="column">
         <section class="ui inverted brown segment">
+            <section class="ui yellow raised segment">
+                <h3 class="ui center aligned header">Updaayhin' your bookin's ay?? <br> Sure wha' are hya whaitin' far?? Carry an!!</h3>
+                <img class="ui centered image" src="http://res.cloudinary.com/cloud101/image/upload/v1504804791/leprechaun_qskvbk.png">
+
+            </section>
+        </section>
+    </div>
+
+    <div class="column">
+        <section class="ui inverted brown segment">
             <div class="ui large blue left ribbon label">
                 <i class="add to calendar icon"></i> Your current Assessment Booking Details being updated!!
             </div>
             <section class="ui yellow segment">
                 <table class="ui fixed left aligned table">
                     <tr>
-                        <td>Assessment Date:</td>
-                        <td>{{bookingToUpdate.date}}</td>
+                        <td><i class="user circle icon"></i>Trainer:</td>
+                        <td>Coach {{bookingToUpdate.coachlastname}}</td>
                     </tr>
                     <tr>
-                        <td>Assessment Time:</td>
+                        <td><i class="time icon"></i>Assessment Time:</td>
                         <td>{{bookingToUpdate.time}}</td>
                     </tr>
                     <tr>
-                        <td>Trainer:</td>
-                        <td>Coach {{bookingToUpdate.coachlastname}}</td>
+                        <td><i class="calendar icon"></i>Assessment Date:</td>
+                        <td>{{bookingToUpdate.date}}</td>
                     </tr>
                 </table>
             </section>
         </section>
-    </div>
-
-    <div class="column">
         <section class="ui inverted brown segment">
             <div class="ui large red right ribbon label">
                 <i class="add to calendar icon"></i> Update your Assessment Booking Details!!
@@ -32,17 +39,17 @@
                 <section class="ui raised segment">
                     <div class="two fields">
                         <div class="field">
-                            <label>New Assessment Date</label>
-                            <div class="ui input left icon">
-                                <i class="calendar icon"></i>
-                                <input placeholder="date" type="date" name="date" required>
-                            </div>
-                        </div>
-                        <div class="field">
                             <label>New Assessment Time</label>
                             <div class="ui yellow input left icon">
                                 <i class="time icon"></i>
                                 <input placeholder="time" type="time" name="time" step="1800" min="06:00" max="18:00" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>New Assessment Date</label>
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input placeholder="date" type="date" name="date" required>
                             </div>
                         </div>
                     </div>

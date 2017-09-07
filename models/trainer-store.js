@@ -88,7 +88,6 @@ const trainerStore = {
     _.remove(trainer.goals, { goalid: goalid }); //-------------------------------> removes goalid from the goals of trainer
     this.store.save(); //---------------------------------------------------------> saves new results to store
   },
-
 };
 
 module.exports = trainerStore; //-------------------------------------------------> this is the object that is then exported
