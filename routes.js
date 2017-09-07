@@ -89,11 +89,10 @@ router.post('/trainerDashboard/addclass', trainerDashboard.addClass);
 router.get('/trainerDashboard/viewtrainerclasses', trainerDashboard.viewTrainerClasses);
 router.get('/trainerDashboard/removeclass/:classid', trainerDashboard.removeClass);
 router.get('/trainerDashboard/trainerupdateclass/:classid', trainerDashboard.trainerUpdateClass);
-router.post('/trainerDashboard/trainereditnoofworkouts/:classid', trainerDashboard.trainerEditNoOfWorkouts); // not adding update to workouts
 router.post('/trainerDashboard/traineredittime/:classid', trainerDashboard.trainerEditTime);
 router.post('/trainerDashboard/trainereditduration/:classid', trainerDashboard.trainerEditDuration);
 router.post('/trainerDashboard/trainereditdifficulty/:classid', trainerDashboard.trainerEditDifficulty);
-router.post('/trainerDashboard/trainereditcapacity/:classid', trainerDashboard.trainerEditCapacity); // not adding update to capacity
+router.post('/trainerDashboard/trainereditcapacity/:classid', trainerDashboard.trainerEditCapacity);
 
 // Trainer Bookings //
 
