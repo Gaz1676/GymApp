@@ -6,42 +6,40 @@
 
 'use strict';
 
-const _ = require('lodash'); //---------------------------------------------------> imports lodash (library for js)
-const JsonStore = require('./json-store'); //-------------------------------------> imports json-store
-
-//---> manage database of classes <---//
+const _ = require('lodash');
+const JsonStore = require('./json-store');
 
 const classStore = {
   store: new JsonStore('./models/class-store.json', { classes: [] }),
   collection: 'classes',
 
   getAllClasses() {
-    return this.store.findAll(this.collection); //--------------------------------> gets all classes from the store
+    return this.store.findAll(this.collection);
   },
 
   addClass(newClass) {
-    this.store.add(this.collection, newClass); //---------------------------------> adds a newClass to the store
-    this.store.save(); //---------------------------------------------------------> saves new results to store
+    this.store.add(this.collection, newClass);
+    this.store.save();
   },
 
   getClassById(classid) {
-    return this.store.findOneBy(this.collection, { classid: classid }); //--------> gets a single class by id
+    return this.store.findOneBy(this.collection, { classid: classid });
   },
 
   getWorkoutById(classid, workoutid) {
-    const currentClass = this.getClassById(classid); //---------------------------> getClassById from this location, stores it in thisClass
-    for (let i = 0; i < currentClass.workouts.length; i++) { //-------------------> for loop
-      if (currentClass.workouts[i].workoutid === workoutid) { //------------------> if workoutid is equal to the one found
-        return currentClass.workouts[i]; //---------------------------------------> then return that workout from the workouts in thisClass
+    const currentClass = this.getClassById(classid);
+    for (let i = 0; i < currentClass.workouts.length; i++) {
+      if (currentClass.workouts[i].workoutid === workoutid) {
+        return currentClass.workouts[i];
       }
     }
   },
 
   removeClass(classid) {
-    const classes = this.getClassById(classid); //--------------------------------> getClassById from this location, stores it in thisClass
-    this.store.remove(this.collection, classes); //-------------------------------> the classes from the collection is removed from the store
-    this.store.save(); //---------------------------------------------------------> saves new results to store
+    const classes = this.getClassById(classid);
+    this.store.remove(this.collection, classes);
+    this.store.save();
   },
 };
 
-module.exports = classStore; //---------------------------------------------------> this is the object that is then exported
+module.exports = classStore;

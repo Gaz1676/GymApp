@@ -6,8 +6,6 @@
 
 'use strict';
 
-//---> general purpose module to maintain a JSON database. uses the lowdb database module <---//
-
 const low = require('lowdb');
 const fileAsync = require('lowdb/lib/storages/file-async');
 

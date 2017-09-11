@@ -13,6 +13,18 @@
       "img": "http://res.cloudinary.com/cloud101/image/upload/v1504790538/tkcn3obscnp5cepddzqu.png",
       "assessments": [
         {
+          "assessmentid": "f61a3386-89bc-4237-8c9f-40ba77466d4f",
+          "date": "Mon Sep 11 2017",
+          "weight": 60,
+          "chest": 35,
+          "thigh": 56,
+          "upperArm": 54,
+          "waist": 77,
+          "hips": 75,
+          "trend": "red",
+          "comment": ""
+        },
+        {
           "assessmentid": "8948345b-353b-45e1-bb50-487a358b9070",
           "date": "Thu Sep 07 2017",
           "weight": 61,
@@ -70,7 +82,7 @@
           "area": "Upper Arm",
           "goal": "54",
           "description": "knjo",
-          "status": "open"
+          "status": "processing result"
         },
         {
           "goalid": "b708359f-50cd-4d4a-a980-9bdfd10333e2",
@@ -78,7 +90,7 @@
           "area": "Thigh",
           "goal": "56",
           "description": "lkjh",
-          "status": "open"
+          "status": "processing result"
         }
       ]
     },

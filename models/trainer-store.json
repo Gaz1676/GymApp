@@ -154,6 +154,19 @@
           "goal": 44,
           "description": "tone up thighs for running",
           "status": "open"
+        },
+        {
+          "goalid": "09f7211b-364d-4996-a0be-8415715059e5",
+          "memberid": "344ce696-47da-4649-84ea-8a55f9099093",
+          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
+          "memberfirstname": "Lisa",
+          "memberlastname": "Simpson",
+          "coachlastname": "Flanders",
+          "date": "Mon Sep 11 2017",
+          "area": "Weight",
+          "goal": 88,
+          "description": "ihvg",
+          "status": "open"
         }
       ]
     }

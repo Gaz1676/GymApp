@@ -6,126 +6,124 @@
 
 'use strict';
 
-const _ = require('lodash'); //------------------------------------------------------> imports lodash (library for js)
-const JsonStore = require('./json-store'); //----------------------------------------> imports json-store
-const logger = require('../utils/logger.js'); //-------------------------------------> imports logger
-const cloudinary = require('cloudinary'); //-----------------------------------------> imports cloudinary
-const path = require('path'); //-----------------------------------------------------> imports path
+const _ = require('lodash');
+const JsonStore = require('./json-store');
+const logger = require('../utils/logger.js');
+const cloudinary = require('cloudinary');
+const path = require('path');
 
-try { //-----------------------------------------------------------------------------> try this first when loading
-  const env = require('../.data/.env.json'); //--------------------------------------> imports env
-  cloudinary.config(env.cloudinary); //----------------------------------------------> config file in cloudinary
+try {
+  const env = require('../.data/.env.json');
+  cloudinary.config(env.cloudinary);
 }
-catch (e) { //-----------------------------------------------------------------------> if try not reached
-  logger.info('You must provide a Cloudinary credentials file - see README.md'); //--> logs message to console
-  process.exit(1); //----------------------------------------------------------------> exits loading
+catch (e) {
+  logger.info('You must provide a Cloudinary credentials file - see README.md');
+  process.exit(1);
 }
-
-//---> manage database of members <---//
 
 const memberStore = {
   store: new JsonStore('./models/member-store.json', { members: [] }),
   collection: 'members',
 
   getAllMembers() {
-    return this.store.findAll(this.collection); //-----------------------------------> gets all members from the store
+    return this.store.findAll(this.collection);
   },
 
   addMember(member) {
-    this.store.add(this.collection, member); //--------------------------------------> adds a member to the store
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    this.store.add(this.collection, member);
+    this.store.save();
   },
 
   getMemberById(memberid) {
-    return this.store.findOneBy(this.collection, { memberid: memberid }); //---------> gets a single member by id
+    return this.store.findOneBy(this.collection, { memberid: memberid });
   },
 
   removeMember(memberid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    this.store.remove(this.collection, member); //-----------------------------------> the member from the collection is removed from the store
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    this.store.remove(this.collection, member);
+    this.store.save();
   },
 
   getMemberByEmail(email) {
-    return this.store.findOneBy(this.collection, { email: email }); //---------------> gets a single member by email
+    return this.store.findOneBy(this.collection, { email: email });
   },
 
   addAssessment(memberid, assessment) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    member.assessments.unshift(assessment); //---------------------------------------> loads assessment to the front of the pile
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    member.assessments.unshift(assessment);
+    this.store.save();
   },
 
   getAssessmentById(memberid, assessmentid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    for (let i = 0; i < member.assessments.length; i++) { //-------------------------> for loop
-      if (member.assessments[i].assessmentid === assessmentid) { //------------------> if assessmentid is equal to one found then
-        return member.assessments[i]; //---------------------------------------------> return that assessment from the assessments in member
+    const member = this.getMemberById(memberid);
+    for (let i = 0; i < member.assessments.length; i++) {
+      if (member.assessments[i].assessmentid === assessmentid) {
+        return member.assessments[i];
       }
     }
   },
 
   removeAssessment(memberid, assessmentid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    _.remove(member.assessments, { assessmentid: assessmentid }); //-----------------> remove assessment by id from members assessments
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    _.remove(member.assessments, { assessmentid: assessmentid });
+    this.store.save();
   },
 
   addBooking(memberid, booking) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    member.bookings.push(booking); //------------------------------------------------> loads booking to the end of the pile
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    member.bookings.push(booking);
+    this.store.save();
   },
 
   getBookingById(memberid, bookingid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    for (let i = 0; i < member.bookings.length; i++) { //----------------------------> for loop
-      if (member.bookings[i].bookingid === bookingid) { //---------------------------> if bookingid is equal to one found then
-        return member.bookings[i]; //------------------------------------------------> return that booking from the bookings in member
+    const member = this.getMemberById(memberid);
+    for (let i = 0; i < member.bookings.length; i++) {
+      if (member.bookings[i].bookingid === bookingid) {
+        return member.bookings[i];
       }
     }
   },
 
   getAllMemberBookings(memberid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    return member.bookings; //-------------------------------------------------------> returns bookings of the member
+    const member = this.getMemberById(memberid);
+    return member.bookings;
   },
 
   removeBooking(memberid, bookingid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    _.remove(member.bookings, { bookingid: bookingid }); //--------------------------> removes bookingid from the bookings of member
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    _.remove(member.bookings, { bookingid: bookingid });
+    this.store.save();
   },
 
   addGoal(memberid, goal) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    member.goals.push(goal); //------------------------------------------------------> loads assessment to the front of the pile
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    member.goals.push(goal);
+    this.store.save();
   },
 
   removeGoal(memberid, goalid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    _.remove(member.goals, { goalid: goalid }); //-----------------------------------> removes goalid from the goals of member
-    this.store.save(); //------------------------------------------------------------> saves new results to store
+    const member = this.getMemberById(memberid);
+    _.remove(member.goals, { goalid: goalid });
+    this.store.save();
   },
 
   getAllMemberGoals(memberid) {
-    const member = this.getMemberById(memberid); //----------------------------------> getsMemberById and stores it in member
-    return member.goals; //----------------------------------------------------------> return goals of the member
+    const member = this.getMemberById(memberid);
+    return member.goals;
   },
 
   addPicture(member, imageFile, response) {
-    const id = path.parse(member.img); //--------------------------------------------> gets img from member and stores it in id
-    cloudinary.api.delete_resources([id.name], function (result) { //----------------> deletes it from cloudinary
-          console.log(result); //----------------------------------------------------> log message to console
+    const id = path.parse(member.img);
+    cloudinary.api.delete_resources([id.name], function (result) {
+          console.log(result);
         }
     );
     imageFile.mv('tempimage', err => {
       if (!err) {
-        cloudinary.uploader.upload('tempimage', result => { //-----------------------> taken from the photo-store lab - creates new image from upload
-          console.log(result); //----------------------------------------------------> logs message to console
-          member.img = result.url; //------------------------------------------------> the url from the result stored it in img of member
-          this.store.save(); //------------------------------------------------------> saves new result to this store
+        cloudinary.uploader.upload('tempimage', result => {
+          console.log(result);
+          member.img = result.url;
+          this.store.save();
           response();
         });
       }
@@ -133,4 +131,4 @@ const memberStore = {
   },
 };
 
-module.exports = memberStore; //------------------------------------------------> this is the object that is then exported
+module.exports = memberStore;

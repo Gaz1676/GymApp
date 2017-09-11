@@ -6,21 +6,16 @@
 
 'use strict';
 
-const logger = require('../utils/logger.js'); //----------------> import logger
-
-//---> index object definition <---//
+const logger = require('../utils/logger.js');
 
 const index = {
-  index(request, response) { //---------------------------------> index method, called when ‘/ index’ request received
-    logger.info('index rendering'); //--------------------------> logs a message to the console
-    const viewData = { //---------------------------------------> creates object called viewData
-      title: 'Welcome to me gym app', //------------------------> name of title
+  index(request, response) {
+    logger.info('index rendering');
+    const viewData = {
+      title: 'Welcome to me gym app',
     };
-    response.render('index', viewData); //----------------------> renders 'index' and viewData to view
+    response.render('index', viewData);
   },
 };
 
-module.exports = index; //--------------------------------------> this is the object that is then exported
-
-//-----> request -> link or button pressed on page
-//-----> response -> complete page rendered into browser
+module.exports = index;

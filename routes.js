@@ -6,14 +6,14 @@
 
 'use strict';
 
-const express = require('express'); //--------------------------------------> accessing dependencies
+const express = require('express');
 const router = express.Router();
 
 // Objects //
 
 const index = require('./controllers/index.js');
 const dashboard = require('./controllers/dashboard.js');
-const trainerDashboard = require('./controllers/trainerDashboard.js'); //----> imports these objects
+const trainerDashboard = require('./controllers/trainerDashboard.js');
 const about = require('./controllers/about.js');
 const accounts = require('./controllers/accounts.js');
 
@@ -21,7 +21,7 @@ const accounts = require('./controllers/accounts.js');
 
 router.get('/', accounts.index);
 router.get('/about', about.index);
-router.get('/index', index.index); //----------------------------------------> matches the objects with each of these links
+router.get('/index', index.index);
 router.get('/dashboard', dashboard.index);
 router.get('/trainerDashboard', trainerDashboard.index);
 
