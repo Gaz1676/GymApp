@@ -2,6 +2,20 @@
 
 <section class="ui inverted brown segment">
     <section class="ui yellow raised segment">
+
+        {{#if goalAlert}}
+            <div class="ui warning message">
+                <p><i class="large red warning sign icon"></i>Hey there {{{member.firstName}}}
+                    you have not set any goals??&nbsp;&nbsp;What are you waiting for fatty!</p>
+            </div>
+        {{else}}
+            <div class="ui warning message">
+                <p><i class="large yellow warning sign icon"></i>Hi {{{member.firstName}}}!!
+                    You currently have goals which are being processed.&nbsp;&nbsp;
+                    Why not book another assessment??</p>
+            </div>
+        {{/if}}
+
         {{> memberStats }}
         {{> memberAddAssessment }}
     </section>
