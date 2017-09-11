@@ -4,15 +4,21 @@
     <section class="ui yellow raised segment">
 
         {{#if goalAlert}}
-            <div class="ui warning message">
-                <p><i class="large red warning sign icon"></i>Hey there {{{member.firstName}}}
-                    you have not set any goals??&nbsp;&nbsp;What are you waiting for fatty!</p>
+            <div class="ui warning message" id="prompt">
+                <i class="close icon" onclick="hide()"></i>
+                <div class="header">
+                    Hey there {{{member.firstName}}} you have not set any goals, click
+                    <a href="/dashboard/membergoals">here </a>to set one FATTY!!!!
+                </div>
             </div>
         {{else}}
-            <div class="ui warning message">
-                <p><i class="large yellow warning sign icon"></i>Hi {{{member.firstName}}}!!
+            <div class="ui negative message" id="prompt">
+                <i class="close icon" onclick="hide()"></i>
+                <div class="header">
+                    Hi {{{member.firstName}}}!!
                     You currently have goals which are being processed.&nbsp;&nbsp;
-                    Why not book another assessment??</p>
+                    Why not set another??
+                </div>
             </div>
         {{/if}}
 
@@ -20,3 +26,10 @@
         {{> memberAddAssessment }}
     </section>
 </section>
+
+<script>
+    function hide() {
+        const hidden = document.createAttribute('hidden');
+        document.getElementById('prompt').setAttributeNode(hidden);
+    }
+</script>
