@@ -69,7 +69,7 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
      
            - Missed
      
-           - Awaiting processing (i.e. a current assessment needs to be done to process it)
+           - Processing results (i.e. a current assessment needs to be done to process it)
   
  ***
  
