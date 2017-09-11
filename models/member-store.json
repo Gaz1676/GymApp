@@ -257,42 +257,7 @@
           "coachlastname": "Simpson"
         }
       ],
-      "goals": [
-        {
-          "goalid": "114375c0-7c66-4dba-845d-8115f57b5a84",
-          "date": "Sat Sep 30 2017",
-          "area": "Upper Arm",
-          "goal": "56",
-          "description": "tone up the guns",
-          "status": "open"
-        },
-        {
-          "goalid": "cb23ae92-cce0-4260-a46b-50bc2170c360",
-          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df263",
-          "memberfirstname": "Bart",
-          "memberlastname": "Simpson",
-          "coachlastname": "Simpson",
-          "date": "Thu Sep 28 2017",
-          "area": "Upper Arm",
-          "goal": 55,
-          "description": "Big up the guns",
-          "status": "open"
-        },
-        {
-          "goalid": "d0eb7ea7-58f5-4223-a4ec-8e793aa3a009",
-          "memberid": "91be1c56-ec01-4292-96c6-1f00c990d062",
-          "trainerid": "b81efe79-a0b6-4226-884e-1428526df264",
-          "memberfirstname": "Bart",
-          "memberlastname": "Simpson",
-          "coachlastname": "Flanders",
-          "date": "Tue Oct 31 2017",
-          "area": "Chest",
-          "goal": 55,
-          "description": "Buff up the chest",
-          "status": "open"
-        }
-      ]
+      "goals": []
     },
     {
       "firstName": "ComicBook",
