@@ -19,7 +19,7 @@ _&emsp;&emsp;&emsp;&emsp;First time JavaScript and Node project created in WebSt
           password: secret           |     password: secret
 
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="https://glitch.com/edit/#!/gym-app?path=README.md:27:0">Click - Glitch - Show Live!!</a>
+To view my project just click on this link  https://gym-app.glitch.me - simple!
 
 ***
 
